@@ -1,0 +1,12 @@
+{
+  "slug": "pigou-os",
+  "title": "Pigou OS",
+  "status": "building",
+  "priority": "high",
+  "summary": "Pigou 的个人项目控制台：管理项目、想法、任务、日志和 AI 协作记录。",
+  "progress": 18,
+  "goals": ["建立个人项目总览", "管理 idea 池", "聚合下一步行动"],
+  "nextActions": ["完成 Nothing 风格 MVP", "接入真实项目内容", "决定部署域名"],
+  "links": [],
+  "updated": "2026-04-27"
+}

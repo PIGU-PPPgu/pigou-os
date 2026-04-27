@@ -1,0 +1,12 @@
+{
+  "slug": "xiaozhi-device",
+  "title": "小智设备",
+  "status": "paused",
+  "priority": "medium",
+  "summary": "自建小智语音设备和 OpenClaw 接入，作为实体入口触发 Mochi。",
+  "progress": 60,
+  "goals": ["稳定唤醒 OpenClaw", "完善语音交互体验", "接入更多生活场景"],
+  "nextActions": ["复测唤醒词", "整理设备文档"],
+  "links": [],
+  "updated": "2026-04-27"
+}

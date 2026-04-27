@@ -1,0 +1,12 @@
+{
+  "slug": "intellitutor",
+  "title": "IntelliTutor",
+  "status": "building",
+  "priority": "high",
+  "summary": "AI 阅读家教项目，基于 DeepTutor 改造成面向学生的智能学习伴侣。",
+  "progress": 72,
+  "goals": ["稳定深度解题和知识图谱", "打通在线部署", "沉淀成可展示产品"],
+  "nextActions": ["修复服务器 LLM_API_KEY_DISABLED", "验证 /agents 路由", "补充产品截图和 demo 流程"],
+  "links": [{"label":"GitHub","url":"https://github.com/PIGU-PPPgu/IntelliTutor"}, {"label":"Live","url":"https://tutor.intelliclass.online"}],
+  "updated": "2026-04-27"
+}

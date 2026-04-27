@@ -1,0 +1,12 @@
+{
+  "slug": "feixiang-assistant",
+  "title": "飞象教学助手",
+  "status": "building",
+  "priority": "high",
+  "summary": "面向 Pigou 教学工作的飞象星球自动查询、作业分析、催交和题目诊断助手。",
+  "progress": 45,
+  "goals": ["自动查询作业提交情况", "分析正确率和薄弱知识点", "生成教学建议"],
+  "nextActions": ["整理飞象 API 能力清单", "做一个常用问题模板", "接入班级学生名单"],
+  "links": [],
+  "updated": "2026-04-27"
+}
