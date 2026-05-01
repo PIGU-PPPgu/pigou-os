@@ -1,23 +1,23 @@
 {
   "slug": "agent-swarm-dev-v2",
   "title": "Agent Swarm Dev v2",
-  "status": "paused",
+  "status": "building",
   "priority": "medium",
   "summary": "集成 Harness 质量工具的多智能体协作软件开发框架。",
   "explanation": "它记录 Pigou 对多智能体开发流程的探索：如何让多个 agent 分工、协作、验证，并最终交付可维护的软件。",
   "domain": "agentic-engineering",
   "source": "github:PIGU-PPPgu/agent-swarm-dev-v2",
-  "progress": 45,
+  "progress": 58,
   "goals": [
     "定义多 agent 分工方式",
     "接入质量工具链",
     "形成可复用开发流程"
   ],
   "nextActions": [
+    "Generate LLM code insights for the most important source files.",
+    "Add one approved public screenshot or product surface image.",
     "选一个小型真实开发任务，完整跑一遍 Builder / Reviewer / Doc Gardener / Cleanup 流程，并保留 PR、日志、命令输出。",
-    "新增 examples/ 或 case-study/，展示从需求、实现、审查、文档更新到清理的完整轨迹。",
-    "为 /harness audit、/harness enforce、/harness garden 等命令补充最小可执行实现或 mock demo。",
-    "明确 agent-swarm-dev-v2 与 harness-skill-v2 的关系：上层流程框架、命令工具集合，还是已被后者合并/替代。"
+    "新增 examples/ 或 case-study/，展示从需求、实现、审查、文档更新到清理的完整轨迹。"
   ],
   "links": [
     {
@@ -25,46 +25,46 @@
       "url": "https://github.com/PIGU-PPPgu/agent-swarm-dev-v2"
     }
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 45,
-    "status": "paused",
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 58,
+    "status": "building",
     "confidence": "medium",
-    "summary": "项目已形成较完整的多智能体开发流程设计与文档框架，但真实可执行能力、端到端案例和使用验证不足。目前更像“流程框架原型/规范库”，不宜判定为已进入稳定构建或可交付阶段。",
-    "rationale": "仓库有 32 个文件，其中 Markdown 文档占比较高，docs/ 覆盖 architecture、quality、observability、roles 等，说明概念和流程设计较完整。,代码与工具实现信号较弱：package.json 只有 init 脚本，无依赖；主要语言为 Shell；仅发现 scripts/init.js，缺少明确的核心运行入口或可验证执行链路。,README 描述了 Builder / Reviewer / Doc Gardener / Cleanup 角色和 /harness 命令，但当前证据不足以证明这些命令已经具备完整可执行实现。,没有 tasks、logs、截图、真实 PR、案例研究或上线/使用记录，暂时缺少 usage validation。,最近 push 在 2026-04-01，说明不是归档项目；但当前状态标记为 paused，且没有持续推进日志，因此维持 paused 判断。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
-        "score": 10,
+        "score": 16,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 10,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 6,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 8,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
@@ -72,16 +72,13 @@
       "last push: 2026-04-01"
     ],
     "risks": [
-      "文档设计领先于工程实现，容易停留在框架设想。",
-      "/harness 命令和质量工具链缺少可执行证据。",
-      "缺少端到端真实开发任务验证，无法判断多 agent 流程是否有效。",
-      "与 harness-skill-v2 的边界不清，可能存在重复或被替代风险。"
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
+      "Generate LLM code insights for the most important source files.",
+      "Add one approved public screenshot or product surface image.",
       "选一个小型真实开发任务，完整跑一遍 Builder / Reviewer / Doc Gardener / Cleanup 流程，并保留 PR、日志、命令输出。",
-      "新增 examples/ 或 case-study/，展示从需求、实现、审查、文档更新到清理的完整轨迹。",
-      "为 /harness audit、/harness enforce、/harness garden 等命令补充最小可执行实现或 mock demo。",
-      "明确 agent-swarm-dev-v2 与 harness-skill-v2 的关系：上层流程框架、命令工具集合，还是已被后者合并/替代。"
+      "新增 examples/ 或 case-study/，展示从需求、实现、审查、文档更新到清理的完整轨迹。"
     ]
   }
 }

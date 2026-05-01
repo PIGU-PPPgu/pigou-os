@@ -1,7 +1,7 @@
 {
   "slug": "harness-skill",
   "title": "harness-skill",
-  "status": "building",
+  "status": "idea",
   "priority": "medium",
   "summary": "Agent-first engineering practices based on OpenAI Harness Engineering",
   "domain": "shell",
@@ -12,17 +12,17 @@
     "- /harness init - 初始化 Harness 工程结构\n- /harness audit - 审计智能体可读性\n- /harness enforce - 强制架构约束\n- /harness garden - 清理过时文档和代码\n- /harness golden-rules - 应用黄金原则重构",
     "支持以下 AI CLI 工具：\n- Claude Code (≥ 1.0)\n- Codex (≥ 0.5)\n- OpenCode (≥ 0.3)\n- OpenClaw (≥ 0.2)"
   ],
-  "progress": 40,
+  "progress": 58,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
     "确认展示边界"
   ],
   "nextActions": [
-    "为 `harness` 和 `install.sh` 生成代码洞察，核对 README 中每个命令是否真实实现。",
-    "补充最小可验证路径：安装后执行 `/harness init`、`/harness audit` 的终端命令与预期输出。",
-    "完善 README Quick Start：安装方式、依赖、支持平台、示例项目、卸载方式。",
-    "增加至少一个公开终端截图或录屏，展示实际执行效果。"
+    "Generate LLM code insights for the most important source files.",
+    "Clarify runtime stack and entrypoint because package metadata is missing.",
+    "Add one approved public screenshot or product surface image.",
+    "为 `harness` 和 `install.sh` 生成代码洞察，核对 README 中每个命令是否真实实现。"
   ],
   "links": [
     {
@@ -30,46 +30,46 @@
       "url": "https://github.com/PIGU-PPPgu/harness-skill"
     }
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 40,
-    "status": "building",
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 58,
+    "status": "idea",
     "confidence": "medium",
-    "summary": "项目已从想法进入构建阶段：仓库公开，已有 Shell 主脚本 `harness`、`install.sh`、`.harness` 配置和 README 命令说明。但目前缺少代码洞察、真实运行示例、截图/录屏、任务日志与命令实现核验，尚不能判断是否稳定可用或已被真实使用。",
-    "rationale": "仓库存在 9 个文件，包含 `harness` 主脚本和 `install.sh`，说明已有最小工程结构，不是纯 idea。,README 已描述 `/harness init`、`audit`、`enforce`、`garden`、`golden-rules` 等命令，但没有证据证明这些命令全部实现并可运行。,没有 public image、终端录屏、运行日志或真实使用信号，使用验证较弱。,没有 LLM code insight，无法确认脚本质量、入口逻辑、错误处理、平台兼容性和 README 一致性。,最近 push 在 2026-03-31，仍有近期维护迹象，但缺少任务和日志支撑连续推进。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
-        "score": 16,
+        "score": 5,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 10,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 11,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
@@ -77,17 +77,14 @@
       "last push: 2026-03-31"
     ],
     "risks": [
-      "README 声明的命令可能与实际脚本实现不一致。",
-      "缺少 Quick Start，用户无法快速验证安装和运行路径。",
-      "没有截图、录屏或日志，产品可用性与展示边界不清晰。",
-      "仓库规模较小，缺少测试、示例项目和兼容性说明。",
-      "没有代码洞察，无法评估脚本健壮性、安全性和可维护性。"
+      "package.json could not be found or parsed.",
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
-      "为 `harness` 和 `install.sh` 生成代码洞察，核对 README 中每个命令是否真实实现。",
-      "补充最小可验证路径：安装后执行 `/harness init`、`/harness audit` 的终端命令与预期输出。",
-      "完善 README Quick Start：安装方式、依赖、支持平台、示例项目、卸载方式。",
-      "增加至少一个公开终端截图或录屏，展示实际执行效果。"
+      "Generate LLM code insights for the most important source files.",
+      "Clarify runtime stack and entrypoint because package metadata is missing.",
+      "Add one approved public screenshot or product surface image.",
+      "为 `harness` 和 `install.sh` 生成代码洞察，核对 README 中每个命令是否真实实现。"
     ]
   }
 }

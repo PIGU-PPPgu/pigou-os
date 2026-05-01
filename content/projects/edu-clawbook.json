@@ -1,7 +1,7 @@
 {
   "slug": "edu-clawbook",
   "title": "Edu-Claw",
-  "status": "building",
+  "status": "idea",
   "priority": "high",
   "summary": "面向教师场景的 AI 工作台，覆盖课堂教学与教案生成、教师科研全周期交付、校园 AI 配置和运行监控。",
   "explanation": "这是 Pigou 教育 AI 产品线里最接近统一工作台的 private 项目：把教师真正面对的聊天、文稿、证据、配图、Agent 编排和导出交付放到同一个操作界面。",
@@ -32,58 +32,58 @@
       "alt": "Mission Control screenshot"
     }
   ],
-  "progress": 62,
+  "progress": 61,
   "goals": [
     "统一教师 AI 工作台",
     "重构科研同屏协作交付链路",
     "把 Agent 编排隐藏到后台"
   ],
   "nextActions": [
-    "生成私有代码洞察：至少覆盖 package.json、app 路由树、/research 页面、/chat 采纳逻辑、app/api、Supabase schema 或数据库访问层。",
-    "补一条最小闭环验证记录：资料输入 → Agent 生成 → 块式编辑 → 证据/配图确认 → 导出预览/导出文件。",
-    "为 4 张私有截图补说明：分别标注同屏 Agent、文稿区、证据/配图采纳、导出预览。",
-    "记录一次本地或内网运行信息：启动命令、访问地址、测试账号、完成一次科研文稿生成的操作日志。"
+    "Generate LLM code insights for the most important source files.",
+    "Clarify runtime stack and entrypoint because package metadata is missing.",
+    "Add one approved public screenshot or product surface image.",
+    "生成私有代码洞察：至少覆盖 package.json、app 路由树、/research 页面、/chat 采纳逻辑、app/api、Supabase schema 或数据库访问层。"
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 62,
-    "status": "building",
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 61,
+    "status": "idea",
     "confidence": "medium",
-    "summary": "Edu-Claw 已经不是纯想法阶段，README 显示它有明确的教师 AI 工作台定位、核心路由、技术栈和科研工作台改造方向；但当前缺少可验证的代码结构、运行日志、真实交付闭环记录和截图说明，因此还不能判断为 shipped。",
-    "rationale": "产品形态较清晰：覆盖 /chat、/research、/agent、/setup、/settings、/stats、/admin，目标是统一教师 AI 工作台。,核心场景明确：当前重点是科研工作台的同屏协作交付，包括文稿区、块式编辑、分页预览、Agent 嵌入、证据/配图采纳。,技术栈有描述：Next.js 15、React、TypeScript、Supabase、API routes，说明已有工程方向。,仓库为 private 且最近仍有 push，项目仍在推进。,但 GitHub/wiki 未抓到文件树，package.json、入口文件、核心 routes、Supabase schema/API 摘要均缺失，代码成熟度无法核验。,没有任务、日志、演示录像、部署地址、测试账号或真实用户使用记录，真实可交付程度证据不足。,有 4 张私有图片信号，但未提供截图内容说明，无法直接证明关键链路已经跑通。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
-        "score": 16,
+        "score": 5,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 2,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 10,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 11,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 8,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
@@ -92,16 +92,14 @@
       "images: 4"
     ],
     "risks": [
-      "可能存在 README 描述领先于实际实现的风险。",
-      "科研工作台的关键闭环是否真正可用尚未被证据证明。",
-      "Agent 编排、文稿编辑、证据采纳、导出之间的数据结构和状态同步复杂，当前缺少 schema/API 证据。",
-      "private 项目无法通过公开仓库文件判断工程质量，confidence 不能给高。"
+      "package.json could not be found or parsed.",
+      "Repository file tree could not be fetched."
     ],
     "nextActions": [
-      "生成私有代码洞察：至少覆盖 package.json、app 路由树、/research 页面、/chat 采纳逻辑、app/api、Supabase schema 或数据库访问层。",
-      "补一条最小闭环验证记录：资料输入 → Agent 生成 → 块式编辑 → 证据/配图确认 → 导出预览/导出文件。",
-      "为 4 张私有截图补说明：分别标注同屏 Agent、文稿区、证据/配图采纳、导出预览。",
-      "记录一次本地或内网运行信息：启动命令、访问地址、测试账号、完成一次科研文稿生成的操作日志。"
+      "Generate LLM code insights for the most important source files.",
+      "Clarify runtime stack and entrypoint because package metadata is missing.",
+      "Add one approved public screenshot or product surface image.",
+      "生成私有代码洞察：至少覆盖 package.json、app 路由树、/research 页面、/chat 采纳逻辑、app/api、Supabase schema 或数据库访问层。"
     ]
   }
 }

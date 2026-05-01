@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/class-teacher-skills",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-04-27T15:05:36Z",
+    "pushedAt": "2026-04-29T17:00:52Z",
     "language": "Python"
   },
-  "generatedAt": "2026-04-27T15:20:40.207Z",
+  "generatedAt": "2026-05-01T21:08:30.224Z",
   "readme": {
     "title": "Class Teacher Skills",
     "summary": [
@@ -22,12 +22,12 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 182,
+    "totalFiles": 192,
     "truncated": false,
     "topDirectories": [
       {
         "name": "skills",
-        "count": 174
+        "count": 184
       },
       {
         "name": "[root]",
@@ -37,7 +37,7 @@
     "extensions": [
       {
         "ext": ".md",
-        "count": 172
+        "count": 182
       },
       {
         "ext": ".py",
@@ -77,7 +77,7 @@
       "name": "skills",
       "kind": "Repository directory",
       "evidence": [
-        "174 file(s)"
+        "184 file(s)"
       ],
       "files": [
         "skills/README-class-teacher-skills.md",
@@ -186,6 +186,7 @@
     }
   ],
   "gaps": [
-    "package.json could not be found or parsed."
+    "package.json could not be found or parsed.",
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
   ]
 }

@@ -12,76 +12,73 @@
     "# 2026MCM_C",
     "仓库包含 2026 美赛 LaTeX 模板、带 AI 提示词的论文模板、ablation metrics 和 uncertainty CI summary 等材料。"
   ],
-  "progress": 38,
+  "progress": 55,
   "goals": [
     "归档建模论文模板",
     "保留实验指标文件",
     "作为研究写作素材库"
   ],
   "nextActions": [
-    "补充归档 README：说明项目用途、目录结构、主 LaTeX 文件、Overleaf 使用方法、本地编译方式。",
-    "给 ablation_metrics.csv 和 uncertainty CI summary 补充字段含义、数据来源、实验目的和主要结论。",
-    "整理文件分类：标注可复用模板、比赛专用材料、最终图表、临时图片/中间产物。",
-    "确认主模板文件，例如 2602199.tex、easymcm.sty、mcmthesis 相关文件之间的关系。"
+    "Generate LLM code insights for the most important source files.",
+    "Clarify runtime stack and entrypoint because package metadata is missing.",
+    "Add one approved public screenshot or product surface image.",
+    "补充归档 README：说明项目用途、目录结构、主 LaTeX 文件、Overleaf 使用方法、本地编译方式。"
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 38,
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 55,
     "status": "archived",
-    "confidence": "medium",
-    "summary": "这是一个私有研究资料归档仓库，主要保存 2026 美赛 C 题相关 LaTeX/Overleaf 模板、论文模板、图片素材和少量实验指标文件。项目不属于当前产品主线，已有较完整的素材沉淀，但归档说明、实验文件解释和可复用性整理不足。",
-    "rationale": "仓库已形成明确资料结构：包含「2026美赛Latex模板」和「overleaf所需」两大目录，共 97 个文件。,技术形态清楚：以 TeX/LaTeX 为主，包含 .cls、.sty、.tex、Overleaf 相关文件，以及少量 .csv、.m、.cpp 辅助材料。,README 仅有极简说明，缺少目录说明、编译方式、模板使用方法、实验指标来源和结论摘要。,没有任务、日志、真实使用记录或后续维护信号；最后 push 时间为 2026-01-31，当前更适合判定为归档而非活跃建设。,作为产品项目成熟度不高，但作为研究/写作素材库已经具备一定可保存价值。",
+    "confidence": "low",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
         "score": 5,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 16,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 5,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 2,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
       "repo files: 97",
-      "last push: 2026-01-31"
+      "last push: 2026-01-31",
+      "frameworks: LaTeX"
     ],
     "risks": [
-      "归档可读性不足：未来回看时可能难以判断哪些文件是最终模板、哪些是临时产物。",
-      "实验指标缺少字段解释、数据来源和结论摘要，复用价值会下降。",
-      "图片素材占比很高，但缺少命名规范和来源说明，可能造成冗余或版权/引用不清。",
-      "仓库没有明确入口文件说明，例如主 .tex 文件、Overleaf 导入方式、本地编译命令。",
-      "当前没有继续维护信号，不宜按活跃项目推进。"
+      "package.json could not be found or parsed."
     ],
     "nextActions": [
-      "补充归档 README：说明项目用途、目录结构、主 LaTeX 文件、Overleaf 使用方法、本地编译方式。",
-      "给 ablation_metrics.csv 和 uncertainty CI summary 补充字段含义、数据来源、实验目的和主要结论。",
-      "整理文件分类：标注可复用模板、比赛专用材料、最终图表、临时图片/中间产物。",
-      "确认主模板文件，例如 2602199.tex、easymcm.sty、mcmthesis 相关文件之间的关系。"
+      "Generate LLM code insights for the most important source files.",
+      "Clarify runtime stack and entrypoint because package metadata is missing.",
+      "Add one approved public screenshot or product surface image.",
+      "补充归档 README：说明项目用途、目录结构、主 LaTeX 文件、Overleaf 使用方法、本地编译方式。"
     ]
   }
 }

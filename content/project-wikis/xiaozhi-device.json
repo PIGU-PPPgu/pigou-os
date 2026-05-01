@@ -9,7 +9,7 @@
     "pushedAt": "2026-04-25T16:06:32Z",
     "language": "C++"
   },
-  "generatedAt": "2026-04-27T15:21:39.904Z",
+  "generatedAt": "2026-05-01T21:08:53.858Z",
   "readme": {
     "title": "open-buddy",
     "summary": [
@@ -142,6 +142,7 @@
     }
   ],
   "gaps": [
-    "package.json could not be found or parsed."
+    "package.json could not be found or parsed.",
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
   ]
 }

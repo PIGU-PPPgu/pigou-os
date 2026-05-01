@@ -9,7 +9,7 @@
     "pushedAt": "2026-04-01T16:42:19Z",
     "language": "Shell"
   },
-  "generatedAt": "2026-04-27T15:20:37.663Z",
+  "generatedAt": "2026-05-01T21:08:27.871Z",
   "readme": {
     "title": "Agent Swarm Development",
     "summary": [
@@ -145,5 +145,7 @@
       "label": "drives"
     }
   ],
-  "gaps": []
+  "gaps": [
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+  ]
 }

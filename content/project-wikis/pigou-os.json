@@ -6,81 +6,97 @@
     "url": "https://github.com/PIGU-PPPgu/pigou-os",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-04-27T04:24:38Z",
+    "pushedAt": "2026-05-01T14:53:53Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-04-27T15:21:25.278Z",
+  "generatedAt": "2026-05-01T21:08:48.501Z",
   "readme": {
     "title": "Pigou OS",
     "summary": [
       "Personal project console for Pigou Wu. Built with Next.js and a Nothing-inspired monochrome interface.",
-      "GitHub Pages deploys automatically from main."
+      "Open http://localhost:3888/knowledge and paste a link or a block of text into Quick Capture.",
+      "Private write actions use a single-user login. There is no registration flow.",
+      "Then open http://localhost:3888/login, log in, and return to /knowledge.",
+      "Without OPENAIAPIKEY, Pigou OS uses a local fallback parser: it fetches page title, description, and text snippets, then creates a draft knowledge note.",
+      "Embeddings are stored locally under data/knowledge-vectors/ and are used for similarity / dedupe signals."
     ]
   },
   "fileTree": {
-    "totalFiles": 28,
+    "totalFiles": 207,
     "truncated": false,
     "topDirectories": [
       {
-        "name": "[root]",
-        "count": 9
+        "name": "content",
+        "count": 67
       },
       {
         "name": "app",
-        "count": 8
+        "count": 37
       },
       {
-        "name": "content",
-        "count": 7
+        "name": "public",
+        "count": 27
       },
       {
         "name": "components",
-        "count": 2
-      },
-      {
-        "name": ".github",
-        "count": 1
+        "count": 22
       },
       {
         "name": "lib",
-        "count": 1
+        "count": 22
+      },
+      {
+        "name": "[root]",
+        "count": 15
+      },
+      {
+        "name": "scripts",
+        "count": 14
+      },
+      {
+        "name": ".github",
+        "count": 2
       }
     ],
     "extensions": [
       {
         "ext": ".json",
-        "count": 9
-      },
-      {
-        "ext": ".tsx",
-        "count": 9
+        "count": 70
       },
       {
         "ext": ".ts",
-        "count": 3
+        "count": 43
+      },
+      {
+        "ext": ".tsx",
+        "count": 39
+      },
+      {
+        "ext": ".png",
+        "count": 21
       },
       {
         "ext": ".mjs",
+        "count": 16
+      },
+      {
+        "ext": ".jpg",
+        "count": 4
+      },
+      {
+        "ext": ".yml",
+        "count": 3
+      },
+      {
+        "ext": ".html",
+        "count": 2
+      },
+      {
+        "ext": ".md",
         "count": 2
       },
       {
         "ext": ".css",
-        "count": 1
-      },
-      {
-        "ext": ".gitignore",
-        "count": 1
-      },
-      {
-        "ext": ".md",
-        "count": 1
-      },
-      {
-        "ext": ".yaml",
-        "count": 1
-      },
-      {
-        "ext": ".yml",
         "count": 1
       }
     ]
@@ -91,7 +107,15 @@
       "dev",
       "build",
       "start",
-      "lint"
+      "lint",
+      "typecheck",
+      "sync:github",
+      "sync:contrib",
+      "sync:wiki",
+      "sync:jobs",
+      "sync:signals",
+      "sync:llm-wiki",
+      "rebuild:llm-wiki"
     ],
     "dependencies": [
       "@mdx-js/loader",
@@ -123,54 +147,112 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "8 file(s) under app/"
+        "37 file(s) under app/"
       ],
       "files": [
-        "app/globals.css",
-        "app/ideas/page.tsx",
-        "app/layout.tsx",
-        "app/log/page.tsx",
-        "app/page.tsx",
-        "app/projects/[slug]/page.tsx",
-        "app/projects/page.tsx",
-        "app/tasks/page.tsx"
+        "app/about/page.tsx",
+        "app/api/analytics/track/route.ts",
+        "app/api/auth/session/route.ts",
+        "app/api/content/delete/route.ts",
+        "app/api/deepwiki/ask/route.ts",
+        "app/api/github/webhook/route.ts",
+        "app/api/ideas/analyze/route.ts",
+        "app/api/ideas/route.ts"
       ]
     },
     {
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "2 file(s) under components/"
+        "22 file(s) under components/"
       ],
       "files": [
-        "components/Shell.tsx",
-        "components/UI.tsx"
+        "components/AnalyticsTracker.tsx",
+        "components/IdeasWorkbench.tsx",
+        "components/ImageGallery.tsx",
+        "components/InboxWorkbench.tsx",
+        "components/KnowledgeBoard.tsx",
+        "components/KnowledgeCapture.tsx",
+        "components/LlmWikiWorkbench.tsx",
+        "components/LogWorkbench.tsx"
       ]
     },
     {
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "1 file(s) under lib/"
+        "22 file(s) under lib/"
       ],
       "files": [
-        "lib/data.ts"
+        "lib/ai-clients.ts",
+        "lib/analytics-store.ts",
+        "lib/auth.ts",
+        "lib/brain-analysis.ts",
+        "lib/data.ts",
+        "lib/embedding-store.ts",
+        "lib/idea-store.ts",
+        "lib/inbox-classifier.ts"
+      ]
+    },
+    {
+      "name": "scripts",
+      "kind": "Automation scripts",
+      "evidence": [
+        "14 file(s) under scripts/"
+      ],
+      "files": [
+        "scripts/add-idea.mjs",
+        "scripts/add-note.mjs",
+        "scripts/evaluate-project-progress.mjs",
+        "scripts/prepare-next-build.mjs",
+        "scripts/prepare-next-cache.mjs",
+        "scripts/prepare-static-export.mjs",
+        "scripts/process-sync-jobs.mjs",
+        "scripts/project-sync-signals.mjs"
       ]
     },
     {
       "name": "content",
       "kind": "Local content source",
       "evidence": [
-        "7 file(s) under content/"
+        "67 file(s) under content/"
       ],
       "files": [
+        "content/activity/github-contributions.json",
         "content/ideas/idea-to-project-pipeline.json",
         "content/ideas/teacher-agent-marketplace.json",
-        "content/log/2026-04-27.json",
-        "content/projects/feixiang-assistant.json",
-        "content/projects/intellitutor.json",
-        "content/projects/pigou-os.json",
-        "content/projects/xiaozhi-device.json"
+        "content/knowledge/headteacher-helper-signal.json",
+        "content/knowledge/pigou-os-as-private-brain.json",
+        "content/knowledge/progress-rubric.json",
+        "content/knowledge/评估-paperclipai-paperclip-用于-opc.json",
+        "content/llm-wiki/current.json"
+      ]
+    },
+    {
+      "name": "public",
+      "kind": "Static assets",
+      "evidence": [
+        "27 file(s) under public/"
+      ],
+      "files": [
+        "public/about/pigou-workshop-qrcode.jpg",
+        "public/project-assets/edu-analysis/intelliclass-cover.png",
+        "public/project-assets/edu-analysis/intelliclass-hero.png",
+        "public/project-assets/edu-analysis/intelliclass-system-map.png",
+        "public/project-assets/edu-analysis/intelliclass-value-added.png",
+        "public/project-assets/edu-analysis/public-landing.jpg",
+        "public/project-assets/edu-clawbook/agent-page.png",
+        "public/project-assets/edu-clawbook/current-chat-ui.png"
+      ]
+    },
+    {
+      "name": "docs",
+      "kind": "Documentation",
+      "evidence": [
+        "1 file(s) under docs/"
+      ],
+      "files": [
+        "docs/deployment.md"
       ]
     }
   ],
@@ -193,8 +275,16 @@
       "reason": "App Router home page"
     },
     {
+      "path": "app/api/analytics/track/route.ts",
+      "reason": "Server API route"
+    },
+    {
       "path": "README.md",
       "reason": "Human project explanation"
+    },
+    {
+      "path": "docker-compose.yml",
+      "reason": "Local infrastructure"
     }
   ],
   "graph": [
@@ -234,6 +324,11 @@
       "label": "contains"
     },
     {
+      "from": "scripts",
+      "to": "Pigou OS",
+      "label": "contains"
+    },
+    {
       "from": "content",
       "to": "Pigou OS",
       "label": "contains"
@@ -244,5 +339,7 @@
       "label": "drives"
     }
   ],
-  "gaps": []
+  "gaps": [
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+  ]
 }

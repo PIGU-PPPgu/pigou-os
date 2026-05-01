@@ -9,7 +9,7 @@
     "pushedAt": "2026-04-09T03:54:28Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-04-27T15:21:07.694Z",
+  "generatedAt": "2026-05-01T21:08:42.392Z",
   "readme": {
     "title": "课题 AI — 教师课题申报书智能生成系统",
     "summary": [
@@ -195,5 +195,7 @@
       "label": "drives"
     }
   ],
-  "gaps": []
+  "gaps": [
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+  ]
 }

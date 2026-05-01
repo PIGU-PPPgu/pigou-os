@@ -9,7 +9,7 @@
     "pushedAt": "2026-04-24T03:42:23Z",
     "language": "Python"
   },
-  "generatedAt": "2026-04-27T15:21:35.103Z",
+  "generatedAt": "2026-05-01T21:08:52.545Z",
   "readme": {
     "title": "teacher-research",
     "summary": [
@@ -99,6 +99,7 @@
     }
   ],
   "gaps": [
-    "package.json could not be found or parsed."
+    "package.json could not be found or parsed.",
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
   ]
 }

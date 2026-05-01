@@ -7,17 +7,17 @@
   "explanation": "它代表 Pigou OS 的硬件入口方向：让 AI 协作不只停留在网页和命令行，而能通过实体设备、声音提醒和状态显示进入日常环境。",
   "domain": "hardware-agent",
   "source": "github:PIGU-PPPgu/open-buddy",
-  "progress": 67,
+  "progress": 80,
   "goals": [
     "稳定唤醒 OpenClaw",
     "完善语音交互体验",
     "接入更多生活场景"
   ],
   "nextActions": [
-    "补一份最小设备验收记录：刷机步骤、启动 bridge、连接设备、触发 Claude/Codex/OpenClaw/Hermes 状态变化、声音提醒是否成功。",
-    "复测唤醒词并记录：成功率、误唤醒、平均延迟、失败场景、测试环境，判断是否可日用。",
-    "补充 1-2 个公开可展示素材：设备界面、agent 标签、提醒状态、语音触发过程的图片或短视频。",
-    "生成代码洞察，优先覆盖 firmware 主循环、BLE 协议、Python bridge、voice-helper、hook installer。"
+    "Generate LLM code insights for the most important source files.",
+    "Clarify runtime stack and entrypoint because package metadata is missing.",
+    "Add one approved public screenshot or product surface image.",
+    "补一份最小设备验收记录：刷机步骤、启动 bridge、连接设备、触发 Claude/Codex/OpenClaw/Hermes 状态变化、声音提醒是否成功。"
   ],
   "links": [
     {
@@ -29,64 +29,62 @@
       "url": "https://github.com/PIGU-PPPgu/xiaozhi-esp32"
     }
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 67,
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 80,
     "status": "building",
     "confidence": "medium",
-    "summary": "小智设备 / open-buddy 已有较完整的硬件固件、Python bridge、安装说明和多 agent 状态提醒设计，处于可构建、可能可运行的工程阶段；但缺少真实设备验收记录、运行日志、唤醒成功率、截图/视频和代码洞察，尚不能判断为稳定日用或 shipped。",
-    "rationale": "仓库信号较强：公开 repo，91 个文件，包含 firmware、bridge、docs、tests，主语言 C++，入口为 firmware/platformio.ini，说明已有嵌入式工程结构。,README 描述清晰：支持 M5Stack StickS3，多 agent 监控 Claude Code / Codex / OpenClaw / Hermes，包含 BLE、声音提醒、静音模式、launchd 自启动、hook installer 等产品能力。,近期仍有提交：pushedAt 为 2026-04-25，说明项目不是长期停滞。,但真实使用证据不足：没有图片、视频、运行日志、验收记录、唤醒率、设备连接记录或用户反馈。,代码理解不足：尚未生成 LLM code insight，无法确认 firmware 主循环、BLE 协议、bridge、voice-helper、hook installer 的实现质量和边界。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
-        "score": 10,
+        "score": 16,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 16,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 6,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 8,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
       "repo files: 91",
-      "last push: 2026-04-25"
+      "last push: 2026-04-25",
+      "frameworks: Python, Embedded / PlatformIO"
     ],
     "risks": [
-      "缺少最小设备验收记录，无法确认刷机、bridge、BLE 连接、agent 状态变化和声音提醒是否闭环成功。",
-      "缺少唤醒词测试数据，无法判断是否达到日用稳定性。",
-      "没有公开截图或短视频，产品可展示性不足。",
-      "没有运行日志和失败案例，难以评估硬件、BLE、语音权限、launchd 自启动的稳定性。",
-      "缺少代码洞察，无法快速定位关键模块成熟度。"
+      "package.json could not be found or parsed.",
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
-      "补一份最小设备验收记录：刷机步骤、启动 bridge、连接设备、触发 Claude/Codex/OpenClaw/Hermes 状态变化、声音提醒是否成功。",
-      "复测唤醒词并记录：成功率、误唤醒、平均延迟、失败场景、测试环境，判断是否可日用。",
-      "补充 1-2 个公开可展示素材：设备界面、agent 标签、提醒状态、语音触发过程的图片或短视频。",
-      "生成代码洞察，优先覆盖 firmware 主循环、BLE 协议、Python bridge、voice-helper、hook installer。"
+      "Generate LLM code insights for the most important source files.",
+      "Clarify runtime stack and entrypoint because package metadata is missing.",
+      "Add one approved public screenshot or product surface image.",
+      "补一份最小设备验收记录：刷机步骤、启动 bridge、连接设备、触发 Claude/Codex/OpenClaw/Hermes 状态变化、声音提醒是否成功。"
     ]
   }
 }

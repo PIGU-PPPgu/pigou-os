@@ -11,81 +11,73 @@
   "readme": [
     "项目示例学习，制作学生信息数据小程序，增值评价模型研究。"
   ],
-  "progress": 24,
+  "progress": 39,
   "goals": [
     "保留早期学习轨迹",
     "记录增值评价模型萌芽",
     "作为历史参考归档"
   ],
   "nextActions": [
-    "补充归档 README：说明项目背景、当时目标、文件说明、运行方式、学习结论。",
-    "检查 app.py 和 temp.py：分别标注“可运行代码 / 可复用片段 / 实验草稿 / 废弃代码”。",
-    "如果仍能运行，记录最小运行步骤；如果不能运行，明确写出不可运行原因。",
-    "补一页增值评价模型笔记：输入数据、核心评价逻辑、可能指标、局限性和后续延展方向。"
+    "Generate LLM code insights for the most important source files.",
+    "Clarify runtime stack and entrypoint because package metadata is missing.",
+    "Add one approved public screenshot or product surface image.",
+    "补充归档 README：说明项目背景、当时目标、文件说明、运行方式、学习结论。"
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 24,
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 39,
     "status": "archived",
     "confidence": "medium",
-    "summary": "这是一个早期教育数据学习型项目，主要价值在于保留学生信息管理小程序与增值评价模型的探索痕迹。目前仓库规模很小，缺少运行说明、截图、任务记录和代码洞察，适合作为历史参考归档，而不是继续按产品化项目推进。",
-    "rationale": "仓库仅有 3 个文件：README.md、app.py、temp.py，结构非常轻量。,README 只说明“学生信息数据小程序、增值评价模型研究”，缺少功能说明、运行方式、技术栈细节和结果展示。,没有发现明确入口、依赖文件、测试、部署、截图或真实使用信号。,最后推送时间为 2024-07-29，当前没有任务和日志，项目动量较低。,项目当前目标本身偏归档和历史参考，因此 archived 状态合理。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
         "score": 5,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 10,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 11,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 2,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
-      "GitHub 私有仓库：Python 项目",
-      "文件数：3",
-      "源码文件：app.py、temp.py",
-      "文档文件：README.md",
-      "README 摘要：项目示例学习，制作学生信息数据小程序，增值评价模型研究",
-      "无截图、无公开图片、无任务、无日志",
-      "最后提交/推送：2024-07-29"
+      "repo files: 3",
+      "last push: 2024-07-29",
+      "frameworks: Python"
     ],
     "risks": [
-      "无法判断 app.py 是否可运行，缺少入口和依赖说明。",
-      "temp.py 可能是实验草稿，当前未标注可复用价值。",
-      "增值评价模型只有方向描述，没有输入数据、评价逻辑、公式或实验结果。",
-      "缺少截图或运行记录，项目形态难以复原。",
-      "私有项目没有代码洞察快照，技术完成度只能低置信评估。"
+      "package.json could not be found or parsed."
     ],
     "nextActions": [
-      "补充归档 README：说明项目背景、当时目标、文件说明、运行方式、学习结论。",
-      "检查 app.py 和 temp.py：分别标注“可运行代码 / 可复用片段 / 实验草稿 / 废弃代码”。",
-      "如果仍能运行，记录最小运行步骤；如果不能运行，明确写出不可运行原因。",
-      "补一页增值评价模型笔记：输入数据、核心评价逻辑、可能指标、局限性和后续延展方向。"
+      "Generate LLM code insights for the most important source files.",
+      "Clarify runtime stack and entrypoint because package metadata is missing.",
+      "Add one approved public screenshot or product surface image.",
+      "补充归档 README：说明项目背景、当时目标、文件说明、运行方式、学习结论。"
     ]
   }
 }

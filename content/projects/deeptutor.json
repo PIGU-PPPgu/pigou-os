@@ -13,17 +13,17 @@
     "<a href=\"https://trendshift.io/repositories/17099\" target=\"blank\"<img src=\"https://trendshift.io/api/badge/repositories/17099\" alt=\"HKUDS%2FDeepTutor  Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/</a",
     "[](https://www.python.org/downloads/)\n[](https://nextjs.org/)\n[](LICENSE)\n[](https://github.com/HKUDS/DeepTutor/releases)\n[]()"
   ],
-  "progress": 58,
+  "progress": 76,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
     "确认展示边界"
   ],
   "nextActions": [
+    "Generate LLM code insights for the most important source files.",
+    "Add one approved public screenshot or product surface image.",
     "在 README 顶部补一段项目专属说明：这是 DeepTutor fork 还是二次产品；AI Reading Companion 增强了哪些能力；当前哪些功能可运行、哪些仍在开发。",
-    "补充最小可运行路径：Web 启动命令、后端/CLI 启动命令、示例输入、预期输出、依赖环境。",
-    "生成代码洞察，优先覆盖 deeptutor 核心模块、web/app、deeptutor_cli、API routes，标注哪些是原项目能力、哪些是本项目新增。",
-    "添加 1-3 张可公开截图：主页、阅读伴侣交互页、学习反馈/知识图谱等。"
+    "补充最小可运行路径：Web 启动命令、后端/CLI 启动命令、示例输入、预期输出、依赖环境。"
   ],
   "links": [
     {
@@ -31,64 +31,61 @@
       "url": "https://github.com/PIGU-PPPgu/DeepTutor"
     }
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 58,
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 76,
     "status": "building",
     "confidence": "medium",
-    "summary": "项目已有较完整的 DeepTutor 代码底座，包含 Python 后端/核心模块、Next.js Web、CLI、测试与脚本，工程结构较成熟；但当前证据更像是 fork 后的二次开发阶段，AI Reading Companion 的专属改动、可运行路径、演示边界和真实使用信号还不清晰，因此不宜按完整产品高估。",
-    "rationale": "仓库规模较大：944 个文件，包含 deeptutor、web、tests、deeptutor_cli、scripts 等目录，说明具备可继续开发的工程基础。,技术栈明确：Python + Next.js + React + Tailwind CSS，web/package.json 中有 dev/build/start/lint 等脚本，具备前端运行入口。,存在 API 路由、docker-compose、CLI 和测试目录，说明不是纯概念项目。,README 仍主要呈现原 DeepTutor 信息，未明确说明该 fork 与原项目的关系、AI Reading Companion 的新增能力和当前可运行范围。,没有公开截图、使用日志、上线地址、用户反馈或本地跑通记录，产品可验证性较弱。,尚未生成 LLM code insight，无法确认核心模块和新增功能的实际完成度。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
         "score": 16,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 20,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 11,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 8,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
       "repo files: 944",
-      "last push: 2026-04-27"
+      "last push: 2026-04-27",
+      "frameworks: Next.js, React, Tailwind CSS, Python"
     ],
     "risks": [
-      "项目定位不清：目前看不出是单纯 fork、实验分支，还是要形成独立 AI Reading Companion 产品。",
-      "README 缺少项目专属说明，外部访问者难以判断新增价值和可运行边界。",
-      "缺少截图或 demo，无法证明 Web 端和阅读伴侣交互已经可展示。",
-      "缺少运行记录：后端、CLI、Web 是否能在本地稳定跑通尚无证据。",
-      "没有代码洞察，无法区分继承代码与实际新增/改造模块。"
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
+      "Generate LLM code insights for the most important source files.",
+      "Add one approved public screenshot or product surface image.",
       "在 README 顶部补一段项目专属说明：这是 DeepTutor fork 还是二次产品；AI Reading Companion 增强了哪些能力；当前哪些功能可运行、哪些仍在开发。",
-      "补充最小可运行路径：Web 启动命令、后端/CLI 启动命令、示例输入、预期输出、依赖环境。",
-      "生成代码洞察，优先覆盖 deeptutor 核心模块、web/app、deeptutor_cli、API routes，标注哪些是原项目能力、哪些是本项目新增。",
-      "添加 1-3 张可公开截图：主页、阅读伴侣交互页、学习反馈/知识图谱等。"
+      "补充最小可运行路径：Web 启动命令、后端/CLI 启动命令、示例输入、预期输出、依赖环境。"
     ]
   }
 }

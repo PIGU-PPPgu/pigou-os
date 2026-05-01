@@ -1,0 +1,113 @@
+{
+  "slug": "agent-swarm-dev",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "agent-swarm-dev",
+    "url": "https://github.com/PIGU-PPPgu/agent-swarm-dev",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-03-31T09:17:49Z",
+    "language": "JavaScript"
+  },
+  "generatedAt": "2026-05-01T21:08:29.155Z",
+  "readme": {
+    "title": "Agent Swarm Development",
+    "summary": [
+      "Multi-agent collaborative software development framework inspired by OpenAI's Harness Engineering.",
+      "A practical framework for coordinating multiple AI agents (Claude, Codex, Cursor, etc.) to build software collaboratively with minimal human intervention.",
+      "Based on OpenAI's experience: 3 engineers + AI agents → 1M+ lines of code in 5 months.",
+      "- 4 Agent Roles: Builder, Reviewer, Doc Gardener, Cleanup - Agent-to-Agent Communication: Via PRs and shared repository state - Strict Architecture Constraints: Enforced by linters and CI - Knowledge in Repository: Everything agents need is version-controlled - Platform Agnostic: Works with any AI coding assistant",
+      "2. Create AGENTS.md (100-line map, not encyclopedia)",
+      "3. Define architecture in docs/architecture.md"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 9,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "[root]",
+        "count": 4
+      },
+      {
+        "name": "templates",
+        "count": 4
+      },
+      {
+        "name": "scripts",
+        "count": 1
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".md",
+        "count": 6
+      },
+      {
+        "ext": ".js",
+        "count": 1
+      },
+      {
+        "ext": ".json",
+        "count": 1
+      },
+      {
+        "ext": "[none]",
+        "count": 1
+      }
+    ]
+  },
+  "package": {
+    "scripts": [
+      "init"
+    ],
+    "dependencies": [],
+    "devDependencies": []
+  },
+  "frameworks": [],
+  "modules": [
+    {
+      "name": "scripts",
+      "kind": "Automation scripts",
+      "evidence": [
+        "1 file(s) under scripts/"
+      ],
+      "files": [
+        "scripts/init.js"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "package.json"
+  ],
+  "importantFiles": [
+    {
+      "path": "package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "agent-swarm-dev",
+      "label": "indexes"
+    },
+    {
+      "from": "scripts",
+      "to": "agent-swarm-dev",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": [
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+  ]
+}

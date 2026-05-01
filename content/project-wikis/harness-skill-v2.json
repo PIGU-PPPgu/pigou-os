@@ -9,7 +9,7 @@
     "pushedAt": "2026-04-02T17:02:18Z",
     "language": "Python"
   },
-  "generatedAt": "2026-04-27T15:20:56.844Z",
+  "generatedAt": "2026-05-01T21:08:38.086Z",
   "readme": {
     "title": "Harness Engineering",
     "summary": [
@@ -127,6 +127,7 @@
     }
   ],
   "gaps": [
-    "package.json could not be found or parsed."
+    "package.json could not be found or parsed.",
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
   ]
 }

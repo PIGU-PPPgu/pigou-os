@@ -1,0 +1,288 @@
+{
+  "slug": "eduana",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "eduana",
+    "url": "https://github.com/PIGU-PPPgu/eduana",
+    "defaultBranch": "newversion",
+    "private": false,
+    "pushedAt": "2025-05-13T13:09:17Z",
+    "language": "TypeScript"
+  },
+  "generatedAt": "2026-05-01T21:08:33.920Z",
+  "readme": {
+    "title": "智能教育数据分析平台",
+    "summary": [
+      "本系统是一个全面的智能教育数据分析平台，专为教师设计，集成了成绩分析和知识点评估双重功能。平台通过数据可视化和AI技术，帮助教师深入理解学生表现，发现教学盲点，并优化教学策略。",
+      "数据看板 - 成绩总览：平均分、最高分、最低分等基本统计 - 分数分布：各分数段学生分布情况 - 箱线图分析：直观展示成绩分布和离群值",
+      "班级分析 - 班级成绩概览：班级整体表现统计 - 分数段分布：优秀、良好、中等、及格、不及格比例 - 学生排名：班级内学生成绩排名",
+      "高级分析 - 多维交叉分析：任意维度（班级、科目、考试时间等）交叉分析 - 成绩异常检测：智能识别学生成绩异常（成绩骤降、异常高分等） - 科目相关性分析：分析不同科目成绩之间的关联程度 - 班级学科箱线图：各个班级不同学科的分数分布，帮助发现极端值 - 学生贡献度分析：分析并展示学生在各科目的优势和劣势",
+      "AI密钥管理 - 支持多种AI提供商和模型选择（OpenAI、Anthropic等） - 用户可上传自己的API密钥 - 密钥安全加密存储",
+      "知识点提取与评估 - 从作业内容中自动识别相关知识点 - 评估学生对各知识点的掌握程度 - 生成掌握程度可视化报告 - 为教师提供针对性教学建议"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 371,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "src",
+        "count": 330
+      },
+      {
+        "name": "[root]",
+        "count": 21
+      },
+      {
+        "name": "supabase",
+        "count": 13
+      },
+      {
+        "name": "public",
+        "count": 3
+      },
+      {
+        "name": "server",
+        "count": 3
+      },
+      {
+        "name": "services",
+        "count": 1
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".tsx",
+        "count": 252
+      },
+      {
+        "ext": ".ts",
+        "count": 68
+      },
+      {
+        "ext": ".sql",
+        "count": 21
+      },
+      {
+        "ext": ".json",
+        "count": 8
+      },
+      {
+        "ext": ".js",
+        "count": 6
+      },
+      {
+        "ext": ".bak",
+        "count": 2
+      },
+      {
+        "ext": ".css",
+        "count": 2
+      },
+      {
+        "ext": ".html",
+        "count": 2
+      },
+      {
+        "ext": ".md",
+        "count": 2
+      },
+      {
+        "ext": ".env",
+        "count": 1
+      }
+    ]
+  },
+  "package": {
+    "manager": "npm",
+    "scripts": [
+      "dev",
+      "build",
+      "build:dev",
+      "lint",
+      "preview",
+      "dev:no-hmr"
+    ],
+    "dependencies": [
+      "@ant-design/icons",
+      "@emotion/react",
+      "@emotion/styled",
+      "@hookform/resolvers",
+      "@mui/icons-material",
+      "@mui/material",
+      "@nivo/bar",
+      "@nivo/core",
+      "@nivo/heatmap",
+      "@nivo/line",
+      "@nivo/scatterplot",
+      "@radix-ui/react-accordion",
+      "@radix-ui/react-alert-dialog",
+      "@radix-ui/react-aspect-ratio",
+      "@radix-ui/react-avatar",
+      "@radix-ui/react-checkbox",
+      "@radix-ui/react-collapsible",
+      "@radix-ui/react-context-menu",
+      "@radix-ui/react-dialog",
+      "@radix-ui/react-dropdown-menu",
+      "@radix-ui/react-hover-card",
+      "@radix-ui/react-label",
+      "@radix-ui/react-menubar",
+      "@radix-ui/react-navigation-menu"
+    ],
+    "devDependencies": [
+      "@eslint/js",
+      "@supabase/supabase-js",
+      "@tailwindcss/typography",
+      "@types/node",
+      "@types/react",
+      "@types/react-dom",
+      "@vitejs/plugin-react-swc",
+      "autoprefixer",
+      "eslint",
+      "eslint-plugin-react-hooks",
+      "eslint-plugin-react-refresh",
+      "globals",
+      "postcss",
+      "tailwindcss",
+      "typescript",
+      "typescript-eslint",
+      "vite"
+    ]
+  },
+  "frameworks": [
+    "Tailwind CSS"
+  ],
+  "modules": [
+    {
+      "name": "services",
+      "kind": "Service workspace",
+      "evidence": [
+        "1 file(s) under services/"
+      ],
+      "files": [
+        "services/homeworkService.ts"
+      ]
+    },
+    {
+      "name": "src/pages",
+      "kind": "Mini program pages",
+      "evidence": [
+        "25 file(s) under src/pages/"
+      ],
+      "files": [
+        "src/pages/AISettings.tsx",
+        "src/pages/ClassManagement.tsx",
+        "src/pages/ClassProfile.tsx",
+        "src/pages/GradeAnalysis.tsx",
+        "src/pages/GradeAnalysisLayout.tsx",
+        "src/pages/HomeworkDetail.tsx",
+        "src/pages/HomeworkManagement.tsx",
+        "src/pages/Index.tsx"
+      ]
+    },
+    {
+      "name": "src/components",
+      "kind": "Mini program components",
+      "evidence": [
+        "227 file(s) under src/components/"
+      ],
+      "files": [
+        "src/components/Loading.tsx",
+        "src/components/analysis/AIAnalysis.tsx",
+        "src/components/analysis/AIAnalysisAssistant.tsx",
+        "src/components/analysis/AIAnalysisController.tsx",
+        "src/components/analysis/AIAnalysisInsightsPanel.tsx",
+        "src/components/analysis/AIAnalysisIntro.tsx",
+        "src/components/analysis/AIAnalysisOptions.tsx",
+        "src/components/analysis/AIAnalysisOverviewPanel.tsx"
+      ]
+    },
+    {
+      "name": "src",
+      "kind": "Source root",
+      "evidence": [
+        "330 file(s) under src/"
+      ],
+      "files": [
+        "src/App.css",
+        "src/App.tsx",
+        "src/app/db/migrations/page.tsx",
+        "src/app/db/page.tsx",
+        "src/app/manage-migrations.tsx",
+        "src/app/teacher/homework/ImportReviewDialog.tsx",
+        "src/app/teacher/homework/page.tsx",
+        "src/clear-auth.js"
+      ]
+    },
+    {
+      "name": "public",
+      "kind": "Static assets",
+      "evidence": [
+        "3 file(s) under public/"
+      ],
+      "files": [
+        "public/favicon.ico",
+        "public/placeholder.svg",
+        "public/robots.txt"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "package.json"
+  ],
+  "importantFiles": [
+    {
+      "path": "package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "eduana",
+      "label": "indexes"
+    },
+    {
+      "from": "Tailwind CSS",
+      "to": "eduana",
+      "label": "powers"
+    },
+    {
+      "from": "services",
+      "to": "eduana",
+      "label": "contains"
+    },
+    {
+      "from": "src/pages",
+      "to": "eduana",
+      "label": "contains"
+    },
+    {
+      "from": "src/components",
+      "to": "eduana",
+      "label": "contains"
+    },
+    {
+      "from": "src",
+      "to": "eduana",
+      "label": "contains"
+    },
+    {
+      "from": "public",
+      "to": "eduana",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": [
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+  ]
+}

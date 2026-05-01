@@ -1,23 +1,23 @@
 {
   "slug": "harness-skill-v2",
   "title": "Harness Skill v2",
-  "status": "paused",
+  "status": "building",
   "priority": "medium",
   "summary": "智能体团队系统，实现从 PRD 到部署的全流程自动化。",
   "explanation": "这是 Pigou 在 agentic engineering 方向的工程方法实验，试图把需求、实现、测试、部署串成可复用的智能体协作流程。",
   "domain": "agentic-engineering",
   "source": "github:PIGU-PPPgu/harness-skill-v2",
-  "progress": 52,
+  "progress": 55,
   "goals": [
     "建立 PRD 到部署的流水线",
     "集成质量检查工具",
     "沉淀多智能体工程协作规范"
   ],
   "nextActions": [
-    "补 README 的最小可运行路径：install、run、check 三组命令，并明确入口是 CLI、bin 脚本还是 Python 库。",
-    "给 examples 增加一个端到端样例：输入小 PRD → 生成计划 → 执行检查 → 输出验收结果。",
-    "为 src/agent_loop.py、src/harness_runtime.py、src/harness_check.py、src/checks/*.py 生成代码洞察，确认哪些是已实现能力、哪些是占位。",
-    "整理 v2 设计说明：相对旧版保留什么、废弃什么、核心抽象是什么。"
+    "Generate LLM code insights for the most important source files.",
+    "Clarify runtime stack and entrypoint because package metadata is missing.",
+    "Add one approved public screenshot or product surface image.",
+    "补 README 的最小可运行路径：install、run、check 三组命令，并明确入口是 CLI、bin 脚本还是 Python 库。"
   ],
   "links": [
     {
@@ -25,64 +25,62 @@
       "url": "https://github.com/PIGU-PPPgu/harness-skill-v2"
     }
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 52,
-    "status": "paused",
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 55,
+    "status": "building",
     "confidence": "medium",
-    "summary": "Harness Skill v2 已有公开 Python 仓库、README 方法论说明、src 模块和模板目录，说明不是纯想法；但当前缺少明确入口、安装/运行/检查命令、端到端示例和代码洞察，真实可运行能力尚未被验证。结合项目当前标记为 paused、近期无任务/日志推进，判断为暂停中的早期工程原型。",
-    "rationale": "仓库已有 26 个文件，包含 src/agent_loop.py、harness_runtime.py、harness_check.py、checks/*，说明已进入实现阶段。,README 对 Harness Engineering 的定位和方法论解释较清楚，但更偏理念与使用方式描述，缺少最小可运行路径。,githubWiki 未识别到 entrypoints，且没有 package/安装元数据，暂无法确认 CLI、脚本还是库。,没有 LLM code insight，无法判断核心模块是否真正完成 agent loop、runtime、check 编排。,没有 examples 的具体洞察、截图、上线或真实使用信号，产品验证较弱。,项目当前状态为 paused，且 tasks/logs 为空，最近 push 距生成时间约 4 周，动能不足。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
-        "score": 10,
+        "score": 16,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 10,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 6,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 8,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
       "repo files: 26",
-      "last push: 2026-04-02"
+      "last push: 2026-04-02",
+      "frameworks: Python"
     ],
     "risks": [
-      "概念和文档信号强于可运行信号，可能仍停留在工程骨架/方法实验阶段。",
-      "缺少 install / run / check 命令，外部用户难以复现价值。",
-      "v2 与旧版关系不清，容易造成抽象目标和实现范围漂移。",
-      "未验证 harness_check 是否是真实质量检查编排，而非模板或占位。",
-      "没有端到端 demo，无法证明 PRD 到部署流水线闭环。"
+      "package.json could not be found or parsed.",
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
-      "补 README 的最小可运行路径：install、run、check 三组命令，并明确入口是 CLI、bin 脚本还是 Python 库。",
-      "给 examples 增加一个端到端样例：输入小 PRD → 生成计划 → 执行检查 → 输出验收结果。",
-      "为 src/agent_loop.py、src/harness_runtime.py、src/harness_check.py、src/checks/*.py 生成代码洞察，确认哪些是已实现能力、哪些是占位。",
-      "整理 v2 设计说明：相对旧版保留什么、废弃什么、核心抽象是什么。"
+      "Generate LLM code insights for the most important source files.",
+      "Clarify runtime stack and entrypoint because package metadata is missing.",
+      "Add one approved public screenshot or product surface image.",
+      "补 README 的最小可运行路径：install、run、check 三组命令，并明确入口是 CLI、bin 脚本还是 Python 库。"
     ]
   }
 }

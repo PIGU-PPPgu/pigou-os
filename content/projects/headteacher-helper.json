@@ -36,10 +36,10 @@
     "和 AI skill 工作流逐步打通"
   ],
   "nextActions": [
+    "补齐 Headteacher Helper 的真实场景说明",
+    "Generate LLM code insights for the most important source files.",
     "优先完成 P0 任务：补齐 Headteacher Helper 的真实场景说明，突出真实班主任流程，而不是只讲技术栈。",
-    "补齐 3-5 张可公开截图：工作台、任务明细、风险留痕、考勤异常、AI 助教各 1 张。",
-    "整理一版公开功能边界：哪些能力已上线、哪些是校内/私有使用、哪些是规划中的 AI 增强。",
-    "生成 LLM code insight：对 app.config、核心页面、cloud/aiProxy、数据流和部署脚本做一次代码洞察快照。"
+    "补齐 3-5 张可公开截图：工作台、任务明细、风险留痕、考勤异常、AI 助教各 1 张。"
   ],
   "links": [
     {
@@ -47,65 +47,63 @@
       "url": "https://github.com/PIGU-PPPgu/Headteacher-helper"
     }
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
     "progress": 92,
     "status": "shipped",
     "confidence": "medium",
-    "summary": "项目已达到可用并投入真实班主任日常工作的状态，具备完整小程序产品形态、前后端/云函数结构、核心业务页面与 AI 助教入口。当前主要不是从 0 到 1 开发，而是补齐可展示材料、真实使用证据和下一轮 AI 工作流接入。",
-    "rationale": "项目当前状态标记为 shipped，README 与项目摘要均明确说明已投入正常使用。,仓库结构完整：156 个文件，包含 src、cloud、scripts、config、docs 等目录，具备小程序前端、云函数、自动化脚本和部署/检查脚本。,技术栈明确：TypeScript + React + Taro / WeChat Mini Program，包含微信小程序配置入口、构建脚本、云函数部署脚本、冒烟测试脚本。,功能覆盖较完整：通知确认、材料收集、考勤异常、风险留痕、班级中心、AI 对话、扫描辅助、看板等页面和流程均有代码模块信号。,近期仍有维护信号：仓库 pushedAt 为 2026-04-26，项目 updated 为 2026-04-28，并有 P0 任务继续完善项目说明。,不足在于公开展示和验证材料仍偏少：公开图片仅 1 张，缺少 LLM code insight，日志为空，真实用户反馈和使用数据尚未沉淀。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
         "score": 25,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 16,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 25,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 11,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 8,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
       "repo files: 156",
       "last push: 2026-04-26",
+      "frameworks: React, Taro / WeChat Mini Program",
       "images: 3",
       "linked tasks: 1"
     ],
     "risks": [
-      "公开可理解材料不足：真实使用截图、核心页面说明、小程序码/入口说明仍需补齐。",
-      "缺少 LLM code insight 快照，外部评估时对代码质量和架构理解证据不足。",
-      "日志为空，暂时看不到真实迭代记录、用户反馈或故障处理记录。",
-      "AI 能力与 class-teacher-skills 的打通仍像下一阶段工作，尚未看到完整闭环证据。"
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
+      "补齐 Headteacher Helper 的真实场景说明",
+      "Generate LLM code insights for the most important source files.",
       "优先完成 P0 任务：补齐 Headteacher Helper 的真实场景说明，突出真实班主任流程，而不是只讲技术栈。",
-      "补齐 3-5 张可公开截图：工作台、任务明细、风险留痕、考勤异常、AI 助教各 1 张。",
-      "整理一版公开功能边界：哪些能力已上线、哪些是校内/私有使用、哪些是规划中的 AI 增强。",
-      "生成 LLM code insight：对 app.config、核心页面、cloud/aiProxy、数据流和部署脚本做一次代码洞察快照。"
+      "补齐 3-5 张可公开截图：工作台、任务明细、风险留痕、考勤异常、AI 助教各 1 张。"
     ]
   }
 }

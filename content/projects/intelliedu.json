@@ -14,75 +14,71 @@
     "AI 知识点分析支持多种 AI 提供商，从作业内容中自动识别知识点，评估掌握程度并生成教学建议。",
     "技术栈包括 React、TypeScript、Tailwind CSS、shadcn-ui、Supabase、OpenAI API 和 Anthropic API。"
   ],
-  "progress": 62,
+  "progress": 80,
   "goals": [
     "保留教育数据产品经验",
     "沉淀知识点分析链路",
     "为 edu-analysis 提供历史参考"
   ],
   "nextActions": [
+    "Generate LLM code insights for the most important source files.",
+    "Add one approved public screenshot or product surface image.",
     "生成关键源码的 LLM code insights，优先覆盖 AI 分析、成绩分析、Supabase 数据模型、作业/知识点链路。",
-    "补充 1 张已脱敏、可公开的产品截图或界面图，用于证明产品表面形态。",
-    "整理 IntelliEdu 与 edu-analysis 的功能差异表，标记：已迁移、可复用、废弃、待重构。",
-    "提取可复用分析模块，尤其是成绩分布、异常检测、知识点识别、教学建议生成链路。"
+    "补充 1 张已脱敏、可公开的产品截图或界面图，用于证明产品表面形态。"
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 62,
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 80,
     "status": "archived",
     "confidence": "medium",
-    "summary": "IntelliEdu 是一个已形成较完整代码体量和产品设想的智能教育数据分析平台，但当前更像历史项目/前身项目，缺少近期维护、真实使用、上线或截图信号，因此应维持 archived。",
-    "rationale": "仓库规模较大：371 个文件，src 下 330 个文件，包含 25 个页面、227 个组件、Supabase SQL、服务文件等，说明不是概念阶段。,README 对产品功能描述较完整，覆盖成绩分析、班级分析、高级分析、AI 密钥管理、知识点提取与评估等核心链路。,技术栈明确：React、TypeScript、Tailwind、Supabase、OpenAI/Anthropic API，具备真实工程实现基础。,但缺少产品验证信号：没有公开截图、没有上线地址、没有真实使用记录、没有任务或日志推进。,最后推送为 2025-05-13，当前项目标记为 archived，且说明中定位为 edu-analysis 的前身或姊妹项目，当前主要价值是经验沉淀和模块复用。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
         "score": 5,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 20,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 11,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 2,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
       "repo files: 371",
-      "last push: 2025-05-13"
+      "last push: 2025-05-13",
+      "frameworks: Tailwind CSS"
     ],
-    "risks": [
-      "未生成 LLM code insights，无法确认关键模块质量、可复用边界和实现完整度。",
-      "没有产品截图或界面证据，外部难以判断真实可用程度。",
-      "作为历史项目，如果不整理功能差异，后续对 edu-analysis 的参考价值会下降。",
-      "私有仓库信号足以判断工程体量，但不足以验证真实使用和产品成熟度。"
-    ],
+    "risks": [],
     "nextActions": [
+      "Generate LLM code insights for the most important source files.",
+      "Add one approved public screenshot or product surface image.",
       "生成关键源码的 LLM code insights，优先覆盖 AI 分析、成绩分析、Supabase 数据模型、作业/知识点链路。",
-      "补充 1 张已脱敏、可公开的产品截图或界面图，用于证明产品表面形态。",
-      "整理 IntelliEdu 与 edu-analysis 的功能差异表，标记：已迁移、可复用、废弃、待重构。",
-      "提取可复用分析模块，尤其是成绩分布、异常检测、知识点识别、教学建议生成链路。"
+      "补充 1 张已脱敏、可公开的产品截图或界面图，用于证明产品表面形态。"
     ]
   }
 }

@@ -14,7 +14,7 @@
     "班主任负责学生德育量化记录、班级统计分析和学生管理；学生可以查看个人德育量化记录和个人报告。",
     "README 特别强调扣分是系统重点，所有分析以扣分为中心，界面修改需谨慎避免破坏现有功能。"
   ],
-  "progress": 38,
+  "progress": 37,
   "goals": [
     "管理德育量化记录",
     "支持多角色视角",
@@ -25,46 +25,46 @@
     "Clarify runtime stack and entrypoint because package metadata is missing.",
     "Add one approved public screenshot or product surface image."
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 38,
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 37,
     "status": "paused",
     "confidence": "medium",
-    "summary": "项目有较清晰的产品定位和角色/功能规划，但当前缺少可验证的代码结构、入口、运行方式、截图、任务推进和真实使用证据。更像是已完成需求与早期架构设计、可能有原型或部分实现，但工程成熟度无法确认，因此维持 paused，并下调进度到 38。",
-    "rationale": "未调用到 LLM 时，Pigou OS 使用本地信号引擎生成可解释的候选分数；有模型配置时会优先交给 AI 复核。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
         "score": 10,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 2,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 11,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 2,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
@@ -72,11 +72,8 @@
       "last push: 2026-02-06"
     ],
     "risks": [
-      "无法确认当前代码是否可运行、是否只是 README 规划。",
-      "缺少运行栈和入口信息，后续接手成本较高。",
-      "没有截图或演示，难以判断 UI/流程完整度。",
-      "本地存储方案可能只适合原型，若用于学校真实管理需补服务端、权限和数据备份。",
-      "README 提醒页面跳转路径需排查，说明现有功能可能存在可用性问题。"
+      "package.json could not be found or parsed.",
+      "Repository file tree could not be fetched."
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",

@@ -7,17 +7,17 @@
   "explanation": "这是 Pigou 的 AI 硬件接口实验：把多智能体协作状态、优先级、声音提醒和静音模式放进一个可触摸的实体设备。",
   "domain": "hardware-agent",
   "source": "github:PIGU-PPPgu/open-buddy",
-  "progress": 72,
+  "progress": 80,
   "goals": [
     "稳定 BLE bridge",
     "显示多智能体优先级状态",
     "把声音提醒和静音模式做成可靠交互"
   ],
   "nextActions": [
-    "补一条端到端验证记录：Mac bridge 启动 → agent hook 触发 → BLE 连接 → StickS3 显示 agent/priority/status → 声音提醒 → 设备端静音/恢复。",
-    "做 BLE 稳定性复测：至少记录连续运行时长、断连次数、自动重连成功率、失败场景、恢复策略。",
-    "补最小安装文档：固件刷写、Python bridge 安装、Swift voice-helper、macOS 权限、launchd 自启动、卸载方式。",
-    "整理状态协议文档：agent、state、priority、sound event、mute、error code、version compatibility。"
+    "Generate LLM code insights for the most important source files.",
+    "Clarify runtime stack and entrypoint because package metadata is missing.",
+    "Add one approved public screenshot or product surface image.",
+    "补一条端到端验证记录：Mac bridge 启动 → agent hook 触发 → BLE 连接 → StickS3 显示 agent/priority/status → 声音提醒 → 设备端静音/恢复。"
   ],
   "links": [
     {
@@ -25,64 +25,62 @@
       "url": "https://github.com/PIGU-PPPgu/open-buddy"
     }
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 72,
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 80,
     "status": "building",
     "confidence": "medium",
-    "summary": "Open Buddy 已有较完整的工程骨架：StickS3 固件、Python BLE bridge、launchd/权限相关配置、README 安装说明和多 agent/声音/静音设计都已经落到仓库中。但缺少端到端运行记录、BLE 稳定性数据、真实设备截图/视频和代码洞察，因此还不能判断为 shipped。",
-    "rationale": "工程完成度明显高于早期原型：固件、bridge、README、启动项和安装流程都已有实现痕迹；但产品成熟度被真实使用证据拖低。README 中提到 Releases / M5Burner / 一键安装等能力，说明接近可试用阶段，但当前信号包没有提供 release 记录、设备演示、用户使用、稳定性报告或完整验证日志，所以不应评为 shipped，也不宜给到 80+。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
         "score": 16,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 16,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 6,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 8,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
       "repo files: 91",
-      "last push: 2026-04-25"
+      "last push: 2026-04-25",
+      "frameworks: Python, Embedded / PlatformIO"
     ],
     "risks": [
-      "BLE 是核心链路，但目前没有断连、重连、运行时长和失败恢复证据。",
-      "硬件交互体验未被验证：声音提醒、静音菜单、优先级显示可能存在边界场景。",
-      "安装链路涉及 Python、Swift、macOS 权限、launchd、agent hooks，失败面较多，需要最小可复现文档。",
-      "状态协议未正式文档化，后续多 agent 扩展和兼容会变脆。",
-      "没有实机截图/视频，外部无法判断产品是否真的可用。"
+      "package.json could not be found or parsed.",
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
-      "补一条端到端验证记录：Mac bridge 启动 → agent hook 触发 → BLE 连接 → StickS3 显示 agent/priority/status → 声音提醒 → 设备端静音/恢复。",
-      "做 BLE 稳定性复测：至少记录连续运行时长、断连次数、自动重连成功率、失败场景、恢复策略。",
-      "补最小安装文档：固件刷写、Python bridge 安装、Swift voice-helper、macOS 权限、launchd 自启动、卸载方式。",
-      "整理状态协议文档：agent、state、priority、sound event、mute、error code、version compatibility。"
+      "Generate LLM code insights for the most important source files.",
+      "Clarify runtime stack and entrypoint because package metadata is missing.",
+      "Add one approved public screenshot or product surface image.",
+      "补一条端到端验证记录：Mac bridge 启动 → agent hook 触发 → BLE 连接 → StickS3 显示 agent/priority/status → 声音提醒 → 设备端静音/恢复。"
     ]
   }
 }

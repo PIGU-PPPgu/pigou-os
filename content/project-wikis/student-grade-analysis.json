@@ -9,7 +9,7 @@
     "pushedAt": "2025-02-06T12:49:41Z",
     "language": null
   },
-  "generatedAt": "2026-04-27T15:21:31.105Z",
+  "generatedAt": "2026-05-01T21:08:51.196Z",
   "readme": {
     "title": "student-grade-analysis",
     "summary": []
@@ -63,6 +63,7 @@
     }
   ],
   "gaps": [
-    "package.json could not be found or parsed."
+    "package.json could not be found or parsed.",
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
   ]
 }

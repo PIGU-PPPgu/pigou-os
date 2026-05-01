@@ -1,5 +1,5 @@
 {
-  "slug": "feixiang-assistant",
+  "slug": "feixiang-skill",
   "repo": {
     "owner": "PIGU-PPPgu",
     "name": "feixiang-skill",
@@ -9,7 +9,7 @@
     "pushedAt": "2026-04-05T17:16:28Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-05-01T21:08:35.537Z",
+  "generatedAt": "2026-05-01T21:08:36.900Z",
   "readme": {
     "title": "飞象星球 OpenClaw Skill",
     "summary": [
@@ -121,12 +121,12 @@
   "graph": [
     {
       "from": "GitHub repository",
-      "to": "飞象教学助手",
+      "to": "feixiang-skill",
       "label": "indexes"
     },
     {
       "from": "src",
-      "to": "飞象教学助手",
+      "to": "feixiang-skill",
       "label": "contains"
     },
     {

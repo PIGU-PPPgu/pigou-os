@@ -13,17 +13,17 @@
     "班级分析\n- 班级成绩概览：班级整体表现统计\n- 分数段分布：优秀、良好、中等、及格、不及格比例\n- 学生排名：班级内学生成绩排名",
     "高级分析\n- 多维交叉分析：任意维度（班级、科目、考试时间等）交叉分析\n- 成绩异常检测：智能识别学生成绩异常（成绩骤降、异常高分等）\n- 科目相关性分析：分析不同科目成绩之间的关联程度\n- 班级学科箱线图：各个班级不同学科的分数分布，帮助发现极端值\n- 学生贡献度分析：分析并展示学生在各科目的优势和劣势"
   ],
-  "progress": 58,
+  "progress": 74,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
     "确认展示边界"
   ],
   "nextActions": [
+    "Generate LLM code insights for the most important source files.",
+    "Add one approved public screenshot or product surface image.",
     "本地执行 npm install、npm run build、npm run dev，并记录结果；若失败，优先修复构建和启动问题。",
-    "补充 README：安装步骤、环境变量、Supabase 初始化、演示数据、演示账号、主要页面路径和限制说明。",
-    "添加 2-4 张公开截图：成绩看板、班级分析、AI 分析、作业/知识点评估流程。",
-    "生成代码洞察，重点检查 App 路由、认证流程、Supabase 数据访问、AI 分析流程、作业管理流程。"
+    "补充 README：安装步骤、环境变量、Supabase 初始化、演示数据、演示账号、主要页面路径和限制说明。"
   ],
   "links": [
     {
@@ -31,64 +31,61 @@
       "url": "https://github.com/PIGU-PPPgu/eduana"
     }
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 58,
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 74,
     "status": "paused",
     "confidence": "medium",
-    "summary": "eduana 已有较完整的 TypeScript/Vite 前端代码与 Supabase 相关结构，功能定位清晰，覆盖成绩分析、班级分析、AI 分析、作业/知识点评估等模块。但目前缺少可运行验证、部署/真实使用信号、公开截图和代码洞察，且仓库最后 push 距当前较久，因此判断为暂停中的中后期构建项目，而非已交付产品。",
-    "rationale": "仓库规模较大：371 个文件，src 下 330 个文件，包含 252 个 .tsx 与 68 个 .ts，说明已有大量实现。,存在明确页面与模块：GradeAnalysis、ClassManagement、HomeworkManagement、AISettings、HomeworkDetail，以及大量 analysis 组件。,README 已说明产品定位和核心功能，包括成绩看板、班级分析、高级分析、AI 密钥管理、知识点评估。,存在 Supabase 目录和 SQL 文件，说明后端/数据层已有设计痕迹。,但没有 npm install / build / dev 的运行结果，无法确认当前是否可启动、可构建或主要流程可用。,没有截图、演示数据、演示账号、线上地址或真实使用记录，产品可展示性和验证度较弱。,没有 LLM code insight，关键流程如认证、Supabase 访问、AI 分析、作业管理尚未被系统性确认。,最后 push 时间为 2025-05-13，当前评估时间为 2026-04-29，缺少近期推进信号，符合 paused。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
         "score": 10,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 20,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 11,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 2,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
       "repo files: 371",
-      "last push: 2025-05-13"
+      "last push: 2025-05-13",
+      "frameworks: Tailwind CSS"
     ],
     "risks": [
-      "项目可能代码量很大但当前不可运行，需优先验证 install/build/dev。",
-      "Supabase 初始化、环境变量、数据表结构和演示数据未在 README 中明确，外部复现成本高。",
-      "AI 分析功能依赖密钥管理和外部模型，若没有降级策略或 mock 数据，演示稳定性可能不足。",
-      "缺少截图与线上演示，项目价值难以被快速理解。",
-      "长期无提交，依赖版本、Supabase API 或前端构建链可能已出现兼容问题。"
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
+      "Generate LLM code insights for the most important source files.",
+      "Add one approved public screenshot or product surface image.",
       "本地执行 npm install、npm run build、npm run dev，并记录结果；若失败，优先修复构建和启动问题。",
-      "补充 README：安装步骤、环境变量、Supabase 初始化、演示数据、演示账号、主要页面路径和限制说明。",
-      "添加 2-4 张公开截图：成绩看板、班级分析、AI 分析、作业/知识点评估流程。",
-      "生成代码洞察，重点检查 App 路由、认证流程、Supabase 数据访问、AI 分析流程、作业管理流程。"
+      "补充 README：安装步骤、环境变量、Supabase 初始化、演示数据、演示账号、主要页面路径和限制说明。"
     ]
   }
 }

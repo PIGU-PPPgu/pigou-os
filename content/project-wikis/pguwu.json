@@ -1,0 +1,107 @@
+{
+  "slug": "pguwu",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "pguWu",
+    "url": "https://github.com/PIGU-PPPgu/pguWu",
+    "defaultBranch": "master",
+    "private": false,
+    "pushedAt": "2022-02-21T16:14:43Z",
+    "language": "Jupyter Notebook"
+  },
+  "generatedAt": "2026-05-01T21:08:45.088Z",
+  "readme": {
+    "title": "pguWu",
+    "summary": []
+  },
+  "fileTree": {
+    "totalFiles": 3,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "[root]",
+        "count": 3
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".ipynb",
+        "count": 1
+      },
+      {
+        "ext": ".md",
+        "count": 1
+      },
+      {
+        "ext": "[none]",
+        "count": 1
+      }
+    ]
+  },
+  "frameworks": [],
+  "modules": [
+    {
+      "name": "MLlearning_c2.ipynb",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "MLlearning_c2.ipynb"
+      ]
+    },
+    {
+      "name": "README.md",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "name": "机器学习 公式推导与代码实现",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "机器学习 公式推导与代码实现"
+      ]
+    }
+  ],
+  "entrypoints": [],
+  "importantFiles": [
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "pguWu",
+      "label": "indexes"
+    },
+    {
+      "from": "MLlearning_c2.ipynb",
+      "to": "pguWu",
+      "label": "contains"
+    },
+    {
+      "from": "README.md",
+      "to": "pguWu",
+      "label": "contains"
+    },
+    {
+      "from": "机器学习 公式推导与代码实现",
+      "to": "pguWu",
+      "label": "contains"
+    }
+  ],
+  "gaps": [
+    "package.json could not be found or parsed.",
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+  ]
+}

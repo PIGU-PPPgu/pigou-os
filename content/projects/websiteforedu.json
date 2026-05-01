@@ -14,7 +14,7 @@
     "班级大富翁设计包括小组协作、投骰子、地产购买升级、随机事件卡片和每周固定机会。",
     "技术栈包括 React、Ant Design、Vite、Axios、ECharts、Node.js、Express、MongoDB、JWT 和 DeepSeek AI API。"
   ],
-  "progress": 64,
+  "progress": 82,
   "goals": [
     "归档教育管理系统蓝图",
     "提取游戏化激励经验",
@@ -22,64 +22,58 @@
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Add one approved public screenshot or product surface image.",
-    "保持 archived 状态，不建议继续作为主线项目推进。",
-    "补一份归档说明：明确它与 Education Monopoly、edu-analysis 的继承关系。"
+    "Add one approved public screenshot or product surface image."
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "local-signal-engine",
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 64,
+    "progress": 82,
     "status": "archived",
     "confidence": "medium",
-    "summary": "基于 GitHub/wiki 快照、任务、日志、图片素材和项目文本自动计算的进度建议。",
-    "rationale": "未调用到 LLM 时，Pigou OS 使用本地信号引擎生成可解释的候选分数；有模型配置时会优先交给 AI 复核。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
         "score": 5,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 16,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 11,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 2,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
       "repo files: 211",
       "last push: 2025-02-10"
     ],
-    "risks": [
-      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
-    ],
+    "risks": [],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Add one approved public screenshot or product surface image.",
-      "保持 archived 状态，不建议继续作为主线项目推进。",
-      "补一份归档说明：明确它与 Education Monopoly、edu-analysis 的继承关系。"
+      "Add one approved public screenshot or product surface image."
     ]
   }
 }

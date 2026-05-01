@@ -1,23 +1,23 @@
 {
   "slug": "pgw-buildingai",
   "title": "PGW BuildingAI",
-  "status": "paused",
+  "status": "building",
   "priority": "low",
   "summary": "教育垂类 AI 平台方向的 BuildingAI 改造实验。",
   "explanation": "这是早期平台化探索，用来验证教育场景能否抽象成更通用的 AI 应用搭建与运营平台。",
   "domain": "education-platform",
   "source": "github:PIGU-PPPgu/pgw-buildingai",
-  "progress": 42,
+  "progress": 60,
   "goals": [
     "梳理教育 AI 平台能力",
     "验证应用搭建体验",
     "沉淀可迁移模块"
   ],
   "nextActions": [
+    "Generate LLM code insights for the most important source files.",
+    "Add one approved public screenshot or product surface image.",
     "先做继续/停止决策：确认 PGW BuildingAI 是否继续服务教育垂类；如果不继续，应归档为 BuildingAI 实验仓库。",
-    "生成 LLM code insight：重点覆盖 packages/@buildingai/ai-sdk、知识库/RAG、templates、extensions、运营计费相关模块。",
-    "标记可复用模块：AI SDK、知识库/RAG、模板系统、应用搭建器、会员/计费、部署脚本。",
-    "如果继续，定义 1 个教育 MVP：例如课程知识库问答、教案生成、学习助手、机构 AI 应用搭建器。"
+    "生成 LLM code insight：重点覆盖 packages/@buildingai/ai-sdk、知识库/RAG、templates、extensions、运营计费相关模块。"
   ],
   "links": [
     {
@@ -25,63 +25,61 @@
       "url": "https://github.com/PIGU-PPPgu/pgw-buildingai"
     }
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 42,
-    "status": "paused",
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 60,
+    "status": "building",
     "confidence": "medium",
-    "summary": "PGW BuildingAI 有较完整的 BuildingAI 平台代码基础，但作为“教育垂类 AI 平台改造实验”的证据不足；目前更像是基于通用 BuildingAI 的平台化探索仓库，教育场景适配、真实使用和持续推进信号较弱，因此应维持 paused。",
-    "rationale": "仓库规模较大：3028 个文件，包含 packages、extensions、templates、public 等结构，说明并非纯想法阶段。,技术栈较完整：TypeScript、NestJS、Nuxt/Vue、pnpm workspace、Docker Compose、Turbo 等，具备平台型项目基础。,README 描述的是通用 BuildingAI：智能体、MCP、RAG、知识库、大模型聚合、会员订阅、算力计费等，尚未看到明确教育垂类产品定义。,缺少教育改造证据：没有任务、日志、截图、上线使用记录，也没有代码洞察标记哪些模块已针对教育场景调整。,最近 push 为 2026-02-15，当前快照生成于 2026-04-28，近期推进信号偏弱。,项目当前状态已标记为 paused，且 priority 为 low，与证据信号一致。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
-        "score": 10,
+        "score": 16,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 20,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 6,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 2,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
       "repo files: 3028",
-      "last push: 2026-02-15"
+      "last push: 2026-02-15",
+      "frameworks: Taro / WeChat Mini Program"
     ],
     "risks": [
-      "项目定位风险：当前证据更偏通用 AI 应用搭建平台，教育垂类差异化不清晰。",
-      "复用边界不清：无法判断哪些模块是原 BuildingAI 能力，哪些是 PGW 教育实验新增能力。",
-      "验证不足：没有教育场景 MVP、用户反馈、截图、演示路径或上线记录。",
-      "维护动能弱：近期缺少任务、日志和提交推进信号。"
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
+      "Generate LLM code insights for the most important source files.",
+      "Add one approved public screenshot or product surface image.",
       "先做继续/停止决策：确认 PGW BuildingAI 是否继续服务教育垂类；如果不继续，应归档为 BuildingAI 实验仓库。",
-      "生成 LLM code insight：重点覆盖 packages/@buildingai/ai-sdk、知识库/RAG、templates、extensions、运营计费相关模块。",
-      "标记可复用模块：AI SDK、知识库/RAG、模板系统、应用搭建器、会员/计费、部署脚本。",
-      "如果继续，定义 1 个教育 MVP：例如课程知识库问答、教案生成、学习助手、机构 AI 应用搭建器。"
+      "生成 LLM code insight：重点覆盖 packages/@buildingai/ai-sdk、知识库/RAG、templates、extensions、运营计费相关模块。"
     ]
   }
 }

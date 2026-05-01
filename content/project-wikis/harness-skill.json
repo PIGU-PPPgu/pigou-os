@@ -1,0 +1,164 @@
+{
+  "slug": "harness-skill",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "harness-skill",
+    "url": "https://github.com/PIGU-PPPgu/harness-skill",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-03-31T11:41:09Z",
+    "language": "Shell"
+  },
+  "generatedAt": "2026-05-01T21:08:39.111Z",
+  "readme": {
+    "title": "Harness Engineering Skill",
+    "summary": [
+      "智能体优先的工程实践 - 基于 OpenAI Harness Engineering",
+      "- /harness init - 初始化 Harness 工程结构 - /harness audit - 审计智能体可读性 - /harness enforce - 强制架构约束 - /harness garden - 清理过时文档和代码 - /harness golden-rules - 应用黄金原则重构",
+      "支持以下 AI CLI 工具： - Claude Code (≥ 1.0) - Codex (≥ 0.5) - OpenCode (≥ 0.3) - OpenClaw (≥ 0.2)"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 9,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "[root]",
+        "count": 6
+      },
+      {
+        "name": ".harness",
+        "count": 2
+      },
+      {
+        "name": ".github",
+        "count": 1
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".md",
+        "count": 4
+      },
+      {
+        "ext": ".json",
+        "count": 2
+      },
+      {
+        "ext": "[none]",
+        "count": 2
+      },
+      {
+        "ext": ".sh",
+        "count": 1
+      }
+    ]
+  },
+  "frameworks": [],
+  "modules": [
+    {
+      "name": ".harness",
+      "kind": "Repository directory",
+      "evidence": [
+        "2 file(s)"
+      ],
+      "files": [
+        ".harness/config.json",
+        ".harness/golden-rules.json"
+      ]
+    },
+    {
+      "name": ".github",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        ".github/README.md"
+      ]
+    },
+    {
+      "name": "CHANGELOG.md",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "CHANGELOG.md"
+      ]
+    },
+    {
+      "name": "harness",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "harness"
+      ]
+    },
+    {
+      "name": "install.sh",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "install.sh"
+      ]
+    },
+    {
+      "name": "LICENSE",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "LICENSE"
+      ]
+    }
+  ],
+  "entrypoints": [],
+  "importantFiles": [
+    {
+      "path": ".github/README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "harness-skill",
+      "label": "indexes"
+    },
+    {
+      "from": ".harness",
+      "to": "harness-skill",
+      "label": "contains"
+    },
+    {
+      "from": ".github",
+      "to": "harness-skill",
+      "label": "contains"
+    },
+    {
+      "from": "CHANGELOG.md",
+      "to": "harness-skill",
+      "label": "contains"
+    },
+    {
+      "from": "harness",
+      "to": "harness-skill",
+      "label": "contains"
+    },
+    {
+      "from": "install.sh",
+      "to": "harness-skill",
+      "label": "contains"
+    }
+  ],
+  "gaps": [
+    "package.json could not be found or parsed.",
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+  ]
+}

@@ -10,17 +10,17 @@
   "readme": [
     "pguWu\n这里将存放自己每本书或每个比赛的代码集合"
   ],
-  "progress": 18,
+  "progress": 36,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
     "确认展示边界"
   ],
   "nextActions": [
-    "先明确项目定位：是“机器学习学习笔记集合”、比赛代码集，还是某本书的实现仓库。",
-    "补充 README：包含项目简介、目录说明、运行环境、Notebook 内容摘要和适用范围。",
-    "对 MLlearning_c2.ipynb 生成代码洞察，提取主要算法、数据依赖、可运行性和输出结果。",
-    "确认无扩展名文件“机器学习 公式推导与代码实现”的类型和用途，必要时重命名或移入目录。"
+    "Generate LLM code insights for the most important source files.",
+    "Clarify runtime stack and entrypoint because package metadata is missing.",
+    "Add one approved public screenshot or product surface image.",
+    "先明确项目定位：是“机器学习学习笔记集合”、比赛代码集，还是某本书的实现仓库。"
   ],
   "links": [
     {
@@ -28,46 +28,46 @@
       "url": "https://github.com/PIGU-PPPgu/pguWu"
     }
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 18,
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 36,
     "status": "paused",
-    "confidence": "medium",
-    "summary": "pguWu 目前更像一个早期的个人代码/Notebook 存档仓库，而不是可运行或可展示的完整项目。仓库仅 3 个文件，README 只有一句定位说明，缺少入口、依赖、运行方式、截图和代码洞察；最后 GitHub push 在 2022 年，近期无任务或日志推进信号，因此判断为暂停状态。",
-    "rationale": "仓库规模很小：仅 1 个 .ipynb、1 个 README 和 1 个无扩展名文件。,README 只说明“存放自己每本书或每个比赛的代码集合”，项目边界和目标不清晰。,未发现框架、入口文件、包管理配置或可复现实验说明。,没有截图、公开演示、真实使用或上线信号。,最后提交时间为 2022-02-21，缺少近期维护证据。,当前项目状态已标记为 paused，与外部信号一致。",
+    "confidence": "low",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
         "score": 10,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 10,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 5,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 2,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
@@ -75,16 +75,14 @@
       "last push: 2022-02-21"
     ],
     "risks": [
-      "项目定位过宽，容易变成杂项代码归档，难以评估完成度。",
-      "Notebook 内容尚未生成代码洞察，无法判断实际实现质量。",
-      "缺少运行环境、依赖版本和复现步骤。",
-      "没有展示素材，无法确认哪些内容适合公开展示。"
+      "package.json could not be found or parsed.",
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
-      "先明确项目定位：是“机器学习学习笔记集合”、比赛代码集，还是某本书的实现仓库。",
-      "补充 README：包含项目简介、目录说明、运行环境、Notebook 内容摘要和适用范围。",
-      "对 MLlearning_c2.ipynb 生成代码洞察，提取主要算法、数据依赖、可运行性和输出结果。",
-      "确认无扩展名文件“机器学习 公式推导与代码实现”的类型和用途，必要时重命名或移入目录。"
+      "Generate LLM code insights for the most important source files.",
+      "Clarify runtime stack and entrypoint because package metadata is missing.",
+      "Add one approved public screenshot or product surface image.",
+      "先明确项目定位：是“机器学习学习笔记集合”、比赛代码集，还是某本书的实现仓库。"
     ]
   }
 }

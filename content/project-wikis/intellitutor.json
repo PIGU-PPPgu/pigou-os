@@ -9,7 +9,7 @@
     "pushedAt": "2026-04-27T09:14:55Z",
     "language": "Python"
   },
-  "generatedAt": "2026-04-27T15:21:04.831Z",
+  "generatedAt": "2026-05-01T21:08:40.856Z",
   "readme": {
     "title": "IntelliTutor — K12 AI 智能学习伴侣",
     "summary": [
@@ -134,6 +134,7 @@
     }
   ],
   "gaps": [
-    "package.json could not be found or parsed."
+    "package.json could not be found or parsed.",
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
   ]
 }

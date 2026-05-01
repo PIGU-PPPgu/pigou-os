@@ -7,17 +7,17 @@
   "explanation": "这是 Pigou 教育 AI 产品线的核心展示项目，用来验证 K12 场景里 AI 家教、阅读陪伴、知识诊断和在线部署能否形成真实可用的学习产品。",
   "domain": "education-ai",
   "source": "github:PIGU-PPPgu/IntelliTutor",
-  "progress": 58,
+  "progress": 68,
   "goals": [
     "稳定深度解题和知识图谱",
     "打通在线部署",
     "沉淀成可展示产品"
   ],
   "nextActions": [
-    "优先修复服务器 LLM_API_KEY_DISABLED，完成一次从前端提问到模型调用、检索、生成、返回的完整链路，并保存日志。",
-    "补充最小可运行说明：依赖安装、环境变量、启动命令、示例账号或本地 demo 流程。",
-    "明确并验证 /agents 路由：状态码、鉴权、模型调用、异常返回和前端入口都需要有记录。",
-    "生成 LLM code insight 快照，覆盖核心 RAG、知识图谱、Agent、后端路由、前端入口文件。"
+    "Generate LLM code insights for the most important source files.",
+    "Clarify runtime stack and entrypoint because package metadata is missing.",
+    "Add one approved public screenshot or product surface image.",
+    "优先修复服务器 LLM_API_KEY_DISABLED，完成一次从前端提问到模型调用、检索、生成、返回的完整链路，并保存日志。"
   ],
   "links": [
     {
@@ -29,61 +29,62 @@
       "url": "https://tutor.intelliclass.online"
     }
   ],
-  "updated": "2026-04-29",
+  "updated": "2026-05-02",
   "progressEvaluation": {
-    "generatedAt": "2026-04-29",
-    "model": "gpt-5.5",
-    "source": "ai",
-    "progress": 58,
+    "generatedAt": "2026-05-02",
+    "model": "sync-worker-signal-engine",
+    "source": "algorithm",
+    "progress": 68,
     "status": "building",
     "confidence": "medium",
-    "summary": "IntelliTutor 已有明确产品定位、README 展示材料、PRD/演示文档、教材内容和多张产品截图，说明产品形态和展示目标较清晰；但当前仓库信号显示代码规模较小、入口缺失、运行链路未被验证，且存在服务器 LLM_API_KEY_DISABLED 等关键阻塞，因此还不能判断为接近可上线状态。",
-    "rationale": "正向证据：README 明确描述 K12 AI 学习伴侣、RAG、知识图谱、多知识库管理等核心能力，并包含多张产品界面截图。,正向证据：仓库包含 docs/PRD.md、demo 文档和 content 教材 PDF，说明已有产品设计和内容样例。,正向证据：仓库近期仍有 push，项目未停滞。,限制证据：仓库仅识别到 2 个 Python 文件，未发现明确后端/前端入口，无法确认核心 RAG、Agent、知识图谱实现是否完整落库。,限制证据：没有 LLM code insight 快照，无法验证 README 中描述的复杂能力与实际代码一致。,限制证据：当前已知阻塞为 LLM_API_KEY_DISABLED，说明真实问答链路可能尚未打通或线上环境不可用。,限制证据：缺少任务日志、部署地址、可复现实验记录或完整 demo 流程，真实使用验证不足。",
+    "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
+    "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
         "score": 16,
         "max": 25,
-        "reason": "项目状态、可用性描述和产品形态信号。"
+        "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
         "score": 10,
         "max": 20,
-        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+        "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
         "score": 4,
         "max": 25,
-        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+        "reason": "Launch/use wording, screenshots, and visible product proof."
       },
       {
         "name": "documentation_knowledge",
         "score": 6,
         "max": 15,
-        "reason": "README、wiki、代码理解和项目说明完整度。"
+        "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
         "score": 8,
         "max": 15,
-        "reason": "近期提交、任务推进和日志记录。"
+        "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
       "repo files: 32",
-      "last push: 2026-04-27"
+      "last push: 2026-04-27",
+      "frameworks: Python"
     ],
     "risks": [
       "package.json could not be found or parsed.",
       "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
-      "优先修复服务器 LLM_API_KEY_DISABLED，完成一次从前端提问到模型调用、检索、生成、返回的完整链路，并保存日志。",
-      "补充最小可运行说明：依赖安装、环境变量、启动命令、示例账号或本地 demo 流程。",
-      "明确并验证 /agents 路由：状态码、鉴权、模型调用、异常返回和前端入口都需要有记录。",
-      "生成 LLM code insight 快照，覆盖核心 RAG、知识图谱、Agent、后端路由、前端入口文件。"
+      "Generate LLM code insights for the most important source files.",
+      "Clarify runtime stack and entrypoint because package metadata is missing.",
+      "Add one approved public screenshot or product surface image.",
+      "优先修复服务器 LLM_API_KEY_DISABLED，完成一次从前端提问到模型调用、检索、生成、返回的完整链路，并保存日志。"
     ]
   }
 }
