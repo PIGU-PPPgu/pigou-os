@@ -1,0 +1,18 @@
+{
+  "slug": "headteacher-helper-signal",
+  "title": "Headteacher Helper 已经接近产品形态",
+  "type": "insight",
+  "status": "linked",
+  "summary": "Headteacher Helper 已经有小程序码、视觉识别和相对完整的流程，因此应该被当成基本成型的产品，而不是松散实验。",
+  "keyPoints": [
+    "页面应该放大媒体区域，并清楚展示小程序码。",
+    "介绍要更细地说明真实班级管理和班主任场景。",
+    "下一步应聚焦采用、包装和证据收集。"
+  ],
+  "tags": ["education", "product", "wechat-mini-program"],
+  "relatedProjects": ["headteacher-helper"],
+  "confidence": "high",
+  "next": "收集几个具体教师场景，并转成项目目标或截图说明。",
+  "capturedAt": "2026-04-27",
+  "updated": "2026-04-27"
+}

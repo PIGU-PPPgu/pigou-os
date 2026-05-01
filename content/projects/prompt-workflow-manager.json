@@ -1,0 +1,88 @@
+{
+  "slug": "prompt-workflow-manager",
+  "title": "Prompt Workflow Manager",
+  "status": "paused",
+  "priority": "medium",
+  "summary": "教师行业提示词库，用于保存教育类提示词，并通过 AI 优化、分类和自动打标签。",
+  "explanation": "它是教师 AI 工作流的知识资产层：把临时提示词变成可沉淀、可检索、可优化的专业提示词库。",
+  "domain": "teacher-agent",
+  "source": "github:PIGU-PPPgu/prompt-workflow-manager",
+  "progress": 68,
+  "goals": [
+    "管理教育类提示词",
+    "自动分类与打标签",
+    "沉淀教师高频 AI 工作流"
+  ],
+  "nextActions": [
+    "先跑通并记录一条端到端主流程：创建提示词 → AI 分析/优化 → 自动分类打标签 → 收藏/导出。",
+    "生成 LLM code insights，重点覆盖 client/src/App.tsx、核心提示词管理组件、server API、数据库 schema。",
+    "补充 1 张可公开产品截图或录屏，并在项目中标记为 public image。",
+    "迁移 20-50 条真实教师高频 prompt，用来验证分类、标签和检索体验。"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/PIGU-PPPgu/prompt-workflow-manager"
+    }
+  ],
+  "updated": "2026-04-29",
+  "progressEvaluation": {
+    "generatedAt": "2026-04-29",
+    "model": "gpt-5.5",
+    "source": "ai",
+    "progress": 68,
+    "status": "paused",
+    "confidence": "medium",
+    "summary": "项目已有较完整的全栈产品雏形：TypeScript 前端、Express/服务端模块、Drizzle 数据库迁移、README 产品说明和多张产品界面素材，方向从“提示词库”扩展为 TeachPT 教育 AI 资产管理平台。但缺少近期推进、真实使用/上线信号、公开可核验截图和代码洞察，因此不应判定为 shipped。",
+    "rationale": "仓库规模较大：353 个文件，client/server/drizzle 结构完整，说明不是概念阶段。,README 已清晰描述教育 AI 资产管理、提示词分类、优化、复用、统计等产品价值。,存在 70 个 Drizzle 迁移文件，说明数据模型和后端能力有一定沉淀。,pic 目录有多张产品界面图，如个人提示词库、AI 分析提示词内容、审计日志、标签自动分类等，说明已有产品表面设计或实现截图。,但 publicImageCount 为 0，缺少已批准公开展示的产品截图。,last push 为 2026-01-25，当前评估时间为 2026-04-29，近三个月无明显代码推进信号。,tasks 和 logs 为空，缺少最近迭代、真实迁移 prompt、用户使用或上线证据。,LLM code insight 为空，无法确认核心功能实现质量和可运行完整度。",
+    "dimensions": [
+      {
+        "name": "product_readiness",
+        "score": 10,
+        "max": 25,
+        "reason": "项目状态、可用性描述和产品形态信号。"
+      },
+      {
+        "name": "technical_completeness",
+        "score": 20,
+        "max": 20,
+        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+      },
+      {
+        "name": "usage_validation",
+        "score": 4,
+        "max": 25,
+        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+      },
+      {
+        "name": "documentation_knowledge",
+        "score": 6,
+        "max": 15,
+        "reason": "README、wiki、代码理解和项目说明完整度。"
+      },
+      {
+        "name": "momentum",
+        "score": 2,
+        "max": 15,
+        "reason": "近期提交、任务推进和日志记录。"
+      }
+    ],
+    "evidence": [
+      "repo files: 353",
+      "last push: 2026-01-25"
+    ],
+    "risks": [
+      "项目可能停留在可演示原型或半成品状态，缺少部署与真实使用证据。",
+      "提示词标签体系、真实高频 prompt 迁移尚未完成，会影响产品核心价值。",
+      "代码规模较大但缺少代码洞察，无法判断关键链路是否真正跑通。",
+      "README 中图片 HTML 片段疑似格式不完整，文档展示质量需要修正。",
+      "当前状态标记为 paused，与仓库近期无提交信号一致。"
+    ],
+    "nextActions": [
+      "先跑通并记录一条端到端主流程：创建提示词 → AI 分析/优化 → 自动分类打标签 → 收藏/导出。",
+      "生成 LLM code insights，重点覆盖 client/src/App.tsx、核心提示词管理组件、server API、数据库 schema。",
+      "补充 1 张可公开产品截图或录屏，并在项目中标记为 public image。",
+      "迁移 20-50 条真实教师高频 prompt，用来验证分类、标签和检索体验。"
+    ]
+  }
+}

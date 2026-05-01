@@ -1,0 +1,47 @@
+services:
+  pigou-os:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pigou-os:local
+    container_name: pigou-os
+    restart: unless-stopped
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      NODE_ENV: production
+      PORT: 3888
+      NEXT_TELEMETRY_DISABLED: "1"
+    ports:
+      - "127.0.0.1:3888:3888"
+    volumes:
+      - ./content:/app/content
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:3888/api/auth/session >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  pigou-os-worker:
+    image: pigou-os:local
+    container_name: pigou-os-worker
+    restart: unless-stopped
+    profiles:
+      - worker
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+      PIGOU_JOB_INTERVAL_SECONDS: ${PIGOU_JOB_INTERVAL_SECONDS:-300}
+      PIGOU_OS_INTERNAL_URL: http://pigou-os:3888
+    volumes:
+      - ./content:/app/content
+    command:
+      - sh
+      - -lc
+      - |
+        node scripts/sync-worker.mjs

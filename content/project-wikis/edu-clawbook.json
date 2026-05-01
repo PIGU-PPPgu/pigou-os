@@ -1,0 +1,45 @@
+{
+  "slug": "edu-clawbook",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "edu-clawbook",
+    "url": "https://github.com/PIGU-PPPgu/edu-clawbook",
+    "defaultBranch": "main",
+    "private": true,
+    "pushedAt": "2026-04-15T09:19:34Z",
+    "language": "TypeScript"
+  },
+  "generatedAt": "2026-04-27T15:20:47.140Z",
+  "readme": {
+    "title": "Edu-Claw Frontend",
+    "summary": [
+      "- 课堂教学与教案生成 - 教师科研全周期交付 - 校园 AI 配置、额度与运行监控",
+      "当前仓库里的 frontend/ 是实际运行中的 Next.js 应用，也是 GitHub 远端 PIGU-PPPgu/edu-clawbook 的 git 根目录。",
+      "- /research 文稿区支持块式编辑与分页预览 - 文稿 Agent 可直接在科研界面左侧嵌入，不再必须整页跳转到 /chat - chat 侧的“采纳”已经按通道区分为阶段草稿、证据、配图 - 阶段文稿写入前会拦截明显的建议腔/讨论纪要，避免污染正式正文 - 文稿 Agent 默认提示词已改成“直接输出可入稿正文”",
+      "- Next.js 15 - React - TypeScript - Supabase Auth / Database - Cloud function style API routes under app/api",
+      "- /chat: 通用对话入口，支持 skill、scene、research agent 绑定 - /research: 教师科研工作台，负责申报/开题/中检/结题链路 - /agent: 多 Agent / Mission Control 监控界面 - /setup: Gateway、模型、教师档案初始化 - /settings: 个人 API 与运行设置 - /stats: 使用统计 - /admin: 管理后台",
+      "- 4144: Edu-Claw 前端 - 18789: OpenClaw gateway"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 0,
+    "truncated": false,
+    "topDirectories": [],
+    "extensions": []
+  },
+  "frameworks": [],
+  "modules": [],
+  "entrypoints": [],
+  "importantFiles": [],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "Edu-Claw",
+      "label": "indexes"
+    }
+  ],
+  "gaps": [
+    "package.json could not be found or parsed.",
+    "Repository file tree could not be fetched."
+  ]
+}

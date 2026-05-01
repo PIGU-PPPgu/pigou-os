@@ -1,0 +1,266 @@
+{
+  "slug": "education-monopoly",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "Education-Monopoly",
+    "url": "https://github.com/PIGU-PPPgu/Education-Monopoly",
+    "defaultBranch": "main",
+    "private": true,
+    "pushedAt": "2026-03-22T11:33:34Z",
+    "language": "Vue"
+  },
+  "generatedAt": "2026-04-27T15:20:50.886Z",
+  "readme": {
+    "title": "🎓 教育大富翁 (Education Monopoly)",
+    "summary": [
+      "[](https://vuejs.org/) [](https://www.typescriptlang.org/) [](https://vitejs.dev/) [](https://supabase.com/)",
+      "教育大富翁是一个创新的游戏化教育平台，将经典大富翁游戏与教育元素深度融合。通过游戏化的方式激发学生学习兴趣，同时为教师提供数据驱动的教学决策支持。",
+      "- 🎮 沉浸式游戏体验 - 完整的大富翁游戏机制，支持48格和72格两种棋盘 - 📚 教育功能整合 - 答题系统、德育任务、成就系统无缝融入游戏 - 📊 数据驱动决策 - 全面的数据分析，帮助教师了解学生表现 - 🎨 赛博朋克风格 - 现代化的像素风UI设计，深色主题护眼 - 🔄 实时同步 - 多人在线同步游戏状态，流畅协作 - 🏆 成就激励 - 多维度成就系统，激发学生积极性",
+      "- Node.js 16+ - npm 或 yarn - 现代浏览器（Chrome/Firefox/Safari/Edge）",
+      "模块 功能说明 ---------------- 学生管理 添加、导入、导出学生信息，支持Excel/CSV 游戏控制台 创建游戏、实时监控、暂停/继续/结束游戏 题库管理 管理选择题、判断题、填空题，支持批量导入 事件库管理 自定义游戏随机事件（机会/命运/选择） 德育任务审核 审核学生提交的德育任务，评分反馈 数据分析 学生报告、班级统计、排行榜、趋势分析",
+      "模块 功能说明 ---------------- 游戏大厅 加入游戏、选择小组、参与游戏对局 游戏系统 掷骰子、购买地产、建设房屋、使用道具 答题挑战 回答题目获得奖励，提升知识水平 德育任务 接收并完成课后实践任务 成就系统 解锁成就、查看进度、激励成长 数据中心 查看个人数据、排名、游戏历史"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 231,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "src",
+        "count": 115
+      },
+      {
+        "name": "[root]",
+        "count": 90
+      },
+      {
+        "name": "database",
+        "count": 15
+      },
+      {
+        "name": "docs",
+        "count": 5
+      },
+      {
+        "name": "scripts",
+        "count": 4
+      },
+      {
+        "name": "supabase",
+        "count": 2
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".md",
+        "count": 78
+      },
+      {
+        "ext": ".vue",
+        "count": 59
+      },
+      {
+        "ext": ".ts",
+        "count": 53
+      },
+      {
+        "ext": ".sql",
+        "count": 17
+      },
+      {
+        "ext": ".js",
+        "count": 5
+      },
+      {
+        "ext": ".json",
+        "count": 5
+      },
+      {
+        "ext": ".css",
+        "count": 4
+      },
+      {
+        "ext": ".mjs",
+        "count": 2
+      },
+      {
+        "ext": ".sh",
+        "count": 2
+      },
+      {
+        "ext": ".backup",
+        "count": 1
+      }
+    ]
+  },
+  "package": {
+    "manager": "npm",
+    "scripts": [
+      "init-db",
+      "dev",
+      "build",
+      "check:types",
+      "preview"
+    ],
+    "dependencies": [
+      "@supabase/supabase-js",
+      "konva",
+      "papaparse",
+      "pinia",
+      "uuid",
+      "vue",
+      "vue-konva",
+      "vue-router",
+      "xlsx"
+    ],
+    "devDependencies": [
+      "@types/uuid",
+      "@vitejs/plugin-vue",
+      "autoprefixer",
+      "postcss",
+      "tailwindcss",
+      "typescript",
+      "vite",
+      "vue-tsc"
+    ]
+  },
+  "frameworks": [
+    "Tailwind CSS"
+  ],
+  "modules": [
+    {
+      "name": "src/pages",
+      "kind": "Mini program pages",
+      "evidence": [
+        "17 file(s) under src/pages/"
+      ],
+      "files": [
+        "src/pages/achievement/index.vue",
+        "src/pages/admin/MoralTaskReview.vue",
+        "src/pages/admin/event-bank.vue",
+        "src/pages/admin/game-control.vue",
+        "src/pages/admin/index.vue",
+        "src/pages/admin/quiz-bank.vue",
+        "src/pages/data/components/ClassLeaderboardView.vue",
+        "src/pages/data/components/DashboardView.vue"
+      ]
+    },
+    {
+      "name": "src/components",
+      "kind": "Mini program components",
+      "evidence": [
+        "43 file(s) under src/components/"
+      ],
+      "files": [
+        "src/components/Button.vue",
+        "src/components/Card.vue",
+        "src/components/ErrorBoundary.vue",
+        "src/components/Input.vue",
+        "src/components/LoadingSpinner.vue",
+        "src/components/Modal.vue",
+        "src/components/Pagination.vue",
+        "src/components/ToastNotification.vue"
+      ]
+    },
+    {
+      "name": "src",
+      "kind": "Source root",
+      "evidence": [
+        "115 file(s) under src/"
+      ],
+      "files": [
+        "src/App.vue",
+        "src/components/Button.vue",
+        "src/components/Card.vue",
+        "src/components/ErrorBoundary.vue",
+        "src/components/Input.vue",
+        "src/components/LoadingSpinner.vue",
+        "src/components/Modal.vue",
+        "src/components/Pagination.vue"
+      ]
+    },
+    {
+      "name": "scripts",
+      "kind": "Automation scripts",
+      "evidence": [
+        "4 file(s) under scripts/"
+      ],
+      "files": [
+        "scripts/init-database.js",
+        "scripts/quick-fix.sh",
+        "scripts/type-check.mjs",
+        "scripts/verify-database.js"
+      ]
+    },
+    {
+      "name": "docs",
+      "kind": "Documentation",
+      "evidence": [
+        "5 file(s) under docs/"
+      ],
+      "files": [
+        "docs/01_TEACHER_GUIDE.md",
+        "docs/02_STUDENT_GUIDE.md",
+        "docs/03_ARCHITECTURE.md",
+        "docs/04_FAQ.md",
+        "docs/GAME_DESIGN_V2.md"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "package.json"
+  ],
+  "importantFiles": [
+    {
+      "path": "package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "Education Monopoly",
+      "label": "indexes"
+    },
+    {
+      "from": "Tailwind CSS",
+      "to": "Education Monopoly",
+      "label": "powers"
+    },
+    {
+      "from": "src/pages",
+      "to": "Education Monopoly",
+      "label": "contains"
+    },
+    {
+      "from": "src/components",
+      "to": "Education Monopoly",
+      "label": "contains"
+    },
+    {
+      "from": "src",
+      "to": "Education Monopoly",
+      "label": "contains"
+    },
+    {
+      "from": "scripts",
+      "to": "Education Monopoly",
+      "label": "contains"
+    },
+    {
+      "from": "docs",
+      "to": "Education Monopoly",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": []
+}

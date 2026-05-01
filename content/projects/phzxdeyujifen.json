@@ -1,0 +1,87 @@
+{
+  "slug": "phzxdeyujifen",
+  "title": "德育量化管理系统",
+  "status": "paused",
+  "priority": "medium",
+  "summary": "学校德育量化管理微信小程序，用于管理学生德育表现的量化评分和扣分记录。",
+  "explanation": "这是 Pigou 对学校真实管理场景的早期产品化探索，重点不是积分娱乐化，而是班主任、管理员、学生三种角色下的德育记录和分析。",
+  "domain": "school-management",
+  "visibility": "private",
+  "source": "private:phzxdeyujifen",
+  "readme": [
+    "系统定位为德育量化管理系统，而非学生积分系统，主要用于对学生德育表现进行量化管理和记录。",
+    "系统包含管理员、班主任、学生三种角色，管理员可管理班主任账号、评分项目、系统配置和统计分析。",
+    "班主任负责学生德育量化记录、班级统计分析和学生管理；学生可以查看个人德育量化记录和个人报告。",
+    "README 特别强调扣分是系统重点，所有分析以扣分为中心，界面修改需谨慎避免破坏现有功能。"
+  ],
+  "progress": 38,
+  "goals": [
+    "管理德育量化记录",
+    "支持多角色视角",
+    "沉淀学校管理小程序经验"
+  ],
+  "nextActions": [
+    "Generate LLM code insights for the most important source files.",
+    "Clarify runtime stack and entrypoint because package metadata is missing.",
+    "Add one approved public screenshot or product surface image."
+  ],
+  "updated": "2026-04-29",
+  "progressEvaluation": {
+    "generatedAt": "2026-04-29",
+    "model": "gpt-5.5",
+    "source": "ai",
+    "progress": 38,
+    "status": "paused",
+    "confidence": "medium",
+    "summary": "项目有较清晰的产品定位和角色/功能规划，但当前缺少可验证的代码结构、入口、运行方式、截图、任务推进和真实使用证据。更像是已完成需求与早期架构设计、可能有原型或部分实现，但工程成熟度无法确认，因此维持 paused，并下调进度到 38。",
+    "rationale": "未调用到 LLM 时，Pigou OS 使用本地信号引擎生成可解释的候选分数；有模型配置时会优先交给 AI 复核。",
+    "dimensions": [
+      {
+        "name": "product_readiness",
+        "score": 10,
+        "max": 25,
+        "reason": "项目状态、可用性描述和产品形态信号。"
+      },
+      {
+        "name": "technical_completeness",
+        "score": 2,
+        "max": 20,
+        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+      },
+      {
+        "name": "usage_validation",
+        "score": 4,
+        "max": 25,
+        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+      },
+      {
+        "name": "documentation_knowledge",
+        "score": 11,
+        "max": 15,
+        "reason": "README、wiki、代码理解和项目说明完整度。"
+      },
+      {
+        "name": "momentum",
+        "score": 2,
+        "max": 15,
+        "reason": "近期提交、任务推进和日志记录。"
+      }
+    ],
+    "evidence": [
+      "repo files: 0",
+      "last push: 2026-02-06"
+    ],
+    "risks": [
+      "无法确认当前代码是否可运行、是否只是 README 规划。",
+      "缺少运行栈和入口信息，后续接手成本较高。",
+      "没有截图或演示，难以判断 UI/流程完整度。",
+      "本地存储方案可能只适合原型，若用于学校真实管理需补服务端、权限和数据备份。",
+      "README 提醒页面跳转路径需排查，说明现有功能可能存在可用性问题。"
+    ],
+    "nextActions": [
+      "Generate LLM code insights for the most important source files.",
+      "Clarify runtime stack and entrypoint because package metadata is missing.",
+      "Add one approved public screenshot or product surface image."
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "slug": "studentproject",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "studentproject",
+    "url": "https://github.com/PIGU-PPPgu/studentproject",
+    "defaultBranch": "main",
+    "private": true,
+    "pushedAt": "2024-07-29T17:47:13Z",
+    "language": "Python"
+  },
+  "generatedAt": "2026-04-27T15:21:33.178Z",
+  "readme": {
+    "title": "studentproject",
+    "summary": [
+      "studentproject 项目示例学习，制作学生信息数据小程序，增值评价模型研究"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 3,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "[root]",
+        "count": 3
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".py",
+        "count": 2
+      },
+      {
+        "ext": ".md",
+        "count": 1
+      }
+    ]
+  },
+  "frameworks": [
+    "Python"
+  ],
+  "modules": [
+    {
+      "name": "app.py",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "app.py"
+      ]
+    },
+    {
+      "name": "README.md",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "name": "temp.py",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "temp.py"
+      ]
+    }
+  ],
+  "entrypoints": [],
+  "importantFiles": [
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "Student Project",
+      "label": "indexes"
+    },
+    {
+      "from": "Python",
+      "to": "Student Project",
+      "label": "powers"
+    },
+    {
+      "from": "app.py",
+      "to": "Student Project",
+      "label": "contains"
+    },
+    {
+      "from": "README.md",
+      "to": "Student Project",
+      "label": "contains"
+    },
+    {
+      "from": "temp.py",
+      "to": "Student Project",
+      "label": "contains"
+    }
+  ],
+  "gaps": [
+    "package.json could not be found or parsed."
+  ]
+}

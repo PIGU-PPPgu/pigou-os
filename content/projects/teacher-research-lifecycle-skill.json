@@ -1,0 +1,88 @@
+{
+  "slug": "teacher-research-lifecycle-skill",
+  "title": "Teacher Research Lifecycle Skill",
+  "status": "building",
+  "priority": "medium",
+  "summary": "面向 OpenClaw 和 EduClaw 的教师课题研究全生命周期 skill。",
+  "explanation": "它把课题申报、研究设计、过程材料、阶段总结和结题复盘串成一条教师研究工作流，服务于教育科研场景。",
+  "domain": "teacher-research",
+  "source": "github:PIGU-PPPgu/teacher-research-lifecycle-skill",
+  "progress": 42,
+  "goals": [
+    "定义课题研究生命周期节点",
+    "沉淀材料生成和审校模板",
+    "支持教师研究过程追踪"
+  ],
+  "nextActions": [
+    "补齐 SKILL.md：明确触发场景、输入字段、输出格式、执行步骤、人工核验点、禁止项和失败处理。",
+    "新增 lifecycle-state-machine.md：定义申报 → 立项/开题 → 过程记录 → 中期检查 → 成果整理 → 结题 → 复盘归档的状态、输入、产物和迁移条件。",
+    "制作 examples/full-case/：放入一个虚构教师课题，从主档案到申报书、开题报告、中检材料、结题报告的连续生成样例。",
+    "建立 master-profile schema：统一课题名称、研究对象、研究问题、周期、成果形式、核心证据，确保各阶段材料口径一致。"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/PIGU-PPPgu/teacher-research-lifecycle-skill"
+    }
+  ],
+  "updated": "2026-04-29",
+  "progressEvaluation": {
+    "generatedAt": "2026-04-29",
+    "model": "gpt-5.5",
+    "source": "ai",
+    "progress": 42,
+    "status": "building",
+    "confidence": "medium",
+    "summary": "项目已有公开仓库、README、参考资料和少量辅助脚本，方向明确为教师课题研究生命周期 Skill；但核心 Skill 规则、可执行入口、完整样例和真实使用信号不足，仍处于早期构建阶段。",
+    "rationale": "当前证据表明项目已经超过纯 idea：有仓库、README、参考材料和脚本，产品边界也较清楚。但核心交付物不是脚本本身，而是可被 OpenClaw/EduClaw 调用的教师科研生命周期 Skill。由于主规则文件、状态机、完整样例、集成和使用验证缺失，不能评为接近 shipped。综合判断为 building，成熟度约 42%。",
+    "dimensions": [
+      {
+        "name": "product_readiness",
+        "score": 16,
+        "max": 25,
+        "reason": "项目状态、可用性描述和产品形态信号。"
+      },
+      {
+        "name": "technical_completeness",
+        "score": 10,
+        "max": 20,
+        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+      },
+      {
+        "name": "usage_validation",
+        "score": 4,
+        "max": 25,
+        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+      },
+      {
+        "name": "documentation_knowledge",
+        "score": 6,
+        "max": 15,
+        "reason": "README、wiki、代码理解和项目说明完整度。"
+      },
+      {
+        "name": "momentum",
+        "score": 8,
+        "max": 15,
+        "reason": "近期提交、任务推进和日志记录。"
+      }
+    ],
+    "evidence": [
+      "仓库公开，语言为 Python，最近 push 为 2026-04-24，仍有近期维护信号。",
+      "仓库共 15 个文件，其中 references/ 有 9 个资料文件，scripts/ 有 3 个辅助脚本。",
+      "README 已说明覆盖课题申报、开题报告、中期检查、结题报告、过程证据沉淀等生命周期场景。",
+      "README 已提出关键原则：主档案优先、口径一致、高风险信息人工核验、过程材料结构化复用。",
+      "未发现明确入口程序、产品界面、上线地址、真实使用截图或用户反馈。"
+    ],
+    "risks": [
+      "package.json could not be found or parsed.",
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+    ],
+    "nextActions": [
+      "补齐 SKILL.md：明确触发场景、输入字段、输出格式、执行步骤、人工核验点、禁止项和失败处理。",
+      "新增 lifecycle-state-machine.md：定义申报 → 立项/开题 → 过程记录 → 中期检查 → 成果整理 → 结题 → 复盘归档的状态、输入、产物和迁移条件。",
+      "制作 examples/full-case/：放入一个虚构教师课题，从主档案到申报书、开题报告、中检材料、结题报告的连续生成样例。",
+      "建立 master-profile schema：统一课题名称、研究对象、研究问题、周期、成果形式、核心证据，确保各阶段材料口径一致。"
+    ]
+  }
+}

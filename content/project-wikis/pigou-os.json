@@ -1,0 +1,248 @@
+{
+  "slug": "pigou-os",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "pigou-os",
+    "url": "https://github.com/PIGU-PPPgu/pigou-os",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-04-27T04:24:38Z",
+    "language": "TypeScript"
+  },
+  "generatedAt": "2026-04-27T15:21:25.278Z",
+  "readme": {
+    "title": "Pigou OS",
+    "summary": [
+      "Personal project console for Pigou Wu. Built with Next.js and a Nothing-inspired monochrome interface.",
+      "GitHub Pages deploys automatically from main."
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 28,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "[root]",
+        "count": 9
+      },
+      {
+        "name": "app",
+        "count": 8
+      },
+      {
+        "name": "content",
+        "count": 7
+      },
+      {
+        "name": "components",
+        "count": 2
+      },
+      {
+        "name": ".github",
+        "count": 1
+      },
+      {
+        "name": "lib",
+        "count": 1
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".json",
+        "count": 9
+      },
+      {
+        "ext": ".tsx",
+        "count": 9
+      },
+      {
+        "ext": ".ts",
+        "count": 3
+      },
+      {
+        "ext": ".mjs",
+        "count": 2
+      },
+      {
+        "ext": ".css",
+        "count": 1
+      },
+      {
+        "ext": ".gitignore",
+        "count": 1
+      },
+      {
+        "ext": ".md",
+        "count": 1
+      },
+      {
+        "ext": ".yaml",
+        "count": 1
+      },
+      {
+        "ext": ".yml",
+        "count": 1
+      }
+    ]
+  },
+  "package": {
+    "manager": "pnpm",
+    "scripts": [
+      "dev",
+      "build",
+      "start",
+      "lint"
+    ],
+    "dependencies": [
+      "@mdx-js/loader",
+      "@next/mdx",
+      "gray-matter",
+      "lucide-react",
+      "next",
+      "react",
+      "react-dom"
+    ],
+    "devDependencies": [
+      "@tailwindcss/postcss",
+      "@types/node",
+      "@types/react",
+      "@types/react-dom",
+      "autoprefixer",
+      "postcss",
+      "tailwindcss",
+      "typescript"
+    ]
+  },
+  "frameworks": [
+    "Next.js",
+    "React",
+    "Tailwind CSS"
+  ],
+  "modules": [
+    {
+      "name": "app",
+      "kind": "Next.js App Router surface",
+      "evidence": [
+        "8 file(s) under app/"
+      ],
+      "files": [
+        "app/globals.css",
+        "app/ideas/page.tsx",
+        "app/layout.tsx",
+        "app/log/page.tsx",
+        "app/page.tsx",
+        "app/projects/[slug]/page.tsx",
+        "app/projects/page.tsx",
+        "app/tasks/page.tsx"
+      ]
+    },
+    {
+      "name": "components",
+      "kind": "Reusable UI components",
+      "evidence": [
+        "2 file(s) under components/"
+      ],
+      "files": [
+        "components/Shell.tsx",
+        "components/UI.tsx"
+      ]
+    },
+    {
+      "name": "lib",
+      "kind": "Core application logic",
+      "evidence": [
+        "1 file(s) under lib/"
+      ],
+      "files": [
+        "lib/data.ts"
+      ]
+    },
+    {
+      "name": "content",
+      "kind": "Local content source",
+      "evidence": [
+        "7 file(s) under content/"
+      ],
+      "files": [
+        "content/ideas/idea-to-project-pipeline.json",
+        "content/ideas/teacher-agent-marketplace.json",
+        "content/log/2026-04-27.json",
+        "content/projects/feixiang-assistant.json",
+        "content/projects/intellitutor.json",
+        "content/projects/pigou-os.json",
+        "content/projects/xiaozhi-device.json"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "package.json",
+    "next.config.mjs",
+    "app/page.tsx"
+  ],
+  "importantFiles": [
+    {
+      "path": "package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": "next.config.mjs",
+      "reason": "Next.js runtime config"
+    },
+    {
+      "path": "app/page.tsx",
+      "reason": "App Router home page"
+    },
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "Pigou OS",
+      "label": "indexes"
+    },
+    {
+      "from": "Next.js",
+      "to": "Pigou OS",
+      "label": "powers"
+    },
+    {
+      "from": "React",
+      "to": "Pigou OS",
+      "label": "powers"
+    },
+    {
+      "from": "Tailwind CSS",
+      "to": "Pigou OS",
+      "label": "powers"
+    },
+    {
+      "from": "app",
+      "to": "Pigou OS",
+      "label": "contains"
+    },
+    {
+      "from": "components",
+      "to": "Pigou OS",
+      "label": "contains"
+    },
+    {
+      "from": "lib",
+      "to": "Pigou OS",
+      "label": "contains"
+    },
+    {
+      "from": "content",
+      "to": "Pigou OS",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": []
+}

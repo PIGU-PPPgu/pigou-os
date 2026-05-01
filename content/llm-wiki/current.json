@@ -1,0 +1,903 @@
+{
+  "slug": "current",
+  "generatedAt": "2026-04-28T02:36:28.169Z",
+  "scope": "all",
+  "nodes": [
+    {
+      "id": "project:class-teacher-skills",
+      "type": "project",
+      "title": "Class Teacher Skills",
+      "summary": "班主任专属 AI 技能仓库，覆盖家校沟通、学生记录、班务台账、数据汇总与确认后外发工作流。",
+      "status": "building",
+      "score": 38,
+      "x": 120,
+      "y": 110
+    },
+    {
+      "id": "project:deeptutor",
+      "type": "project",
+      "title": "DeepTutor",
+      "summary": "Fork of DeepTutor with AI Reading Companion enhancements",
+      "status": "idea",
+      "score": 35,
+      "x": 340,
+      "y": 110
+    },
+    {
+      "id": "project:feixiang-assistant",
+      "type": "project",
+      "title": "飞象教学助手",
+      "summary": "面向 Pigou 教学工作的飞象星球自动查询、作业分析、催交和题目诊断助手。",
+      "status": "building",
+      "score": 45,
+      "x": 560,
+      "y": 110
+    },
+    {
+      "id": "project:intellitutor",
+      "type": "project",
+      "title": "IntelliTutor",
+      "summary": "AI 阅读家教项目，基于 DeepTutor 改造成面向学生的智能学习伴侣。",
+      "status": "building",
+      "score": 72,
+      "x": 120,
+      "y": 225
+    },
+    {
+      "id": "project:pigou-os",
+      "type": "project",
+      "title": "Pigou OS",
+      "summary": "Pigou 的个人项目控制台：管理项目、想法、任务、日志和 AI 协作记录。",
+      "status": "building",
+      "score": 18,
+      "x": 340,
+      "y": 225
+    },
+    {
+      "id": "project:xiaozhi-device",
+      "type": "project",
+      "title": "小智设备",
+      "summary": "自建小智语音设备和 OpenClaw 接入，作为实体入口触发 Mochi。",
+      "status": "paused",
+      "score": 60,
+      "x": 560,
+      "y": 225
+    },
+    {
+      "id": "project:headteacher-helper",
+      "type": "project",
+      "title": "Headteacher Helper",
+      "summary": "班主任工作管理助手微信小程序，使用 Taro、React 和 TypeScript 构建。",
+      "status": "building",
+      "score": 82,
+      "x": 120,
+      "y": 340
+    },
+    {
+      "id": "project:open-buddy",
+      "type": "project",
+      "title": "Open Buddy",
+      "summary": "面向 M5Stack StickS3 的多智能体硬件伙伴，支持 Claude Code、Codex、OpenClaw 等状态显示和提醒。",
+      "status": "building",
+      "score": 55,
+      "x": 340,
+      "y": 340
+    },
+    {
+      "id": "project:teacher-research-lifecycle-skill",
+      "type": "project",
+      "title": "Teacher Research Lifecycle Skill",
+      "summary": "面向 OpenClaw 和 EduClaw 的教师课题研究全生命周期 skill。",
+      "status": "idea",
+      "score": 28,
+      "x": 560,
+      "y": 340
+    },
+    {
+      "id": "project:edu-analysis",
+      "type": "project",
+      "title": "Edu Analysis",
+      "summary": "智能教育数据分析平台，集成成绩分析、增值评价、AI 智能诊断与报告导出。",
+      "status": "building",
+      "score": 74,
+      "x": 120,
+      "y": 455
+    },
+    {
+      "id": "project:edu-clawbook",
+      "type": "project",
+      "title": "Edu-Claw",
+      "summary": "面向教师场景的 AI 工作台，覆盖课堂教学与教案生成、教师科研全周期交付、校园 AI 配置和运行监控。",
+      "status": "building",
+      "score": 68,
+      "x": 340,
+      "y": 455
+    },
+    {
+      "id": "project:keti-ai-assistant",
+      "type": "project",
+      "title": "Keti AI Assistant",
+      "summary": "面向中国教师的 AI 课题申报书生成助手。",
+      "status": "paused",
+      "score": 46,
+      "x": 560,
+      "y": 455
+    },
+    {
+      "id": "project:feixiang-skill",
+      "type": "project",
+      "title": "feixiang-skill",
+      "summary": "飞象星球教学平台 OpenClaw Skill - 作业/考试/AI精准练 API 客户端",
+      "status": "idea",
+      "score": 35,
+      "x": 120,
+      "y": 570
+    },
+    {
+      "id": "project:harness-skill-v2",
+      "type": "project",
+      "title": "Harness Skill v2",
+      "summary": "智能体团队系统，实现从 PRD 到部署的全流程自动化。",
+      "status": "paused",
+      "score": 63,
+      "x": 340,
+      "y": 570
+    },
+    {
+      "id": "project:agent-swarm-dev-v2",
+      "type": "project",
+      "title": "Agent Swarm Dev v2",
+      "summary": "集成 Harness 质量工具的多智能体协作软件开发框架。",
+      "status": "paused",
+      "score": 52,
+      "x": 560,
+      "y": 570
+    },
+    {
+      "id": "project:agent-swarm-dev",
+      "type": "project",
+      "title": "agent-swarm-dev",
+      "summary": "Multi-agent collaborative software development framework inspired by OpenAI's Harness Engineering",
+      "status": "idea",
+      "score": 35,
+      "x": 120,
+      "y": 685
+    },
+    {
+      "id": "project:harness-skill",
+      "type": "project",
+      "title": "harness-skill",
+      "summary": "Agent-first engineering practices based on OpenAI Harness Engineering",
+      "status": "idea",
+      "score": 35,
+      "x": 340,
+      "y": 685
+    },
+    {
+      "id": "project:pgw-buildingai",
+      "type": "project",
+      "title": "PGW BuildingAI",
+      "summary": "教育垂类 AI 平台方向的 BuildingAI 改造实验。",
+      "status": "paused",
+      "score": 34,
+      "x": 560,
+      "y": 685
+    },
+    {
+      "id": "project:phzxdeyujifen",
+      "type": "project",
+      "title": "德育量化管理系统",
+      "summary": "学校德育量化管理微信小程序，用于管理学生德育表现的量化评分和扣分记录。",
+      "status": "paused",
+      "score": 50,
+      "x": 120,
+      "y": 800
+    },
+    {
+      "id": "project:2026mcm-c",
+      "type": "project",
+      "title": "2026 MCM C",
+      "summary": "2026 美赛 C 题相关 LaTeX 模板、论文模板和实验指标归档。",
+      "status": "archived",
+      "score": 25,
+      "x": 340,
+      "y": 800
+    },
+    {
+      "id": "project:prompt-workflow-manager",
+      "type": "project",
+      "title": "Prompt Workflow Manager",
+      "summary": "教师行业提示词库，用于保存教育类提示词，并通过 AI 优化、分类和自动打标签。",
+      "status": "paused",
+      "score": 50,
+      "x": 560,
+      "y": 800
+    },
+    {
+      "id": "project:mathtitle",
+      "type": "project",
+      "title": "MathTitle",
+      "summary": "数学题目与可视化生成方向的 private 项目，仓库内包含多智能体、Manim、前端集成和可视化路由等文档。",
+      "status": "paused",
+      "score": 41,
+      "x": 120,
+      "y": 915
+    },
+    {
+      "id": "project:education-monopoly",
+      "type": "project",
+      "title": "Education Monopoly",
+      "summary": "教育大富翁游戏化学习平台，把大富翁机制和答题、德育任务、成就系统、教师数据分析结合起来。",
+      "status": "paused",
+      "score": 58,
+      "x": 340,
+      "y": 915
+    },
+    {
+      "id": "project:eduana",
+      "type": "project",
+      "title": "eduana",
+      "summary": "eduana project imported from GitHub.",
+      "status": "idea",
+      "score": 35,
+      "x": 560,
+      "y": 915
+    },
+    {
+      "id": "project:intelliedu",
+      "type": "project",
+      "title": "IntelliEdu",
+      "summary": "智能教育数据分析平台，专为教师设计，集成成绩分析和知识点评估。",
+      "status": "archived",
+      "score": 44,
+      "x": 120,
+      "y": 1030
+    },
+    {
+      "id": "project:websiteforedu",
+      "type": "project",
+      "title": "Website for Edu",
+      "summary": "智慧教育管理系统，集成成绩管理、学生管理、智能分析和游戏化激励。",
+      "status": "archived",
+      "score": 32,
+      "x": 340,
+      "y": 1030
+    },
+    {
+      "id": "project:student-grade-analysis",
+      "type": "project",
+      "title": "Student Grade Analysis",
+      "summary": "学生成绩分析方向的早期项目，用于沉淀教育数据分析经验。",
+      "status": "archived",
+      "score": 30,
+      "x": 560,
+      "y": 1030
+    },
+    {
+      "id": "project:studentproject",
+      "type": "project",
+      "title": "Student Project",
+      "summary": "学生信息数据小程序和增值评价模型研究的项目示例学习。",
+      "status": "archived",
+      "score": 20,
+      "x": 120,
+      "y": 1145
+    },
+    {
+      "id": "project:pguwu",
+      "type": "project",
+      "title": "pguWu",
+      "summary": "nothing",
+      "status": "idea",
+      "score": 35,
+      "x": 340,
+      "y": 1145
+    },
+    {
+      "id": "project:pdfpro",
+      "type": "project",
+      "title": "PDF Pro",
+      "summary": "空的 private 归档仓库，暂时只作为历史占位。",
+      "status": "archived",
+      "score": 0,
+      "x": 560,
+      "y": 1145
+    },
+    {
+      "id": "idea:teacher-agent-marketplace",
+      "type": "idea",
+      "title": "教师 Agent 市场",
+      "summary": "把作业分析、备课、出题、家校沟通等拆成教师可复用的 Agent。",
+      "status": "spark",
+      "score": 82,
+      "x": 170,
+      "y": 430
+    },
+    {
+      "id": "idea:idea-to-project-pipeline",
+      "type": "idea",
+      "title": "Idea 到项目的一键流水线",
+      "summary": "把一个想法自动展开成 PRD、任务清单、技术方案、repo skeleton。",
+      "status": "validated",
+      "score": 76,
+      "x": 410,
+      "y": 430
+    },
+    {
+      "id": "knowledge:pigou-os-as-private-brain",
+      "type": "knowledge",
+      "title": "Pigou OS 应该是私有知识大脑和项目驾驶舱",
+      "summary": "Pigou OS 不应该漂成公开作品集。它首先要帮助 Pigou 在项目、想法、笔记和复盘之间记住、判断并行动。",
+      "status": "linked",
+      "platform": "manual",
+      "x": 760,
+      "y": 100
+    },
+    {
+      "id": "knowledge:headteacher-helper-signal",
+      "type": "knowledge",
+      "title": "Headteacher Helper 已经接近产品形态",
+      "summary": "Headteacher Helper 已经有小程序码、视觉识别和相对完整的流程，因此应该被当成基本成型的产品，而不是松散实验。",
+      "status": "linked",
+      "x": 1020,
+      "y": 100
+    },
+    {
+      "id": "knowledge:progress-rubric",
+      "type": "knowledge",
+      "title": "进度分数衡量运营成熟度，而不是投入时间",
+      "summary": "项目进度是一个手动运营信号，基于项目是否可运行、可解释、可使用，而不是严格的工程百分比。",
+      "status": "processed",
+      "x": 760,
+      "y": 200
+    },
+    {
+      "id": "knowledge:评估-paperclipai-paperclip-用于-opc",
+      "type": "knowledge",
+      "title": "评估 paperclipai/paperclip 用于 OPC",
+      "summary": "https://github.com/paperclipai/paperclip，想用这个做 opc",
+      "status": "raw",
+      "x": 1020,
+      "y": 200
+    },
+    {
+      "id": "task:rebuild-llm-wiki-graph",
+      "type": "task",
+      "title": "重建 Pigou OS 全局 LLM Wiki 图谱",
+      "summary": "把知识、想法、项目和行动统一进一个可缩放、可点击、可重新分析的图谱。",
+      "status": "next",
+      "x": 760,
+      "y": 560
+    },
+    {
+      "id": "task:refine-headteacher-helper-story",
+      "type": "task",
+      "title": "补齐 Headteacher Helper 的真实场景说明",
+      "summary": "用小程序码、真实班主任流程和产品截图补齐项目页说明，让它从实验变成可理解的产品。",
+      "status": "next",
+      "x": 1020,
+      "y": 560
+    },
+    {
+      "id": "task:validate-teacher-agent-marketplace",
+      "type": "task",
+      "title": "验证教师 Agent 市场的前三个高频场景",
+      "summary": "从 Pigou 自己每天使用的教师 Agent 开始，确认哪些能力值得产品化。",
+      "status": "waiting",
+      "x": 760,
+      "y": 655
+    },
+    {
+      "id": "topic:education-data",
+      "type": "topic",
+      "title": "education-data",
+      "summary": "4 signal(s)",
+      "x": 490,
+      "y": 170
+    },
+    {
+      "id": "topic:personal-os",
+      "type": "topic",
+      "title": "personal-os",
+      "summary": "3 signal(s)",
+      "x": 680,
+      "y": 170
+    },
+    {
+      "id": "topic:education",
+      "type": "topic",
+      "title": "education",
+      "summary": "2 signal(s)",
+      "x": 490,
+      "y": 265
+    },
+    {
+      "id": "topic:teacher-agent",
+      "type": "topic",
+      "title": "teacher-agent",
+      "summary": "2 signal(s)",
+      "x": 680,
+      "y": 265
+    },
+    {
+      "id": "topic:hardware-agent",
+      "type": "topic",
+      "title": "hardware-agent",
+      "summary": "2 signal(s)",
+      "x": 490,
+      "y": 360
+    },
+    {
+      "id": "topic:teacher-research",
+      "type": "topic",
+      "title": "teacher-research",
+      "summary": "2 signal(s)",
+      "x": 680,
+      "y": 360
+    },
+    {
+      "id": "topic:javascript",
+      "type": "topic",
+      "title": "javascript",
+      "summary": "2 signal(s)",
+      "x": 490,
+      "y": 455
+    },
+    {
+      "id": "topic:agentic-engineering",
+      "type": "topic",
+      "title": "agentic-engineering",
+      "summary": "2 signal(s)",
+      "x": 680,
+      "y": 455
+    },
+    {
+      "id": "topic:education-platform",
+      "type": "topic",
+      "title": "education-platform",
+      "summary": "2 signal(s)",
+      "x": 490,
+      "y": 550
+    },
+    {
+      "id": "topic:product-positioning",
+      "type": "topic",
+      "title": "product-positioning",
+      "summary": "1 signal(s)",
+      "x": 680,
+      "y": 550
+    },
+    {
+      "id": "topic:decision",
+      "type": "topic",
+      "title": "decision",
+      "summary": "1 signal(s)",
+      "x": 490,
+      "y": 645
+    },
+    {
+      "id": "topic:product",
+      "type": "topic",
+      "title": "product",
+      "summary": "1 signal(s)",
+      "x": 680,
+      "y": 645
+    },
+    {
+      "id": "topic:wechat-mini-program",
+      "type": "topic",
+      "title": "wechat-mini-program",
+      "summary": "1 signal(s)",
+      "x": 490,
+      "y": 740
+    },
+    {
+      "id": "topic:project-management",
+      "type": "topic",
+      "title": "project-management",
+      "summary": "1 signal(s)",
+      "x": 680,
+      "y": 740
+    }
+  ],
+  "edges": [
+    {
+      "from": "knowledge:pigou-os-as-private-brain",
+      "to": "project:pigou-os",
+      "type": "supports",
+      "reason": "该笔记直接讨论 Pigou OS 的定位、边界和下一步产品设计，因此关联 pigou-os。其强调从捕获知识连接到项目、想法和行动，符合 idea-to-project-pipeline 的转化逻辑。",
+      "confidence": "high"
+    },
+    {
+      "from": "knowledge:pigou-os-as-private-brain",
+      "to": "idea:idea-to-project-pipeline",
+      "type": "validates",
+      "reason": "Knowledge analysis links this note to the idea.",
+      "confidence": "high"
+    },
+    {
+      "from": "knowledge:pigou-os-as-private-brain",
+      "to": "topic:product-positioning",
+      "type": "relates",
+      "reason": "Shared topic: product-positioning",
+      "confidence": "medium"
+    },
+    {
+      "from": "knowledge:pigou-os-as-private-brain",
+      "to": "topic:personal-os",
+      "type": "relates",
+      "reason": "Shared topic: personal-os",
+      "confidence": "medium"
+    },
+    {
+      "from": "knowledge:pigou-os-as-private-brain",
+      "to": "topic:decision",
+      "type": "relates",
+      "reason": "Shared topic: decision",
+      "confidence": "medium"
+    },
+    {
+      "from": "knowledge:headteacher-helper-signal",
+      "to": "project:headteacher-helper",
+      "type": "supports",
+      "reason": "Knowledge note is linked to this project.",
+      "confidence": "high"
+    },
+    {
+      "from": "knowledge:headteacher-helper-signal",
+      "to": "topic:education",
+      "type": "relates",
+      "reason": "Shared topic: education",
+      "confidence": "medium"
+    },
+    {
+      "from": "knowledge:headteacher-helper-signal",
+      "to": "topic:product",
+      "type": "relates",
+      "reason": "Shared topic: product",
+      "confidence": "medium"
+    },
+    {
+      "from": "knowledge:headteacher-helper-signal",
+      "to": "topic:wechat-mini-program",
+      "type": "relates",
+      "reason": "Shared topic: wechat-mini-program",
+      "confidence": "medium"
+    },
+    {
+      "from": "knowledge:progress-rubric",
+      "to": "project:pigou-os",
+      "type": "supports",
+      "reason": "Knowledge note is linked to this project.",
+      "confidence": "medium"
+    },
+    {
+      "from": "knowledge:progress-rubric",
+      "to": "topic:project-management",
+      "type": "relates",
+      "reason": "Shared topic: project-management",
+      "confidence": "medium"
+    },
+    {
+      "from": "knowledge:pigou-os-as-private-brain",
+      "to": "idea:teacher-agent-marketplace",
+      "type": "validates",
+      "reason": "Idea analysis uses this knowledge as evidence.",
+      "confidence": "medium"
+    },
+    {
+      "from": "knowledge:headteacher-helper-signal",
+      "to": "idea:teacher-agent-marketplace",
+      "type": "validates",
+      "reason": "Idea analysis uses this knowledge as evidence.",
+      "confidence": "medium"
+    },
+    {
+      "from": "knowledge:progress-rubric",
+      "to": "idea:teacher-agent-marketplace",
+      "type": "validates",
+      "reason": "Idea analysis uses this knowledge as evidence.",
+      "confidence": "medium"
+    },
+    {
+      "from": "knowledge:评估-paperclipai-paperclip-用于-opc",
+      "to": "idea:teacher-agent-marketplace",
+      "type": "validates",
+      "reason": "Idea analysis uses this knowledge as evidence.",
+      "confidence": "medium"
+    },
+    {
+      "from": "idea:teacher-agent-marketplace",
+      "to": "project:headteacher-helper",
+      "type": "becomes",
+      "reason": "Idea analysis suggests this project target.",
+      "confidence": "medium"
+    },
+    {
+      "from": "idea:teacher-agent-marketplace",
+      "to": "topic:education",
+      "type": "inspires",
+      "reason": "Idea carries topic: education",
+      "confidence": "medium"
+    },
+    {
+      "from": "idea:idea-to-project-pipeline",
+      "to": "topic:personal-os",
+      "type": "inspires",
+      "reason": "Idea carries topic: personal-os",
+      "confidence": "medium"
+    },
+    {
+      "from": "project:pigou-os",
+      "to": "task:rebuild-llm-wiki-graph",
+      "type": "becomes",
+      "reason": "Task was generated from this source.",
+      "confidence": "high"
+    },
+    {
+      "from": "task:rebuild-llm-wiki-graph",
+      "to": "project:pigou-os",
+      "type": "relates",
+      "reason": "Task is assigned to this project.",
+      "confidence": "high"
+    },
+    {
+      "from": "knowledge:headteacher-helper-signal",
+      "to": "task:refine-headteacher-helper-story",
+      "type": "becomes",
+      "reason": "Task was generated from this source.",
+      "confidence": "high"
+    },
+    {
+      "from": "task:refine-headteacher-helper-story",
+      "to": "project:headteacher-helper",
+      "type": "relates",
+      "reason": "Task is assigned to this project.",
+      "confidence": "high"
+    },
+    {
+      "from": "idea:teacher-agent-marketplace",
+      "to": "task:validate-teacher-agent-marketplace",
+      "type": "becomes",
+      "reason": "Task was generated from this source.",
+      "confidence": "high"
+    },
+    {
+      "from": "project:class-teacher-skills",
+      "to": "topic:teacher-agent",
+      "type": "relates",
+      "reason": "Project matches topic: teacher-agent",
+      "confidence": "low"
+    },
+    {
+      "from": "project:intellitutor",
+      "to": "topic:education",
+      "type": "relates",
+      "reason": "Project matches topic: education",
+      "confidence": "low"
+    },
+    {
+      "from": "project:pigou-os",
+      "to": "topic:personal-os",
+      "type": "relates",
+      "reason": "Project matches topic: personal-os",
+      "confidence": "low"
+    },
+    {
+      "from": "project:xiaozhi-device",
+      "to": "topic:hardware-agent",
+      "type": "relates",
+      "reason": "Project matches topic: hardware-agent",
+      "confidence": "low"
+    },
+    {
+      "from": "project:headteacher-helper",
+      "to": "topic:product",
+      "type": "relates",
+      "reason": "Project matches topic: product",
+      "confidence": "low"
+    },
+    {
+      "from": "project:open-buddy",
+      "to": "topic:hardware-agent",
+      "type": "relates",
+      "reason": "Project matches topic: hardware-agent",
+      "confidence": "low"
+    },
+    {
+      "from": "project:teacher-research-lifecycle-skill",
+      "to": "topic:teacher-research",
+      "type": "relates",
+      "reason": "Project matches topic: teacher-research",
+      "confidence": "low"
+    },
+    {
+      "from": "project:edu-analysis",
+      "to": "topic:education-data",
+      "type": "relates",
+      "reason": "Project matches topic: education-data",
+      "confidence": "low"
+    },
+    {
+      "from": "project:edu-analysis",
+      "to": "topic:education",
+      "type": "relates",
+      "reason": "Project matches topic: education",
+      "confidence": "low"
+    },
+    {
+      "from": "project:keti-ai-assistant",
+      "to": "topic:teacher-research",
+      "type": "relates",
+      "reason": "Project matches topic: teacher-research",
+      "confidence": "low"
+    },
+    {
+      "from": "project:feixiang-skill",
+      "to": "topic:javascript",
+      "type": "relates",
+      "reason": "Project matches topic: javascript",
+      "confidence": "low"
+    },
+    {
+      "from": "project:harness-skill-v2",
+      "to": "topic:agentic-engineering",
+      "type": "relates",
+      "reason": "Project matches topic: agentic-engineering",
+      "confidence": "low"
+    },
+    {
+      "from": "project:agent-swarm-dev-v2",
+      "to": "topic:agentic-engineering",
+      "type": "relates",
+      "reason": "Project matches topic: agentic-engineering",
+      "confidence": "low"
+    },
+    {
+      "from": "project:agent-swarm-dev",
+      "to": "topic:javascript",
+      "type": "relates",
+      "reason": "Project matches topic: javascript",
+      "confidence": "low"
+    },
+    {
+      "from": "project:pgw-buildingai",
+      "to": "topic:education",
+      "type": "relates",
+      "reason": "Project matches topic: education",
+      "confidence": "low"
+    },
+    {
+      "from": "project:pgw-buildingai",
+      "to": "topic:education-platform",
+      "type": "relates",
+      "reason": "Project matches topic: education-platform",
+      "confidence": "low"
+    },
+    {
+      "from": "project:prompt-workflow-manager",
+      "to": "topic:teacher-agent",
+      "type": "relates",
+      "reason": "Project matches topic: teacher-agent",
+      "confidence": "low"
+    },
+    {
+      "from": "project:education-monopoly",
+      "to": "topic:education",
+      "type": "relates",
+      "reason": "Project matches topic: education",
+      "confidence": "low"
+    },
+    {
+      "from": "project:intelliedu",
+      "to": "topic:education-data",
+      "type": "relates",
+      "reason": "Project matches topic: education-data",
+      "confidence": "low"
+    },
+    {
+      "from": "project:intelliedu",
+      "to": "topic:education",
+      "type": "relates",
+      "reason": "Project matches topic: education",
+      "confidence": "low"
+    },
+    {
+      "from": "project:websiteforedu",
+      "to": "topic:education",
+      "type": "relates",
+      "reason": "Project matches topic: education",
+      "confidence": "low"
+    },
+    {
+      "from": "project:websiteforedu",
+      "to": "topic:education-platform",
+      "type": "relates",
+      "reason": "Project matches topic: education-platform",
+      "confidence": "low"
+    },
+    {
+      "from": "project:student-grade-analysis",
+      "to": "topic:education-data",
+      "type": "relates",
+      "reason": "Project matches topic: education-data",
+      "confidence": "low"
+    },
+    {
+      "from": "project:student-grade-analysis",
+      "to": "topic:education",
+      "type": "relates",
+      "reason": "Project matches topic: education",
+      "confidence": "low"
+    },
+    {
+      "from": "project:studentproject",
+      "to": "topic:education-data",
+      "type": "relates",
+      "reason": "Project matches topic: education-data",
+      "confidence": "low"
+    },
+    {
+      "from": "project:studentproject",
+      "to": "topic:education",
+      "type": "relates",
+      "reason": "Project matches topic: education",
+      "confidence": "low"
+    }
+  ],
+  "analysis": {
+    "summary": "Built from 30 project(s), 2 idea(s), 4 knowledge note(s), and 3 task(s).",
+    "clusters": [
+      {
+        "topic": "education-data",
+        "nodes": [
+          "topic:education-data"
+        ],
+        "reason": "Shared tags, domains, titles, or summaries."
+      },
+      {
+        "topic": "personal-os",
+        "nodes": [
+          "topic:personal-os"
+        ],
+        "reason": "Shared tags, domains, titles, or summaries."
+      },
+      {
+        "topic": "education",
+        "nodes": [
+          "project:education-monopoly",
+          "topic:education-data",
+          "topic:education",
+          "topic:education-platform"
+        ],
+        "reason": "Shared tags, domains, titles, or summaries."
+      },
+      {
+        "topic": "teacher-agent",
+        "nodes": [
+          "topic:teacher-agent"
+        ],
+        "reason": "Shared tags, domains, titles, or summaries."
+      },
+      {
+        "topic": "hardware-agent",
+        "nodes": [
+          "topic:hardware-agent"
+        ],
+        "reason": "Shared tags, domains, titles, or summaries."
+      },
+      {
+        "topic": "teacher-research",
+        "nodes": [
+          "topic:teacher-research"
+        ],
+        "reason": "Shared tags, domains, titles, or summaries."
+      }
+    ],
+    "nextActions": [
+      "重建图谱后优先查看高置信 edge。",
+      "把高信号 idea 转为 task 或 project。",
+      "补齐 raw knowledge 的平台和分析。"
+    ]
+  }
+}

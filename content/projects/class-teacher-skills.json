@@ -1,0 +1,93 @@
+{
+  "slug": "class-teacher-skills",
+  "title": "Class Teacher Skills",
+  "status": "building",
+  "priority": "high",
+  "summary": "班主任专属 AI 技能仓库，覆盖家校沟通、学生记录、班务台账、数据汇总与确认后外发工作流。",
+  "explanation": "这是 Pigou 最贴近真实工作流的 AI skill 集合：把班主任日常事务拆成可确认、可复用、可持续扩展的能力模块。",
+  "domain": "teacher-agent",
+  "source": "github:PIGU-PPPgu/class-teacher-skills",
+  "progress": 64,
+  "goals": [
+    "沉淀班主任高频事务 skill",
+    "建立确认后外发的安全工作流",
+    "把学生记录和班务台账结构化"
+  ],
+  "nextActions": [
+    "从现有 174 个 skill/场景中筛出 10 个最高频、最成熟、最可直接复用的 MVP skill，建立优先级清单。",
+    "为 MVP skill 统一补齐结构：适用场景、输入字段、处理步骤、人工确认点、输出模板、禁止事项、脱敏示例。",
+    "补一个端到端闭环案例：导入学生/班级数据 → 生成通知或台账 → 人工确认 → 外发前检查。",
+    "在 Pigou OS 中实际挂载 1-3 个 class-assistant skill，并保存一次真实调用日志或演示截图。"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/PIGU-PPPgu/class-teacher-skills"
+    }
+  ],
+  "updated": "2026-04-29",
+  "progressEvaluation": {
+    "generatedAt": "2026-04-29",
+    "model": "gpt-5.5",
+    "source": "ai",
+    "progress": 64,
+    "status": "building",
+    "confidence": "medium",
+    "summary": "项目已从想法进入成体系建设阶段：仓库规模较大，已有大量班主任场景文档、skill 目录结构、示例数据和使用/安装/贡献说明，说明核心知识库和技能形态已经成型。但目前缺少真实调用日志、演示截图、上线/挂载证据和端到端验证，因此还不能判定为 shipped。",
+    "rationale": "未调用到 LLM 时，Pigou OS 使用本地信号引擎生成可解释的候选分数；有模型配置时会优先交给 AI 复核。",
+    "dimensions": [
+      {
+        "name": "product_readiness",
+        "score": 16,
+        "max": 25,
+        "reason": "项目状态、可用性描述和产品形态信号。"
+      },
+      {
+        "name": "technical_completeness",
+        "score": 16,
+        "max": 20,
+        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+      },
+      {
+        "name": "usage_validation",
+        "score": 4,
+        "max": 25,
+        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+      },
+      {
+        "name": "documentation_knowledge",
+        "score": 6,
+        "max": 15,
+        "reason": "README、wiki、代码理解和项目说明完整度。"
+      },
+      {
+        "name": "momentum",
+        "score": 8,
+        "max": 15,
+        "reason": "近期提交、任务推进和日志记录。"
+      }
+    ],
+    "evidence": [
+      "GitHub 仓库公开，最近推送时间为 2026-04-27，仍在活跃建设。",
+      "仓库共 182 个文件，其中 skills 目录 174 个文件，说明场景沉淀量较大。",
+      "以 .md 为主，共 172 个，符合 AI skill / prompt / workflow 知识库型项目特征。",
+      "存在 skills/class-assistant/SKILL.md、SCENARIOS_INDEX.md、README.md、class-assistant.skill，说明已有较明确的 skill 封装结构。",
+      "存在 examples/class_summary.sample.json 和 students.sample.csv，说明已开始准备结构化输入样例。",
+      "根目录包含 AGENT_INSTRUCTIONS.md、HOW_TO_USE_SKILLS.md、INSTALL.md、CONTRIBUTING.md，文档基础较完整。",
+      "README 明确聚焦班主任高频事务：家校沟通、学生记录、考勤成绩、班级日报/周报/月报、台账和发送前确认工作流。"
+    ],
+    "risks": [
+      "暂无真实使用日志、调用记录、演示截图或 Pigou OS 实际挂载证据，使用验证不足。",
+      "没有 LLM code insight 快照，无法确认 skill 文件质量、结构一致性和可执行程度。",
+      "仓库主要是文档型资产，Python 文件仅 3 个，未看到明确运行入口或自动化执行链路。",
+      "场景数量较多，但尚未看到明确 MVP 清单，可能存在覆盖广但成熟度不均的问题。",
+      "确认后外发是核心安全工作流，但当前证据中还缺少完整端到端闭环示例。"
+    ],
+    "nextActions": [
+      "从现有 174 个 skill/场景中筛出 10 个最高频、最成熟、最可直接复用的 MVP skill，建立优先级清单。",
+      "为 MVP skill 统一补齐结构：适用场景、输入字段、处理步骤、人工确认点、输出模板、禁止事项、脱敏示例。",
+      "补一个端到端闭环案例：导入学生/班级数据 → 生成通知或台账 → 人工确认 → 外发前检查。",
+      "在 Pigou OS 中实际挂载 1-3 个 class-assistant skill，并保存一次真实调用日志或演示截图。"
+    ]
+  }
+}

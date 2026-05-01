@@ -1,0 +1,300 @@
+{
+  "slug": "headteacher-helper",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "Headteacher-helper",
+    "url": "https://github.com/PIGU-PPPgu/Headteacher-helper",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-04-26T23:50:16Z",
+    "language": "TypeScript"
+  },
+  "generatedAt": "2026-04-27T16:13:45.815Z",
+  "readme": {
+    "title": "班主任助手（微信小程序）",
+    "summary": [
+      "面向班主任高频工作场景的小程序：把通知确认、材料催交、考勤异常、风险留痕、家校跟进与 AI 助教整合到同一套工作流里，降低重复沟通和信息分散带来的管理成本。",
+      "- 通知和收集“发了但没回”：统一追踪未确认、未提交与催办记录。 - 风险事件“有处理但难留痕”：风险分级、过程记录、导出与操作日志闭环。 - 考勤和跟进“信息割裂”：异常考勤直达跟进清单，减少来回切页。 - 班务节奏“靠记忆”：月度行事历、晚间总结、班级日常沉淀。 - 日常文案“重复劳动”：AI 辅助生成通知、总结、风险建议与问答。",
+      "- 核心指标：未确认通知、未交收集、考勤异常、待跟进。 - 效率看板：闭环率、催办转化率、行政节省时长。 - 入口联动：可直接跳转到考勤、跟进、行事历、晚间总结。",
+      "- 任务管理：通知类 / 收集类任务新建与执行。 - 任务明细：按学生追踪状态，支持催办与留痕。 - 风险联动：风险列表与详情、处理记录、导出状态。 - 扫描辅助：拍照/相册进入智能识别流程（Scan / SmartScan）。",
+      "- AI 对话：文本、语音速记、图片输入三种入口。 - 快捷提问：常见班务提示词快速触发。 - 语音流程：长按/点击录音，上传后自动识别与意图解析。",
+      "- 班级中心：名册、座位、班级动态（Moments）等聚合。 - 搜索联动：无跟进结果时可快速跳转到名册继续处理。"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 156,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "src",
+        "count": 98
+      },
+      {
+        "name": "cloud",
+        "count": 25
+      },
+      {
+        "name": "[root]",
+        "count": 20
+      },
+      {
+        "name": "scripts",
+        "count": 7
+      },
+      {
+        "name": "config",
+        "count": 4
+      },
+      {
+        "name": "docs",
+        "count": 1
+      },
+      {
+        "name": "i18n",
+        "count": 1
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".tsx",
+        "count": 59
+      },
+      {
+        "ext": ".ts",
+        "count": 36
+      },
+      {
+        "ext": ".json",
+        "count": 29
+      },
+      {
+        "ext": ".js",
+        "count": 7
+      },
+      {
+        "ext": ".md",
+        "count": 7
+      },
+      {
+        "ext": ".mjs",
+        "count": 7
+      },
+      {
+        "ext": ".css",
+        "count": 2
+      },
+      {
+        "ext": ".png",
+        "count": 2
+      },
+      {
+        "ext": ".gitignore",
+        "count": 1
+      },
+      {
+        "ext": ".html",
+        "count": 1
+      }
+    ]
+  },
+  "package": {
+    "manager": "npm",
+    "scripts": [
+      "dev:weapp",
+      "build:weapp",
+      "dev:h5",
+      "build:h5",
+      "build:icons",
+      "check:types",
+      "check:no-mock",
+      "check:release",
+      "db:indexes:create",
+      "cloud:functions:deploy",
+      "cloud:smoke",
+      "db:seed:import"
+    ],
+    "dependencies": [
+      "@tarojs/components",
+      "@tarojs/react",
+      "@tarojs/runtime",
+      "@tarojs/taro",
+      "echarts",
+      "echarts-for-weixin",
+      "react",
+      "react-dom",
+      "remixicon",
+      "xlsx"
+    ],
+    "devDependencies": [
+      "@babel/preset-react",
+      "@babel/preset-typescript",
+      "@cloudbase/manager-node",
+      "@tarojs/cli",
+      "@tarojs/plugin-framework-react",
+      "@tarojs/plugin-platform-h5",
+      "@tarojs/plugin-platform-weapp",
+      "@tarojs/webpack5-runner",
+      "@types/node",
+      "@types/react",
+      "@types/react-dom",
+      "babel-preset-taro",
+      "typescript"
+    ]
+  },
+  "frameworks": [
+    "React",
+    "Taro / WeChat Mini Program"
+  ],
+  "modules": [
+    {
+      "name": "src/pages",
+      "kind": "Mini program pages",
+      "evidence": [
+        "46 file(s) under src/pages/"
+      ],
+      "files": [
+        "src/pages/AIChat.tsx",
+        "src/pages/Agreement.tsx",
+        "src/pages/Attendance.tsx",
+        "src/pages/ClassDevelopmentReport.tsx",
+        "src/pages/ClassHub.tsx",
+        "src/pages/CreateCollection.tsx",
+        "src/pages/CreateTask.tsx",
+        "src/pages/Dashboard.tsx"
+      ]
+    },
+    {
+      "name": "src/components",
+      "kind": "Mini program components",
+      "evidence": [
+        "12 file(s) under src/components/"
+      ],
+      "files": [
+        "src/components/AIAvatar.tsx",
+        "src/components/EdgeSwipeBackView.tsx",
+        "src/components/TabBar.tsx",
+        "src/components/ec-canvas/index.js",
+        "src/components/ec-canvas/index.json",
+        "src/components/ec-canvas/index.wxml",
+        "src/components/ec-canvas/index.wxss",
+        "src/components/ec-canvas/runtime.js"
+      ]
+    },
+    {
+      "name": "src",
+      "kind": "Source root",
+      "evidence": [
+        "98 file(s) under src/"
+      ],
+      "files": [
+        "src/App.tsx",
+        "src/app 2.tsx",
+        "src/app-router.tsx",
+        "src/app.config.ts",
+        "src/app.css",
+        "src/assets/logo.jpg",
+        "src/assets/logo.png",
+        "src/components/AIAvatar.tsx"
+      ]
+    },
+    {
+      "name": "scripts",
+      "kind": "Automation scripts",
+      "evidence": [
+        "7 file(s) under scripts/"
+      ],
+      "files": [
+        "scripts/build-remixicon-subset.mjs",
+        "scripts/clean-seed.mjs",
+        "scripts/cloud-smoke.mjs",
+        "scripts/create-indexes.mjs",
+        "scripts/deploy-functions.mjs",
+        "scripts/import-seed.mjs",
+        "scripts/preflight.mjs"
+      ]
+    },
+    {
+      "name": "docs",
+      "kind": "Documentation",
+      "evidence": [
+        "1 file(s) under docs/"
+      ],
+      "files": [
+        "docs/interaction-matrix.md"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "cloud/aiProxy/package.json",
+    "src/app.config.ts",
+    "project.config.json"
+  ],
+  "importantFiles": [
+    {
+      "path": "cloud/aiProxy/package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": "src/app.config.ts",
+      "reason": "Mini program app config"
+    },
+    {
+      "path": "project.config.json",
+      "reason": "WeChat project config"
+    },
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "Headteacher Helper",
+      "label": "indexes"
+    },
+    {
+      "from": "React",
+      "to": "Headteacher Helper",
+      "label": "powers"
+    },
+    {
+      "from": "Taro / WeChat Mini Program",
+      "to": "Headteacher Helper",
+      "label": "powers"
+    },
+    {
+      "from": "src/pages",
+      "to": "Headteacher Helper",
+      "label": "contains"
+    },
+    {
+      "from": "src/components",
+      "to": "Headteacher Helper",
+      "label": "contains"
+    },
+    {
+      "from": "src",
+      "to": "Headteacher Helper",
+      "label": "contains"
+    },
+    {
+      "from": "scripts",
+      "to": "Headteacher Helper",
+      "label": "contains"
+    },
+    {
+      "from": "docs",
+      "to": "Headteacher Helper",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": [
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+  ]
+}

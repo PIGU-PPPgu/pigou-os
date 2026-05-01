@@ -1,0 +1,279 @@
+{
+  "slug": "pgw-buildingai",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "pgw-buildingai",
+    "url": "https://github.com/PIGU-PPPgu/pgw-buildingai",
+    "defaultBranch": "master",
+    "private": false,
+    "pushedAt": "2026-02-15T07:13:30Z",
+    "language": "TypeScript"
+  },
+  "generatedAt": "2026-04-27T15:21:19.248Z",
+  "readme": {
+    "title": "Enter the project directory (replace with your directory name)",
+    "summary": [
+      "<p align=\"center\" <a href=\"https://www.buildingai.cc/\" target=\"blank\"<img src=\"./assets/banner.png\" width=\"100%\" alt=\"BuildingAI Banner\" /</a </p",
+      "<p align=\"center\" <a href=\"http://demo.buildingai.cc/\" target=\"blank\"Live Demo</a｜ <a href=\"https://www.buildingai.cc/\"Official Website</a｜ <a href=\"./README.zh-CN.md\"中文文档</a </p",
+      "<p align=\"center\" <a href=\"https://nestjs.com/\"<img src=\"https://img.shields.io/badge/NestJS-11.x-ea2845\" alt=\"NestJS\" /</a <a href=\"https://typeorm.io/\"<img src=\"https://img.shields.io/badge/Typeorm-0.3.x-ef4100\" alt=\"TypeORM\" /</a <a href=\"https://www.postgresql.org/\"<img src=\"https://img.shields.io/badge/PostgreSQL-17.x-29527d\" alt=\"PostgreSQL\" /</a <a href=\"https://www.typescriptlang.org/\"<img src=\"https://img.shields.io/badge/TypeScript-5.x-3178c6\" alt=\"TypeScript\" /</a <a href=\"https://turbo.build/\"<img src=\"https://img.shields.io/badge/Turbo-2.x-6d5cb3\" alt=\"Turbo\" /</a <a href=\"https://vuejs.org/\"<img src=\"https://img.shields.io/badge/Vue.js-3.x-3aaf78\" alt=\"Vue.js\" /</a <a href=\"https://vitejs.dev/\"<img src=\"https://img.shields.io/badge/Vite-7.x-646cff\" alt=\"Vite\" /</a <a href=\"https://ui.nuxt.com/\"<img src=\"https://img.shields.io/badge/NuxtUI-3.x-00b95f\" alt=\"NuxtUI\" /</a <a href=\"https://nuxt.com/\"<img src=\"https://img.shields.io/badge/NuxtJS-4.x-00b95f\" alt=\"NuxtJS\" /</a </p",
+      "BuildingAI is an enterprise-grade open-source intelligent agent platform designed for AI developers, AI entrepreneurs, and forward-thinking organizations. Through a visual configuration interface (Do It Yourself), you can build native enterprise AI applications without code. The platform offers native capabilities such as intelligent agents, MCP, RAG pipelines, knowledge bases, large-model aggregation, and context engineering, along with user registration, membership subscriptions, compute billing, and other business operations.",
+      "Before installing BuildingAI, make sure your device meets the minimum requirements: - CPU: ≥ 2 cores - Memory: ≥ 4 GB RAM - Storage: ≥ 5 GB free space",
+      "Deploying BuildingAI with Docker is the simplest and most stable option. Ensure that Docker and Docker Compose are already installed on your device."
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 3028,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "packages",
+        "count": 1710
+      },
+      {
+        "name": "public",
+        "count": 689
+      },
+      {
+        "name": "extensions",
+        "count": 276
+      },
+      {
+        "name": "templates",
+        "count": 249
+      },
+      {
+        "name": "storage",
+        "count": 71
+      },
+      {
+        "name": "[root]",
+        "count": 17
+      },
+      {
+        "name": "assets",
+        "count": 8
+      },
+      {
+        "name": "scripts",
+        "count": 4
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".ts",
+        "count": 949
+      },
+      {
+        "ext": ".js",
+        "count": 800
+      },
+      {
+        "ext": ".vue",
+        "count": 408
+      },
+      {
+        "ext": ".json",
+        "count": 241
+      },
+      {
+        "ext": ".png",
+        "count": 128
+      },
+      {
+        "ext": ".woff2",
+        "count": 77
+      },
+      {
+        "ext": ".svg",
+        "count": 69
+      },
+      {
+        "ext": ".ttf",
+        "count": 60
+      },
+      {
+        "ext": ".woff",
+        "count": 60
+      },
+      {
+        "ext": ".md",
+        "count": 58
+      }
+    ]
+  },
+  "package": {
+    "manager": "pnpm",
+    "scripts": [
+      "build",
+      "dev",
+      "start",
+      "predeploy",
+      "stop",
+      "restart",
+      "delete",
+      "lint",
+      "lint:fix",
+      "format",
+      "typecheck",
+      "clean"
+    ],
+    "dependencies": [
+      "@iconify-json/heroicons",
+      "@iconify-json/lucide",
+      "@iconify-json/tabler",
+      "@internationalized/date",
+      "@nestjs/axios",
+      "@nestjs/bullmq",
+      "@nestjs/cache-manager",
+      "@nestjs/common",
+      "@nestjs/config",
+      "@nestjs/core",
+      "@nestjs/event-emitter",
+      "@nestjs/jwt",
+      "@nestjs/mapped-types",
+      "@nestjs/platform-express",
+      "@nestjs/schedule",
+      "@nestjs/serve-static",
+      "@nestjs/terminus",
+      "@nestjs/typeorm",
+      "@nuxt/image",
+      "@nuxt/kit",
+      "@nuxt/ui",
+      "@nuxtjs/color-mode",
+      "@nuxtjs/i18n",
+      "@pinia/nuxt"
+    ],
+    "devDependencies": [
+      "@nestjs/cli",
+      "@nestjs/schematics",
+      "@nestjs/testing",
+      "@nuxt/devtools",
+      "@nuxt/eslint",
+      "@types/body-parser",
+      "@types/express",
+      "@types/multer",
+      "@types/node",
+      "@types/semver",
+      "body-parser",
+      "clsx",
+      "concurrently",
+      "cross-env",
+      "eslint",
+      "eslint-plugin-format",
+      "eslint-plugin-vue",
+      "mime-types",
+      "prettier",
+      "prettier-plugin-tailwindcss",
+      "ts-node",
+      "tsup",
+      "turbo",
+      "typescript"
+    ]
+  },
+  "frameworks": [
+    "Taro / WeChat Mini Program"
+  ],
+  "modules": [
+    {
+      "name": "packages",
+      "kind": "Shared package workspace",
+      "evidence": [
+        "1710 file(s) under packages/"
+      ],
+      "files": [
+        "packages/@buildingai/ai-sdk/README.md",
+        "packages/@buildingai/ai-sdk/eslint.config.mjs",
+        "packages/@buildingai/ai-sdk/package.json",
+        "packages/@buildingai/ai-sdk/src/config/provider-config.types.ts",
+        "packages/@buildingai/ai-sdk/src/config/provider-config.utils.ts",
+        "packages/@buildingai/ai-sdk/src/config/providers/anthropic.config.json",
+        "packages/@buildingai/ai-sdk/src/config/providers/deepseek.config.json",
+        "packages/@buildingai/ai-sdk/src/config/providers/google.config.json"
+      ]
+    },
+    {
+      "name": "scripts",
+      "kind": "Automation scripts",
+      "evidence": [
+        "4 file(s) under scripts/"
+      ],
+      "files": [
+        "scripts/copy-extension-build.mjs",
+        "scripts/release.mjs",
+        "scripts/sync-env.mjs",
+        "scripts/translate-i18n.mjs"
+      ]
+    },
+    {
+      "name": "public",
+      "kind": "Static assets",
+      "evidence": [
+        "689 file(s) under public/"
+      ],
+      "files": [
+        "public/index.html",
+        "public/web/200.html",
+        "public/web/403/index.html",
+        "public/web/404.html",
+        "public/web/_nuxt/-NQlV6jO.js",
+        "public/web/_nuxt/0IcIaDmG.js",
+        "public/web/_nuxt/0KdVzVPn.js",
+        "public/web/_nuxt/0kB9tCkD.js"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "extensions/buildingai-simple-blog/package.json"
+  ],
+  "importantFiles": [
+    {
+      "path": "extensions/buildingai-simple-blog/package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "reason": "Workspace layout"
+    },
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    },
+    {
+      "path": "docker-compose.yml",
+      "reason": "Local infrastructure"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "PGW BuildingAI",
+      "label": "indexes"
+    },
+    {
+      "from": "Taro / WeChat Mini Program",
+      "to": "PGW BuildingAI",
+      "label": "powers"
+    },
+    {
+      "from": "packages",
+      "to": "PGW BuildingAI",
+      "label": "contains"
+    },
+    {
+      "from": "scripts",
+      "to": "PGW BuildingAI",
+      "label": "contains"
+    },
+    {
+      "from": "public",
+      "to": "PGW BuildingAI",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": []
+}

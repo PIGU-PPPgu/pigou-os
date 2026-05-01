@@ -1,0 +1,68 @@
+{
+  "slug": "student-grade-analysis",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "student-grade-analysis",
+    "url": "https://github.com/PIGU-PPPgu/student-grade-analysis",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2025-02-06T12:49:41Z",
+    "language": null
+  },
+  "generatedAt": "2026-04-27T15:21:31.105Z",
+  "readme": {
+    "title": "student-grade-analysis",
+    "summary": []
+  },
+  "fileTree": {
+    "totalFiles": 1,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "[root]",
+        "count": 1
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".md",
+        "count": 1
+      }
+    ]
+  },
+  "frameworks": [],
+  "modules": [
+    {
+      "name": "README.md",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "README.md"
+      ]
+    }
+  ],
+  "entrypoints": [],
+  "importantFiles": [
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "Student Grade Analysis",
+      "label": "indexes"
+    },
+    {
+      "from": "README.md",
+      "to": "Student Grade Analysis",
+      "label": "contains"
+    }
+  ],
+  "gaps": [
+    "package.json could not be found or parsed."
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "slug": "harness-skill-v2",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "harness-skill-v2",
+    "url": "https://github.com/PIGU-PPPgu/harness-skill-v2",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-04-02T17:02:18Z",
+    "language": "Python"
+  },
+  "generatedAt": "2026-04-27T15:20:56.844Z",
+  "readme": {
+    "title": "Harness Engineering",
+    "summary": [
+      "你有没有遇到这种情况：把任务丢给 Claude Code 或 Codex，它写了一堆代码，但因为不了解你的仓库结构、不知道你的架构约束、不清楚当前在做什么，写出来的东西偏了方向，或者需要大量反复纠正？",
+      "它不是一个 AI agent——Claude Code 和 Codex 本身就是 agent，而且比任何自制方案都强。它做的是把你的仓库改造成 agent 友好的环境：",
+      "- 生成结构化的 CLAUDE.md / AGENTS.md 入口文件，让 agent 一进来就理解仓库 - 建立标准化的文档骨架（架构、产品需求、质量标准、安全规范） - 提供执行计划管理，让 agent 知道当前在做什么、做到哪了 - 提供真实的质量检查命令（不是打印假输出），在 PR 前机械化验收",
+      "基于 OpenAI Harness Engineering（2026-02-11）方法论。",
+      "人类负责 Agent 负责 -------------------- 目标和验收标准 读文档理解仓库 架构决策 写代码、跑测试 安全审查 开 PR、响应 review 最终合并 根据反馈修改",
+      "然后填写关键文档，让 agent 真正理解你的仓库，直接用 Claude Code 或 Codex 开始工作。"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 26,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "src",
+        "count": 7
+      },
+      {
+        "name": "templates",
+        "count": 7
+      },
+      {
+        "name": "[root]",
+        "count": 5
+      },
+      {
+        "name": ".doc",
+        "count": 3
+      },
+      {
+        "name": "examples",
+        "count": 2
+      },
+      {
+        "name": ".github",
+        "count": 1
+      },
+      {
+        "name": "bin",
+        "count": 1
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".md",
+        "count": 12
+      },
+      {
+        "ext": ".py",
+        "count": 7
+      },
+      {
+        "ext": "[none]",
+        "count": 3
+      },
+      {
+        "ext": ".html",
+        "count": 2
+      },
+      {
+        "ext": ".sh",
+        "count": 1
+      },
+      {
+        "ext": ".yml",
+        "count": 1
+      }
+    ]
+  },
+  "frameworks": [
+    "Python"
+  ],
+  "modules": [
+    {
+      "name": "src",
+      "kind": "Source root",
+      "evidence": [
+        "7 file(s) under src/"
+      ],
+      "files": [
+        "src/agent_loop.py",
+        "src/checks/__init__.py",
+        "src/checks/audit.py",
+        "src/checks/garden.py",
+        "src/checks/golden_rules.py",
+        "src/harness_check.py",
+        "src/harness_runtime.py"
+      ]
+    }
+  ],
+  "entrypoints": [],
+  "importantFiles": [
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "Harness Skill v2",
+      "label": "indexes"
+    },
+    {
+      "from": "Python",
+      "to": "Harness Skill v2",
+      "label": "powers"
+    },
+    {
+      "from": "src",
+      "to": "Harness Skill v2",
+      "label": "contains"
+    }
+  ],
+  "gaps": [
+    "package.json could not be found or parsed."
+  ]
+}

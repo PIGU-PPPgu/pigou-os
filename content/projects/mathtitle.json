@@ -1,0 +1,87 @@
+{
+  "slug": "mathtitle",
+  "title": "MathTitle",
+  "status": "paused",
+  "priority": "medium",
+  "summary": "数学题目与可视化生成方向的 private 项目，仓库内包含多智能体、Manim、前端集成和可视化路由等文档。",
+  "explanation": "README 本身很短，但仓库文件显示它是一个数学题目、多模态讲解和 Manim 可视化方向的持续实验，可以作为 Pigou 教育 AI 产品线的数学内容分支。",
+  "domain": "math-ai",
+  "visibility": "private",
+  "source": "private:mathtitle",
+  "readme": [
+    "# mathtitle",
+    "仓库内包含 MULTIMODAL_FINAL_ARCHITECTURE、MANIM_AUTO_FALLBACK、WEBSOCKET_VISUALIZATION_INTEGRATION、PHASE_5_FRONTEND_INTEGRATION 等实现文档。"
+  ],
+  "progress": 55,
+  "goals": [
+    "探索数学题目 AI 讲解",
+    "接入 Manim 可视化",
+    "沉淀多模态数学内容生成链路"
+  ],
+  "nextActions": [
+    "先做项目归属决策：继续作为 MathTitle 独立项目，还是并入 IntelliTutor 的数学可视化/题目讲解模块。",
+    "补一版正式 README：目标、当前能力、启动方式、核心目录、依赖服务、示例输入输出、已知限制。",
+    "整理一个最小 demo：输入一道数学题，生成文字讲解，再生成或触发 Manim/交互式可视化，并在前端展示。",
+    "补至少 1 张可公开截图或 GIF，优先展示题目讲解页、数学可视化结果页或 Manim 动画效果。"
+  ],
+  "updated": "2026-04-29",
+  "progressEvaluation": {
+    "generatedAt": "2026-04-29",
+    "model": "gpt-5.5",
+    "source": "ai",
+    "progress": 55,
+    "status": "paused",
+    "confidence": "low",
+    "summary": "MathTitle 已不是纯 idea：仓库中有较多 Python 后端、Next.js/React 前端、Manim worker、可视化与多模态架构文档，说明已经进入过系统性构建阶段。但目前缺少可验证的产品闭环、公开截图、运行说明、任务/日志和近期推进信号，更像是阶段性实验项目暂停中。",
+    "rationale": "仓库规模较大：约 1989 个文件，包含 backend、src、docs、manim-worker 等目录，说明已有实际工程沉淀。,技术栈明确：Python、Next.js、React、Tailwind CSS，并有数学渲染/可视化相关依赖，如 katex、mafs、mathjs、react-katex、three/fiber 等。,文档信号较多：docs 下有 MULTIMODAL、MANIM、WebSocket 可视化、前端集成等方向性文档，说明曾围绕数学 AI 讲解和可视化链路做过设计。,产品验证不足：没有公开截图或 GIF，没有真实使用、上线、演示链接、用户反馈或任务完成记录。,README 过短，无法判断当前能稳定运行哪些能力，也没有清晰启动方式、示例输入输出和限制说明。,最后 push 为 2026-02-05，当前评估时间为 2026-04-29，近期缺少推进日志，因此状态更适合判为 paused，而不是 building。",
+    "dimensions": [
+      {
+        "name": "product_readiness",
+        "score": 10,
+        "max": 25,
+        "reason": "项目状态、可用性描述和产品形态信号。"
+      },
+      {
+        "name": "technical_completeness",
+        "score": 20,
+        "max": 20,
+        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+      },
+      {
+        "name": "usage_validation",
+        "score": 4,
+        "max": 25,
+        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+      },
+      {
+        "name": "documentation_knowledge",
+        "score": 5,
+        "max": 15,
+        "reason": "README、wiki、代码理解和项目说明完整度。"
+      },
+      {
+        "name": "momentum",
+        "score": 2,
+        "max": 15,
+        "reason": "近期提交、任务推进和日志记录。"
+      }
+    ],
+    "evidence": [
+      "repo files: 1989",
+      "last push: 2026-02-05"
+    ],
+    "risks": [
+      "仓库可能混入构建产物或外部代码，如 .next、docs/Wise-Will-agent-main，真实核心代码成熟度需要进一步代码洞察确认。",
+      "缺少最小可演示闭环，无法证明“输入数学题 → AI 讲解 → 可视化生成 → 前端展示”已经稳定打通。",
+      "没有截图、GIF 或上线地址，产品形态不可见。",
+      "README 信息不足，后续接手和复现成本较高。",
+      "项目归属不清：可能与 IntelliTutor 的数学讲解/可视化能力重叠。"
+    ],
+    "nextActions": [
+      "先做项目归属决策：继续作为 MathTitle 独立项目，还是并入 IntelliTutor 的数学可视化/题目讲解模块。",
+      "补一版正式 README：目标、当前能力、启动方式、核心目录、依赖服务、示例输入输出、已知限制。",
+      "整理一个最小 demo：输入一道数学题，生成文字讲解，再生成或触发 Manim/交互式可视化，并在前端展示。",
+      "补至少 1 张可公开截图或 GIF，优先展示题目讲解页、数学可视化结果页或 Manim 动画效果。"
+    ]
+  }
+}

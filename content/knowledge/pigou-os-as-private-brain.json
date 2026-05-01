@@ -1,0 +1,44 @@
+{
+  "slug": "pigou-os-as-private-brain",
+  "title": "Pigou OS 应该是私有知识大脑和项目驾驶舱",
+  "type": "decision",
+  "status": "linked",
+  "summary": "Pigou OS 不应该漂成公开作品集。它首先要帮助 Pigou 在项目、想法、笔记和复盘之间记住、判断并行动。",
+  "keyPoints": [
+    "可以有对外展示层，但产品中心是私有决策支持。",
+    "项目数据、想法雷达、下一步行动和日志都应该能连接回捕获的知识。",
+    "OPC OS 以后可以成为更深的自动化后台；Pigou OS 保持轻量、可读、好改。"
+  ],
+  "tags": [
+    "product-positioning",
+    "personal-os",
+    "decision"
+  ],
+  "relatedProjects": [
+    "pigou-os"
+  ],
+  "confidence": "high",
+  "next": "让总览同时显示项目驾驶舱信号和知识大脑信号。",
+  "capturedAt": "2026-04-27",
+  "updated": "2026-04-28",
+  "analysis": {
+    "intent": "明确 Pigou OS 的产品定位：以私有知识大脑和项目驾驶舱为核心，而不是公开作品集。",
+    "usefulness": "可作为 Pigou OS 后续信息架构、总览页设计、项目/想法/笔记/复盘关联机制的核心决策依据。",
+    "projectLinks": [
+      "pigou-os"
+    ],
+    "ideaLinks": [
+      "idea-to-project-pipeline"
+    ],
+    "actionSuggestions": [
+      "调整 Pigou OS 总览页，让它同时显示项目驾驶舱信号和知识大脑信号。",
+      "为项目、想法、笔记、复盘、下一步行动建立统一的回链关系。",
+      "区分私有决策层和对外展示层，避免产品中心漂移成作品集。",
+      "保持 Pigou OS 轻量、可读、好改，把深层自动化留给未来的 OPC OS。"
+    ],
+    "relationReasoning": "该笔记直接讨论 Pigou OS 的定位、边界和下一步产品设计，因此关联 pigou-os。其强调从捕获知识连接到项目、想法和行动，符合 idea-to-project-pipeline 的转化逻辑。",
+    "confidence": "high"
+  },
+  "platform": "manual",
+  "analyzedAt": "2026-04-28"
+}

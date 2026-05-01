@@ -1,0 +1,191 @@
+{
+  "slug": "class-teacher-skills",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "class-teacher-skills",
+    "url": "https://github.com/PIGU-PPPgu/class-teacher-skills",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-04-27T15:05:36Z",
+    "language": "Python"
+  },
+  "generatedAt": "2026-04-27T15:20:40.207Z",
+  "readme": {
+    "title": "Class Teacher Skills",
+    "summary": [
+      "面向班主任的 AI 技能仓库，不是泛教育 prompt 集，而是围绕真实班务工作拆出来的一套可复用工作台。",
+      "- 家校沟通 - 学生记录 - 成绩与考勤分析 - 班级日报 / 周报 / 月报 - 台账、跟进表、清单、统计 - 发送前确认的工作流骨架",
+      "它更接近一个 班主任专属 AI 工作台，把高频、重复、容易漏的事务拆成可以直接复用的：",
+      "- 标准场景 - 固定模板 - 脱敏示例 - 本地脚本 - 面向 agent 的目录结构",
+      "1. 场景不是泛化的，是班主任高频任务直拆 覆盖重点围绕： - 家长群通知 - 一对一家长沟通 - 学生评语与观察记录 - 谈话、请假、家访、违纪留痕 - 作业催交、返校补课、重点学生跟踪 - 班级日报 / 周报 / 月报 - 班级事务待办、周统计、月统计",
+      "这套仓库专门补的是班主任真正累的地方： - 台账 - 表格 - 跟进表 - 周期汇总 - 数据统计 - 后续动作收口"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 182,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "skills",
+        "count": 174
+      },
+      {
+        "name": "[root]",
+        "count": 8
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".md",
+        "count": 172
+      },
+      {
+        "ext": ".py",
+        "count": 3
+      },
+      {
+        "ext": ".csv",
+        "count": 2
+      },
+      {
+        "ext": ".gitignore",
+        "count": 1
+      },
+      {
+        "ext": ".json",
+        "count": 1
+      },
+      {
+        "ext": ".skill",
+        "count": 1
+      },
+      {
+        "ext": ".txt",
+        "count": 1
+      },
+      {
+        "ext": "[none]",
+        "count": 1
+      }
+    ]
+  },
+  "frameworks": [
+    "Python"
+  ],
+  "modules": [
+    {
+      "name": "skills",
+      "kind": "Repository directory",
+      "evidence": [
+        "174 file(s)"
+      ],
+      "files": [
+        "skills/README-class-teacher-skills.md",
+        "skills/SCENARIO_STYLE_GUIDE.md",
+        "skills/class-assistant.skill",
+        "skills/class-assistant/README.md",
+        "skills/class-assistant/SCENARIOS_INDEX.md",
+        "skills/class-assistant/SKILL.md",
+        "skills/class-assistant/examples/class_summary.sample.json",
+        "skills/class-assistant/examples/students.sample.csv"
+      ]
+    },
+    {
+      "name": ".gitignore",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        ".gitignore"
+      ]
+    },
+    {
+      "name": "AGENT_INSTRUCTIONS.md",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "AGENT_INSTRUCTIONS.md"
+      ]
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "CONTRIBUTING.md"
+      ]
+    },
+    {
+      "name": "HOW_TO_USE_SKILLS.md",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "HOW_TO_USE_SKILLS.md"
+      ]
+    },
+    {
+      "name": "INSTALL.md",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "INSTALL.md"
+      ]
+    }
+  ],
+  "entrypoints": [],
+  "importantFiles": [
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "Class Teacher Skills",
+      "label": "indexes"
+    },
+    {
+      "from": "Python",
+      "to": "Class Teacher Skills",
+      "label": "powers"
+    },
+    {
+      "from": "skills",
+      "to": "Class Teacher Skills",
+      "label": "contains"
+    },
+    {
+      "from": ".gitignore",
+      "to": "Class Teacher Skills",
+      "label": "contains"
+    },
+    {
+      "from": "AGENT_INSTRUCTIONS.md",
+      "to": "Class Teacher Skills",
+      "label": "contains"
+    },
+    {
+      "from": "CONTRIBUTING.md",
+      "to": "Class Teacher Skills",
+      "label": "contains"
+    },
+    {
+      "from": "HOW_TO_USE_SKILLS.md",
+      "to": "Class Teacher Skills",
+      "label": "contains"
+    }
+  ],
+  "gaps": [
+    "package.json could not be found or parsed."
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "slug": "edu-analysis",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "edu-analysis",
+    "url": "https://github.com/PIGU-PPPgu/edu-analysis",
+    "defaultBranch": "main",
+    "private": true,
+    "pushedAt": "2026-04-14T16:34:39Z",
+    "language": "TypeScript"
+  },
+  "generatedAt": "2026-04-27T15:20:43.663Z",
+  "readme": {
+    "title": "智能教育数据分析平台",
+    "summary": [
+      "[](https://github.com/PIGU-PPPgu/edu-analysis) [](https://reactjs.org/) [](https://www.typescriptlang.org/) [](https://vitejs.dev/) [](https://supabase.com/)",
+      "面向教学管理的一站式数据分析平台，集成成绩分析、增值评价、AI 智能诊断与报告导出功能。",
+      "- 数据看板：平均分、分数段分布、箱线图、散点图 - 班级分析：班级对比、学科排名、成绩趋势追踪 - 高级分析：多维交叉分析、异常检测（2 sigma）、科目相关性、学生贡献度",
+      "- 数据导入：Excel 模板导入，自动校验学生信息、教学编排和考试成绩 - 增值活动：创建分析任务，配置前测/后测，一键计算增值率 - 增值报告： - 班级增值评价（班级增值率排名、科目增值对比） - 教师增值评价（教师教学效能排名、历次追踪） - 学生增值评价（个体成长轨迹、趋势预测） - 学科均衡分析（科目间教学效果对比） - AI 智能分析（自动生成诊断报告、改进建议） - 数据对比工具（跨活动/跨班级对比） - 报告导出：PPT 一键导出（Positivus 风格，支持图表与富文本）",
+      "- 多维度筛选（班级、科目、分层）后自动生成分析报告 - 算法洞察：异常检测、趋势预测、分层诊断 - 支持多 AI 提供商（OpenAI、Anthropic 等）",
+      "- 知识点评估：从作业中提取知识点并追踪掌握度 - 预警系统：自动识别成绩异常学生 - 学生画像：AI 标签与自定义标签 - 考试管理：考试创建、等级分数线配置、x 段评价"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 1423,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "src",
+        "count": 891
+      },
+      {
+        "name": "supabase",
+        "count": 124
+      },
+      {
+        "name": "docs",
+        "count": 43
+      },
+      {
+        "name": "[root]",
+        "count": 39
+      },
+      {
+        "name": ".claude",
+        "count": 35
+      },
+      {
+        "name": "scripts",
+        "count": 33
+      },
+      {
+        "name": ".cursor",
+        "count": 32
+      },
+      {
+        "name": ".doc",
+        "count": 29
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".tsx",
+        "count": 504
+      },
+      {
+        "ext": ".ts",
+        "count": 406
+      },
+      {
+        "ext": ".md",
+        "count": 144
+      },
+      {
+        "ext": ".sql",
+        "count": 108
+      },
+      {
+        "ext": ".json",
+        "count": 39
+      },
+      {
+        "ext": ".mdc",
+        "count": 28
+      },
+      {
+        "ext": ".js",
+        "count": 25
+      },
+      {
+        "ext": "[none]",
+        "count": 21
+      },
+      {
+        "ext": ".sh",
+        "count": 19
+      },
+      {
+        "ext": ".xlsx",
+        "count": 18
+      }
+    ]
+  },
+  "package": {
+    "manager": "npm",
+    "scripts": [
+      "dev",
+      "build",
+      "build:strict",
+      "build:analyze",
+      "build:stats",
+      "build:types",
+      "build:desktop",
+      "package:desktop",
+      "build:with-typecheck",
+      "build:dev",
+      "preview",
+      "lint"
+    ],
+    "dependencies": [
+      "@capacitor/cli",
+      "@capacitor/core",
+      "@capacitor/ios",
+      "@hookform/resolvers",
+      "@nivo/bar",
+      "@nivo/core",
+      "@nivo/heatmap",
+      "@nivo/line",
+      "@nivo/scatterplot",
+      "@radix-ui/react-accordion",
+      "@radix-ui/react-alert-dialog",
+      "@radix-ui/react-aspect-ratio",
+      "@radix-ui/react-avatar",
+      "@radix-ui/react-checkbox",
+      "@radix-ui/react-collapsible",
+      "@radix-ui/react-context-menu",
+      "@radix-ui/react-dialog",
+      "@radix-ui/react-dropdown-menu",
+      "@radix-ui/react-hover-card",
+      "@radix-ui/react-label",
+      "@radix-ui/react-menubar",
+      "@radix-ui/react-navigation-menu",
+      "@radix-ui/react-popover",
+      "@radix-ui/react-progress"
+    ],
+    "devDependencies": [
+      "@browser-echo/vite",
+      "@eslint/js",
+      "@playwright/test",
+      "@supabase/supabase-js",
+      "@tailwindcss/typography",
+      "@testing-library/jest-dom",
+      "@testing-library/react",
+      "@types/crypto-js",
+      "@types/lodash",
+      "@types/lodash-es",
+      "@types/node",
+      "@types/papaparse",
+      "@types/react",
+      "@types/react-dom",
+      "@types/uuid",
+      "@types/xlsx",
+      "@vitejs/plugin-react-swc",
+      "@vitest/ui",
+      "autoprefixer",
+      "electron",
+      "electron-builder",
+      "eslint",
+      "eslint-config-prettier",
+      "eslint-plugin-prettier"
+    ]
+  },
+  "frameworks": [
+    "Tailwind CSS",
+    "Python"
+  ],
+  "modules": [
+    {
+      "name": "src/pages",
+      "kind": "Mini program pages",
+      "evidence": [
+        "42 file(s) under src/pages/"
+      ],
+      "files": [
+        "src/pages/AdminDashboard.tsx",
+        "src/pages/AdvancedAnalysis.tsx",
+        "src/pages/ClassAnalytics.tsx",
+        "src/pages/ClassManagement.tsx",
+        "src/pages/ClassProfile.tsx",
+        "src/pages/CleanDuplicateStudents.tsx",
+        "src/pages/ConfigurationManagement.tsx",
+        "src/pages/DiagnosisPage.tsx"
+      ]
+    },
+    {
+      "name": "src/components",
+      "kind": "Mini program components",
+      "evidence": [
+        "485 file(s) under src/components/"
+      ],
+      "files": [
+        "src/components/ErrorBoundary.tsx",
+        "src/components/Loading.tsx",
+        "src/components/ai/AIManagementDashboard.tsx",
+        "src/components/ai/FloatingChatAssistant.tsx",
+        "src/components/ai/RecommendationPanel.tsx",
+        "src/components/analysis/AIAnalysisButton.tsx",
+        "src/components/analysis/AutoAnalysisTrigger.tsx",
+        "src/components/analysis/DebugDataViewer.tsx"
+      ]
+    },
+    {
+      "name": "src",
+      "kind": "Source root",
+      "evidence": [
+        "891 file(s) under src/"
+      ],
+      "files": [
+        "src/App-Legacy.tsx",
+        "src/App.css",
+        "src/App.tsx",
+        "src/TestContext.tsx",
+        "src/ThemeTest.tsx",
+        "src/api/README_ADVANCED_API.md",
+        "src/api/__tests__/advancedStatisticsAPI.integration.test.ts",
+        "src/api/__tests__/gradeDataAPI.integration.test.ts"
+      ]
+    },
+    {
+      "name": "scripts",
+      "kind": "Automation scripts",
+      "evidence": [
+        "33 file(s) under scripts/"
+      ],
+      "files": [
+        "scripts/apply-exams-rls-fix.ts",
+        "scripts/backup-restore.sh",
+        "scripts/backup-ssh.sh",
+        "scripts/blue-green-deploy.sh",
+        "scripts/check-data.ts",
+        "scripts/check-excel-columns.ts",
+        "scripts/check-grade-data-subjects.ts",
+        "scripts/check-politics-data.ts"
+      ]
+    },
+    {
+      "name": "public",
+      "kind": "Static assets",
+      "evidence": [
+        "19 file(s) under public/"
+      ],
+      "files": [
+        "public/favicon.ico",
+        "public/favicon.png",
+        "public/hero-loop.mp4",
+        "public/hero.mp4",
+        "public/libs/prop-types.min.js",
+        "public/libs/react-dom.production.min.js",
+        "public/libs/react.production.min.js",
+        "public/libs/recharts.min.js"
+      ]
+    },
+    {
+      "name": "docs",
+      "kind": "Documentation",
+      "evidence": [
+        "43 file(s) under docs/"
+      ],
+      "files": [
+        "docs/AGENT_COMMAND_REFERENCE.md",
+        "docs/API_INTERFACE_STANDARDS.md",
+        "docs/API_UNIFIED_GUIDE.md",
+        "docs/INTERFACE_TESTING_REPORT.md",
+        "docs/MATERIALIZED_VIEWS.md",
+        "docs/MULTI_CLASS_DASHBOARD_GUIDE.md",
+        "docs/PDF分页优化-LaTeX级别控制.md",
+        "docs/Positivus风格AI报告改造说明.md"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "ops/edu-analysis-ai-api/package.json"
+  ],
+  "importantFiles": [
+    {
+      "path": "ops/edu-analysis-ai-api/package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": ".claude/agents/README.md",
+      "reason": "Human project explanation"
+    },
+    {
+      "path": "docker-compose.yml",
+      "reason": "Local infrastructure"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "Edu Analysis",
+      "label": "indexes"
+    },
+    {
+      "from": "Tailwind CSS",
+      "to": "Edu Analysis",
+      "label": "powers"
+    },
+    {
+      "from": "Python",
+      "to": "Edu Analysis",
+      "label": "powers"
+    },
+    {
+      "from": "src/pages",
+      "to": "Edu Analysis",
+      "label": "contains"
+    },
+    {
+      "from": "src/components",
+      "to": "Edu Analysis",
+      "label": "contains"
+    },
+    {
+      "from": "src",
+      "to": "Edu Analysis",
+      "label": "contains"
+    },
+    {
+      "from": "scripts",
+      "to": "Edu Analysis",
+      "label": "contains"
+    },
+    {
+      "from": "public",
+      "to": "Edu Analysis",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": []
+}

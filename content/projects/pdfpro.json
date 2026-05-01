@@ -1,0 +1,89 @@
+{
+  "slug": "pdfpro",
+  "title": "PDF Pro",
+  "status": "archived",
+  "priority": "low",
+  "summary": "空的 private 归档仓库，暂时只作为历史占位。",
+  "explanation": "GitHub 显示该仓库为空，没有 README 和可展示图片。Pigou OS 只保留它的存在，不提供外链。",
+  "domain": "archive",
+  "visibility": "private",
+  "source": "private:pdfpro",
+  "readme": [
+    "Empty private repository. No README content is available yet."
+  ],
+  "progress": 0,
+  "goals": [
+    "确认是否仍有保留价值",
+    "必要时删除或归档"
+  ],
+  "nextActions": [
+    "决定是否从 Pigou OS 项目列表中隐藏该项目。",
+    "如果没有历史或复用价值，建议删除仓库或保持 private archived 且不展示。",
+    "如果需要保留，补充一个极简 README：项目背景、为什么归档、是否不再维护。",
+    "无需投入开发评估，除非重新定义 PDF Pro 的产品目标并新建实现。"
+  ],
+  "updated": "2026-04-29",
+  "progressEvaluation": {
+    "generatedAt": "2026-04-29",
+    "model": "gpt-5.5",
+    "source": "ai",
+    "progress": 0,
+    "status": "archived",
+    "confidence": "high",
+    "summary": "PDF Pro 是一个空的 private 归档仓库，目前没有代码、README、图片、任务或使用信号，只适合作为历史占位，不应作为活跃项目展示。",
+    "rationale": "GitHub/wiki 快照显示仓库文件数为 0，没有目录、入口文件、模块、框架或语言识别。,README、package.json、代码树和代码洞察均不可用，没有可判断的产品或技术实现。,最后 push 时间为 2021-01-16，缺少近期维护、任务推进和日志记录。,项目当前描述已明确为归档占位，且优先级为 low。",
+    "dimensions": [
+      {
+        "name": "product_readiness",
+        "score": 5,
+        "max": 25,
+        "reason": "项目状态、可用性描述和产品形态信号。"
+      },
+      {
+        "name": "technical_completeness",
+        "score": 2,
+        "max": 20,
+        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+      },
+      {
+        "name": "usage_validation",
+        "score": 4,
+        "max": 25,
+        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+      },
+      {
+        "name": "documentation_knowledge",
+        "score": 5,
+        "max": 15,
+        "reason": "README、wiki、代码理解和项目说明完整度。"
+      },
+      {
+        "name": "momentum",
+        "score": 2,
+        "max": 15,
+        "reason": "近期提交、任务推进和日志记录。"
+      }
+    ],
+    "evidence": [
+      "repo private: true",
+      "totalFiles: 0",
+      "language: null",
+      "imageCount: 0",
+      "publicImageCount: 0",
+      "tasks: 0",
+      "logs: 0",
+      "last push: 2021-01-16"
+    ],
+    "risks": [
+      "仓库为空，无法复用或评估历史实现。",
+      "没有 README，未来回看时难以判断项目背景和归档原因。",
+      "如果继续出现在 Pigou OS 项目列表中，可能造成误导。"
+    ],
+    "nextActions": [
+      "决定是否从 Pigou OS 项目列表中隐藏该项目。",
+      "如果没有历史或复用价值，建议删除仓库或保持 private archived 且不展示。",
+      "如果需要保留，补充一个极简 README：项目背景、为什么归档、是否不再维护。",
+      "无需投入开发评估，除非重新定义 PDF Pro 的产品目标并新建实现。"
+    ]
+  }
+}

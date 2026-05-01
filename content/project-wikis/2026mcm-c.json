@@ -1,0 +1,203 @@
+{
+  "slug": "2026mcm-c",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "2026MCM_C",
+    "url": "https://github.com/PIGU-PPPgu/2026MCM_C",
+    "defaultBranch": "main",
+    "private": true,
+    "pushedAt": "2026-01-31T11:17:33Z",
+    "language": "TeX"
+  },
+  "generatedAt": "2026-04-27T15:20:35.084Z",
+  "readme": {
+    "title": "2026MCM_C",
+    "summary": []
+  },
+  "fileTree": {
+    "totalFiles": 97,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "2026美赛Latex模板",
+        "count": 51
+      },
+      {
+        "name": "overleaf所需",
+        "count": 40
+      },
+      {
+        "name": "[root]",
+        "count": 6
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".png",
+        "count": 81
+      },
+      {
+        "ext": ".cls",
+        "count": 2
+      },
+      {
+        "ext": ".csv",
+        "count": 2
+      },
+      {
+        "ext": ".eps",
+        "count": 2
+      },
+      {
+        "ext": ".md",
+        "count": 2
+      },
+      {
+        "ext": "[none]",
+        "count": 2
+      },
+      {
+        "ext": ".cpp",
+        "count": 1
+      },
+      {
+        "ext": ".docx",
+        "count": 1
+      },
+      {
+        "ext": ".gitignore",
+        "count": 1
+      },
+      {
+        "ext": ".m",
+        "count": 1
+      }
+    ]
+  },
+  "frameworks": [
+    "LaTeX"
+  ],
+  "modules": [
+    {
+      "name": "2026美赛Latex模板",
+      "kind": "Repository directory",
+      "evidence": [
+        "51 file(s)"
+      ],
+      "files": [
+        "2026美赛Latex模板/2602199.tex",
+        "2026美赛Latex模板/easymcm.sty",
+        "2026美赛Latex模板/figures/Data_Screening(1).png",
+        "2026美赛Latex模板/figures/Data_Screening(2).png",
+        "2026美赛Latex模板/figures/Fire_Situation.png",
+        "2026美赛Latex模板/figures/Flow_Chart.png",
+        "2026美赛Latex模板/figures/Literature_Review.png",
+        "2026美赛Latex模板/figures/adv_accuracy_lines.png"
+      ]
+    },
+    {
+      "name": "overleaf所需",
+      "kind": "Repository directory",
+      "evidence": [
+        "40 file(s)"
+      ],
+      "files": [
+        "overleaf所需/LICENSE",
+        "overleaf所需/README.md",
+        "overleaf所需/code/mcmthesis-matlab1.m",
+        "overleaf所需/code/mcmthesis-sudoku.cpp",
+        "overleaf所需/figures/Data_Screening(1).png",
+        "overleaf所需/figures/Data_Screening(2).png",
+        "overleaf所需/figures/Fire_Situation.png",
+        "overleaf所需/figures/Flow_Chart.png"
+      ]
+    },
+    {
+      "name": ".gitignore",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        ".gitignore"
+      ]
+    },
+    {
+      "name": "2026美赛论文模板（带AI提示词）.docx",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "2026美赛论文模板（带AI提示词）.docx"
+      ]
+    },
+    {
+      "name": "ablation_metrics.csv",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "ablation_metrics.csv"
+      ]
+    },
+    {
+      "name": "LICENSE",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "LICENSE"
+      ]
+    }
+  ],
+  "entrypoints": [],
+  "importantFiles": [
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "2026 MCM C",
+      "label": "indexes"
+    },
+    {
+      "from": "LaTeX",
+      "to": "2026 MCM C",
+      "label": "powers"
+    },
+    {
+      "from": "2026美赛Latex模板",
+      "to": "2026 MCM C",
+      "label": "contains"
+    },
+    {
+      "from": "overleaf所需",
+      "to": "2026 MCM C",
+      "label": "contains"
+    },
+    {
+      "from": ".gitignore",
+      "to": "2026 MCM C",
+      "label": "contains"
+    },
+    {
+      "from": "2026美赛论文模板（带AI提示词）.docx",
+      "to": "2026 MCM C",
+      "label": "contains"
+    },
+    {
+      "from": "ablation_metrics.csv",
+      "to": "2026 MCM C",
+      "label": "contains"
+    }
+  ],
+  "gaps": [
+    "package.json could not be found or parsed."
+  ]
+}

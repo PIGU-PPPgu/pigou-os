@@ -1,5 +1,10 @@
+.next
 .next/
+.next *
 out/
 node_modules/
 .env*
+!.env.example
+data/knowledge-vectors/
+tsconfig.tsbuildinfo
 .DS_Store

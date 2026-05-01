@@ -1,0 +1,88 @@
+{
+  "slug": "keti-ai-assistant",
+  "title": "Keti AI Assistant",
+  "status": "paused",
+  "priority": "medium",
+  "summary": "面向中国教师的 AI 课题申报书生成助手。",
+  "explanation": "它是教师科研方向的产品原型，专注把一个研究主题展开成更规范的课题申报材料。",
+  "domain": "teacher-research",
+  "source": "github:PIGU-PPPgu/keti-ai-assistant",
+  "progress": 64,
+  "goals": [
+    "生成课题申报书初稿",
+    "沉淀教育科研写作结构",
+    "验证教师科研辅助需求"
+  ],
+  "nextActions": [
+    "补齐 1-2 组脱敏端到端样例：研究主题、教师信息、生成片段、章节评分、最终 Word 文件截图或摘要。",
+    "运行一次完整生成流程并保存日志：Agent 状态、文献搜索结果、章节生成、Critic 评分、低分重写、docx 导出路径。",
+    "生成 LLM code insight，重点检查 src/agents、生成链路、Tavily 文献引用、QualityGate、docx 导出和异常恢复。",
+    "清理或忽略 node_modules，确保仓库统计和代码审查聚焦真实源码。"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/PIGU-PPPgu/keti-ai-assistant"
+    }
+  ],
+  "updated": "2026-04-29",
+  "progressEvaluation": {
+    "generatedAt": "2026-04-29",
+    "model": "gpt-5.5",
+    "source": "ai",
+    "progress": 64,
+    "status": "paused",
+    "confidence": "medium",
+    "summary": "Keti AI Assistant 已具备较完整的原型信号：README 描述了多 Agent 生成链路、Tavily 文献搜索、章节评分、Word 导出，仓库中也有 src/agents、docx/Express/SQLite 等实现依赖和截图文档。但缺少端到端运行日志、脱敏样例输出、真实用户/上线使用证据和 LLM code insight；近期无任务/日志推进，因此应维持 paused，而不是 building 或 shipped。",
+    "rationale": "产品形态明确：面向教师课题申报书生成，目标、章节结构和导出场景清楚。,技术实现已有基础：仓库包含 src/agents、BaseAgent、CheckpointManager、ModelRouter、QualityGate、generator 等模块，依赖包含 express、better-sqlite3、docx、jsonwebtoken、Tavily/OpenAI 兼容相关描述。,README 声称支持 4 个 Agent 协作、真实文献搜索、Critic 评分、低分重写、Word 导出，并给出 22,995 字和平均质量分 8.3/10 的生成结果描述。,docs/screenshots 下存在首页、表单、Mission Control、结果页截图，说明至少有可演示界面雏形。,但仓库文件数被 node_modules 严重放大，不能据此高估完成度；有效 src 文件约 37 个。,缺少 code insight、端到端运行日志、样例输入输出、导出文件证据和真实使用反馈，因此成熟度不能判定为接近上线。,项目当前状态标记为 paused，且无 tasks/logs，最近 push 为 2026-04-09，相比评估时间已有一段停滞。",
+    "dimensions": [
+      {
+        "name": "product_readiness",
+        "score": 10,
+        "max": 25,
+        "reason": "项目状态、可用性描述和产品形态信号。"
+      },
+      {
+        "name": "technical_completeness",
+        "score": 20,
+        "max": 20,
+        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+      },
+      {
+        "name": "usage_validation",
+        "score": 4,
+        "max": 25,
+        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+      },
+      {
+        "name": "documentation_knowledge",
+        "score": 6,
+        "max": 15,
+        "reason": "README、wiki、代码理解和项目说明完整度。"
+      },
+      {
+        "name": "momentum",
+        "score": 8,
+        "max": 15,
+        "reason": "近期提交、任务推进和日志记录。"
+      }
+    ],
+    "evidence": [
+      "repo files: 1709",
+      "last push: 2026-04-09"
+    ],
+    "risks": [
+      "没有端到端生成日志，无法确认 README 中的 22,995 字、评分、重写和导出流程是否可稳定复现。",
+      "没有脱敏样例输入输出，难以验证对真实教师申报书场景的质量。",
+      "没有上线地址、用户反馈、试用记录或提交材料成功案例，需求验证不足。",
+      "node_modules 被计入仓库统计，技术完成度信号有噪声。",
+      "缺少代码洞察，无法确认 Tavily 引用、Agent 状态流转、错误恢复、docx 导出等关键路径质量。"
+    ],
+    "nextActions": [
+      "补齐 1-2 组脱敏端到端样例：研究主题、教师信息、生成片段、章节评分、最终 Word 文件截图或摘要。",
+      "运行一次完整生成流程并保存日志：Agent 状态、文献搜索结果、章节生成、Critic 评分、低分重写、docx 导出路径。",
+      "生成 LLM code insight，重点检查 src/agents、生成链路、Tavily 文献引用、QualityGate、docx 导出和异常恢复。",
+      "清理或忽略 node_modules，确保仓库统计和代码审查聚焦真实源码。"
+    ]
+  }
+}

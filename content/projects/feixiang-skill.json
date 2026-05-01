@@ -1,0 +1,94 @@
+{
+  "slug": "feixiang-skill",
+  "title": "feixiang-skill",
+  "status": "building",
+  "priority": "medium",
+  "summary": "飞象星球教学平台 OpenClaw Skill - 作业/考试/AI精准练 API 客户端",
+  "domain": "javascript",
+  "visibility": "public",
+  "source": "github:PIGU-PPPgu/feixiang-skill",
+  "readme": [
+    "飞象星球教学平台的 OpenClaw Skill，通过直接调用平台 API 实现作业、考试、AI精准练数据的自动化获取与分析。",
+    "- 作业列表、提交情况、未交名单、正确率\n- 考试列表、成绩分布、优良及格率\n- 周周清错题知识点分析\n- Token 自动刷新（无需手动维护登录状态）",
+    "先在 OpenClaw 浏览器（profile=openclaw）中打开并登录飞象星球，然后运行：",
+    "脚本会自动从浏览器读取 cookie、刷新 token、检测班级信息，一步完成。"
+  ],
+  "progress": 52,
+  "goals": [
+    "整理项目定位",
+    "补充 README 摘要",
+    "确认展示边界"
+  ],
+  "nextActions": [
+    "补一个最小可验证运行记录：命令、脱敏成功日志、生成的 JSON/HTML 报告路径。",
+    "生成 LLM code insight 或人工代码摘要，重点覆盖 feixiang-api、cdp-sniff、analyzer、reporter。",
+    "统一 README 推荐流程：明确默认使用 OpenClaw 自动读取 cookie，手动 at/rt/YFDU 仅作为 fallback。",
+    "提交 1 张脱敏截图或 reports 示例 HTML，展示作业/考试/错题分析结果。"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/PIGU-PPPgu/feixiang-skill"
+    }
+  ],
+  "updated": "2026-04-29",
+  "progressEvaluation": {
+    "generatedAt": "2026-04-29",
+    "model": "gpt-5.5",
+    "source": "ai",
+    "progress": 52,
+    "status": "building",
+    "confidence": "medium",
+    "summary": "项目已有明确定位、Node.js 仓库结构、核心源码模块和 README 使用说明，处于可构建/可试运行阶段；但缺少脱敏运行记录、截图、真实输出样例和代码洞察，尚不能判断为已稳定可用或 shipped。",
+    "rationale": "仓库公开且结构完整：26 个文件，包含 src/ 下 8 个核心模块，如 feixiang-api、cdp-sniff、analyzer、reporter、index 等。,README 已说明产品目标：通过飞象星球 API 获取作业、考试、AI 精准练数据，并支持 token 自动刷新。,package.json 存在 npm start，说明有基本入口和运行方式。,已有 reports 目录和 HTML 文件信号，但没有提供可验证的脱敏运行日志、报告截图或 JSON/HTML 输出样例。,README 同时提到自动读取 cookie 与手动复制 at/rt/YFDU，使用流程存在混淆。,暂无 LLM code insight 或人工代码摘要，无法进一步确认 API 调用、token 刷新、分析逻辑、报告生成的完整性与健壮性。,最近 push 为 2026-04-05，仍有维护信号，但缺少任务/日志连续推进记录。",
+    "dimensions": [
+      {
+        "name": "product_readiness",
+        "score": 16,
+        "max": 25,
+        "reason": "项目状态、可用性描述和产品形态信号。"
+      },
+      {
+        "name": "technical_completeness",
+        "score": 10,
+        "max": 20,
+        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+      },
+      {
+        "name": "usage_validation",
+        "score": 4,
+        "max": 25,
+        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+      },
+      {
+        "name": "documentation_knowledge",
+        "score": 11,
+        "max": 15,
+        "reason": "README、wiki、代码理解和项目说明完整度。"
+      },
+      {
+        "name": "momentum",
+        "score": 8,
+        "max": 15,
+        "reason": "近期提交、任务推进和日志记录。"
+      }
+    ],
+    "evidence": [
+      "repo files: 26",
+      "last push: 2026-04-05"
+    ],
+    "risks": [
+      "无法确认当前代码是否能在真实飞象星球账号下稳定跑通。",
+      "自动 cookie 读取与手动 token 配置两套流程并存，可能导致用户理解和排障成本较高。",
+      "未提供脱敏输出样例，产品结果形态不够可信。",
+      "缺少错误处理、鉴权刷新、数据映射、报告生成等关键模块的代码级摘要，成熟度判断受限。",
+      "教学平台 API 可能变动，若没有失败日志和重试策略说明，后续维护风险较高。"
+    ],
+    "nextActions": [
+      "补一个最小可验证运行记录：命令、脱敏成功日志、生成的 JSON/HTML 报告路径。",
+      "生成 LLM code insight 或人工代码摘要，重点覆盖 feixiang-api、cdp-sniff、analyzer、reporter。",
+      "统一 README 推荐流程：明确默认使用 OpenClaw 自动读取 cookie，手动 at/rt/YFDU 仅作为 fallback。",
+      "提交 1 张脱敏截图或 reports 示例 HTML，展示作业/考试/错题分析结果。"
+    ]
+  }
+}

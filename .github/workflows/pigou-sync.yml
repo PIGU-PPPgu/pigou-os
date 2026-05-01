@@ -1,0 +1,96 @@
+name: Pigou OS Sync
+
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: Optional project slug, for example headteacher-helper
+        required: false
+        type: string
+      with_llm:
+        description: Generate LLM code insights for the selected project
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    - cron: "17 20 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Sync GitHub projects
+        env:
+          GH_TOKEN: ${{ secrets.PIGOU_SYNC_GITHUB_TOKEN || github.token }}
+        run: pnpm sync:github
+
+      - name: Sync contribution heatmap
+        env:
+          GH_TOKEN: ${{ secrets.PIGOU_SYNC_GITHUB_TOKEN || github.token }}
+        run: pnpm sync:contrib
+
+      - name: Sync project wikis
+        env:
+          GH_TOKEN: ${{ secrets.PIGOU_SYNC_GITHUB_TOKEN || github.token }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+          PROJECT: ${{ github.event.inputs.project }}
+          WITH_LLM: ${{ github.event.inputs.with_llm }}
+        run: |
+          ARGS=""
+          if [ -n "$PROJECT" ]; then ARGS="$ARGS --project=$PROJECT"; fi
+          if [ "$WITH_LLM" = "true" ]; then ARGS="$ARGS --with-llm"; fi
+          pnpm sync:wiki -- $ARGS
+
+      - name: Refresh project status signals
+        env:
+          PROJECT: ${{ github.event.inputs.project }}
+        run: |
+          ARGS=""
+          if [ -n "$PROJECT" ]; then ARGS="$ARGS --project=$PROJECT"; fi
+          pnpm sync:signals -- $ARGS
+
+      - name: Rebuild LLM Wiki graph
+        env:
+          PIGOU_OS_BASE_URL: ${{ secrets.PIGOU_OS_BASE_URL }}
+          PIGOU_LLM_WIKI_REBUILD_SECRET: ${{ secrets.PIGOU_LLM_WIKI_REBUILD_SECRET }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          PIGOU_LOGIN_PASSWORD: ${{ secrets.PIGOU_LOGIN_PASSWORD }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+        run: |
+          if [ -z "$PIGOU_OS_BASE_URL" ]; then
+            echo "Skipping LLM Wiki rebuild: PIGOU_OS_BASE_URL is not configured."
+            exit 0
+          fi
+          if [ -z "$PIGOU_LLM_WIKI_REBUILD_SECRET" ] && [ -z "$CRON_SECRET" ] && [ -z "$PIGOU_LOGIN_PASSWORD" ]; then
+            echo "Skipping LLM Wiki rebuild: no rebuild secret or login password is configured."
+            exit 0
+          fi
+          pnpm rebuild:llm-wiki
+
+      - run: pnpm lint
+
+      - name: Commit sync artifacts
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: sync Pigou OS project data"
+          file_pattern: "content/**/*.json"

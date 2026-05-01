@@ -1,0 +1,45 @@
+{
+  "slug": "phzxdeyujifen",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "phzxdeyujifen",
+    "url": "https://github.com/PIGU-PPPgu/phzxdeyujifen",
+    "defaultBranch": "master",
+    "private": true,
+    "pushedAt": "2026-02-06T19:29:33Z",
+    "language": "Java"
+  },
+  "generatedAt": "2026-04-27T15:21:22.155Z",
+  "readme": {
+    "title": "德育量化管理系统",
+    "summary": [
+      "本系统是一个德育量化管理系统，而非学生积分系统。主要目的是对学生的德育表现进行量化管理和记录，重点关注扣分项目的监控和管理。",
+      "1. 管理员：拥有系统的最高权限，可以查看所有数据、管理班主任账号、管理评分项目、查看统计分析等 2. 班主任：负责班级的日常管理，可以对学生进行德育量化评分、查看班级统计等 3. 学生：可以查看自己的德育量化记录、个人报告等",
+      "- 班主任账号管理 - 德育量化标准设置 - 系统配置管理 - 数据统计分析 - 角色切换",
+      "1. 系统中所有的\"积分\"表述应更改为\"德育量化分数\"或\"德育分\" 2. 扣分是系统的重点功能，所有分析都应以扣分为中心，而非加分 3. 界面的修改需谨慎，避免破坏现有功能 4. 页面跳转问题需要排查路径是否正确，确保功能模块能够正常打开",
+      "- 使用微信小程序原生框架开发 - 数据暂时使用本地存储，后续可对接服务器 - 角色切换通过自定义组件实现 - 统计分析使用wxCharts图表库",
+      "- [x] 确定需求和功能规划 - [x] 设计数据结构 - [x] 规划系统架构"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 0,
+    "truncated": false,
+    "topDirectories": [],
+    "extensions": []
+  },
+  "frameworks": [],
+  "modules": [],
+  "entrypoints": [],
+  "importantFiles": [],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "德育量化管理系统",
+      "label": "indexes"
+    }
+  ],
+  "gaps": [
+    "package.json could not be found or parsed.",
+    "Repository file tree could not be fetched."
+  ]
+}

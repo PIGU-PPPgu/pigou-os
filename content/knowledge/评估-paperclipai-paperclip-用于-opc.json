@@ -1,0 +1,26 @@
+{
+  "slug": "评估-paperclipai-paperclip-用于-opc",
+  "title": "评估 paperclipai/paperclip 用于 OPC",
+  "type": "source",
+  "status": "raw",
+  "summary": "https://github.com/paperclipai/paperclip，想用这个做 opc",
+  "keyPoints": [
+    "来源链接：https://github.com/paperclipai/paperclip，想用这个做"
+  ],
+  "tags": [
+    "inbox"
+  ],
+  "relatedProjects": [],
+  "sourceUrl": "https://github.com/paperclipai/paperclip",
+  "confidence": "medium",
+  "next": "判断这条资料应该关联到哪个项目、想法或决策。",
+  "similar": [
+    {
+      "slug": "小红书链接未能有效抓取内容",
+      "title": "小红书链接未能有效抓取内容",
+      "score": 0.39826366297624305
+    }
+  ],
+  "capturedAt": "2026-04-27",
+  "updated": "2026-04-27"
+}

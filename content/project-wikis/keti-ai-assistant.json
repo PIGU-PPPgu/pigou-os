@@ -1,0 +1,199 @@
+{
+  "slug": "keti-ai-assistant",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "keti-ai-assistant",
+    "url": "https://github.com/PIGU-PPPgu/keti-ai-assistant",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-04-09T03:54:28Z",
+    "language": "JavaScript"
+  },
+  "generatedAt": "2026-04-27T15:21:07.694Z",
+  "readme": {
+    "title": "课题 AI — 教师课题申报书智能生成系统",
+    "summary": [
+      "用 4 个专业 Agent 协作，帮教师生成高质量课题申报书、开题报告、中期检查、结题报告。",
+      "- AI 选题顾问 — 对话式确认研究方向，自动填充表单 - Multi-Agent 架构 — 文献 Agent + 生成 Agent + 评审 Agent + 润色 Agent 协作 - 真实文献搜索 — 接入 Tavily，搜索真实学术文献并引用 - Critic 质量把控 — 每章生成后自动评审打分，低分重写 - 一键导出 Word — 生成标准 .docx 格式，可直接提交",
+      "点击\"开始生成\"后，进入 Mission Control 视图，实时显示各 Agent 工作状态和章节评分。",
+      "22,995 字，平均质量分 8.3/10，10 个章节全部完成，支持一键导出 Word。",
+      "章节 质量分 -------------- 基本信息 9/10 研究背景与意义 9/10 研究目标与内容 9/10 研究框架与理论基础 9/10 研究方法与实施计划 9/10 参考文献 9/10 预期研究成果 8/10 研究现状述评 7/10 研究重难点与创新 7/10 经费预算 7/10 平均 8.3/10",
+      "- 后端：Node.js + Express (ESM) - 数据库：SQLite (better-sqlite3) - AI：GLM-5 / 可切换 OpenAI 兼容接口 - 文献搜索：Tavily API - Word 生成：docx 库 - 前端：原生 HTML/CSS/JS（无框架）"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 1709,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "node_modules",
+        "count": 1626
+      },
+      {
+        "name": "src",
+        "count": 37
+      },
+      {
+        "name": ".claude",
+        "count": 31
+      },
+      {
+        "name": "[root]",
+        "count": 7
+      },
+      {
+        "name": "docs",
+        "count": 5
+      },
+      {
+        "name": "data",
+        "count": 1
+      },
+      {
+        "name": "frontend",
+        "count": 1
+      },
+      {
+        "name": "skill",
+        "count": 1
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".js",
+        "count": 597
+      },
+      {
+        "ext": ".md",
+        "count": 244
+      },
+      {
+        "ext": ".ts",
+        "count": 222
+      },
+      {
+        "ext": ".json",
+        "count": 192
+      },
+      {
+        "ext": "[none]",
+        "count": 151
+      },
+      {
+        "ext": ".yml",
+        "count": 44
+      },
+      {
+        "ext": ".mjs",
+        "count": 41
+      },
+      {
+        "ext": ".csv",
+        "count": 24
+      },
+      {
+        "ext": ".eslintrc",
+        "count": 21
+      },
+      {
+        "ext": ".cpp",
+        "count": 18
+      }
+    ]
+  },
+  "package": {
+    "manager": "npm",
+    "scripts": [
+      "start",
+      "dev"
+    ],
+    "dependencies": [
+      "bcrypt",
+      "better-sqlite3",
+      "cors",
+      "docx",
+      "dotenv",
+      "express",
+      "express-rate-limit",
+      "jsonwebtoken"
+    ],
+    "devDependencies": []
+  },
+  "frameworks": [
+    "Python"
+  ],
+  "modules": [
+    {
+      "name": "src",
+      "kind": "Source root",
+      "evidence": [
+        "37 file(s) under src/"
+      ],
+      "files": [
+        "src/agents/base.mjs",
+        "src/agents/base/BaseAgent.mjs",
+        "src/agents/base/CheckpointManager.mjs",
+        "src/agents/base/ModelRouter.mjs",
+        "src/agents/base/QualityGate.mjs",
+        "src/agents/base/index.mjs",
+        "src/agents/diagram.mjs",
+        "src/agents/generator.mjs"
+      ]
+    },
+    {
+      "name": "docs",
+      "kind": "Documentation",
+      "evidence": [
+        "5 file(s) under docs/"
+      ],
+      "files": [
+        "docs/REDESIGN.md",
+        "docs/screenshots/01-homepage.jpg",
+        "docs/screenshots/02-chat-form.jpg",
+        "docs/screenshots/03-mission-control.jpg",
+        "docs/screenshots/04-result.jpg"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "node_modules/@types/node/package.json"
+  ],
+  "importantFiles": [
+    {
+      "path": "node_modules/@types/node/package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "Keti AI Assistant",
+      "label": "indexes"
+    },
+    {
+      "from": "Python",
+      "to": "Keti AI Assistant",
+      "label": "powers"
+    },
+    {
+      "from": "src",
+      "to": "Keti AI Assistant",
+      "label": "contains"
+    },
+    {
+      "from": "docs",
+      "to": "Keti AI Assistant",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": []
+}

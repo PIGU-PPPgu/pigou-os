@@ -1,0 +1,286 @@
+{
+  "slug": "mathtitle",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "mathtitle",
+    "url": "https://github.com/PIGU-PPPgu/mathtitle",
+    "defaultBranch": "main",
+    "private": true,
+    "pushedAt": "2026-02-05T15:09:04Z",
+    "language": "Python"
+  },
+  "generatedAt": "2026-04-27T15:21:11.171Z",
+  "readme": {
+    "title": "mathtitle",
+    "summary": []
+  },
+  "fileTree": {
+    "totalFiles": 1989,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "backend",
+        "count": 1421
+      },
+      {
+        "name": "docs",
+        "count": 299
+      },
+      {
+        "name": "src",
+        "count": 119
+      },
+      {
+        "name": ".next",
+        "count": 75
+      },
+      {
+        "name": "[root]",
+        "count": 54
+      },
+      {
+        "name": "manim-worker",
+        "count": 12
+      },
+      {
+        "name": ".claude",
+        "count": 4
+      },
+      {
+        "name": ".trae",
+        "count": 2
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".py",
+        "count": 1236
+      },
+      {
+        "ext": "[none]",
+        "count": 167
+      },
+      {
+        "ext": ".md",
+        "count": 93
+      },
+      {
+        "ext": ".tsx",
+        "count": 87
+      },
+      {
+        "ext": ".pyx",
+        "count": 63
+      },
+      {
+        "ext": ".ts",
+        "count": 46
+      },
+      {
+        "ext": ".pxd",
+        "count": 45
+      },
+      {
+        "ext": ".js",
+        "count": 41
+      },
+      {
+        "ext": ".txt",
+        "count": 28
+      },
+      {
+        "ext": ".typed",
+        "count": 26
+      }
+    ]
+  },
+  "package": {
+    "manager": "npm",
+    "scripts": [
+      "dev",
+      "build",
+      "start",
+      "lint"
+    ],
+    "dependencies": [
+      "@react-three/drei",
+      "@react-three/fiber",
+      "@types/node",
+      "@types/react",
+      "@types/react-dom",
+      "autoprefixer",
+      "clsx",
+      "framer-motion",
+      "gsap",
+      "katex",
+      "lucide-react",
+      "mafs",
+      "mathjs",
+      "matter-js",
+      "next",
+      "postcss",
+      "react",
+      "react-dom",
+      "react-dropzone",
+      "react-joyride",
+      "react-katex",
+      "react-markdown",
+      "react-syntax-highlighter",
+      "recharts"
+    ],
+    "devDependencies": [
+      "@types/react-syntax-highlighter",
+      "@types/three",
+      "eslint",
+      "eslint-config-next"
+    ]
+  },
+  "frameworks": [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Python"
+  ],
+  "modules": [
+    {
+      "name": "src/components",
+      "kind": "Mini program components",
+      "evidence": [
+        "68 file(s) under src/components/"
+      ],
+      "files": [
+        "src/components/business/FilterBar.tsx",
+        "src/components/business/PaperPreview.tsx",
+        "src/components/business/QuestionCard.tsx",
+        "src/components/dashboard/RecentSessionsList.tsx",
+        "src/components/effects/ParticleField.tsx",
+        "src/components/effects/RadialBurstField.tsx",
+        "src/components/effects/index.ts",
+        "src/components/features/input/OCRDialog.tsx"
+      ]
+    },
+    {
+      "name": "src",
+      "kind": "Source root",
+      "evidence": [
+        "119 file(s) under src/"
+      ],
+      "files": [
+        "src/app/api/provider-test/route.ts",
+        "src/app/auth/login/page.tsx",
+        "src/app/auth/register/page.tsx",
+        "src/app/bank/page.tsx",
+        "src/app/dashboard/page.tsx",
+        "src/app/globals.css",
+        "src/app/layout.tsx",
+        "src/app/learning/page.tsx"
+      ]
+    },
+    {
+      "name": "public",
+      "kind": "Static assets",
+      "evidence": [
+        "1 file(s) under public/"
+      ],
+      "files": [
+        "public/grid.svg"
+      ]
+    },
+    {
+      "name": "docs",
+      "kind": "Documentation",
+      "evidence": [
+        "299 file(s) under docs/"
+      ],
+      "files": [
+        "docs/MathViz-E_Analysis.md",
+        "docs/Wise-Will-Analysis.md",
+        "docs/Wise-Will-agent-main/README.md",
+        "docs/Wise-Will-agent-main/README_EN.md",
+        "docs/Wise-Will-agent-main/backend/.env.example",
+        "docs/Wise-Will-agent-main/backend/.gitignore",
+        "docs/Wise-Will-agent-main/backend/.python-version",
+        "docs/Wise-Will-agent-main/backend/agent/agent.yaml"
+      ]
+    }
+  ],
+  "entrypoints": [
+    ".next/package.json",
+    "docs/Wise-Will-agent-main/frontend/src/app/page.tsx"
+  ],
+  "importantFiles": [
+    {
+      "path": ".next/package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": "docs/Wise-Will-agent-main/frontend/src/app/page.tsx",
+      "reason": "App Router home page"
+    },
+    {
+      "path": "src/app/api/provider-test/route.ts",
+      "reason": "Server API route"
+    },
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    },
+    {
+      "path": "docker-compose.yml",
+      "reason": "Local infrastructure"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "MathTitle",
+      "label": "indexes"
+    },
+    {
+      "from": "Next.js",
+      "to": "MathTitle",
+      "label": "powers"
+    },
+    {
+      "from": "React",
+      "to": "MathTitle",
+      "label": "powers"
+    },
+    {
+      "from": "Tailwind CSS",
+      "to": "MathTitle",
+      "label": "powers"
+    },
+    {
+      "from": "Python",
+      "to": "MathTitle",
+      "label": "powers"
+    },
+    {
+      "from": "src/components",
+      "to": "MathTitle",
+      "label": "contains"
+    },
+    {
+      "from": "src",
+      "to": "MathTitle",
+      "label": "contains"
+    },
+    {
+      "from": "public",
+      "to": "MathTitle",
+      "label": "contains"
+    },
+    {
+      "from": "docs",
+      "to": "MathTitle",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": []
+}

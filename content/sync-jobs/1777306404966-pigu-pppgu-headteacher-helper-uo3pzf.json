@@ -1,0 +1,27 @@
+{
+  "source": "github-webhook",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "Headteacher-helper",
+    "fullName": "PIGU-PPPgu/Headteacher-helper",
+    "url": "https://github.com/PIGU-PPPgu/Headteacher-helper",
+    "private": false
+  },
+  "projectSlug": "headteacher-helper",
+  "event": "push",
+  "ref": "refs/heads/main",
+  "before": "before-test",
+  "after": "after-test",
+  "withLlm": false,
+  "warmDeepWiki": true,
+  "summary": "Synced PIGU-PPPgu/Headteacher-helper as headteacher-helper. Synced 1 project wiki snapshot(s), skipped 0. deepwiki-open not warmed: disabled",
+  "id": "1777306404966-pigu-pppgu-headteacher-helper-uo3pzf",
+  "requestedAt": "2026-04-27T16:13:24.966Z",
+  "attempts": 1,
+  "status": "success",
+  "artifacts": [
+    "content/project-wikis/headteacher-helper.json"
+  ],
+  "startedAt": "2026-04-27T16:13:35.706Z",
+  "finishedAt": "2026-04-27T16:13:45.821Z"
+}

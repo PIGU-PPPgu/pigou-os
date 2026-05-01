@@ -1,0 +1,12 @@
+{
+  "slug": "refine-headteacher-helper-story",
+  "title": "补齐 Headteacher Helper 的真实场景说明",
+  "status": "next",
+  "priority": "P0",
+  "sourceType": "knowledge",
+  "sourceSlug": "headteacher-helper-signal",
+  "projectSlug": "headteacher-helper",
+  "summary": "用小程序码、真实班主任流程和产品截图补齐项目页说明，让它从实验变成可理解的产品。",
+  "createdAt": "2026-04-28",
+  "updated": "2026-04-28"
+}

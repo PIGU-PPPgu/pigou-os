@@ -1,0 +1,92 @@
+{
+  "slug": "education-monopoly",
+  "title": "Education Monopoly",
+  "status": "building",
+  "priority": "medium",
+  "summary": "教育大富翁游戏化学习平台，把大富翁机制和答题、德育任务、成就系统、教师数据分析结合起来。",
+  "explanation": "这是 Pigou 对“游戏化教育”的 private 实验：用游戏机制承载学习激励、团队协作、题库任务和教师端数据反馈。",
+  "domain": "gamified-education",
+  "visibility": "private",
+  "source": "private:Education-Monopoly",
+  "readme": [
+    "教育大富翁将经典大富翁游戏与教育元素融合，通过游戏化方式激发学生学习兴趣，同时为教师提供数据驱动的教学决策支持。",
+    "核心特色包括完整大富翁机制、48/72 格棋盘、答题系统、德育任务、成就系统、多人在线同步和教师端数据分析。",
+    "教师端包括学生管理、游戏控制台、题库管理、事件库管理、德育任务审核和数据分析；学生端围绕游戏参与和学习任务展开。",
+    "技术栈以 Vue 3、TypeScript、Vite 和 Supabase 为主。"
+  ],
+  "images": [
+    {
+      "src": "/project-assets/education-monopoly/legend(1).png",
+      "alt": "Education Monopoly legend asset"
+    },
+    {
+      "src": "/project-assets/education-monopoly/formats(1).png",
+      "alt": "Education Monopoly format asset"
+    }
+  ],
+  "progress": 85,
+  "goals": [
+    "验证游戏化学习机制",
+    "连接题库和德育任务",
+    "沉淀教师端游戏数据分析"
+  ],
+  "nextActions": [
+    "Generate LLM code insights for the most important source files.",
+    "Add one approved public screenshot or product surface image."
+  ],
+  "updated": "2026-04-29",
+  "progressEvaluation": {
+    "generatedAt": "2026-04-29",
+    "model": "local-signal-engine",
+    "source": "algorithm",
+    "progress": 85,
+    "status": "building",
+    "confidence": "medium",
+    "summary": "基于 GitHub/wiki 快照、任务、日志、图片素材和项目文本自动计算的进度建议。",
+    "rationale": "未调用到 LLM 时，Pigou OS 使用本地信号引擎生成可解释的候选分数；有模型配置时会优先交给 AI 复核。",
+    "dimensions": [
+      {
+        "name": "product_readiness",
+        "score": 16,
+        "max": 25,
+        "reason": "项目状态、可用性描述和产品形态信号。"
+      },
+      {
+        "name": "technical_completeness",
+        "score": 16,
+        "max": 20,
+        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+      },
+      {
+        "name": "usage_validation",
+        "score": 10,
+        "max": 25,
+        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+      },
+      {
+        "name": "documentation_knowledge",
+        "score": 11,
+        "max": 15,
+        "reason": "README、wiki、代码理解和项目说明完整度。"
+      },
+      {
+        "name": "momentum",
+        "score": 2,
+        "max": 15,
+        "reason": "近期提交、任务推进和日志记录。"
+      }
+    ],
+    "evidence": [
+      "repo files: 231",
+      "last push: 2026-03-22",
+      "images: 2"
+    ],
+    "risks": [
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+    ],
+    "nextActions": [
+      "Generate LLM code insights for the most important source files.",
+      "Add one approved public screenshot or product surface image."
+    ]
+  }
+}

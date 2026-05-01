@@ -1,0 +1,11 @@
+{
+  "slug": "validate-teacher-agent-marketplace",
+  "title": "验证教师 Agent 市场的前三个高频场景",
+  "status": "waiting",
+  "priority": "P1",
+  "sourceType": "idea",
+  "sourceSlug": "teacher-agent-marketplace",
+  "summary": "从 Pigou 自己每天使用的教师 Agent 开始，确认哪些能力值得产品化。",
+  "createdAt": "2026-04-28",
+  "updated": "2026-04-28"
+}

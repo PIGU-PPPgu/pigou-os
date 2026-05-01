@@ -1,0 +1,19 @@
+{
+  "slug": "progress-rubric",
+  "title": "进度分数衡量运营成熟度，而不是投入时间",
+  "type": "pattern",
+  "status": "processed",
+  "summary": "项目进度是一个手动运营信号，基于项目是否可运行、可解释、可使用，而不是严格的工程百分比。",
+  "keyPoints": [
+    "0-25 表示想法、笔记或空仓库。",
+    "26-50 表示已有原型或核心模块。",
+    "51-75 表示主流程可跑，并且有 README、截图或局部用户。",
+    "76-100 表示项目基本成型，可以解释、演示或使用。"
+  ],
+  "tags": ["project-management", "metric", "rubric"],
+  "relatedProjects": ["pigou-os"],
+  "confidence": "medium",
+  "next": "把这个口径展示在项目进度附近，保证以后更新项目时一致。",
+  "capturedAt": "2026-04-27",
+  "updated": "2026-04-27"
+}

@@ -1,0 +1,94 @@
+{
+  "slug": "agent-swarm-dev",
+  "title": "agent-swarm-dev",
+  "status": "building",
+  "priority": "medium",
+  "summary": "Multi-agent collaborative software development framework inspired by OpenAI's Harness Engineering",
+  "domain": "javascript",
+  "visibility": "public",
+  "source": "github:PIGU-PPPgu/agent-swarm-dev",
+  "readme": [
+    "Multi-agent collaborative software development framework inspired by OpenAI's Harness Engineering.",
+    "A practical framework for coordinating multiple AI agents (Claude, Codex, Cursor, etc.) to build software collaboratively with minimal human intervention.",
+    "Based on OpenAI's experience: 3 engineers + AI agents → 1M+ lines of code in 5 months.",
+    "- 4 Agent Roles: Builder, Reviewer, Doc Gardener, Cleanup\n- Agent-to-Agent Communication: Via PRs and shared repository state\n- Strict Architecture Constraints: Enforced by linters and CI\n- Knowledge in Repository: Everything agents need is version-controlled\n- Platform Agnostic: Works with any AI coding assistant"
+  ],
+  "progress": 30,
+  "goals": [
+    "整理项目定位",
+    "补充 README 摘要",
+    "确认展示边界"
+  ],
+  "nextActions": [
+    "补齐最小可运行 demo：运行 init 后生成 AGENTS.md、docs/architecture.md、任务模板、PR 模板、review checklist、cleanup checklist。",
+    "完善 README Quick Start：安装方式、init 命令、生成的文件树、推荐工作流和一个完整示例。",
+    "把 README 中的机制落到仓库文件：templates/AGENTS.md、templates/architecture.md、templates/review-checklist.md、templates/cleanup-checklist.md。",
+    "增加 CI/linters 示例配置，例如 GitHub Actions、eslint/prettier 或 markdown lint，用实际文件支撑“严格架构约束”。"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/PIGU-PPPgu/agent-swarm-dev"
+    }
+  ],
+  "updated": "2026-04-29",
+  "progressEvaluation": {
+    "generatedAt": "2026-04-29",
+    "model": "gpt-5.5",
+    "source": "ai",
+    "progress": 30,
+    "status": "building",
+    "confidence": "medium",
+    "summary": "项目已从概念进入早期构建阶段：仓库公开、已有 README、package.json、templates/ 和 scripts/init.js，说明正在实现一个多 Agent 协作开发框架的脚手架/模板工具。但目前文件规模很小，缺少可验证 demo、CI/linters、真实使用案例和代码洞察，README 中的关键承诺尚未被充分落到工程文件。",
+    "rationale": "有明确项目定位：面向 Claude/Codex/Cursor 等 AI coding agents 的协作开发框架。,已有基础仓库结构：9 个文件，包含 templates/、scripts/init.js、package.json，说明不是纯 idea。,package.json 仅暴露 init 脚本，无依赖、无测试、无 lint、无 CI 信号，技术闭环仍弱。,README 描述了 4 类 Agent、PR 协作、架构约束、知识入库等机制，但缺少足够文件证明这些机制已经可运行。,没有截图、任务记录、日志、真实用户/项目使用信号，产品验证不足。,最近 push 为 2026-03-31，仍有近期活动，但缺少连续推进证据。",
+    "dimensions": [
+      {
+        "name": "product_readiness",
+        "score": 16,
+        "max": 25,
+        "reason": "项目状态、可用性描述和产品形态信号。"
+      },
+      {
+        "name": "technical_completeness",
+        "score": 10,
+        "max": 20,
+        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+      },
+      {
+        "name": "usage_validation",
+        "score": 4,
+        "max": 25,
+        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+      },
+      {
+        "name": "documentation_knowledge",
+        "score": 11,
+        "max": 15,
+        "reason": "README、wiki、代码理解和项目说明完整度。"
+      },
+      {
+        "name": "momentum",
+        "score": 8,
+        "max": 15,
+        "reason": "近期提交、任务推进和日志记录。"
+      }
+    ],
+    "evidence": [
+      "repo files: 9",
+      "last push: 2026-03-31"
+    ],
+    "risks": [
+      "README 承诺较大，但当前工程资产偏少，容易停留在框架宣言层。",
+      "缺少 Quick Start 和最小可运行示例，外部用户难以验证价值。",
+      "没有 CI、lint、review checklist 等约束文件，无法证明“严格架构约束”。",
+      "没有真实 repo 使用案例或生成结果快照，usage validation 很弱。",
+      "缺少 LLM code insight，无法更深入判断 scripts/init.js 和模板质量。"
+    ],
+    "nextActions": [
+      "补齐最小可运行 demo：运行 init 后生成 AGENTS.md、docs/architecture.md、任务模板、PR 模板、review checklist、cleanup checklist。",
+      "完善 README Quick Start：安装方式、init 命令、生成的文件树、推荐工作流和一个完整示例。",
+      "把 README 中的机制落到仓库文件：templates/AGENTS.md、templates/architecture.md、templates/review-checklist.md、templates/cleanup-checklist.md。",
+      "增加 CI/linters 示例配置，例如 GitHub Actions、eslint/prettier 或 markdown lint，用实际文件支撑“严格架构约束”。"
+    ]
+  }
+}

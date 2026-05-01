@@ -1,0 +1,149 @@
+{
+  "slug": "agent-swarm-dev-v2",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "agent-swarm-dev-v2",
+    "url": "https://github.com/PIGU-PPPgu/agent-swarm-dev-v2",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-04-01T16:42:19Z",
+    "language": "Shell"
+  },
+  "generatedAt": "2026-04-27T15:20:37.663Z",
+  "readme": {
+    "title": "Agent Swarm Development",
+    "summary": [
+      "Multi-agent collaborative software development framework with integrated quality tools, inspired by OpenAI's Harness Engineering.",
+      "A comprehensive framework for coordinating multiple AI agents (Claude, Codex, Cursor, etc.) to build software collaboratively with minimal human intervention, plus integrated quality tools to maintain code and documentation standards.",
+      "Based on OpenAI's experience: 3 engineers + AI agents → 1M+ lines of code in 5 months.",
+      "- 4 Agent Roles: Builder, Reviewer, Doc Gardener, Cleanup - Agent-to-Agent Communication: Via PRs and shared repository state - Integrated Quality Tools: /harness commands for audit, enforce, garden, golden-rules - Strict Architecture Constraints: Enforced by linters and CI - Knowledge in Repository: Everything agents need is version-controlled - Platform Agnostic: Works with any AI coding assistant",
+      "2. Create AGENTS.md (100-line map, not encyclopedia)",
+      "3. Define architecture in docs/architecture.md"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 32,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "docs",
+        "count": 9
+      },
+      {
+        "name": "bin",
+        "count": 8
+      },
+      {
+        "name": "[root]",
+        "count": 7
+      },
+      {
+        "name": "templates",
+        "count": 5
+      },
+      {
+        "name": ".github",
+        "count": 2
+      },
+      {
+        "name": "scripts",
+        "count": 1
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".md",
+        "count": 19
+      },
+      {
+        "ext": "[none]",
+        "count": 9
+      },
+      {
+        "ext": ".yml",
+        "count": 2
+      },
+      {
+        "ext": ".js",
+        "count": 1
+      },
+      {
+        "ext": ".json",
+        "count": 1
+      }
+    ]
+  },
+  "package": {
+    "scripts": [
+      "init"
+    ],
+    "dependencies": [],
+    "devDependencies": []
+  },
+  "frameworks": [],
+  "modules": [
+    {
+      "name": "scripts",
+      "kind": "Automation scripts",
+      "evidence": [
+        "1 file(s) under scripts/"
+      ],
+      "files": [
+        "scripts/init.js"
+      ]
+    },
+    {
+      "name": "docs",
+      "kind": "Documentation",
+      "evidence": [
+        "9 file(s) under docs/"
+      ],
+      "files": [
+        "docs/AUTOMATION.md",
+        "docs/architecture.md",
+        "docs/observability.md",
+        "docs/principles.md",
+        "docs/quality.md",
+        "docs/roles/builder.md",
+        "docs/roles/cleanup.md",
+        "docs/roles/doc-gardener.md"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "package.json"
+  ],
+  "importantFiles": [
+    {
+      "path": "package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "Agent Swarm Dev v2",
+      "label": "indexes"
+    },
+    {
+      "from": "scripts",
+      "to": "Agent Swarm Dev v2",
+      "label": "contains"
+    },
+    {
+      "from": "docs",
+      "to": "Agent Swarm Dev v2",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,139 @@
+{
+  "slug": "feixiang-assistant",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "feixiang-skill",
+    "url": "https://github.com/PIGU-PPPgu/feixiang-skill",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-04-05T17:16:28Z",
+    "language": "JavaScript"
+  },
+  "generatedAt": "2026-04-27T15:20:53.453Z",
+  "readme": {
+    "title": "飞象星球 OpenClaw Skill",
+    "summary": [
+      "飞象星球教学平台的 OpenClaw Skill，通过直接调用平台 API 实现作业、考试、AI精准练数据的自动化获取与分析。",
+      "- 作业列表、提交情况、未交名单、正确率 - 考试列表、成绩分布、优良及格率 - 周周清错题知识点分析 - Token 自动刷新（无需手动维护登录状态）",
+      "先在 OpenClaw 浏览器（profile=openclaw）中打开并登录飞象星球，然后运行：",
+      "打开 https://laoshi.feixiangxingqiu.com，登录后按 F12 打开开发者工具：",
+      "Application → Cookies → 找到 at、rt、YFDU 三个值",
+      ".feixiang-token.json 和 .feixiang-config.json 已加入 .gitignore，不会上传到 GitHub。"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 26,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "src",
+        "count": 8
+      },
+      {
+        "name": ".harness",
+        "count": 7
+      },
+      {
+        "name": "[root]",
+        "count": 7
+      },
+      {
+        "name": "skills",
+        "count": 2
+      },
+      {
+        "name": "data",
+        "count": 1
+      },
+      {
+        "name": "reports",
+        "count": 1
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".js",
+        "count": 9
+      },
+      {
+        "ext": ".md",
+        "count": 9
+      },
+      {
+        "ext": ".json",
+        "count": 6
+      },
+      {
+        "ext": ".gitignore",
+        "count": 1
+      },
+      {
+        "ext": ".html",
+        "count": 1
+      }
+    ]
+  },
+  "package": {
+    "manager": "npm",
+    "scripts": [
+      "start"
+    ],
+    "dependencies": [
+      "openai"
+    ],
+    "devDependencies": [
+      "ws"
+    ]
+  },
+  "frameworks": [],
+  "modules": [
+    {
+      "name": "src",
+      "kind": "Source root",
+      "evidence": [
+        "8 file(s) under src/"
+      ],
+      "files": [
+        "src/analyzer.js",
+        "src/cdp-sniff.js",
+        "src/feixiang-api.js",
+        "src/index.js",
+        "src/mapper.js",
+        "src/paper.js",
+        "src/reporter.js",
+        "src/setup.js"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "package.json"
+  ],
+  "importantFiles": [
+    {
+      "path": "package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": ".harness/docs/README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "飞象教学助手",
+      "label": "indexes"
+    },
+    {
+      "from": "src",
+      "to": "飞象教学助手",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": []
+}

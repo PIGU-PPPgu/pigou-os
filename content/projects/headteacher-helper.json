@@ -1,0 +1,111 @@
+{
+  "slug": "headteacher-helper",
+  "title": "班主任万事留痕小程序",
+  "status": "shipped",
+  "priority": "high",
+  "summary": "已经投入正常使用的班主任工作管理小程序，用于风险跟进、通知确认、考勤异常、随手记录和班务留痕。",
+  "explanation": "它是班主任场景的产品化前台，和 class-teacher-skills 互补：小程序承载真实日常使用，skills 仓库沉淀可复用的 AI 能力和工作流。",
+  "domain": "teacher-product",
+  "visibility": "private",
+  "source": "github:PIGU-PPPgu/Headteacher-helper",
+  "progress": 92,
+  "readme": [
+    "班主任万事留痕小程序已经投入正常使用，核心方向是把班主任日常事务、学生记录、班级事项和移动端快速处理放进微信小程序入口。",
+    "它和 class-teacher-skills 是一前一后的关系：小程序负责日常使用入口，skills 仓库负责沉淀可复用的 AI 能力和工作流。",
+    "当前适合展示的重点不是“技术栈”，而是它已经在真实班主任工作中承担随身工作台角色：记录、查询、提醒、归档，并为后续 AI 生成和分析留下结构化入口。",
+    "下一阶段重点是继续补齐真实使用截图、核心页面说明和可公开的功能边界，让访问者能理解它已经进入使用阶段。"
+  ],
+  "images": [
+    {
+      "src": "/project-assets/headteacher-helper/mini-program-code.png",
+      "alt": "班主任万事留痕小程序码",
+      "public": true
+    },
+    {
+      "src": "/project-assets/headteacher-helper/app-logo.jpg",
+      "alt": "Headteacher Helper 应用图标"
+    },
+    {
+      "src": "/project-assets/headteacher-helper/logo.png",
+      "alt": "Headteacher Helper logo"
+    }
+  ],
+  "goals": [
+    "稳定承载班主任移动端日常工作",
+    "支持学生与班级事项快速记录和留痕",
+    "和 AI skill 工作流逐步打通"
+  ],
+  "nextActions": [
+    "优先完成 P0 任务：补齐 Headteacher Helper 的真实场景说明，突出真实班主任流程，而不是只讲技术栈。",
+    "补齐 3-5 张可公开截图：工作台、任务明细、风险留痕、考勤异常、AI 助教各 1 张。",
+    "整理一版公开功能边界：哪些能力已上线、哪些是校内/私有使用、哪些是规划中的 AI 增强。",
+    "生成 LLM code insight：对 app.config、核心页面、cloud/aiProxy、数据流和部署脚本做一次代码洞察快照。"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/PIGU-PPPgu/Headteacher-helper"
+    }
+  ],
+  "updated": "2026-04-29",
+  "progressEvaluation": {
+    "generatedAt": "2026-04-29",
+    "model": "gpt-5.5",
+    "source": "ai",
+    "progress": 92,
+    "status": "shipped",
+    "confidence": "medium",
+    "summary": "项目已达到可用并投入真实班主任日常工作的状态，具备完整小程序产品形态、前后端/云函数结构、核心业务页面与 AI 助教入口。当前主要不是从 0 到 1 开发，而是补齐可展示材料、真实使用证据和下一轮 AI 工作流接入。",
+    "rationale": "项目当前状态标记为 shipped，README 与项目摘要均明确说明已投入正常使用。,仓库结构完整：156 个文件，包含 src、cloud、scripts、config、docs 等目录，具备小程序前端、云函数、自动化脚本和部署/检查脚本。,技术栈明确：TypeScript + React + Taro / WeChat Mini Program，包含微信小程序配置入口、构建脚本、云函数部署脚本、冒烟测试脚本。,功能覆盖较完整：通知确认、材料收集、考勤异常、风险留痕、班级中心、AI 对话、扫描辅助、看板等页面和流程均有代码模块信号。,近期仍有维护信号：仓库 pushedAt 为 2026-04-26，项目 updated 为 2026-04-28，并有 P0 任务继续完善项目说明。,不足在于公开展示和验证材料仍偏少：公开图片仅 1 张，缺少 LLM code insight，日志为空，真实用户反馈和使用数据尚未沉淀。",
+    "dimensions": [
+      {
+        "name": "product_readiness",
+        "score": 25,
+        "max": 25,
+        "reason": "项目状态、可用性描述和产品形态信号。"
+      },
+      {
+        "name": "technical_completeness",
+        "score": 16,
+        "max": 20,
+        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+      },
+      {
+        "name": "usage_validation",
+        "score": 25,
+        "max": 25,
+        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+      },
+      {
+        "name": "documentation_knowledge",
+        "score": 11,
+        "max": 15,
+        "reason": "README、wiki、代码理解和项目说明完整度。"
+      },
+      {
+        "name": "momentum",
+        "score": 8,
+        "max": 15,
+        "reason": "近期提交、任务推进和日志记录。"
+      }
+    ],
+    "evidence": [
+      "repo files: 156",
+      "last push: 2026-04-26",
+      "images: 3",
+      "linked tasks: 1"
+    ],
+    "risks": [
+      "公开可理解材料不足：真实使用截图、核心页面说明、小程序码/入口说明仍需补齐。",
+      "缺少 LLM code insight 快照，外部评估时对代码质量和架构理解证据不足。",
+      "日志为空，暂时看不到真实迭代记录、用户反馈或故障处理记录。",
+      "AI 能力与 class-teacher-skills 的打通仍像下一阶段工作，尚未看到完整闭环证据。"
+    ],
+    "nextActions": [
+      "优先完成 P0 任务：补齐 Headteacher Helper 的真实场景说明，突出真实班主任流程，而不是只讲技术栈。",
+      "补齐 3-5 张可公开截图：工作台、任务明细、风险留痕、考勤异常、AI 助教各 1 张。",
+      "整理一版公开功能边界：哪些能力已上线、哪些是校内/私有使用、哪些是规划中的 AI 增强。",
+      "生成 LLM code insight：对 app.config、核心页面、cloud/aiProxy、数据流和部署脚本做一次代码洞察快照。"
+    ]
+  }
+}

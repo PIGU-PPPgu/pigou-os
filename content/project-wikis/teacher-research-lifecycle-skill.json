@@ -1,0 +1,104 @@
+{
+  "slug": "teacher-research-lifecycle-skill",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "teacher-research-lifecycle-skill",
+    "url": "https://github.com/PIGU-PPPgu/teacher-research-lifecycle-skill",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-04-24T03:42:23Z",
+    "language": "Python"
+  },
+  "generatedAt": "2026-04-27T15:21:35.103Z",
+  "readme": {
+    "title": "teacher-research",
+    "summary": [
+      "这份 Skill 不是一次性申报书生成器，而是围绕单个课题持续工作的科研生命周期助手，覆盖：",
+      "- 课题申报 - 开题报告 - 中期检查 - 结题报告 - 过程证据沉淀 - 配图与流程图建议",
+      "- SKILL.md: Skill 主说明与执行规则 - references/: 写作规范、参考模板、标准资料 - scripts/: 辅助脚本",
+      "- 课题申报书撰写 - 开题报告生成 - 中期检查整理 - 结题报告撰写 - 研究过程记录整理 - 数字素养或教育科研课题材料沉淀",
+      "- 主档案优先，确保申报、开题、中检、结题口径一致 - 所有高风险信息单独提示人工核验 - 图表服务于评审表达，不作为装饰 - 过程材料应被沉淀为结构化证据，供后续自动复用",
+      "- EduClaw 的 /research 主入口 - 绑定项目上下文的 chat?skill=teacher-research-lifecycle"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 15,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "references",
+        "count": 9
+      },
+      {
+        "name": "[root]",
+        "count": 3
+      },
+      {
+        "name": "scripts",
+        "count": 3
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".md",
+        "count": 10
+      },
+      {
+        "ext": ".py",
+        "count": 3
+      },
+      {
+        "ext": ".gitignore",
+        "count": 1
+      },
+      {
+        "ext": ".last-updated",
+        "count": 1
+      }
+    ]
+  },
+  "frameworks": [
+    "Python"
+  ],
+  "modules": [
+    {
+      "name": "scripts",
+      "kind": "Automation scripts",
+      "evidence": [
+        "3 file(s) under scripts/"
+      ],
+      "files": [
+        "scripts/fetch_standards.py",
+        "scripts/multi_agent.py",
+        "scripts/tavily-search.py"
+      ]
+    }
+  ],
+  "entrypoints": [],
+  "importantFiles": [
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "Teacher Research Lifecycle Skill",
+      "label": "indexes"
+    },
+    {
+      "from": "Python",
+      "to": "Teacher Research Lifecycle Skill",
+      "label": "powers"
+    },
+    {
+      "from": "scripts",
+      "to": "Teacher Research Lifecycle Skill",
+      "label": "contains"
+    }
+  ],
+  "gaps": [
+    "package.json could not be found or parsed."
+  ]
+}

@@ -4,9 +4,84 @@
   "status": "building",
   "priority": "high",
   "summary": "面向 Pigou 教学工作的飞象星球自动查询、作业分析、催交和题目诊断助手。",
-  "progress": 45,
-  "goals": ["自动查询作业提交情况", "分析正确率和薄弱知识点", "生成教学建议"],
-  "nextActions": ["整理飞象 API 能力清单", "做一个常用问题模板", "接入班级学生名单"],
-  "links": [],
-  "updated": "2026-04-27"
+  "explanation": "这个项目把日常教学平台操作变成可复用的 AI skill，目标是减少查询、统计、催交、诊断这些重复动作，让老师把时间放回教学判断。",
+  "domain": "teaching-workflow",
+  "source": "github:PIGU-PPPgu/feixiang-skill",
+  "progress": 63,
+  "goals": [
+    "自动查询作业提交情况",
+    "分析正确率和薄弱知识点",
+    "生成教学建议"
+  ],
+  "nextActions": [
+    "为 src/feixiang-api.js、src/analyzer.js、src/reporter.js、src/index.js 生成 LLM code insights，确认核心链路和缺口。",
+    "补一份脱敏运行样例：输入任务、API 返回摘要、生成的未交名单/正确率/知识点报告。",
+    "整理飞象 API 能力清单：接口名、用途、入参、出参、是否需要登录态、失败处理。",
+    "做 3-5 个高频教学问题模板，例如“今天谁没交”“这次作业薄弱知识点是什么”“哪些题需要讲评”。"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/PIGU-PPPgu/feixiang-skill"
+    }
+  ],
+  "updated": "2026-04-29",
+  "progressEvaluation": {
+    "generatedAt": "2026-04-29",
+    "model": "gpt-5.5",
+    "source": "ai",
+    "progress": 63,
+    "status": "building",
+    "confidence": "medium",
+    "summary": "飞象教学助手已经有公开仓库、README、Node 入口和多个核心源码模块，目标和能力边界较清楚，处于可构建/可能可本地运行的阶段；但缺少代码洞察、真实使用记录、截图/演示、任务闭环和上线信号，因此还不能判断为 shipped。",
+    "rationale": "仓库存在 26 个文件，包含 src/ 下 8 个源码文件，模块名覆盖 API、分析、映射、试卷、报告、初始化等关键链路。,README 明确描述了飞象星球 API 自动化能力：作业、考试、AI 精准练、提交情况、正确率、知识点分析、Token 自动刷新。,package.json 有 npm start 入口，依赖较少，说明项目形态偏轻量 OpenClaw Skill/脚本工具。,当前没有 LLM code insight，无法确认核心实现质量、异常处理、数据结构稳定性和 API 覆盖完整度。,没有公开截图、产品界面、运行日志、任务记录或真实教学使用反馈，使用验证不足。,最近 push 在 2026-04-05，相对当前快照仍有近期维护信号，但缺少连续推进记录。",
+    "dimensions": [
+      {
+        "name": "product_readiness",
+        "score": 16,
+        "max": 25,
+        "reason": "项目状态、可用性描述和产品形态信号。"
+      },
+      {
+        "name": "technical_completeness",
+        "score": 10,
+        "max": 20,
+        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+      },
+      {
+        "name": "usage_validation",
+        "score": 4,
+        "max": 25,
+        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+      },
+      {
+        "name": "documentation_knowledge",
+        "score": 6,
+        "max": 15,
+        "reason": "README、wiki、代码理解和项目说明完整度。"
+      },
+      {
+        "name": "momentum",
+        "score": 8,
+        "max": 15,
+        "reason": "近期提交、任务推进和日志记录。"
+      }
+    ],
+    "evidence": [
+      "repo files: 26",
+      "last push: 2026-04-05"
+    ],
+    "risks": [
+      "飞象平台 API 可能依赖登录态、Cookie、Token 刷新机制，稳定性和失效处理需要验证。",
+      "如果只完成数据抓取而缺少标准化输出/常用问题模板，老师实际使用成本仍可能偏高。",
+      "缺少真实班级/作业样本的脱敏测试记录，难以证明分析结果可靠。",
+      "没有截图或运行日志，外部无法判断当前能力是否已经跑通。"
+    ],
+    "nextActions": [
+      "为 src/feixiang-api.js、src/analyzer.js、src/reporter.js、src/index.js 生成 LLM code insights，确认核心链路和缺口。",
+      "补一份脱敏运行样例：输入任务、API 返回摘要、生成的未交名单/正确率/知识点报告。",
+      "整理飞象 API 能力清单：接口名、用途、入参、出参、是否需要登录态、失败处理。",
+      "做 3-5 个高频教学问题模板，例如“今天谁没交”“这次作业薄弱知识点是什么”“哪些题需要讲评”。"
+    ]
+  }
 }

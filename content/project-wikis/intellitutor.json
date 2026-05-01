@@ -1,0 +1,139 @@
+{
+  "slug": "intellitutor",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "IntelliTutor",
+    "url": "https://github.com/PIGU-PPPgu/IntelliTutor",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-04-27T09:14:55Z",
+    "language": "Python"
+  },
+  "generatedAt": "2026-04-27T15:21:04.831Z",
+  "readme": {
+    "title": "IntelliTutor — K12 AI 智能学习伴侣",
+    "summary": [
+      "不是聊天机器人，是学习引擎。 基于 DeepTutor（港大 DSA Lab, Apache-2.0）深度改造，面向中国 K12 场景的全学科智能学习平台。",
+      "DeepTutor 是一个优秀的 RAG 对话框架——你上传文档，它回答问题。仅此而已。",
+      "<table <tr <td width=\"50%\"<img src=\"screenshots/homepage.png\" alt=\"首页 - 多知识库管理\"/</td <td width=\"50%\"<img src=\"screenshots/chat-session.png\" alt=\"RAG对话 - 结构化回答\"/</td </tr <tr<td align=\"center\"<b首页 · 多知识库管理</b</td<td align=\"center\"<bRAG 对话 · 结构化回答</b</td</tr",
+      "<tr <td<img src=\"screenshots/graph-with-tree.png\" alt=\"知识图谱 + 树形导航\"/</td <td<img src=\"screenshots/full-math-tooltip.png\" alt=\"节点详情 Tooltip\"/</td </tr <tr<td align=\"center\"<b知识图谱 · 树形导航 + D3力导向图</b</td<td align=\"center\"<b节点详情 · 掌握度/来源/关联知识点</b</td</tr",
+      "<tr <td<img src=\"screenshots/graph-with-expand.png\" alt=\"知识图谱展开\"/</td <td<img src=\"screenshots/interactive-graph.png\" alt=\"交互式图谱\"/</td </tr <tr<td align=\"center\"<b图谱展开 · 1500+节点递归扩展</b</td<td align=\"center\"<b交互式图谱 · 小地图+聚焦+导出</b</td</tr",
+      "<tr <td<img src=\"screenshots/knowledge.png\" alt=\"知识库管理\"/</td <td<img src=\"screenshots/math-graph.png\" alt=\"数学知识图谱\"/</td </tr <tr<td align=\"center\"<b知识库 · 多学科内容管理</b</td<td align=\"center\"<b数学图谱 · 有理数知识体系</b</td</tr </table"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 32,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "screenshots",
+        "count": 14
+      },
+      {
+        "name": "[root]",
+        "count": 11
+      },
+      {
+        "name": "content",
+        "count": 2
+      },
+      {
+        "name": "docs",
+        "count": 2
+      },
+      {
+        "name": "plugins",
+        "count": 2
+      },
+      {
+        "name": ".github",
+        "count": 1
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".png",
+        "count": 16
+      },
+      {
+        "ext": ".md",
+        "count": 10
+      },
+      {
+        "ext": ".pdf",
+        "count": 2
+      },
+      {
+        "ext": ".py",
+        "count": 2
+      },
+      {
+        "ext": ".gitignore",
+        "count": 1
+      },
+      {
+        "ext": ".gitmodules",
+        "count": 1
+      }
+    ]
+  },
+  "frameworks": [
+    "Python"
+  ],
+  "modules": [
+    {
+      "name": "content",
+      "kind": "Local content source",
+      "evidence": [
+        "2 file(s) under content/"
+      ],
+      "files": [
+        "content/七年级数学上册.pdf",
+        "content/七年级数学下册.pdf"
+      ]
+    },
+    {
+      "name": "docs",
+      "kind": "Documentation",
+      "evidence": [
+        "2 file(s) under docs/"
+      ],
+      "files": [
+        "docs/PRD.md",
+        "docs/demo-luotuo-xiangzi.md"
+      ]
+    }
+  ],
+  "entrypoints": [],
+  "importantFiles": [
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "IntelliTutor",
+      "label": "indexes"
+    },
+    {
+      "from": "Python",
+      "to": "IntelliTutor",
+      "label": "powers"
+    },
+    {
+      "from": "content",
+      "to": "IntelliTutor",
+      "label": "contains"
+    },
+    {
+      "from": "docs",
+      "to": "IntelliTutor",
+      "label": "contains"
+    }
+  ],
+  "gaps": [
+    "package.json could not be found or parsed."
+  ]
+}

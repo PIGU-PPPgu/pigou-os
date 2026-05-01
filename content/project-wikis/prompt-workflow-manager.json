@@ -1,0 +1,342 @@
+{
+  "slug": "prompt-workflow-manager",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "prompt-workflow-manager",
+    "url": "https://github.com/PIGU-PPPgu/prompt-workflow-manager",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-01-25T07:09:39Z",
+    "language": "TypeScript"
+  },
+  "generatedAt": "2026-04-27T15:21:28.742Z",
+  "readme": {
+    "title": "TeachPT - 教育行业 AI 资产管理平台",
+    "summary": [
+      "<div align=\"center\" <img src=\"pic/介绍页1.png\" alt=\"TeachPT 介绍页\" width=\"100%\" / </div",
+      "在 AI 赋能教育的时代，教师们每天都在使用 AI 工具辅助教学——生成教案、设计作业、分析学情、撰写评语。但这些宝贵的 AI 对话经验往往散落在聊天记录里，无法沉淀为学校的数字资产。",
+      "TeachPT 解决的核心问题： - 📚 资产零散 → 集中管理：将分散的 AI 指令统一存储、分类 - 🎯 质量参差 → 智能优化：AI 自动评分和优化建议 - 🔄 难以复用 → 模板化：将优秀经验固化为可复用的标准模板 - 📊 价值不明 → 数据可视：使用统计、质量分析一目了然",
+      "<div align=\"center\" <img src=\"pic/介绍页2.png\" alt=\"TeachPT 核心价值\" width=\"100%\" / </div",
+      "- 支持创建、编辑、分类存储各类 AI 提示词 - 三级场景分类体系：学科 → 教学环节 → 具体场景 - 版本历史记录，随时回溯修改 - 收藏、标记、导出等便捷功能",
+      "<div align=\"center\" <img src=\"pic/个人提示词库.png\" alt=\"个人提示词库\" width=\"80%\" / </div"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 353,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "client",
+        "count": 128
+      },
+      {
+        "name": "drizzle",
+        "count": 70
+      },
+      {
+        "name": "[root]",
+        "count": 49
+      },
+      {
+        "name": "server",
+        "count": 33
+      },
+      {
+        "name": ".claude",
+        "count": 22
+      },
+      {
+        "name": "pic",
+        "count": 22
+      },
+      {
+        "name": ".shared",
+        "count": 18
+      },
+      {
+        "name": "shared",
+        "count": 3
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".tsx",
+        "count": 115
+      },
+      {
+        "ext": ".ts",
+        "count": 50
+      },
+      {
+        "ext": ".json",
+        "count": 37
+      },
+      {
+        "ext": ".sql",
+        "count": 37
+      },
+      {
+        "ext": ".csv",
+        "count": 33
+      },
+      {
+        "ext": ".md",
+        "count": 27
+      },
+      {
+        "ext": ".png",
+        "count": 24
+      },
+      {
+        "ext": ".mjs",
+        "count": 10
+      },
+      {
+        "ext": ".py",
+        "count": 4
+      },
+      {
+        "ext": ".gitkeep",
+        "count": 3
+      }
+    ]
+  },
+  "package": {
+    "manager": "pnpm",
+    "scripts": [
+      "dev",
+      "build",
+      "start",
+      "check",
+      "format",
+      "test",
+      "db:push",
+      "db:seed"
+    ],
+    "dependencies": [
+      "@aws-sdk/client-s3",
+      "@aws-sdk/s3-request-presigner",
+      "@dnd-kit/core",
+      "@dnd-kit/sortable",
+      "@dnd-kit/utilities",
+      "@radix-ui/react-accordion",
+      "@radix-ui/react-alert-dialog",
+      "@radix-ui/react-aspect-ratio",
+      "@radix-ui/react-avatar",
+      "@radix-ui/react-checkbox",
+      "@radix-ui/react-collapsible",
+      "@radix-ui/react-context-menu",
+      "@radix-ui/react-dialog",
+      "@radix-ui/react-dropdown-menu",
+      "@radix-ui/react-hover-card",
+      "@radix-ui/react-label",
+      "@radix-ui/react-menubar",
+      "@radix-ui/react-navigation-menu",
+      "@radix-ui/react-popover",
+      "@radix-ui/react-progress",
+      "@radix-ui/react-radio-group",
+      "@radix-ui/react-scroll-area",
+      "@radix-ui/react-select",
+      "@radix-ui/react-separator"
+    ],
+    "devDependencies": [
+      "@builder.io/vite-plugin-jsx-loc",
+      "@tailwindcss/typography",
+      "@tailwindcss/vite",
+      "@types/express",
+      "@types/google.maps",
+      "@types/node",
+      "@types/react",
+      "@types/react-dom",
+      "@types/sanitize-html",
+      "@vitejs/plugin-react",
+      "add",
+      "autoprefixer",
+      "drizzle-kit",
+      "esbuild",
+      "pnpm",
+      "postcss",
+      "prettier",
+      "tailwindcss",
+      "tsx",
+      "tw-animate-css",
+      "typescript",
+      "vite",
+      "vite-plugin-manus-runtime",
+      "vitest"
+    ]
+  },
+  "frameworks": [
+    "Tailwind CSS",
+    "Python"
+  ],
+  "modules": [
+    {
+      "name": "client",
+      "kind": "Repository directory",
+      "evidence": [
+        "128 file(s)"
+      ],
+      "files": [
+        "client/index.html",
+        "client/public/.gitkeep",
+        "client/public/alipay-qrcode.jpg",
+        "client/public/teachpt-logo.png",
+        "client/src/App.tsx",
+        "client/src/_core/hooks/useAuth.ts",
+        "client/src/components/AIChatBox.tsx",
+        "client/src/components/AgentDialog.tsx"
+      ]
+    },
+    {
+      "name": "drizzle",
+      "kind": "Repository directory",
+      "evidence": [
+        "70 file(s)"
+      ],
+      "files": [
+        "drizzle/0000_flat_arclight.sql",
+        "drizzle/0001_closed_penance.sql",
+        "drizzle/0002_oval_warbound.sql",
+        "drizzle/0003_complex_expediter.sql",
+        "drizzle/0004_lean_oracle.sql",
+        "drizzle/0005_complex_prodigy.sql",
+        "drizzle/0006_broad_gladiator.sql",
+        "drizzle/0007_cool_goblin_queen.sql"
+      ]
+    },
+    {
+      "name": "server",
+      "kind": "Repository directory",
+      "evidence": [
+        "33 file(s)"
+      ],
+      "files": [
+        "server/_core/auth.ts",
+        "server/_core/context.ts",
+        "server/_core/cookies.ts",
+        "server/_core/crypto.ts",
+        "server/_core/dataApi.ts",
+        "server/_core/env.ts",
+        "server/_core/imageGeneration.ts",
+        "server/_core/index.ts"
+      ]
+    },
+    {
+      "name": ".claude",
+      "kind": "Repository directory",
+      "evidence": [
+        "22 file(s)"
+      ],
+      "files": [
+        ".claude/settings.local 2.json",
+        ".claude/skills/codex/SKILL.md",
+        ".claude/skills/ui-ux-pro-max/SKILL.md",
+        ".claude/skills/ui-ux-pro-max/data/charts.csv",
+        ".claude/skills/ui-ux-pro-max/data/colors.csv",
+        ".claude/skills/ui-ux-pro-max/data/landing.csv",
+        ".claude/skills/ui-ux-pro-max/data/products.csv",
+        ".claude/skills/ui-ux-pro-max/data/prompts.csv"
+      ]
+    },
+    {
+      "name": "pic",
+      "kind": "Repository directory",
+      "evidence": [
+        "22 file(s)"
+      ],
+      "files": [
+        "pic/AI分析提示词内容.png",
+        "pic/AI客服助手.png",
+        "pic/API密钥服务.png",
+        "pic/个人提示词库.png",
+        "pic/介绍页1.png",
+        "pic/介绍页2.png",
+        "pic/场景:标签自动分类.png",
+        "pic/审计日志.png"
+      ]
+    },
+    {
+      "name": ".shared",
+      "kind": "Repository directory",
+      "evidence": [
+        "18 file(s)"
+      ],
+      "files": [
+        ".shared/ui-ux-pro-max/data/charts.csv",
+        ".shared/ui-ux-pro-max/data/colors.csv",
+        ".shared/ui-ux-pro-max/data/landing.csv",
+        ".shared/ui-ux-pro-max/data/products.csv",
+        ".shared/ui-ux-pro-max/data/prompts.csv",
+        ".shared/ui-ux-pro-max/data/stacks/flutter.csv",
+        ".shared/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+        ".shared/ui-ux-pro-max/data/stacks/nextjs.csv"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "package.json"
+  ],
+  "importantFiles": [
+    {
+      "path": "package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    },
+    {
+      "path": "docker-compose.yml",
+      "reason": "Local infrastructure"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "Prompt Workflow Manager",
+      "label": "indexes"
+    },
+    {
+      "from": "Tailwind CSS",
+      "to": "Prompt Workflow Manager",
+      "label": "powers"
+    },
+    {
+      "from": "Python",
+      "to": "Prompt Workflow Manager",
+      "label": "powers"
+    },
+    {
+      "from": "client",
+      "to": "Prompt Workflow Manager",
+      "label": "contains"
+    },
+    {
+      "from": "drizzle",
+      "to": "Prompt Workflow Manager",
+      "label": "contains"
+    },
+    {
+      "from": "server",
+      "to": "Prompt Workflow Manager",
+      "label": "contains"
+    },
+    {
+      "from": ".claude",
+      "to": "Prompt Workflow Manager",
+      "label": "contains"
+    },
+    {
+      "from": "pic",
+      "to": "Prompt Workflow Manager",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": []
+}

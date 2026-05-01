@@ -1,0 +1,110 @@
+{
+  "slug": "edu-analysis",
+  "title": "Edu Analysis",
+  "status": "shipped",
+  "priority": "high",
+  "summary": "已经投入正常使用的成绩分析系统，集成成绩分析、增值评价、AI 智能诊断与报告导出。",
+  "explanation": "这是 Pigou 教育数据方向的重要 private 项目：把考试、班级、教师、学生、知识点和 AI 诊断放进一个面向教学管理的分析平台，并已经在真实场景中使用。",
+  "domain": "education-data",
+  "visibility": "private",
+  "source": "private:edu-analysis",
+  "readme": [
+    "成绩分析系统已经投入正常使用，面向教学管理，集成成绩分析、增值评价、AI 智能诊断与报告导出功能。",
+    "成绩分析包括数据看板、班级分析、高级分析、异常检测、科目相关性、学生贡献度等。",
+    "增值评价包括班级增值、教师增值、学生增值、学科均衡分析、AI 智能分析和跨活动/跨班级对比。",
+    "技术栈包括 React、TypeScript、Vite、shadcn/ui、Tailwind CSS、Recharts、Supabase、OpenAI/Anthropic API、pptxgenjs 和 xlsx。"
+  ],
+  "images": [
+    {
+      "src": "/project-assets/edu-analysis/intelliclass-hero.png",
+      "alt": "IntelliClass 官网首页截图",
+      "public": true
+    },
+    {
+      "src": "/project-assets/edu-analysis/intelliclass-system-map.png",
+      "alt": "IntelliClass 系统架构图",
+      "public": true
+    },
+    {
+      "src": "/project-assets/edu-analysis/intelliclass-value-added.png",
+      "alt": "IntelliClass 增值评价说明图",
+      "public": true
+    },
+    {
+      "src": "/project-assets/edu-analysis/intelliclass-cover.png",
+      "alt": "Intelliclass cover"
+    }
+  ],
+  "progress": 90,
+  "goals": [
+    "稳定支撑教学数据分析",
+    "支持增值评价报告",
+    "输出 AI 教学诊断建议"
+  ],
+  "nextActions": [
+    "生成 LLM code insight：优先覆盖 src/App、核心 pages、analysis、ai、report/export、supabase 相关模块。",
+    "整理 3-5 张可公开截图：数据看板、班级分析、增值评价、AI 诊断、报告导出。",
+    "沉淀真实使用反馈：使用场景、解决的问题、典型分析结论、教师/管理者反馈。",
+    "提炼公开版本叙述：避免暴露学校、学生、成绩等敏感信息，突出产品能力和工程复杂度。"
+  ],
+  "updated": "2026-04-29",
+  "progressEvaluation": {
+    "generatedAt": "2026-04-29",
+    "model": "gpt-5.5",
+    "source": "ai",
+    "progress": 90,
+    "status": "shipped",
+    "confidence": "high",
+    "summary": "Edu Analysis 已达到可交付并投入真实使用的成熟阶段，是一个功能完整的教育成绩分析与增值评价平台。当前主要工作不再是从 0 到 1 构建，而是稳定运营、证据沉淀、展示材料整理和公开叙述提炼。",
+    "rationale": "项目已明确描述为“已经投入正常使用”，具备真实使用信号。,README 与项目摘要覆盖成绩分析、班级分析、高级分析、增值评价、AI 诊断、报告导出等完整产品闭环。,仓库规模较大：1423 个文件，其中 src 891 个、components 485 个、pages 42 个，说明不是原型级项目。,存在 Supabase、SQL、部署脚本、备份脚本、测试、文档、报告导出、AI API 等工程化信号。,最近 push 时间为 2026-04-14，说明项目仍有近期维护活动。,已有 4 张图片素材，其中 3 张可公开，具备展示基础。",
+    "dimensions": [
+      {
+        "name": "product_readiness",
+        "score": 25,
+        "max": 25,
+        "reason": "项目状态、可用性描述和产品形态信号。"
+      },
+      {
+        "name": "technical_completeness",
+        "score": 20,
+        "max": 20,
+        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+      },
+      {
+        "name": "usage_validation",
+        "score": 25,
+        "max": 25,
+        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+      },
+      {
+        "name": "documentation_knowledge",
+        "score": 11,
+        "max": 15,
+        "reason": "README、wiki、代码理解和项目说明完整度。"
+      },
+      {
+        "name": "momentum",
+        "score": 8,
+        "max": 15,
+        "reason": "近期提交、任务推进和日志记录。"
+      }
+    ],
+    "evidence": [
+      "repo files: 1423",
+      "last push: 2026-04-14",
+      "images: 4"
+    ],
+    "risks": [
+      "缺少 LLM code insight 快照，代码关键路径的自动化理解还不完整。",
+      "虽然有真实使用描述，但缺少结构化用户反馈、使用数据或案例沉淀。",
+      "private 项目对外展示受限，需要整理可公开截图和脱敏叙述。",
+      "仓库规模较大，后续需要关注模块边界、维护成本和关键流程回归测试。"
+    ],
+    "nextActions": [
+      "生成 LLM code insight：优先覆盖 src/App、核心 pages、analysis、ai、report/export、supabase 相关模块。",
+      "整理 3-5 张可公开截图：数据看板、班级分析、增值评价、AI 诊断、报告导出。",
+      "沉淀真实使用反馈：使用场景、解决的问题、典型分析结论、教师/管理者反馈。",
+      "提炼公开版本叙述：避免暴露学校、学生、成绩等敏感信息，突出产品能力和工程复杂度。"
+    ]
+  }
+}

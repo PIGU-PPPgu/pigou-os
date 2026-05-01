@@ -1,0 +1,163 @@
+{
+  "slug": "websiteforedu",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "websiteforedu",
+    "url": "https://github.com/PIGU-PPPgu/websiteforedu",
+    "defaultBranch": "main",
+    "private": true,
+    "pushedAt": "2025-02-10T19:20:51Z",
+    "language": "JavaScript"
+  },
+  "generatedAt": "2026-04-27T15:21:37.770Z",
+  "readme": {
+    "title": "智慧教育管理系统",
+    "summary": [
+      "- 📊 成绩管理与分析 - 成绩录入和导入 - 统计分析和可视化 - 成绩趋势追踪 - 班级排名",
+      "1. 游戏机制 - 小组协作模式 - 投骰子前进 - 地产购买与升级 - 随机事件卡片 - 每周固定次数机会",
+      "2. 积分获取 - 完成学习任务 - 测验成绩转换 - 课堂表现加分 - 特殊成就奖励",
+      "3. 界面特色 - 现代化UI设计 - 流畅动画效果 - 实时状态更新 - 清晰的操作反馈",
+      "4. 数据分析 - 团队排行榜 - 个人贡献度 - 历史记录追踪 - 收益统计分析",
+      "前端 - React - Ant Design - Vite - Axios - ECharts"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 211,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "frontend",
+        "count": 122
+      },
+      {
+        "name": "backend",
+        "count": 82
+      },
+      {
+        "name": "docs",
+        "count": 5
+      },
+      {
+        "name": "[root]",
+        "count": 2
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".js",
+        "count": 88
+      },
+      {
+        "ext": ".jsx",
+        "count": 49
+      },
+      {
+        "ext": ".css",
+        "count": 46
+      },
+      {
+        "ext": ".svg",
+        "count": 8
+      },
+      {
+        "ext": ".xlsx",
+        "count": 7
+      },
+      {
+        "ext": ".json",
+        "count": 4
+      },
+      {
+        "ext": ".md",
+        "count": 3
+      },
+      {
+        "ext": ".env",
+        "count": 2
+      },
+      {
+        "ext": ".example",
+        "count": 1
+      },
+      {
+        "ext": ".gitignore",
+        "count": 1
+      }
+    ]
+  },
+  "package": {
+    "scripts": [
+      "start",
+      "dev",
+      "debug",
+      "init-data"
+    ],
+    "dependencies": [
+      "axios",
+      "bcryptjs",
+      "cors",
+      "dotenv",
+      "express",
+      "file-type",
+      "jsonwebtoken",
+      "mongoose",
+      "morgan",
+      "multer",
+      "nodemailer",
+      "openai",
+      "sharp",
+      "tencentcloud-sdk-nodejs"
+    ],
+    "devDependencies": [
+      "nodemon"
+    ]
+  },
+  "frameworks": [],
+  "modules": [
+    {
+      "name": "docs",
+      "kind": "Documentation",
+      "evidence": [
+        "5 file(s) under docs/"
+      ],
+      "files": [
+        "docs/README.md",
+        "docs/学生个人成绩及等级.xlsx",
+        "docs/学生信息.md",
+        "docs/班级大富翁规则.xlsx",
+        "docs/需求分析.md"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "backend/package.json"
+  ],
+  "importantFiles": [
+    {
+      "path": "backend/package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": "docs/README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "Website for Edu",
+      "label": "indexes"
+    },
+    {
+      "from": "docs",
+      "to": "Website for Edu",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,147 @@
+{
+  "slug": "xiaozhi-device",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "open-buddy",
+    "url": "https://github.com/PIGU-PPPgu/open-buddy",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-04-25T16:06:32Z",
+    "language": "C++"
+  },
+  "generatedAt": "2026-04-27T15:21:39.904Z",
+  "readme": {
+    "title": "open-buddy",
+    "summary": [
+      "A multi-agent hardware buddy for M5Stack StickS3, built on top of CodeBuddy.",
+      "While CodeBuddy supports a single agent (Codex), open-buddy extends it to watch Claude Code, Codex, OpenClaw, and Hermes simultaneously — always surfacing what needs your attention most.",
+      "CodeBuddy open-buddy --------- Agents Codex only Claude Code, Codex, OpenClaw, Hermes Priority logic Single session Multi-agent: attention busy idle Agent label — Active agent shown on device (cc / codex / claw / hermes) Sound alerts — Distinct tones: approval / complete / error / mute Mute mode — Toggle from device menu BLE transport CodeBuddyBLEHelper.app Direct Python bleak — no helper app needed macOS autostart Manual launchd service, starts at login Hook installer Manual open-buddy hooks install auto-injects all agent configs",
+      "Firmware is a fork of CodeBuddy's — same wire protocol, same display logic, with additions for agent labels and sound events.",
+      "Or download a pre-built .bin from Releases and flash with M5Burner.",
+      "This single command: - Installs the Python bridge (pip install -e .) - Compiles and installs voice-helper (Swift, requires Xcode CLT) - Registers both as launchd services (auto-start at login) - Installs hooks into all agent configs - Triggers the one-time microphone + speech recognition permission dialogs"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 91,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "firmware",
+        "count": 70
+      },
+      {
+        "name": "bridge",
+        "count": 12
+      },
+      {
+        "name": "[root]",
+        "count": 6
+      },
+      {
+        "name": "docs",
+        "count": 2
+      },
+      {
+        "name": "tests",
+        "count": 1
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".cpp",
+        "count": 27
+      },
+      {
+        "ext": ".py",
+        "count": 17
+      },
+      {
+        "ext": ".gif",
+        "count": 15
+      },
+      {
+        "ext": ".h",
+        "count": 13
+      },
+      {
+        "ext": ".md",
+        "count": 5
+      },
+      {
+        "ext": ".plist",
+        "count": 2
+      },
+      {
+        "ext": ".png",
+        "count": 2
+      },
+      {
+        "ext": "[none]",
+        "count": 2
+      },
+      {
+        "ext": ".gitignore",
+        "count": 1
+      },
+      {
+        "ext": ".html",
+        "count": 1
+      }
+    ]
+  },
+  "frameworks": [
+    "Python",
+    "Embedded / PlatformIO"
+  ],
+  "modules": [
+    {
+      "name": "docs",
+      "kind": "Documentation",
+      "evidence": [
+        "2 file(s) under docs/"
+      ],
+      "files": [
+        "docs/VoiceHelper-Info.plist",
+        "docs/com.open-buddy.voice-helper.plist"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "firmware/platformio.ini"
+  ],
+  "importantFiles": [
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    },
+    {
+      "path": "firmware/platformio.ini",
+      "reason": "Embedded build config"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "小智设备",
+      "label": "indexes"
+    },
+    {
+      "from": "Python",
+      "to": "小智设备",
+      "label": "powers"
+    },
+    {
+      "from": "Embedded / PlatformIO",
+      "to": "小智设备",
+      "label": "powers"
+    },
+    {
+      "from": "docs",
+      "to": "小智设备",
+      "label": "contains"
+    }
+  ],
+  "gaps": [
+    "package.json could not be found or parsed."
+  ]
+}

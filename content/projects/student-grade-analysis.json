@@ -1,0 +1,83 @@
+{
+  "slug": "student-grade-analysis",
+  "title": "Student Grade Analysis",
+  "status": "archived",
+  "priority": "low",
+  "summary": "学生成绩分析方向的早期项目，用于沉淀教育数据分析经验。",
+  "explanation": "虽然它不是当前主线，但它代表 Pigou 对教育数据分析、学生画像和教学诊断的早期积累，可以作为后续飞象/班主任项目的数据经验来源。",
+  "domain": "education-data",
+  "source": "github:PIGU-PPPgu/student-grade-analysis",
+  "progress": 38,
+  "goals": [
+    "保留历史分析经验",
+    "提炼可复用指标",
+    "作为教育数据项目参考"
+  ],
+  "nextActions": [
+    "Generate LLM code insights for the most important source files.",
+    "Clarify runtime stack and entrypoint because package metadata is missing.",
+    "Add one approved public screenshot or product surface image."
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/PIGU-PPPgu/student-grade-analysis"
+    }
+  ],
+  "updated": "2026-04-29",
+  "progressEvaluation": {
+    "generatedAt": "2026-04-29",
+    "model": "local-signal-engine",
+    "source": "algorithm",
+    "progress": 38,
+    "status": "archived",
+    "confidence": "low",
+    "summary": "基于 GitHub/wiki 快照、任务、日志、图片素材和项目文本自动计算的进度建议。",
+    "rationale": "未调用到 LLM 时，Pigou OS 使用本地信号引擎生成可解释的候选分数；有模型配置时会优先交给 AI 复核。",
+    "dimensions": [
+      {
+        "name": "product_readiness",
+        "score": 5,
+        "max": 25,
+        "reason": "项目状态、可用性描述和产品形态信号。"
+      },
+      {
+        "name": "technical_completeness",
+        "score": 10,
+        "max": 20,
+        "reason": "仓库文件规模、框架、入口、模块和代码洞察。"
+      },
+      {
+        "name": "usage_validation",
+        "score": 4,
+        "max": 25,
+        "reason": "是否已经上线、投入使用、可演示或有真实截图。"
+      },
+      {
+        "name": "documentation_knowledge",
+        "score": 0,
+        "max": 15,
+        "reason": "README、wiki、代码理解和项目说明完整度。"
+      },
+      {
+        "name": "momentum",
+        "score": 2,
+        "max": 15,
+        "reason": "近期提交、任务推进和日志记录。"
+      }
+    ],
+    "evidence": [
+      "repo files: 1",
+      "last push: 2025-02-06"
+    ],
+    "risks": [
+      "package.json could not be found or parsed.",
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+    ],
+    "nextActions": [
+      "Generate LLM code insights for the most important source files.",
+      "Clarify runtime stack and entrypoint because package metadata is missing.",
+      "Add one approved public screenshot or product surface image."
+    ]
+  }
+}

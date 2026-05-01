@@ -1,0 +1,35 @@
+{
+  "slug": "pdfpro",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "pdfpro",
+    "url": "https://github.com/PIGU-PPPgu/pdfpro",
+    "defaultBranch": "main",
+    "private": true,
+    "pushedAt": "2021-01-16T20:14:55Z",
+    "language": null
+  },
+  "generatedAt": "2026-04-27T15:21:15.692Z",
+  "fileTree": {
+    "totalFiles": 0,
+    "truncated": false,
+    "topDirectories": [],
+    "extensions": []
+  },
+  "frameworks": [],
+  "modules": [],
+  "entrypoints": [],
+  "importantFiles": [],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "PDF Pro",
+      "label": "indexes"
+    }
+  ],
+  "gaps": [
+    "README could not be fetched.",
+    "package.json could not be found or parsed.",
+    "Repository file tree could not be fetched."
+  ]
+}
