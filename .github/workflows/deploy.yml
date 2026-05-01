@@ -23,7 +23,7 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: node scripts/prepare-static-export.mjs
+      - run: GITHUB_PAGES=true node scripts/prepare-static-export.mjs
       - run: GITHUB_PAGES=true pnpm build
       - uses: actions/upload-pages-artifact@v3
         with:
