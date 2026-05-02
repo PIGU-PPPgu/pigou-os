@@ -45,7 +45,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <span className="caption mb-3 text-white/45">{locked ? 'private' : '百分比'}</span>
           </div>
           {!locked && <div className="mt-7"><SegmentedProgress value={project.progress} /></div>}
-          <div className="caption mt-5 text-white/45">{locked ? 'login required' : `更新于 / ${project.updated}`}</div>
+          <div className="caption mt-5 text-white/45">{locked ? 'locked' : `更新于 / ${project.updated}`}</div>
         </div>
       </div>
     </Panel>
@@ -55,14 +55,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <SectionHeader label="公开素材" value={`${visibleImages.length} 张`} />
       <ImageGallery images={visibleImages} />
     </Panel>}
-    <Panel className="p-5 md:p-6">
-      <SectionHeader label="Private Boundary" value="login required" />
-      <div className="grid gap-3 text-sm leading-7 text-[var(--text-secondary)]">
-        <p>This project is marked private, so Pigou OS only shows a high-level introduction and approved public media for visitors. README details, internal images, goals, next actions, links, repository wiki, code graph, and DeepWiki answers stay hidden.</p>
-        <p>After login, the same URL unlocks the private cockpit view.</p>
-        <a href="/login" className="mono mt-2 inline-flex min-h-10 w-fit items-center rounded-full border border-[var(--ink)] px-4 text-[10px] uppercase text-[var(--ink)]">login</a>
-      </div>
-    </Panel>
+    <a href="/login" className="mono inline-flex min-h-10 w-fit items-center rounded-full border border-[var(--ink)] px-4 text-[10px] uppercase text-[var(--ink)]">login</a>
     </> : <>
     <ProjectAutoBrief brief={brief} />
 
@@ -88,7 +81,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <Panel className="p-5 md:p-6">
         <SectionHeader label="链接" value={project.visibility === 'private' ? '已隐藏' : project.links?.length ? '外部链接' : '无'} />
         <div className="grid gap-2">
-          {project.visibility === 'private' ? <p className="text-sm leading-6 text-[var(--text-secondary)]">这是未公开/内部项目，因此不展示外部仓库链接，只保留说明和本地图片。</p> : project.links?.length ? project.links.map(link => <a key={link.url} href={link.url} target="_blank" className="mono rounded-full border border-[var(--border-visible)] bg-white/45 px-4 py-3 text-center text-[11px] uppercase text-[var(--text-secondary)] transition hover:border-[var(--ink)] hover:text-[var(--ink)]">{link.label}</a>) : <p className="text-sm leading-6 text-[var(--text-secondary)]">暂未附加外部链接。</p>}
+          {project.visibility === 'private' ? <div className="caption">private</div> : project.links?.length ? project.links.map(link => <a key={link.url} href={link.url} target="_blank" className="mono rounded-full border border-[var(--border-visible)] bg-white/45 px-4 py-3 text-center text-[11px] uppercase text-[var(--text-secondary)] transition hover:border-[var(--ink)] hover:text-[var(--ink)]">{link.label}</a>) : <div className="caption">none</div>}
         </div>
       </Panel>
     </section>
@@ -201,7 +194,7 @@ function RelationColumn({ title, href, items }: { title: string; href: string; i
         <div className="text-sm font-medium leading-5 text-[var(--ink)]">{item.title}</div>
         <div className="caption mt-1">{item.meta}</div>
       </div>)}
-      {!items.length && <p className="text-xs leading-5 text-[var(--text-disabled)]">No linked item yet.</p>}
+      {!items.length && <div className="caption">none</div>}
     </div>
   </div>;
 }
@@ -211,7 +204,7 @@ function EvidenceList({ title, items }: { title: string; items: string[] }) {
     <div className="caption mb-2">{title} / {items.length}</div>
     <ul className="grid gap-2 text-xs leading-5 text-[var(--text-secondary)]">
       {items.slice(0, 6).map(item => <li key={item} className="border-b border-[var(--border)] pb-2 last:border-b-0">{item}</li>)}
-      {!items.length && <li className="text-[var(--text-disabled)]">No signal yet.</li>}
+      {!items.length && <li className="text-[var(--text-disabled)]">none</li>}
     </ul>
   </div>;
 }

@@ -106,7 +106,7 @@ export default async function OpsPage() {
             </div>
             <div className="h-1.5 overflow-hidden rounded-full bg-[var(--surface-soft)]"><div className="h-full bg-[var(--accent)]" style={{ width: `${Math.min(100, (device.views / Math.max(1, summary.totalPageviews)) * 100)}%` }} /></div>
           </div>)}
-          {!summary.devices.length && <p className="text-sm leading-6 text-[var(--text-secondary)]">还没有公开访客数据。</p>}
+          {!summary.devices.length && <div className="caption">none</div>}
         </div>
       </Panel>
     </section>
@@ -122,7 +122,7 @@ export default async function OpsPage() {
             </div>
             <div className="doto text-3xl leading-none text-[var(--ink)]">{page.views}</div>
           </div>)}
-          {!summary.topPages.length && <p className="text-sm leading-6 text-[var(--text-secondary)]">还没有页面浏览记录。</p>}
+          {!summary.topPages.length && <div className="caption">none</div>}
         </div>
       </Panel>
 
@@ -133,7 +133,7 @@ export default async function OpsPage() {
             <span className="truncate text-sm text-[var(--ink)]">{item.referrer}</span>
             <span className="caption text-[var(--text-primary)]">{item.views}</span>
           </div>)}
-          {!summary.referrers.length && <p className="text-sm leading-6 text-[var(--text-secondary)]">还没有来源数据。</p>}
+          {!summary.referrers.length && <div className="caption">none</div>}
         </div>
       </Panel>
     </section>
@@ -149,7 +149,7 @@ export default async function OpsPage() {
           </div>
           <div className="caption md:text-right">{event.device}</div>
         </div>)}
-        {!summary.recent.length && <p className="text-sm leading-6 text-[var(--text-secondary)]">还没有最近访问。</p>}
+        {!summary.recent.length && <div className="caption">none</div>}
       </div>
     </Panel>
   </div>;

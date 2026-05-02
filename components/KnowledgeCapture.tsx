@@ -12,7 +12,7 @@ export function KnowledgeCapture({ onCaptured }: { onCaptured?: (note: Knowledge
   const quickFormRef = useRef<HTMLFormElement>(null);
   const detailFormRef = useRef<HTMLFormElement>(null);
   const [state, setState] = useState<CaptureState>('idle');
-  const [message, setMessage] = useState('直接甩链接或文字，系统会先解析成知识笔记。');
+  const [message, setMessage] = useState('ready');
 
   async function quickSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -86,7 +86,7 @@ export function KnowledgeCapture({ onCaptured }: { onCaptured?: (note: Knowledge
         <textarea name="input" required rows={5} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 py-3 text-sm leading-6 outline-none focus:border-[var(--ink)]" placeholder="URL / 文本 / 聊天记录 / 资料摘要" />
       </label>
       <div className="flex flex-wrap items-center gap-3">
-        <button type="submit" disabled={state === 'saving'} className="mono inline-flex min-h-11 items-center rounded-full bg-[var(--ink)] px-6 text-[12px] uppercase text-white transition hover:bg-black disabled:cursor-not-allowed disabled:opacity-50">{state === 'saving' ? '解析中' : '自动解析并保存'}</button>
+        <button type="submit" disabled={state === 'saving'} className="mono inline-flex min-h-11 items-center rounded-full bg-[var(--ink)] px-6 text-[12px] uppercase text-white transition hover:bg-black disabled:cursor-not-allowed disabled:opacity-50">{state === 'saving' ? '解析中' : 'capture'}</button>
         <span className={`caption ${state === 'error' ? 'text-[var(--danger)]' : state === 'saved' ? 'text-[var(--success)]' : ''}`}>{message}</span>
       </div>
     </form>
@@ -97,7 +97,7 @@ export function KnowledgeCapture({ onCaptured }: { onCaptured?: (note: Knowledge
     <div className="grid gap-3 sm:grid-cols-2">
       <label className="grid gap-2">
         <span className="caption">标题</span>
-        <input name="title" required className="min-h-11 rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 text-sm outline-none focus:border-[var(--ink)]" placeholder="例如：班主任助手的真实使用场景" />
+        <input name="title" required className="min-h-11 rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 text-sm outline-none focus:border-[var(--ink)]" placeholder="标题" />
       </label>
       <label className="grid gap-2">
         <span className="caption">类型</span>
@@ -114,7 +114,7 @@ export function KnowledgeCapture({ onCaptured }: { onCaptured?: (note: Knowledge
 
     <label className="grid gap-2">
       <span className="caption">摘要</span>
-      <textarea name="summary" required rows={4} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 py-3 text-sm leading-6 outline-none focus:border-[var(--ink)]" placeholder="这条内容为什么值得进入 Pigou OS？它影响哪个项目、想法或判断？" />
+      <textarea name="summary" required rows={4} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 py-3 text-sm leading-6 outline-none focus:border-[var(--ink)]" placeholder="摘要" />
     </label>
 
     <div className="grid gap-3 sm:grid-cols-2">
@@ -150,7 +150,7 @@ export function KnowledgeCapture({ onCaptured }: { onCaptured?: (note: Knowledge
 
     <label className="grid gap-2">
       <span className="caption">下一步</span>
-      <input name="next" className="min-h-11 rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 text-sm outline-none focus:border-[var(--ink)]" placeholder="把它变成项目行动、想法验证或决策记录" />
+      <input name="next" className="min-h-11 rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 text-sm outline-none focus:border-[var(--ink)]" placeholder="下一步" />
     </label>
 
     <div className="flex flex-wrap items-center gap-3">

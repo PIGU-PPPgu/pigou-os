@@ -6,7 +6,7 @@ import type { ProjectStatusSuggestion } from '@/lib/project-status';
 
 export function ProjectStatusAdvisor({ enabled }: { enabled: boolean }) {
   const [items, setItems] = useState<ProjectStatusSuggestion[]>([]);
-  const [message, setMessage] = useState(enabled ? 'loading suggestions' : 'login required');
+  const [message, setMessage] = useState(enabled ? 'loading suggestions' : 'locked');
   const [busySlug, setBusySlug] = useState<string | null>(null);
 
   useEffect(() => {
@@ -48,7 +48,6 @@ export function ProjectStatusAdvisor({ enabled }: { enabled: boolean }) {
 
   return <Panel className="p-5 md:p-6">
     <SectionHeader label="AI Progress Engine" value={message} />
-    {!enabled && <div className="caption">locked</div>}
     {enabled && !items.length && <div className="caption">no pending diff</div>}
     {enabled && items.length > 0 && <div className="grid gap-3">
       {items.slice(0, 8).map(item => <div key={item.slug} className="rounded-[8px] border border-[var(--border)] bg-white/40 p-4">

@@ -47,37 +47,26 @@ export function LogWorkbench({ logs: initialLogs, projects, tasks }: { logs: Log
     <Panel raised className="p-6 md:p-8">
       <Label>Log / Review System</Label>
       <h2 className="mt-3 text-5xl font-semibold leading-none text-[var(--ink)] md:text-7xl">What changed?</h2>
-      <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--text-secondary)]">Log is the review layer: decisions, daily notes, project retrospectives, and why a task moved.</p>
     </Panel>
 
     <section className="grid gap-5 lg:grid-cols-[.88fr_1.12fr]">
       <div className="grid content-start gap-5">
         <Panel className="p-5 md:p-6">
-          <SectionHeader label="New Log" value="login required" />
+          <SectionHeader label="New Log" />
           <AuthOnly fallback={<LoginRequired />}>
             <form ref={formRef} onSubmit={submit} className="grid gap-3">
-              <input name="title" required className="min-h-11 rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 text-sm outline-none" placeholder="Decision, review, or daily note title" />
+              <input name="title" required className="min-h-11 rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 text-sm outline-none" placeholder="Title" />
               <div className="grid gap-3 sm:grid-cols-2">
                 <input name="date" type="date" className="min-h-11 rounded-full border border-[var(--border-visible)] bg-white/60 px-4 text-sm outline-none" />
                 <input name="tags" className="min-h-11 rounded-full border border-[var(--border-visible)] bg-white/60 px-4 text-sm outline-none" placeholder="daily, decision, project-slug" />
               </div>
-              <textarea name="content" required rows={6} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 py-3 text-sm leading-6 outline-none" placeholder="事实 / 判断 / 阻塞 / 下一步。写得短也可以，关键是留下决策理由。" />
+              <textarea name="content" required rows={6} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 py-3 text-sm leading-6 outline-none" placeholder="Content" />
               <div className="flex flex-wrap items-center gap-3">
                 <button type="submit" className="primary-action mono inline-flex min-h-10 items-center rounded-full px-4 text-[10px] uppercase">save log</button>
                 <span className="caption">{message}</span>
               </div>
             </form>
           </AuthOnly>
-        </Panel>
-
-        <Panel className="p-5 md:p-6">
-          <SectionHeader label="Review Prompts" value="operating loop" />
-          <div className="grid gap-3 text-sm leading-7 text-[var(--text-secondary)]">
-            <p><span className="caption mr-2">Fact</span>What actually changed?</p>
-            <p><span className="caption mr-2">Decision</span>What did this make you believe?</p>
-            <p><span className="caption mr-2">Blocker</span>What is stuck and why?</p>
-            <p><span className="caption mr-2">Action</span>What should happen next?</p>
-          </div>
         </Panel>
 
         <Panel className="p-5 md:p-6">

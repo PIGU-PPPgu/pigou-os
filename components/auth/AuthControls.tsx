@@ -40,8 +40,7 @@ export function AuthOnly({ children, fallback = null }: { children: ReactNode; f
 export function LoginRequired() {
   return <div className="rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
     <div className="caption mb-2">Login required</div>
-    <p className="text-sm leading-6 text-[var(--text-secondary)]">只有 Pigou 登录后才能快速投喂、删除内容和改写本地知识脑。访客只能浏览公开面板。</p>
-    <Link href="/login" className="mono mt-4 inline-flex min-h-10 items-center rounded-full bg-[var(--ink)] px-4 text-[10px] uppercase text-white">login</Link>
+    <Link href="/login" className="mono inline-flex min-h-10 items-center rounded-full bg-[var(--ink)] px-4 text-[10px] uppercase text-white">login</Link>
   </div>;
 }
 

@@ -8,7 +8,7 @@ type AskState = 'idle' | 'asking' | 'done' | 'error';
 export function DeepWikiAsk({ slug, files }: { slug: string; files: string[] }) {
   const [state, setState] = useState<AskState>('idle');
   const [answer, setAnswer] = useState('');
-  const [message, setMessage] = useState('Ask self-hosted deepwiki-open about this repository.');
+  const [message, setMessage] = useState('ready');
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -19,7 +19,7 @@ export function DeepWikiAsk({ slug, files }: { slug: string; files: string[] }) 
 
     setState('asking');
     setAnswer('');
-    setMessage('DeepWiki 正在索引/检索仓库，这一步第一次会慢一点。');
+    setMessage('asking');
     const response = await fetch('/api/deepwiki/ask', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
@@ -53,14 +53,14 @@ export function DeepWikiAsk({ slug, files }: { slug: string; files: string[] }) 
     output += decoder.decode();
     setAnswer(output.trim());
     setState('done');
-    setMessage('DeepWiki answer generated.');
+    setMessage('done');
   }
 
   return <AuthOnly fallback={<LoginRequired />}>
     <form onSubmit={submit} className="rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
       <div className="caption mb-3">Ask deepwiki-open</div>
       <div className="grid gap-3">
-        <textarea name="question" required rows={3} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/70 px-4 py-3 text-sm leading-6 outline-none focus:border-[var(--ink)]" placeholder="例如：这个仓库的核心入口和数据流是什么？有哪些风险？" />
+        <textarea name="question" required rows={3} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/70 px-4 py-3 text-sm leading-6 outline-none focus:border-[var(--ink)]" placeholder="Ask a repository question..." />
         {files.length ? <select name="filePath" className="min-h-10 rounded-full border border-[var(--border-visible)] bg-white/70 px-4 text-sm outline-none focus:border-[var(--ink)]" defaultValue="">
           <option value="">整个仓库</option>
           {files.map(file => <option key={file} value={file}>{file}</option>)}

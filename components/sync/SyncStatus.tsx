@@ -67,10 +67,10 @@ export function SyncStatus({ jobs, compact = false }: { jobs: SyncJob[]; compact
             <span className="mono text-[11px] text-[var(--ink)]">{job.repo.fullName}</span>
             <span className={`mono rounded-full border border-[var(--border-visible)] px-2 py-1 text-[9px] uppercase ${tone[job.status]}`}>{label[job.status]}</span>
           </div>
-          <p className="text-xs leading-5 text-[var(--text-secondary)]">{job.summary || job.error || job.event || 'waiting for worker'}</p>
+          {(job.summary || job.error || job.event) && <p className="text-xs leading-5 text-[var(--text-secondary)]">{job.summary || job.error || job.event}</p>}
         </div>)}
       </div>}
-      {!localJobs.length && <p className="text-sm leading-6 text-[var(--text-secondary)]">还没有 GitHub webhook 或手动同步 job。部署后把 GitHub webhook 指向 `/api/github/webhook`。</p>}
+      {!localJobs.length && <div className="caption">no sync jobs</div>}
       {!compact && <AuthOnly>
         <form onSubmit={submit} className="grid gap-3 rounded-[8px] border border-[var(--border)] bg-white/35 p-3">
           <div className="caption">Manual sync job</div>

@@ -14,14 +14,14 @@ function codeBrief(project: Project, snapshot?: ProjectWikiSnapshot) {
   if (!snapshot) {
     return {
       purpose: project.explanation || project.summary,
-      entry: project.source?.startsWith('github:') ? '等待 GitHub/wiki 索引后识别入口。' : '缺少仓库入口，当前只能根据项目说明推断。',
-      architecture: project.readme?.[0] || 'README 摘要不足，暂时无法生成可靠结构说明。',
+      entry: project.source?.startsWith('github:') ? 'pending' : 'none',
+      architecture: project.readme?.[0] || 'none',
       inspect: project.nextActions.slice(0, 3)
     };
   }
   return {
     purpose: snapshot.readme?.summary?.[0] || project.explanation || project.summary,
-    entry: snapshot.entrypoints.length ? snapshot.entrypoints.slice(0, 4).join(' / ') : snapshot.importantFiles.slice(0, 3).map(file => file.path).join(' / ') || '入口文件未识别。',
+    entry: snapshot.entrypoints.length ? snapshot.entrypoints.slice(0, 4).join(' / ') : snapshot.importantFiles.slice(0, 3).map(file => file.path).join(' / ') || 'none',
     architecture: snapshot.codeInsights?.architectureSummary || `${snapshot.frameworks.join(', ') || snapshot.repo.language || 'Unknown stack'} project with ${snapshot.fileTree.totalFiles} indexed file(s).`,
     inspect: [
       ...(snapshot.codeInsights?.nextQuestions || []),
@@ -65,7 +65,6 @@ export function ProjectDeepWiki({ project, snapshot }: { project: Project; snaps
             <a href={wiki.repo.url} target="_blank" className="mono rounded-full border border-[var(--border-visible)] px-3 py-2 text-[10px] uppercase text-[var(--text-secondary)] transition hover:border-[var(--ink)] hover:text-[var(--ink)]">GitHub repo</a>
             <a href={wiki.repo.deepwikiUrl} target="_blank" className="mono primary-action rounded-full px-3 py-2 text-[10px] uppercase transition">Open DeepWiki</a>
           </div>}
-          {wiki.repo && !canShowRepoLinks && <div className="caption mt-4">私有项目：已索引仓库信号，但不展示外部跳转链接。</div>}
         </div>
 
         {wiki.snapshot && <div className="rounded-[8px] border border-[var(--border)] bg-white/35 p-4">
@@ -107,7 +106,7 @@ export function ProjectDeepWiki({ project, snapshot }: { project: Project; snaps
         {wiki.snapshot && <DeepWikiAsk slug={project.slug} files={wiki.snapshot.importantFiles.map(file => file.path)} />}
 
         <div className="rounded-[8px] border border-[var(--border)] bg-white/35 p-4">
-          <div className="caption mb-3">下一步让它变真</div>
+          <div className="caption mb-3">Next</div>
           <ol className="space-y-3">
             {wiki.next.map((item, index) => <li key={item} className="grid grid-cols-[28px_1fr] gap-3 text-sm leading-6 text-[var(--text-secondary)]">
               <span className="doto text-2xl leading-none text-[var(--text-disabled)]">{index + 1}</span>
@@ -172,7 +171,7 @@ export function ProjectDeepWiki({ project, snapshot }: { project: Project; snaps
     </div>
 
     {wiki.gaps.length ? <div className="mt-5 rounded-[8px] border border-[var(--warning)]/45 bg-white/45 p-4">
-      <div className="caption mb-2 text-[var(--text-primary)]">不假装已经完成</div>
+      <div className="caption mb-2 text-[var(--text-primary)]">Gaps</div>
       <ul className="grid gap-2 md:grid-cols-2">
         {wiki.gaps.map(gap => <li key={gap} className="text-sm leading-6 text-[var(--text-secondary)]">{gap}</li>)}
       </ul>

@@ -100,7 +100,7 @@ export function TasksWorkbench({ tasks: initialTasks, projects }: { tasks: Task[
         </div>
       </Panel>
       <Panel raised className="p-5 md:p-6">
-        <SectionHeader label="Manual Task" value="login required" />
+        <SectionHeader label="Manual Task" />
         <AuthOnly fallback={<LoginRequired />}>
           <form onSubmit={createManual} className="grid gap-3">
             <input name="title" required className="min-h-11 rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 text-sm outline-none" placeholder="Task title" />

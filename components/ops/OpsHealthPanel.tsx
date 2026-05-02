@@ -109,7 +109,7 @@ export function OpsHealthPanel({ status }: { status: OpsStatusSnapshot }) {
               <p className="mt-1 text-xs leading-5 text-[var(--danger)]">{error.message}</p>
             </div>
           </div>)}
-          {!status.recentErrors.length && <p className="text-sm leading-6 text-[var(--text-secondary)]">No failed sync jobs or review states in recent job files.</p>}
+          {!status.recentErrors.length && <div className="caption">none</div>}
         </div>
       </Panel>
     </section>

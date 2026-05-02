@@ -45,9 +45,9 @@ export default function WorkPage() {
               <div className="flex flex-wrap gap-2"><StatusBadge status={project.status} />{project.visibility === 'private' && <span className="mono inline-flex min-h-7 items-center rounded-full border border-[var(--ink)] px-3 text-[10px] uppercase text-[var(--ink)]">public summary</span>}</div>
               <h3 className="mt-3 text-3xl font-semibold leading-tight text-[var(--ink)]">{project.title}</h3>
               <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">{project.explanation || project.summary}</p>
-              <div className="mt-4"><ButtonLink href={`/projects/${project.slug}`}>查看说明</ButtonLink></div>
+              <div className="mt-4"><ButtonLink href={`/projects/${project.slug}`}>open</ButtonLink></div>
             </div>
-            {publicImages.length ? <ImageGallery images={publicImages} /> : <div className="rounded-[8px] border border-[var(--border)] bg-white/40 p-5 text-sm leading-7 text-[var(--text-secondary)]">暂时没有公开截图。</div>}
+            {publicImages.length ? <ImageGallery images={publicImages} /> : <div className="caption">no public image</div>}
           </div>;
         })}
       </div>

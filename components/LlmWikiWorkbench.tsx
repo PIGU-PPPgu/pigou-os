@@ -401,7 +401,7 @@ export function LlmWikiWorkbench({ graph: initialGraph }: { graph: LlmWikiGraph 
         <Panel className="p-5 md:p-6">
           <SectionHeader label="Graph Insight" value="reasoning" />
           <div className="grid gap-4">
-            <InsightBlock title="Strongest relation" empty="No relation detected yet.">
+            <InsightBlock title="Strongest relation" empty="none">
               {graphInsight.strongest && <button type="button" onClick={() => { setSelectedId(graphInsight.strongest!.from.id); setFocusId(graphInsight.strongest!.from.id); }} className="text-left">
                 <div className="text-sm font-semibold leading-5 text-[var(--ink)]">{graphInsight.strongest.from.title} {'->'} {graphInsight.strongest.to.title}</div>
                 <p className="mt-1 text-xs leading-5 text-[var(--text-secondary)]">{edgeLabels[graphInsight.strongest.edge.type]} / {graphInsight.strongest.edge.confidence}: {graphInsight.strongest.edge.reason}</p>
@@ -413,7 +413,7 @@ export function LlmWikiWorkbench({ graph: initialGraph }: { graph: LlmWikiGraph 
                 <p className="text-xs leading-5 text-[var(--text-secondary)]">{item.text}</p>
               </button>) : null}
             </InsightBlock>
-            <InsightBlock title="Next step" empty="No next step suggested yet.">
+            <InsightBlock title="Next step" empty="none">
               {graphInsight.nextSteps.length ? graphInsight.nextSteps.map(step => <p key={step} className="border-b border-[var(--border)] pb-2 text-xs leading-5 text-[var(--text-secondary)] last:border-b-0">{step}</p>) : null}
             </InsightBlock>
           </div>
@@ -421,7 +421,7 @@ export function LlmWikiWorkbench({ graph: initialGraph }: { graph: LlmWikiGraph 
 
         <Panel className="p-5 md:p-6">
           <SectionHeader label="AI Analysis" value={graph.scope} />
-          <p className="text-sm leading-6 text-[var(--text-secondary)]">{graph.analysis?.summary || 'No graph analysis yet.'}</p>
+          {graph.analysis?.summary && <p className="text-sm leading-6 text-[var(--text-secondary)]">{graph.analysis.summary}</p>}
           <div className="mt-4 grid gap-3">
             {graph.analysis?.clusters.slice(0, 4).map(cluster => <button key={cluster.topic} type="button" className="border-b border-[var(--border)] pb-3 text-left last:border-b-0" onClick={() => { setLens('focus'); setNodeType('topic'); setQuery(cluster.topic); }}>
               <div className="text-sm font-semibold text-[var(--ink)]">{cluster.topic}</div>

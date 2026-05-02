@@ -3,7 +3,7 @@
 import { FormEvent, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { CheckCircle2, ClipboardPaste, Copy, Loader2, RotateCcw, SendHorizonal } from 'lucide-react';
+import { CheckCircle2, ClipboardPaste, Loader2, RotateCcw, SendHorizonal } from 'lucide-react';
 import { AuthOnly, LoginRequired } from '@/components/auth/AuthControls';
 import { Label, Panel, Pill, SectionHeader } from '@/components/UI';
 import type { InboxMode, InboxTarget } from '@/lib/inbox-classifier';
@@ -223,7 +223,10 @@ export function InboxWorkbench({ stats, baseUrl }: { stats: InboxStats; baseUrl:
       </Panel>
     </section>
 
-    <MobileIngressPanel baseUrl={baseUrl} />
+    <details className="rounded-[8px] border border-[var(--border-visible)] bg-white/35 p-5">
+      <summary className="caption cursor-pointer text-[var(--text-primary)]">Mobile Ingress</summary>
+      <MobileIngressPanel baseUrl={baseUrl} />
+    </details>
   </div>;
 }
 
@@ -245,14 +248,13 @@ function MobileIngressPanel({ baseUrl }: { baseUrl: string }) {
   const wecomUrl = `${baseUrl || 'https://pigou-os.intellicode.top'}/api/inbox/wecom?secret=${secretHint}`;
 
   return <Panel className="p-5 md:p-6">
-    <SectionHeader label="Mobile Ingress" value="iOS / Feishu / WeCom" />
+    <SectionHeader label="Endpoints" value="iOS / Feishu / WeCom" />
     <div className="grid gap-4 lg:grid-cols-3">
       <IngressCard
         title="iOS Shortcut"
         meta="share sheet"
         endpoint={shortcutUrl}
         body={`{"input":"Shortcut Input","mode":"auto","tags":"mobile,shortcut"}`}
-        steps={['Share Sheet receives URLs/text', 'Get Contents of URL', 'POST JSON to endpoint']}
       />
       <IngressCard
         title="飞书"
@@ -260,33 +262,24 @@ function MobileIngressPanel({ baseUrl }: { baseUrl: string }) {
         endpoint={feishuUrl}
         header={`Authorization: Bearer ${secretHint}`}
         body={`{"input":"{{message.text}}","mode":"auto","tags":"mobile,feishu"}`}
-        steps={['自定义机器人或自动化', 'POST JSON', 'Authorization Bearer secret']}
       />
       <IngressCard
         title="企业微信"
         meta="webhook"
         endpoint={wecomUrl}
         body={`{"text":"{{message}}","mode":"auto","tags":"mobile,wecom"}`}
-        steps={['回调 URL 带 secret', '文本字段用 text/content/message', '10 秒投喂到 Inbox']}
       />
     </div>
   </Panel>;
 }
 
-function IngressCard({ title, meta, endpoint, header, body, steps }: { title: string; meta: string; endpoint: string; header?: string; body: string; steps: string[] }) {
-  async function copy(value: string) {
-    await navigator.clipboard?.writeText(value).catch(() => undefined);
-  }
-
+function IngressCard({ title, meta, endpoint, header, body }: { title: string; meta: string; endpoint: string; header?: string; body: string }) {
   return <section className="grid content-start gap-4 rounded-[8px] border border-[var(--border)] bg-white/40 p-4">
     <div className="flex items-start justify-between gap-3">
       <div>
         <h3 className="text-xl font-semibold leading-tight text-[var(--ink)]">{title}</h3>
         <div className="caption mt-1">{meta}</div>
       </div>
-      <button type="button" onClick={() => copy(endpoint)} className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[var(--border-visible)] bg-white/70 transition hover:border-[var(--ink)]" aria-label={`Copy ${title} endpoint`} title="Copy endpoint">
-        <Copy aria-hidden size={15} />
-      </button>
     </div>
     <div className="grid gap-2">
       <div className="caption">endpoint</div>
@@ -300,8 +293,5 @@ function IngressCard({ title, meta, endpoint, header, body, steps }: { title: st
       <div className="caption">json body</div>
       <code className="block whitespace-pre-wrap rounded-[8px] border border-[var(--border)] bg-white/65 p-3 text-xs leading-5 text-[var(--ink)]">{body}</code>
     </div>
-    <ul className="grid gap-2">
-      {steps.map(step => <li key={step} className="text-sm leading-6 text-[var(--text-secondary)]">{step}</li>)}
-    </ul>
   </section>;
 }

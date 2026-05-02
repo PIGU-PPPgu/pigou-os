@@ -137,7 +137,7 @@ export function IdeasWorkbench({ ideas: initialIdeas }: { ideas: Idea[] }) {
           <SectionHeader label="Quick Capture" value="AI scoring" />
           <AuthOnly fallback={<LoginRequired />}>
             <form ref={formRef} onSubmit={submit} className="grid gap-4">
-              <textarea name="input" required rows={7} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 py-3 text-sm leading-6 outline-none focus:border-[var(--ink)]" placeholder="写一个想法、用户场景、产品机会或模糊判断，AI 会先打分并生成下一步实验。" />
+              <textarea name="input" required rows={7} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 py-3 text-sm leading-6 outline-none focus:border-[var(--ink)]" placeholder="Idea / scene / opportunity..." />
               <div className="flex flex-wrap items-center gap-3">
                 <button type="submit" className="primary-action mono inline-flex min-h-11 items-center rounded-full px-6 text-[12px] uppercase transition">capture idea</button>
                 <span className="caption">{state}</span>
