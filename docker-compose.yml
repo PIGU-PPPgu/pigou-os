@@ -16,7 +16,7 @@ services:
     ports:
       - "127.0.0.1:3888:3888"
     volumes:
-      - ./content:/app/content
+      - ${PIGOU_CONTENT_DIR:-./content}:/app/content
     healthcheck:
       test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:3888/api/auth/session >/dev/null 2>&1 || exit 1"]
       interval: 30s
@@ -39,7 +39,7 @@ services:
       PIGOU_JOB_INTERVAL_SECONDS: ${PIGOU_JOB_INTERVAL_SECONDS:-300}
       PIGOU_OS_INTERNAL_URL: http://pigou-os:3888
     volumes:
-      - ./content:/app/content
+      - ${PIGOU_CONTENT_DIR:-./content}:/app/content
     command:
       - sh
       - -lc

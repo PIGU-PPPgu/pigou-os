@@ -74,3 +74,64 @@ PIGOU_LLM_WIKI_REBUILD_SECRET=...
 ```
 
 The same script can still log in with `PIGOU_LOGIN_PASSWORD` when a cron secret is not available. Rebuild responses and CLI logs include up to 3 notable connections for the current Asia/Shanghai day when fresh or high-confidence links exist.
+
+## Production server loop
+
+The live Pigou OS server is intended to run as a Docker Compose app on a VPS, with nginx proxying the public domain to `127.0.0.1:3888`.
+
+The production deployment script is:
+
+```bash
+PIGOU_APP_DIR=/opt/pigou-os PIGOU_DEPLOY_BRANCH=main ./scripts/deploy-production.sh
+```
+
+It is deliberately host-level. Do not run Docker control from the Next.js web process. The script:
+
+1. Writes `content/ops/deploy.json` with the running deployment state.
+2. Runs `scripts/backup-content.sh`.
+3. Moves live `content` to `/opt/pigou-os/.runtime/content` on first run.
+4. Fetches and resets code to `origin/main`.
+5. Rebuilds `pigou-os` and `pigou-os-worker`.
+6. Waits for the app healthcheck, then writes deployment success or failure for `/ops`.
+
+The Compose file supports external live content:
+
+```env
+PIGOU_CONTENT_DIR=/opt/pigou-os/.runtime/content
+```
+
+This matters because server content is the live memory store. Do not overwrite it during rsync, git checkout, or manual deploys. The repository may still contain a checked-out `content/` directory after `git reset`; the running containers should use `PIGOU_CONTENT_DIR`.
+
+## GitHub Actions production deploy
+
+`.github/workflows/production-deploy.yml` can deploy `main` to the VPS over SSH. Enable it with:
+
+```text
+Repository variable:
+PIGOU_PRODUCTION_DEPLOY_ENABLED=true
+
+Repository secrets:
+PIGOU_PRODUCTION_HOST=43.156.108.211
+PIGOU_PRODUCTION_USER=root
+PIGOU_PRODUCTION_SSH_KEY=<private key with access to the server>
+PIGOU_PRODUCTION_PORT=22
+```
+
+The workflow only executes when the variable is explicitly set to `true`. This prevents accidental server deploys from forks or incomplete secret setups.
+
+## Ops health panel
+
+`/ops` reads `content/ops/*.json`, sync jobs, LLM Wiki graph metadata, and content mtimes to answer the question "is Pigou OS alive?"
+
+Runtime markers currently include:
+
+```text
+content/ops/deploy.json
+content/ops/worker-heartbeat.json
+content/ops/last-sync-job.json
+content/ops/last-llm-wiki-rebuild.json
+content/ops/last-content-backup.json
+content/ops/events.jsonl
+```
+
+The JSON API is available at `GET /api/ops/status` for authenticated requests.

@@ -1,0 +1,27 @@
+name: Deploy Production Server
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: production-server
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ vars.PIGOU_PRODUCTION_DEPLOY_ENABLED == 'true' }}
+    steps:
+      - name: Deploy on production host
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.PIGOU_PRODUCTION_HOST }}
+          username: ${{ secrets.PIGOU_PRODUCTION_USER || 'root' }}
+          key: ${{ secrets.PIGOU_PRODUCTION_SSH_KEY }}
+          port: ${{ secrets.PIGOU_PRODUCTION_PORT || 22 }}
+          script_stop: true
+          script: |
+            cd /opt/pigou-os
+            PIGOU_APP_DIR=/opt/pigou-os PIGOU_DEPLOY_BRANCH=main ./scripts/deploy-production.sh

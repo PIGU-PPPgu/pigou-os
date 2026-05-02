@@ -4,7 +4,9 @@ import { getSessionUserFromCookieHeader } from '@/lib/auth';
 import { summarizeAnalytics } from '@/lib/analytics-store';
 import { Label, Panel, SectionHeader, Stat } from '@/components/UI';
 import { SyncStatus } from '@/components/sync/SyncStatus';
+import { OpsHealthPanel } from '@/components/ops/OpsHealthPanel';
 import { getSyncJobs } from '@/lib/data';
+import { getOpsStatusSnapshot } from '@/lib/ops-status';
 
 export const dynamic = 'force-dynamic';
 
@@ -34,8 +36,11 @@ export default async function OpsPage() {
   const summary = summarizeAnalytics();
   const maxDaily = Math.max(1, ...summary.daily.map(day => day.views));
   const syncJobs = getSyncJobs();
+  const opsStatus = getOpsStatusSnapshot();
 
   return <div className="grid gap-5">
+    <OpsHealthPanel status={opsStatus} />
+
     <Panel raised className="p-6 md:p-8">
       <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-end">
         <div>

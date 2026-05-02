@@ -2,6 +2,7 @@ import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { refreshProjectSignals } from './project-sync-signals.mjs';
+import { appendOpsEvent, writeOpsJson } from '../lib/ops-store.mjs';
 
 loadEnvLocal();
 
@@ -27,6 +28,27 @@ function readJson(file) {
 function writeJob(job) {
   fs.mkdirSync(jobDir, { recursive: true });
   fs.writeFileSync(path.join(jobDir, `${job.id}.json`), `${JSON.stringify(job, null, 2)}\n`);
+}
+
+function recordJob(job, eventType) {
+  const payload = {
+    generatedAt: new Date().toISOString(),
+    id: job.id,
+    event: job.event,
+    source: job.source,
+    status: job.status,
+    repo: job.repo,
+    projectSlug: job.projectSlug,
+    requestedAt: job.requestedAt,
+    startedAt: job.startedAt,
+    finishedAt: job.finishedAt,
+    attempts: job.attempts,
+    summary: job.summary,
+    error: job.error,
+    artifacts: job.artifacts || []
+  };
+  writeOpsJson('last-sync-job', payload);
+  appendOpsEvent({ type: eventType, jobId: job.id, status: job.status, repo: job.repo?.fullName, summary: job.summary, error: job.error });
 }
 
 function slugify(input) {
@@ -102,6 +124,7 @@ async function processJob(file) {
   job.attempts = (job.attempts || 0) + 1;
   job.error = undefined;
   writeJob(job);
+  recordJob(job, 'sync-job-started');
 
   try {
     if (job.event === 'rebuild-llm-wiki') {
@@ -111,6 +134,7 @@ async function processJob(file) {
       job.artifacts = Array.from(new Set([...(job.artifacts || []), 'content/llm-wiki/current.json']));
       job.finishedAt = new Date().toISOString();
       writeJob(job);
+      recordJob(job, 'sync-job-finished');
       console.log(`${job.status}: ${job.id} ${job.summary}`);
       return true;
     }
@@ -147,6 +171,7 @@ async function processJob(file) {
     ].join(' ');
     job.finishedAt = new Date().toISOString();
     writeJob(job);
+    recordJob(job, 'sync-job-finished');
     console.log(`${job.status}: ${job.id} ${job.summary}`);
     return true;
   } catch (error) {
@@ -154,6 +179,7 @@ async function processJob(file) {
     job.error = error.message;
     job.finishedAt = new Date().toISOString();
     writeJob(job);
+    recordJob(job, 'sync-job-failed');
     console.log(`failed: ${job.id} ${error.message}`);
     return true;
   }
