@@ -13,6 +13,8 @@ fi
 BRANCH="${PIGOU_DEPLOY_BRANCH:-main}"
 REMOTE="${PIGOU_DEPLOY_REMOTE:-origin}"
 OPS_DIR="$CONTENT_DIR/ops"
+CONTENT_UID="${PIGOU_CONTENT_UID:-1001}"
+CONTENT_GID="${PIGOU_CONTENT_GID:-1001}"
 
 cd "$APP_DIR"
 
@@ -42,6 +44,9 @@ write_deploy_status() {
 }
 JSON
   printf '{"createdAt":"%s","type":"deploy-%s","branch":"%s","before":"%s","after":"%s","error":"%s"}\n' "$finished_at" "$status" "$BRANCH" "$BEFORE" "$after" "$error" >> "$OPS_DIR/events.jsonl"
+  if [[ "$(id -u)" == "0" ]]; then
+    chown -R "$CONTENT_UID:$CONTENT_GID" "$OPS_DIR"
+  fi
 }
 
 on_error() {
@@ -82,6 +87,9 @@ git checkout -B "$BRANCH" "$REMOTE/$BRANCH"
 git reset --hard "$REMOTE/$BRANCH"
 
 mkdir -p "$OPS_DIR"
+if [[ "$(id -u)" == "0" ]]; then
+  chown -R "$CONTENT_UID:$CONTENT_GID" "$CONTENT_DIR"
+fi
 
 docker compose up -d --build pigou-os
 docker compose --profile worker up -d --build pigou-os-worker
