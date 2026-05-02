@@ -21,6 +21,28 @@ pnpm dev
 
 Then open http://localhost:3888/login, log in, and return to `/knowledge`.
 
+Mobile Quick Capture can also write through a webhook secret:
+
+```env
+PIGOU_INBOX_WEBHOOK_SECRET=
+```
+
+Supported mobile endpoints:
+
+```bash
+# iOS Shortcut share sheet
+POST /api/inbox/shortcut?secret=$PIGOU_INBOX_WEBHOOK_SECRET
+
+# Feishu automation / bot
+POST /api/inbox/feishu
+Authorization: Bearer $PIGOU_INBOX_WEBHOOK_SECRET
+
+# WeCom / enterprise WeChat webhook
+POST /api/inbox/wecom?secret=$PIGOU_INBOX_WEBHOOK_SECRET
+```
+
+All three accept JSON fields like `input`, `text`, `content`, `message`, `url`, or `link`, plus optional `mode`, `title`, and `tags`.
+
 Without `OPENAI_API_KEY`, Pigou OS uses a local fallback parser: it fetches page title, description, and text snippets, then creates a draft knowledge note.
 
 To enable AI parsing:

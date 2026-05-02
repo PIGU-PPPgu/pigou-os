@@ -11,6 +11,7 @@ Required environment variables:
 ```env
 PIGOU_LOGIN_PASSWORD=
 PIGOU_SESSION_SECRET=
+PIGOU_INBOX_WEBHOOK_SECRET=
 PIGOU_LLM_WIKI_REBUILD_SECRET=
 OPENAI_BASE_URL=
 OPENAI_API_KEY=
@@ -74,6 +75,65 @@ PIGOU_LLM_WIKI_REBUILD_SECRET=...
 ```
 
 The same script can still log in with `PIGOU_LOGIN_PASSWORD` when a cron secret is not available. Rebuild responses and CLI logs include up to 3 notable connections for the current Asia/Shanghai day when fresh or high-confidence links exist.
+
+## Mobile Quick Capture
+
+Set `PIGOU_INBOX_WEBHOOK_SECRET` on the server to allow phone-native capture without an interactive browser session.
+
+All capture endpoints accept `input`, `text`, `content`, `message`, `url`, or `link`. Optional fields are `mode`, `title`, `tags`, `priority`, and `due`.
+
+### iOS Shortcut
+
+Use this for the iOS share sheet:
+
+```text
+URL:
+https://pigou-os.intellicode.top/api/inbox/shortcut?secret=<PIGOU_INBOX_WEBHOOK_SECRET>
+
+Method:
+POST
+
+Headers:
+Content-Type: application/json
+
+Body:
+{"input":"Shortcut Input","mode":"auto","tags":"mobile,shortcut"}
+```
+
+### Feishu
+
+Use a Feishu bot or automation step that posts JSON:
+
+```text
+URL:
+https://pigou-os.intellicode.top/api/inbox/feishu
+
+Headers:
+Authorization: Bearer <PIGOU_INBOX_WEBHOOK_SECRET>
+Content-Type: application/json
+
+Body:
+{"input":"{{message.text}}","mode":"auto","tags":"mobile,feishu"}
+```
+
+The endpoint also understands Feishu-style nested event bodies where message content is stored as JSON in `event.message.content`.
+
+### Enterprise WeChat / WeCom
+
+Use this as a webhook-style endpoint:
+
+```text
+URL:
+https://pigou-os.intellicode.top/api/inbox/wecom?secret=<PIGOU_INBOX_WEBHOOK_SECRET>
+
+Method:
+POST
+
+Body:
+{"text":"{{message}}","mode":"auto","tags":"mobile,wecom"}
+```
+
+The WeCom route also responds to basic `echostr` verification requests.
 
 ## Production server loop
 
