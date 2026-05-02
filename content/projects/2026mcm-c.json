@@ -12,7 +12,7 @@
     "# 2026MCM_C",
     "仓库包含 2026 美赛 LaTeX 模板、带 AI 提示词的论文模板、ablation metrics 和 uncertainty CI summary 等材料。"
   ],
-  "progress": 55,
+  "progress": 72,
   "goals": [
     "归档建模论文模板",
     "保留实验指标文件",
@@ -21,15 +21,14 @@
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
     "Clarify runtime stack and entrypoint because package metadata is missing.",
-    "Add one approved public screenshot or product surface image.",
-    "补充归档 README：说明项目用途、目录结构、主 LaTeX 文件、Overleaf 使用方法、本地编译方式。"
+    "Add one approved public screenshot or product surface image."
   ],
-  "updated": "2026-05-02",
+  "updated": "2026-05-03",
   "progressEvaluation": {
-    "generatedAt": "2026-05-02",
+    "generatedAt": "2026-05-03",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 55,
+    "progress": 72,
     "status": "archived",
     "confidence": "low",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -77,8 +76,57 @@
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
       "Clarify runtime stack and entrypoint because package metadata is missing.",
-      "Add one approved public screenshot or product surface image.",
-      "补充归档 README：说明项目用途、目录结构、主 LaTeX 文件、Overleaf 使用方法、本地编译方式。"
+      "Add one approved public screenshot or product surface image."
+    ]
+  },
+  "prioritySuggestion": {
+    "id": "inbtnh",
+    "generatedAt": "2026-05-03",
+    "model": "sync-worker-priority-signal-engine",
+    "source": "algorithm",
+    "currentPriority": "low",
+    "suggestedPriority": "low",
+    "confidence": "medium",
+    "score": 0,
+    "rationale": "综合分 0/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "evidence": [
+      "no open linked tasks",
+      "repo files: 97",
+      "last push: 2026-01-31",
+      "status penalty: archived",
+      "progress evaluation: 72% archived"
+    ],
+    "dimensions": [
+      {
+        "name": "urgency",
+        "score": 0,
+        "max": 100,
+        "reason": "Open P0/P1 tasks and active doing items."
+      },
+      {
+        "name": "momentum",
+        "score": 10,
+        "max": 100,
+        "reason": "Recent repository pushes, project updates, and log activity."
+      },
+      {
+        "name": "strategic_fit",
+        "score": 5,
+        "max": 100,
+        "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
+      },
+      {
+        "name": "maturity_or_impact",
+        "score": 20,
+        "max": 100,
+        "reason": "Progress, shipped/use signals, screenshots, and repository scale."
+      },
+      {
+        "name": "staleness_penalty",
+        "score": 55,
+        "max": 100,
+        "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
+      }
     ]
   }
 }

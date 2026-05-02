@@ -13,7 +13,7 @@
     "先在 OpenClaw 浏览器（profile=openclaw）中打开并登录飞象星球，然后运行：",
     "脚本会自动从浏览器读取 cookie、刷新 token、检测班级信息，一步完成。"
   ],
-  "progress": 70,
+  "progress": 71,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -21,9 +21,7 @@
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Add one approved public screenshot or product surface image.",
-    "补一个最小可验证运行记录：命令、脱敏成功日志、生成的 JSON/HTML 报告路径。",
-    "生成 LLM code insight 或人工代码摘要，重点覆盖 feixiang-api、cdp-sniff、analyzer、reporter。"
+    "Add one approved public screenshot or product surface image."
   ],
   "links": [
     {
@@ -31,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/feixiang-skill"
     }
   ],
-  "updated": "2026-05-02",
+  "updated": "2026-05-03",
   "progressEvaluation": {
-    "generatedAt": "2026-05-02",
+    "generatedAt": "2026-05-03",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 70,
+    "progress": 71,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -82,9 +80,58 @@
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Add one approved public screenshot or product surface image.",
-      "补一个最小可验证运行记录：命令、脱敏成功日志、生成的 JSON/HTML 报告路径。",
-      "生成 LLM code insight 或人工代码摘要，重点覆盖 feixiang-api、cdp-sniff、analyzer、reporter。"
+      "Add one approved public screenshot or product surface image."
+    ]
+  },
+  "prioritySuggestion": {
+    "id": "uqqbyw",
+    "generatedAt": "2026-05-03",
+    "model": "sync-worker-priority-signal-engine",
+    "source": "algorithm",
+    "currentPriority": "medium",
+    "suggestedPriority": "low",
+    "confidence": "medium",
+    "score": 41,
+    "rationale": "综合分 41/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "evidence": [
+      "no open linked tasks",
+      "repo files: 26",
+      "last push: 2026-04-05",
+      "launch/use signal in project text",
+      "strategic OS/workflow signal in project text",
+      "progress evaluation: 71% building"
+    ],
+    "dimensions": [
+      {
+        "name": "urgency",
+        "score": 0,
+        "max": 100,
+        "reason": "Open P0/P1 tasks and active doing items."
+      },
+      {
+        "name": "momentum",
+        "score": 22,
+        "max": 100,
+        "reason": "Recent repository pushes, project updates, and log activity."
+      },
+      {
+        "name": "strategic_fit",
+        "score": 38,
+        "max": 100,
+        "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
+      },
+      {
+        "name": "maturity_or_impact",
+        "score": 35,
+        "max": 100,
+        "reason": "Progress, shipped/use signals, screenshots, and repository scale."
+      },
+      {
+        "name": "staleness_penalty",
+        "score": 0,
+        "max": 100,
+        "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
+      }
     ]
   }
 }

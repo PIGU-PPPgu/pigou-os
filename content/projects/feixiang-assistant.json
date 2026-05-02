@@ -15,9 +15,7 @@
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Add one approved public screenshot or product surface image.",
-    "为 src/feixiang-api.js、src/analyzer.js、src/reporter.js、src/index.js 生成 LLM code insights，确认核心链路和缺口。",
-    "补一份脱敏运行样例：输入任务、API 返回摘要、生成的未交名单/正确率/知识点报告。"
+    "Add one approved public screenshot or product surface image."
   ],
   "links": [
     {
@@ -25,9 +23,9 @@
       "url": "https://github.com/PIGU-PPPgu/feixiang-skill"
     }
   ],
-  "updated": "2026-05-02",
+  "updated": "2026-05-03",
   "progressEvaluation": {
-    "generatedAt": "2026-05-02",
+    "generatedAt": "2026-05-03",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 71,
@@ -76,9 +74,57 @@
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Add one approved public screenshot or product surface image.",
-      "为 src/feixiang-api.js、src/analyzer.js、src/reporter.js、src/index.js 生成 LLM code insights，确认核心链路和缺口。",
-      "补一份脱敏运行样例：输入任务、API 返回摘要、生成的未交名单/正确率/知识点报告。"
+      "Add one approved public screenshot or product surface image."
+    ]
+  },
+  "prioritySuggestion": {
+    "id": "uljlsz",
+    "generatedAt": "2026-05-03",
+    "model": "sync-worker-priority-signal-engine",
+    "source": "algorithm",
+    "currentPriority": "high",
+    "suggestedPriority": "low",
+    "confidence": "medium",
+    "score": 37,
+    "rationale": "综合分 37/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "evidence": [
+      "no open linked tasks",
+      "repo files: 26",
+      "last push: 2026-04-05",
+      "strategic OS/workflow signal in project text",
+      "progress evaluation: 71% building"
+    ],
+    "dimensions": [
+      {
+        "name": "urgency",
+        "score": 0,
+        "max": 100,
+        "reason": "Open P0/P1 tasks and active doing items."
+      },
+      {
+        "name": "momentum",
+        "score": 22,
+        "max": 100,
+        "reason": "Recent repository pushes, project updates, and log activity."
+      },
+      {
+        "name": "strategic_fit",
+        "score": 38,
+        "max": 100,
+        "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
+      },
+      {
+        "name": "maturity_or_impact",
+        "score": 17,
+        "max": 100,
+        "reason": "Progress, shipped/use signals, screenshots, and repository scale."
+      },
+      {
+        "name": "staleness_penalty",
+        "score": 0,
+        "max": 100,
+        "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
+      }
     ]
   }
 }

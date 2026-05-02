@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/pigou-os",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-05-01T14:53:53Z",
+    "pushedAt": "2026-05-02T12:34:22Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-05-01T21:08:48.501Z",
+  "generatedAt": "2026-05-02T21:00:45.586Z",
   "readme": {
     "title": "Pigou OS",
     "summary": [
@@ -17,21 +17,25 @@
       "Open http://localhost:3888/knowledge and paste a link or a block of text into Quick Capture.",
       "Private write actions use a single-user login. There is no registration flow.",
       "Then open http://localhost:3888/login, log in, and return to /knowledge.",
-      "Without OPENAIAPIKEY, Pigou OS uses a local fallback parser: it fetches page title, description, and text snippets, then creates a draft knowledge note.",
-      "Embeddings are stored locally under data/knowledge-vectors/ and are used for similarity / dedupe signals."
+      "Mobile Quick Capture can also write through a webhook secret:",
+      "All three accept JSON fields like input, text, content, message, url, or link, plus optional mode, title, and tags."
     ]
   },
   "fileTree": {
-    "totalFiles": 207,
+    "totalFiles": 230,
     "truncated": false,
     "topDirectories": [
       {
         "name": "content",
-        "count": 67
+        "count": 73
       },
       {
         "name": "app",
-        "count": 37
+        "count": 42
+      },
+      {
+        "name": "lib",
+        "count": 27
       },
       {
         "name": "public",
@@ -39,37 +43,33 @@
       },
       {
         "name": "components",
-        "count": 22
+        "count": 25
       },
       {
-        "name": "lib",
-        "count": 22
+        "name": "scripts",
+        "count": 17
       },
       {
         "name": "[root]",
         "count": 15
       },
       {
-        "name": "scripts",
-        "count": 14
-      },
-      {
         "name": ".github",
-        "count": 2
+        "count": 3
       }
     ],
     "extensions": [
       {
         "ext": ".json",
-        "count": 70
+        "count": 76
       },
       {
         "ext": ".ts",
-        "count": 43
+        "count": 52
       },
       {
         "ext": ".tsx",
-        "count": 39
+        "count": 42
       },
       {
         "ext": ".png",
@@ -77,7 +77,7 @@
       },
       {
         "ext": ".mjs",
-        "count": 16
+        "count": 17
       },
       {
         "ext": ".jpg",
@@ -85,6 +85,10 @@
       },
       {
         "ext": ".yml",
+        "count": 4
+      },
+      {
+        "ext": ".sh",
         "count": 3
       },
       {
@@ -94,10 +98,6 @@
       {
         "ext": ".md",
         "count": 2
-      },
-      {
-        "ext": ".css",
-        "count": 1
       }
     ]
   },
@@ -147,7 +147,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "37 file(s) under app/"
+        "42 file(s) under app/"
       ],
       "files": [
         "app/about/page.tsx",
@@ -164,24 +164,24 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "22 file(s) under components/"
+        "25 file(s) under components/"
       ],
       "files": [
         "components/AnalyticsTracker.tsx",
         "components/IdeasWorkbench.tsx",
         "components/ImageGallery.tsx",
         "components/InboxWorkbench.tsx",
+        "components/InternalLock.tsx",
         "components/KnowledgeBoard.tsx",
         "components/KnowledgeCapture.tsx",
-        "components/LlmWikiWorkbench.tsx",
-        "components/LogWorkbench.tsx"
+        "components/LlmWikiWorkbench.tsx"
       ]
     },
     {
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "22 file(s) under lib/"
+        "27 file(s) under lib/"
       ],
       "files": [
         "lib/ai-clients.ts",
@@ -191,31 +191,31 @@
         "lib/data.ts",
         "lib/embedding-store.ts",
         "lib/idea-store.ts",
-        "lib/inbox-classifier.ts"
+        "lib/inbox-capture.ts"
       ]
     },
     {
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "14 file(s) under scripts/"
+        "17 file(s) under scripts/"
       ],
       "files": [
         "scripts/add-idea.mjs",
         "scripts/add-note.mjs",
+        "scripts/backup-content.sh",
+        "scripts/deploy-production.sh",
         "scripts/evaluate-project-progress.mjs",
+        "scripts/install-production-webhook.sh",
         "scripts/prepare-next-build.mjs",
-        "scripts/prepare-next-cache.mjs",
-        "scripts/prepare-static-export.mjs",
-        "scripts/process-sync-jobs.mjs",
-        "scripts/project-sync-signals.mjs"
+        "scripts/prepare-next-cache.mjs"
       ]
     },
     {
       "name": "content",
       "kind": "Local content source",
       "evidence": [
-        "67 file(s) under content/"
+        "73 file(s) under content/"
       ],
       "files": [
         "content/activity/github-contributions.json",

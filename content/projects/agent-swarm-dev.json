@@ -13,7 +13,7 @@
     "Based on OpenAI's experience: 3 engineers + AI agents → 1M+ lines of code in 5 months.",
     "- 4 Agent Roles: Builder, Reviewer, Doc Gardener, Cleanup\n- Agent-to-Agent Communication: Via PRs and shared repository state\n- Strict Architecture Constraints: Enforced by linters and CI\n- Knowledge in Repository: Everything agents need is version-controlled\n- Platform Agnostic: Works with any AI coding assistant"
   ],
-  "progress": 48,
+  "progress": 40,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -21,9 +21,7 @@
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Add one approved public screenshot or product surface image.",
-    "补齐最小可运行 demo：运行 init 后生成 AGENTS.md、docs/architecture.md、任务模板、PR 模板、review checklist、cleanup checklist。",
-    "完善 README Quick Start：安装方式、init 命令、生成的文件树、推荐工作流和一个完整示例。"
+    "Add one approved public screenshot or product surface image."
   ],
   "links": [
     {
@@ -31,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/agent-swarm-dev"
     }
   ],
-  "updated": "2026-05-02",
+  "updated": "2026-05-03",
   "progressEvaluation": {
-    "generatedAt": "2026-05-02",
+    "generatedAt": "2026-05-03",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 48,
+    "progress": 40,
     "status": "idea",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -82,9 +80,57 @@
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Add one approved public screenshot or product surface image.",
-      "补齐最小可运行 demo：运行 init 后生成 AGENTS.md、docs/architecture.md、任务模板、PR 模板、review checklist、cleanup checklist。",
-      "完善 README Quick Start：安装方式、init 命令、生成的文件树、推荐工作流和一个完整示例。"
+      "Add one approved public screenshot or product surface image."
+    ]
+  },
+  "prioritySuggestion": {
+    "id": "6rehwq",
+    "generatedAt": "2026-05-03",
+    "model": "sync-worker-priority-signal-engine",
+    "source": "algorithm",
+    "currentPriority": "medium",
+    "suggestedPriority": "low",
+    "confidence": "medium",
+    "score": 33,
+    "rationale": "综合分 33/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "evidence": [
+      "no open linked tasks",
+      "repo files: 9",
+      "last push: 2026-03-31",
+      "strategic OS/workflow signal in project text",
+      "progress evaluation: 40% idea"
+    ],
+    "dimensions": [
+      {
+        "name": "urgency",
+        "score": 0,
+        "max": 100,
+        "reason": "Open P0/P1 tasks and active doing items."
+      },
+      {
+        "name": "momentum",
+        "score": 22,
+        "max": 100,
+        "reason": "Recent repository pushes, project updates, and log activity."
+      },
+      {
+        "name": "strategic_fit",
+        "score": 28,
+        "max": 100,
+        "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
+      },
+      {
+        "name": "maturity_or_impact",
+        "score": 13,
+        "max": 100,
+        "reason": "Progress, shipped/use signals, screenshots, and repository scale."
+      },
+      {
+        "name": "staleness_penalty",
+        "score": 0,
+        "max": 100,
+        "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
+      }
     ]
   }
 }

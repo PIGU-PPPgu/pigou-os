@@ -7,7 +7,7 @@
   "explanation": "它是教师 AI 工作流的知识资产层：把临时提示词变成可沉淀、可检索、可优化的专业提示词库。",
   "domain": "teacher-agent",
   "source": "github:PIGU-PPPgu/prompt-workflow-manager",
-  "progress": 74,
+  "progress": 87,
   "goals": [
     "管理教育类提示词",
     "自动分类与打标签",
@@ -15,9 +15,7 @@
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Add one approved public screenshot or product surface image.",
-    "先跑通并记录一条端到端主流程：创建提示词 → AI 分析/优化 → 自动分类打标签 → 收藏/导出。",
-    "生成 LLM code insights，重点覆盖 client/src/App.tsx、核心提示词管理组件、server API、数据库 schema。"
+    "Add one approved public screenshot or product surface image."
   ],
   "links": [
     {
@@ -25,12 +23,12 @@
       "url": "https://github.com/PIGU-PPPgu/prompt-workflow-manager"
     }
   ],
-  "updated": "2026-05-02",
+  "updated": "2026-05-03",
   "progressEvaluation": {
-    "generatedAt": "2026-05-02",
+    "generatedAt": "2026-05-03",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 74,
+    "progress": 87,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -77,9 +75,57 @@
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Add one approved public screenshot or product surface image.",
-      "先跑通并记录一条端到端主流程：创建提示词 → AI 分析/优化 → 自动分类打标签 → 收藏/导出。",
-      "生成 LLM code insights，重点覆盖 client/src/App.tsx、核心提示词管理组件、server API、数据库 schema。"
+      "Add one approved public screenshot or product surface image."
+    ]
+  },
+  "prioritySuggestion": {
+    "id": "19huwgz",
+    "generatedAt": "2026-05-03",
+    "model": "sync-worker-priority-signal-engine",
+    "source": "algorithm",
+    "currentPriority": "medium",
+    "suggestedPriority": "low",
+    "confidence": "medium",
+    "score": 35,
+    "rationale": "综合分 35/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "evidence": [
+      "no open linked tasks",
+      "repo files: 353",
+      "last push: 2026-01-25",
+      "strategic OS/workflow signal in project text",
+      "progress evaluation: 87% building"
+    ],
+    "dimensions": [
+      {
+        "name": "urgency",
+        "score": 0,
+        "max": 100,
+        "reason": "Open P0/P1 tasks and active doing items."
+      },
+      {
+        "name": "momentum",
+        "score": 10,
+        "max": 100,
+        "reason": "Recent repository pushes, project updates, and log activity."
+      },
+      {
+        "name": "strategic_fit",
+        "score": 38,
+        "max": 100,
+        "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
+      },
+      {
+        "name": "maturity_or_impact",
+        "score": 24,
+        "max": 100,
+        "reason": "Progress, shipped/use signals, screenshots, and repository scale."
+      },
+      {
+        "name": "staleness_penalty",
+        "score": 0,
+        "max": 100,
+        "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
+      }
     ]
   }
 }

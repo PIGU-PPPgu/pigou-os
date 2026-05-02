@@ -7,16 +7,16 @@
   "explanation": "这是所有个人项目的入口，不追求博客式展示，而是把 GitHub 项目、idea 池、下一步行动和复盘记录组织成一个私人驾驶舱。",
   "domain": "personal-os",
   "source": "github:PIGU-PPPgu/pigou-os",
-  "progress": 63,
+  "progress": 81,
   "goals": [
     "建立个人项目总览",
     "管理 idea 池",
     "聚合下一步行动"
   ],
   "nextActions": [
-    "重建 Pigou OS 全局 LLM Wiki 图谱",
     "Generate LLM code insights for the most important source files.",
-    "Add one approved public screenshot or product surface image."
+    "Add one approved public screenshot or product surface image.",
+    "重建 Pigou OS 全局 LLM Wiki 图谱"
   ],
   "links": [
     {
@@ -24,12 +24,12 @@
       "url": "https://github.com/PIGU-PPPgu/pigou-os"
     }
   ],
-  "updated": "2026-05-02",
+  "updated": "2026-05-03",
   "progressEvaluation": {
-    "generatedAt": "2026-05-02",
+    "generatedAt": "2026-05-03",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 63,
+    "progress": 81,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -67,8 +67,8 @@
       }
     ],
     "evidence": [
-      "repo files: 207",
-      "last push: 2026-05-01",
+      "repo files: 230",
+      "last push: 2026-05-02",
       "frameworks: Next.js, React, Tailwind CSS",
       "linked tasks: 1",
       "linked logs: 1"
@@ -77,9 +77,60 @@
       "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
-      "重建 Pigou OS 全局 LLM Wiki 图谱",
       "Generate LLM code insights for the most important source files.",
-      "Add one approved public screenshot or product surface image."
+      "Add one approved public screenshot or product surface image.",
+      "重建 Pigou OS 全局 LLM Wiki 图谱"
+    ]
+  },
+  "prioritySuggestion": {
+    "id": "1885dk3",
+    "generatedAt": "2026-05-03",
+    "model": "sync-worker-priority-signal-engine",
+    "source": "algorithm",
+    "currentPriority": "high",
+    "suggestedPriority": "medium",
+    "confidence": "high",
+    "score": 42,
+    "rationale": "综合分 42/100，建议为 medium。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "evidence": [
+      "no open linked tasks",
+      "repo files: 230",
+      "last push: 2026-05-02",
+      "recent logs: 1",
+      "strategic OS/workflow signal in project text",
+      "progress evaluation: 81% building"
+    ],
+    "dimensions": [
+      {
+        "name": "urgency",
+        "score": 0,
+        "max": 100,
+        "reason": "Open P0/P1 tasks and active doing items."
+      },
+      {
+        "name": "momentum",
+        "score": 40,
+        "max": 100,
+        "reason": "Recent repository pushes, project updates, and log activity."
+      },
+      {
+        "name": "strategic_fit",
+        "score": 38,
+        "max": 100,
+        "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
+      },
+      {
+        "name": "maturity_or_impact",
+        "score": 20,
+        "max": 100,
+        "reason": "Progress, shipped/use signals, screenshots, and repository scale."
+      },
+      {
+        "name": "staleness_penalty",
+        "score": 0,
+        "max": 100,
+        "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
+      }
     ]
   }
 }

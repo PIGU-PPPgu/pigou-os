@@ -36,10 +36,8 @@
     "和 AI skill 工作流逐步打通"
   ],
   "nextActions": [
-    "补齐 Headteacher Helper 的真实场景说明",
     "Generate LLM code insights for the most important source files.",
-    "优先完成 P0 任务：补齐 Headteacher Helper 的真实场景说明，突出真实班主任流程，而不是只讲技术栈。",
-    "补齐 3-5 张可公开截图：工作台、任务明细、风险留痕、考勤异常、AI 助教各 1 张。"
+    "补齐 Headteacher Helper 的真实场景说明"
   ],
   "links": [
     {
@@ -47,9 +45,9 @@
       "url": "https://github.com/PIGU-PPPgu/Headteacher-helper"
     }
   ],
-  "updated": "2026-05-02",
+  "updated": "2026-05-03",
   "progressEvaluation": {
-    "generatedAt": "2026-05-02",
+    "generatedAt": "2026-05-03",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 92,
@@ -100,10 +98,59 @@
       "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
-      "补齐 Headteacher Helper 的真实场景说明",
       "Generate LLM code insights for the most important source files.",
-      "优先完成 P0 任务：补齐 Headteacher Helper 的真实场景说明，突出真实班主任流程，而不是只讲技术栈。",
-      "补齐 3-5 张可公开截图：工作台、任务明细、风险留痕、考勤异常、AI 助教各 1 张。"
+      "补齐 Headteacher Helper 的真实场景说明"
+    ]
+  },
+  "prioritySuggestion": {
+    "id": "1cm8tqh",
+    "generatedAt": "2026-05-03",
+    "model": "sync-worker-priority-signal-engine",
+    "source": "algorithm",
+    "currentPriority": "high",
+    "suggestedPriority": "medium",
+    "confidence": "high",
+    "score": 46,
+    "rationale": "综合分 46/100，建议为 medium。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "evidence": [
+      "no open linked tasks",
+      "repo files: 156",
+      "last push: 2026-04-26",
+      "launch/use signal in project text",
+      "strategic OS/workflow signal in project text",
+      "progress evaluation: 92% shipped"
+    ],
+    "dimensions": [
+      {
+        "name": "urgency",
+        "score": 0,
+        "max": 100,
+        "reason": "Open P0/P1 tasks and active doing items."
+      },
+      {
+        "name": "momentum",
+        "score": 34,
+        "max": 100,
+        "reason": "Recent repository pushes, project updates, and log activity."
+      },
+      {
+        "name": "strategic_fit",
+        "score": 39,
+        "max": 100,
+        "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
+      },
+      {
+        "name": "maturity_or_impact",
+        "score": 44,
+        "max": 100,
+        "reason": "Progress, shipped/use signals, screenshots, and repository scale."
+      },
+      {
+        "name": "staleness_penalty",
+        "score": 0,
+        "max": 100,
+        "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
+      }
     ]
   }
 }

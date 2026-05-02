@@ -7,7 +7,7 @@
   "explanation": "这是早期平台化探索，用来验证教育场景能否抽象成更通用的 AI 应用搭建与运营平台。",
   "domain": "education-platform",
   "source": "github:PIGU-PPPgu/pgw-buildingai",
-  "progress": 60,
+  "progress": 78,
   "goals": [
     "梳理教育 AI 平台能力",
     "验证应用搭建体验",
@@ -15,9 +15,7 @@
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Add one approved public screenshot or product surface image.",
-    "先做继续/停止决策：确认 PGW BuildingAI 是否继续服务教育垂类；如果不继续，应归档为 BuildingAI 实验仓库。",
-    "生成 LLM code insight：重点覆盖 packages/@buildingai/ai-sdk、知识库/RAG、templates、extensions、运营计费相关模块。"
+    "Add one approved public screenshot or product surface image."
   ],
   "links": [
     {
@@ -25,12 +23,12 @@
       "url": "https://github.com/PIGU-PPPgu/pgw-buildingai"
     }
   ],
-  "updated": "2026-05-02",
+  "updated": "2026-05-03",
   "progressEvaluation": {
-    "generatedAt": "2026-05-02",
+    "generatedAt": "2026-05-03",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 60,
+    "progress": 78,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -77,9 +75,58 @@
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Add one approved public screenshot or product surface image.",
-      "先做继续/停止决策：确认 PGW BuildingAI 是否继续服务教育垂类；如果不继续，应归档为 BuildingAI 实验仓库。",
-      "生成 LLM code insight：重点覆盖 packages/@buildingai/ai-sdk、知识库/RAG、templates、extensions、运营计费相关模块。"
+      "Add one approved public screenshot or product surface image."
+    ]
+  },
+  "prioritySuggestion": {
+    "id": "1p9j0xt",
+    "generatedAt": "2026-05-03",
+    "model": "sync-worker-priority-signal-engine",
+    "source": "algorithm",
+    "currentPriority": "low",
+    "suggestedPriority": "low",
+    "confidence": "medium",
+    "score": 39,
+    "rationale": "综合分 39/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "evidence": [
+      "no open linked tasks",
+      "repo files: 3028",
+      "last push: 2026-02-15",
+      "launch/use signal in project text",
+      "strategic OS/workflow signal in project text",
+      "progress evaluation: 78% building"
+    ],
+    "dimensions": [
+      {
+        "name": "urgency",
+        "score": 0,
+        "max": 100,
+        "reason": "Open P0/P1 tasks and active doing items."
+      },
+      {
+        "name": "momentum",
+        "score": 10,
+        "max": 100,
+        "reason": "Recent repository pushes, project updates, and log activity."
+      },
+      {
+        "name": "strategic_fit",
+        "score": 38,
+        "max": 100,
+        "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
+      },
+      {
+        "name": "maturity_or_impact",
+        "score": 42,
+        "max": 100,
+        "reason": "Progress, shipped/use signals, screenshots, and repository scale."
+      },
+      {
+        "name": "staleness_penalty",
+        "score": 0,
+        "max": 100,
+        "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
+      }
     ]
   }
 }

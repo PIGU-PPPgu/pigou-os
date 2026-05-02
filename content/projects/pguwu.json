@@ -10,7 +10,7 @@
   "readme": [
     "pguWu\n这里将存放自己每本书或每个比赛的代码集合"
   ],
-  "progress": 36,
+  "progress": 39,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -19,8 +19,7 @@
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
     "Clarify runtime stack and entrypoint because package metadata is missing.",
-    "Add one approved public screenshot or product surface image.",
-    "先明确项目定位：是“机器学习学习笔记集合”、比赛代码集，还是某本书的实现仓库。"
+    "Add one approved public screenshot or product surface image."
   ],
   "links": [
     {
@@ -28,12 +27,12 @@
       "url": "https://github.com/PIGU-PPPgu/pguWu"
     }
   ],
-  "updated": "2026-05-02",
+  "updated": "2026-05-03",
   "progressEvaluation": {
-    "generatedAt": "2026-05-02",
+    "generatedAt": "2026-05-03",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 36,
+    "progress": 39,
     "status": "paused",
     "confidence": "low",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -81,8 +80,58 @@
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
       "Clarify runtime stack and entrypoint because package metadata is missing.",
-      "Add one approved public screenshot or product surface image.",
-      "先明确项目定位：是“机器学习学习笔记集合”、比赛代码集，还是某本书的实现仓库。"
+      "Add one approved public screenshot or product surface image."
+    ]
+  },
+  "prioritySuggestion": {
+    "id": "1epbxcf",
+    "generatedAt": "2026-05-03",
+    "model": "sync-worker-priority-signal-engine",
+    "source": "algorithm",
+    "currentPriority": "medium",
+    "suggestedPriority": "low",
+    "confidence": "medium",
+    "score": 10,
+    "rationale": "综合分 10/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "evidence": [
+      "no open linked tasks",
+      "repo files: 3",
+      "last push: 2022-02-21",
+      "strategic OS/workflow signal in project text",
+      "status penalty: paused",
+      "progress evaluation: 39% paused"
+    ],
+    "dimensions": [
+      {
+        "name": "urgency",
+        "score": 0,
+        "max": 100,
+        "reason": "Open P0/P1 tasks and active doing items."
+      },
+      {
+        "name": "momentum",
+        "score": 10,
+        "max": 100,
+        "reason": "Recent repository pushes, project updates, and log activity."
+      },
+      {
+        "name": "strategic_fit",
+        "score": 20,
+        "max": 100,
+        "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
+      },
+      {
+        "name": "maturity_or_impact",
+        "score": 13,
+        "max": 100,
+        "reason": "Progress, shipped/use signals, screenshots, and repository scale."
+      },
+      {
+        "name": "staleness_penalty",
+        "score": 18,
+        "max": 100,
+        "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
+      }
     ]
   }
 }
