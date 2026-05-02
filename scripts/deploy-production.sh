@@ -2,6 +2,7 @@
 set -euo pipefail
 
 APP_DIR="${PIGOU_APP_DIR:-/opt/pigou-os}"
+REPO_URL="${PIGOU_DEPLOY_REPO:-https://github.com/PIGU-PPPgu/pigou-os.git}"
 if [[ -n "${PIGOU_CONTENT_DIR:-}" ]]; then
   CONTENT_DIR="$PIGOU_CONTENT_DIR"
 elif [[ -d "$APP_DIR/.runtime/content" ]]; then
@@ -71,8 +72,13 @@ fi
 
 export PIGOU_CONTENT_DIR="$CONTENT_DIR"
 
+if [[ ! -d "$APP_DIR/.git" ]]; then
+  git init
+  git remote add "$REMOTE" "$REPO_URL" 2>/dev/null || git remote set-url "$REMOTE" "$REPO_URL"
+fi
+
 git fetch "$REMOTE" "$BRANCH" --prune
-git checkout "$BRANCH"
+git checkout -B "$BRANCH" "$REMOTE/$BRANCH"
 git reset --hard "$REMOTE/$BRANCH"
 
 mkdir -p "$OPS_DIR"
