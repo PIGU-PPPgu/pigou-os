@@ -42,7 +42,7 @@ export default function Home() {
             <div className="border-t border-white/15 pt-4">
               <div className="caption text-white/40">NOW BUILDING</div>
               <div className="mt-2 text-2xl font-semibold text-white">{hottestProject?.project.title ?? 'No active project'}</div>
-              {hottestProject && <div className="caption mt-2 text-white/45">heat {hottestProject.score} / {hottestProject.reason}</div>}
+              {hottestProject && <div className="caption mt-2 text-white/45">信号 {hottestProject.score} / {hottestProject.reason}</div>}
             </div>
             <div className="border-t border-white/15 pt-4">
               <div className="caption text-white/40">LATEST SIGNAL</div>
@@ -77,7 +77,7 @@ export default function Home() {
           {activeProjects.filter(item => item.project.status === 'building').map(({ project: p, score, reason }) => <ItemLink key={p.slug} href={`/projects/${p.slug}`} title={p.title} meta={<StatusBadge status={p.status} />}>
             <span>{p.summary}</span>
             <div className="mt-5"><SegmentedProgress value={p.progress} /></div>
-            <div className="caption mt-3">heat {score} / {reason}</div>
+            <div className="caption mt-3">信号 {score} / {reason}</div>
           </ItemLink>)}
         </div>
       </Panel>

@@ -40,7 +40,7 @@ export function AuthOnly({ children, fallback = null }: { children: ReactNode; f
 export function LoginRequired() {
   return <div className="rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
     <div className="caption mb-2">Login required</div>
-    <Link href="/login" className="mono inline-flex min-h-10 items-center rounded-full bg-[var(--ink)] px-4 text-[10px] uppercase text-white">login</Link>
+    <Link href="/login" className="mono inline-flex min-h-10 items-center rounded-full bg-[var(--ink)] px-4 text-[10px] uppercase text-white">登录</Link>
   </div>;
 }
 

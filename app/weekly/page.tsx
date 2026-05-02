@@ -29,9 +29,10 @@ const sourceHref: Record<WeeklyBriefItem['source'], string> = {
 function LockScreen() {
   return <div className="grid gap-5">
     <Panel dark className="console-screen min-h-[430px] p-6 md:p-8">
-      <Label>Weekly Brief / Internal</Label>
-      <h2 className="mt-8 max-w-[8ch] text-6xl font-semibold leading-[.9] text-white md:text-8xl">LOCK</h2>
-      <Link href="/login" className="mono mt-8 inline-flex min-h-10 w-fit items-center rounded-full border border-white/40 px-4 text-[10px] uppercase text-white">login</Link>
+      <Label>Weekly Brief / Private</Label>
+      <h2 className="mt-8 max-w-[8ch] text-6xl font-semibold leading-[.9] text-white md:text-8xl">周回顾</h2>
+      <p className="mt-6 max-w-xl text-sm leading-7 text-white/55">这里汇总私人项目、日志和同步信号，登录后查看。</p>
+      <Link href="/login" className="mono mt-8 inline-flex min-h-10 w-fit items-center rounded-full border border-white/40 px-4 text-[10px] uppercase text-white">登录查看</Link>
     </Panel>
   </div>;
 }

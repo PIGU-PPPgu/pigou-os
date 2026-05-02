@@ -7,6 +7,10 @@ const useExternalCache = Boolean(process.env.PIGOU_NEXT_CACHE_DIR);
 const cacheRoot = process.env.PIGOU_NEXT_CACHE_DIR || path.join(os.homedir(), 'Library', 'Caches', 'pigou-os-next');
 const resetCache = process.env.PIGOU_RESET_NEXT_CACHE === '1';
 
+function removeDir(target) {
+  fs.rmSync(target, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
+}
+
 if (!useExternalCache) {
   try {
     const stat = fs.lstatSync(projectNextDir);
@@ -14,7 +18,7 @@ if (!useExternalCache) {
       fs.unlinkSync(projectNextDir);
       fs.mkdirSync(projectNextDir, { recursive: true });
     } else if (resetCache) {
-      fs.rmSync(projectNextDir, { recursive: true, force: true });
+      removeDir(projectNextDir);
       fs.mkdirSync(projectNextDir, { recursive: true });
     }
   } catch (error) {
@@ -27,7 +31,7 @@ if (!useExternalCache) {
 
 fs.mkdirSync(cacheRoot, { recursive: true });
 if (resetCache) {
-  fs.rmSync(path.join(cacheRoot, 'dev'), { recursive: true, force: true });
+  removeDir(path.join(cacheRoot, 'dev'));
 }
 
 try {
@@ -40,7 +44,7 @@ try {
     }
     fs.unlinkSync(projectNextDir);
   } else {
-    fs.rmSync(projectNextDir, { recursive: true, force: true });
+    removeDir(projectNextDir);
   }
 } catch (error) {
   if (error.code !== 'ENOENT') throw error;

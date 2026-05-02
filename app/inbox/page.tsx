@@ -1,10 +1,15 @@
 import { headers } from 'next/headers';
 import { InboxWorkbench } from '@/components/InboxWorkbench';
 import { getIdeas, getKnowledge, getLogs, getTasks } from '@/lib/data';
+import { InternalLock } from '@/components/InternalLock';
+import { cookies } from 'next/headers';
+import { getSessionUserFromCookieHeader } from '@/lib/auth';
 
 export const dynamic = 'force-dynamic';
 
 export default async function InboxPage() {
+  const cookieHeader = (await cookies()).toString();
+  if (!getSessionUserFromCookieHeader(cookieHeader)) return <InternalLock title="快速收件箱" />;
   const headerList = await headers();
   const host = headerList.get('x-forwarded-host') || headerList.get('host') || 'pigou-os.intellicode.top';
   const protocol = headerList.get('x-forwarded-proto') || (host.includes('localhost') ? 'http' : 'https');

@@ -33,7 +33,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     <Panel raised className="overflow-hidden p-6 md:p-8">
       <div className="grid gap-8 lg:grid-cols-[1fr_360px]">
         <div>
-          <div className="flex flex-wrap items-center gap-2">{project.visibility === 'private' && <span className="mono inline-flex min-h-7 items-center rounded-full border border-[var(--ink)] px-3 text-[10px] uppercase text-[var(--ink)]">内部</span>}<StatusBadge status={project.status} /><PriorityBadge priority={project.priority} />{project.domain && <span className="mono inline-flex min-h-7 items-center rounded-full border border-[var(--border-visible)] px-3 text-[10px] uppercase text-[var(--text-secondary)]">{project.domain}</span>}</div>
+          <div className="flex flex-wrap items-center gap-2">{project.visibility === 'private' && <span className="mono inline-flex min-h-7 items-center rounded-full border border-[var(--ink)] px-3 text-[10px] uppercase text-[var(--ink)]">{locked ? '公开简介' : '内部项目'}</span>}<StatusBadge status={project.status} />{!locked && <PriorityBadge priority={project.priority} />}{project.domain && <span className="mono inline-flex min-h-7 items-center rounded-full border border-[var(--border-visible)] px-3 text-[10px] uppercase text-[var(--text-secondary)]">{project.domain}</span>}</div>
           <h2 className="mt-5 text-5xl font-semibold leading-[.95] text-[var(--ink)] md:text-8xl">{project.title}</h2>
           <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--text-secondary)]">{project.summary}</p>
           {locked && project.explanation && <p className="mt-4 max-w-3xl text-sm leading-7 text-[var(--text-secondary)]">{project.explanation}</p>}
@@ -41,11 +41,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <div className="surface-dark panel-corners p-5">
           <Label>进度读数</Label>
           <div className="mt-6 flex items-end gap-3">
-            <span className="doto text-8xl leading-none text-white">{locked ? 'LOCK' : project.progress}</span>
-            <span className="caption mb-3 text-white/45">{locked ? 'private' : '百分比'}</span>
+            <span className="doto text-8xl leading-none text-white">{locked ? '--' : project.progress}</span>
+            <span className="caption mb-3 text-white/45">{locked ? '仅展示公开简介' : '百分比'}</span>
           </div>
           {!locked && <div className="mt-7"><SegmentedProgress value={project.progress} /></div>}
-          <div className="caption mt-5 text-white/45">{locked ? 'locked' : `更新于 / ${project.updated}`}</div>
+          <div className="caption mt-5 text-white/45">{locked ? '登录后可查看完整进展' : `更新于 / ${project.updated}`}</div>
         </div>
       </div>
     </Panel>
@@ -55,7 +55,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <SectionHeader label="公开素材" value={`${visibleImages.length} 张`} />
       <ImageGallery images={visibleImages} />
     </Panel>}
-    <a href="/login" className="mono inline-flex min-h-10 w-fit items-center rounded-full border border-[var(--ink)] px-4 text-[10px] uppercase text-[var(--ink)]">login</a>
+    <a href="/login" className="mono inline-flex min-h-10 w-fit items-center rounded-full border border-[var(--ink)] px-4 text-[10px] uppercase text-[var(--ink)]">登录查看完整项目</a>
     </> : <>
     <ProjectAutoBrief brief={brief} />
 
@@ -79,9 +79,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </ul>
       </Panel>
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="链接" value={project.visibility === 'private' ? '已隐藏' : project.links?.length ? '外部链接' : '无'} />
+        <SectionHeader label="链接" value={project.visibility === 'private' ? '仅自己可见' : project.links?.length ? '外部链接' : '暂无链接'} />
         <div className="grid gap-2">
-          {project.visibility === 'private' ? <div className="caption">private</div> : project.links?.length ? project.links.map(link => <a key={link.url} href={link.url} target="_blank" className="mono rounded-full border border-[var(--border-visible)] bg-white/45 px-4 py-3 text-center text-[11px] uppercase text-[var(--text-secondary)] transition hover:border-[var(--ink)] hover:text-[var(--ink)]">{link.label}</a>) : <div className="caption">none</div>}
+          {project.visibility === 'private' ? null : project.links?.length ? project.links.map(link => <a key={link.url} href={link.url} target="_blank" className="mono rounded-full border border-[var(--border-visible)] bg-white/45 px-4 py-3 text-center text-[11px] uppercase text-[var(--text-secondary)] transition hover:border-[var(--ink)] hover:text-[var(--ink)]">{link.label}</a>) : <div className="caption">暂无公开链接</div>}
         </div>
       </Panel>
     </section>
@@ -89,19 +89,19 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     <ProjectHealthPanel health={health} />
 
     {project.prioritySuggestion && <Panel className="p-5 md:p-6">
-      <SectionHeader label="AI Priority Evaluation" value={`${project.prioritySuggestion.source} / ${project.prioritySuggestion.model} / ${project.prioritySuggestion.confidence}`} />
+      <SectionHeader label="AI 优先级建议" value={`${project.prioritySuggestion.source} / ${project.prioritySuggestion.model} / ${project.prioritySuggestion.confidence}`} />
       <div className="grid gap-5 lg:grid-cols-[.75fr_1.25fr]">
         <div>
           <div className="flex flex-wrap gap-2">
-            <div><div className="caption mb-1">current</div><PriorityBadge priority={project.priority} /></div>
-            <div><div className="caption mb-1">suggested</div><PriorityBadge priority={project.prioritySuggestion.suggestedPriority} /></div>
+            <div><div className="caption mb-1">当前</div><PriorityBadge priority={project.priority} /></div>
+            <div><div className="caption mb-1">建议</div><PriorityBadge priority={project.prioritySuggestion.suggestedPriority} /></div>
           </div>
           <div className="mt-5">
-            <span className="caption">priority score</span>
+            <span className="caption">优先级分数</span>
             <div className="doto mt-1 text-6xl leading-none text-[var(--ink)]">{project.prioritySuggestion.score}</div>
           </div>
           <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">{project.prioritySuggestion.rationale}</p>
-          <div className="caption mt-4">generated / {project.prioritySuggestion.generatedAt}</div>
+          <div className="caption mt-4">生成于 / {project.prioritySuggestion.generatedAt}</div>
         </div>
         <div className="grid gap-3">
           {project.prioritySuggestion.dimensions.map(dimension => <div key={dimension.name} className="border-b border-[var(--border)] pb-3 last:border-b-0">
@@ -115,17 +115,17 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </div>
       </div>
       <div className="mt-5 border-t border-[var(--border)] pt-4">
-        <EvidenceList title="Evidence" items={project.prioritySuggestion.evidence} />
+        <EvidenceList title="依据" items={project.prioritySuggestion.evidence} />
       </div>
     </Panel>}
 
     {project.progressEvaluation && <Panel className="p-5 md:p-6">
-      <SectionHeader label="AI Progress Evaluation" value={`${project.progressEvaluation.source} / ${project.progressEvaluation.model} / ${project.progressEvaluation.confidence}`} />
+      <SectionHeader label="AI 进度判断" value={`${project.progressEvaluation.source} / ${project.progressEvaluation.model} / ${project.progressEvaluation.confidence}`} />
       <div className="grid gap-5 lg:grid-cols-[.9fr_1.1fr]">
         <div>
           <p className="text-sm leading-7 text-[var(--text-primary)]">{project.progressEvaluation.summary}</p>
           <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">{project.progressEvaluation.rationale}</p>
-          <div className="caption mt-4">generated / {project.progressEvaluation.generatedAt}</div>
+          <div className="caption mt-4">生成于 / {project.progressEvaluation.generatedAt}</div>
         </div>
         <div className="grid gap-3">
           {project.progressEvaluation.dimensions.map(dimension => <div key={dimension.name} className="border-b border-[var(--border)] pb-3 last:border-b-0">
@@ -139,9 +139,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </div>
       </div>
       <div className="mt-5 grid gap-4 border-t border-[var(--border)] pt-4 md:grid-cols-3">
-        <EvidenceList title="Evidence" items={project.progressEvaluation.evidence} />
-        <EvidenceList title="Risks" items={project.progressEvaluation.risks} />
-        <EvidenceList title="AI Next" items={project.progressEvaluation.nextActions} />
+        <EvidenceList title="依据" items={project.progressEvaluation.evidence} />
+        <EvidenceList title="风险" items={project.progressEvaluation.risks} />
+        <EvidenceList title="建议下一步" items={project.progressEvaluation.nextActions} />
       </div>
     </Panel>}
 
@@ -176,12 +176,12 @@ function getProjectRelations(projectSlug: string) {
 
 function ProjectOperatingPanel({ projectSlug, related }: { projectSlug: string; related: { knowledge: KnowledgeNote[]; ideas: Idea[]; tasks: Task[]; logs: Log[] } }) {
   return <Panel className="p-5 md:p-6">
-    <SectionHeader label="Operating Links" value={projectSlug} />
+    <SectionHeader label="关联线索" value={projectSlug} />
     <div className="grid gap-5 lg:grid-cols-4">
-      <RelationColumn title="Knowledge" href="/knowledge" items={related.knowledge.map(note => ({ key: note.slug, title: note.title, meta: note.status }))} />
-      <RelationColumn title="Ideas" href="/ideas" items={related.ideas.map(idea => ({ key: idea.slug, title: idea.title, meta: String(idea.score) }))} />
-      <RelationColumn title="Tasks" href="/tasks" items={related.tasks.map(task => ({ key: task.slug, title: task.title, meta: task.status }))} />
-      <RelationColumn title="Log" href="/log" items={related.logs.map(log => ({ key: log.slug, title: log.title, meta: log.date }))} />
+      <RelationColumn title="知识" href="/knowledge" items={related.knowledge.map(note => ({ key: note.slug, title: note.title, meta: note.status }))} />
+      <RelationColumn title="想法" href="/ideas" items={related.ideas.map(idea => ({ key: idea.slug, title: idea.title, meta: String(idea.score) }))} />
+      <RelationColumn title="行动" href="/tasks" items={related.tasks.map(task => ({ key: task.slug, title: task.title, meta: task.status }))} />
+      <RelationColumn title="日志" href="/log" items={related.logs.map(log => ({ key: log.slug, title: log.title, meta: log.date }))} />
     </div>
   </Panel>;
 }
@@ -194,7 +194,7 @@ function RelationColumn({ title, href, items }: { title: string; href: string; i
         <div className="text-sm font-medium leading-5 text-[var(--ink)]">{item.title}</div>
         <div className="caption mt-1">{item.meta}</div>
       </div>)}
-      {!items.length && <div className="caption">none</div>}
+      {!items.length && <div className="caption">暂无关联内容</div>}
     </div>
   </div>;
 }
@@ -204,7 +204,7 @@ function EvidenceList({ title, items }: { title: string; items: string[] }) {
     <div className="caption mb-2">{title} / {items.length}</div>
     <ul className="grid gap-2 text-xs leading-5 text-[var(--text-secondary)]">
       {items.slice(0, 6).map(item => <li key={item} className="border-b border-[var(--border)] pb-2 last:border-b-0">{item}</li>)}
-      {!items.length && <li className="text-[var(--text-disabled)]">none</li>}
+      {!items.length && <li className="text-[var(--text-disabled)]">暂无</li>}
     </ul>
   </div>;
 }

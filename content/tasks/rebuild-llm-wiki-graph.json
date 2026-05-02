@@ -1,12 +1,12 @@
 {
   "slug": "rebuild-llm-wiki-graph",
   "title": "重建 Pigou OS 全局 LLM Wiki 图谱",
-  "status": "next",
+  "status": "done",
   "priority": "P0",
   "sourceType": "project",
   "sourceSlug": "pigou-os",
   "projectSlug": "pigou-os",
   "summary": "把知识、想法、项目和行动统一进一个可缩放、可点击、可重新分析的图谱。",
   "createdAt": "2026-04-28",
-  "updated": "2026-04-28"
+  "updated": "2026-05-02"
 }

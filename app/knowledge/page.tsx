@@ -1,10 +1,15 @@
 import { Label, Panel } from '@/components/UI';
 import { KnowledgeBoard } from '@/components/KnowledgeBoard';
 import { getKnowledge } from '@/lib/data';
+import { InternalLock } from '@/components/InternalLock';
+import { cookies } from 'next/headers';
+import { getSessionUserFromCookieHeader } from '@/lib/auth';
 
 export const dynamic = 'force-dynamic';
 
-export default function KnowledgePage() {
+export default async function KnowledgePage() {
+  const cookieHeader = (await cookies()).toString();
+  if (!getSessionUserFromCookieHeader(cookieHeader)) return <InternalLock title="知识大脑" />;
   const notes = getKnowledge();
   const linked = notes.filter(note => note.status === 'linked').length;
   const raw = notes.filter(note => note.status === 'raw').length;
