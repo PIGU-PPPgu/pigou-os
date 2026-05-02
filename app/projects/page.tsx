@@ -1,26 +1,33 @@
 import { ItemLink, Label, Panel, PriorityBadge, SectionHeader, SegmentedProgress, StatusBadge } from '@/components/UI';
-import { getProjects, getSyncJobs } from '@/lib/data';
+import { getLogs, getProjects, getProjectWikis, getSyncJobs, getTasks } from '@/lib/data';
 import { SyncStatus } from '@/components/sync/SyncStatus';
 import { ProjectPriorityAdvisor } from '@/components/projects/ProjectPriorityAdvisor';
 import { ProjectStatusAdvisor } from '@/components/projects/ProjectStatusAdvisor';
+import { sortProjectsByActivity } from '@/lib/project-activity';
 import { cookies } from 'next/headers';
 import { getSessionUserFromCookieHeader } from '@/lib/auth';
 
 export const dynamic = 'force-dynamic';
 
 export default async function ProjectsPage() {
-  const projects = getProjects();
+  const rawProjects = getProjects();
+  const tasks = getTasks();
+  const logs = getLogs();
+  const wikis = getProjectWikis();
+  const activity = sortProjectsByActivity({ projects: rawProjects, wikis, tasks, logs });
+  const projects = activity.map(item => item.project);
+  const activityBySlug = new Map(activity.map(item => [item.project.slug, item]));
   const syncJobs = getSyncJobs();
   const cookieHeader = (await cookies()).toString();
   const isLoggedIn = Boolean(getSessionUserFromCookieHeader(cookieHeader));
   const statusCounts = {
-    building: projects.filter(project => project.status === 'building').length,
-    paused: projects.filter(project => project.status === 'paused').length,
-    idea: projects.filter(project => project.status === 'idea').length,
-    private: projects.filter(project => project.visibility === 'private').length
+    building: rawProjects.filter(project => project.status === 'building').length,
+    paused: rawProjects.filter(project => project.status === 'paused').length,
+    idea: rawProjects.filter(project => project.status === 'idea').length,
+    private: rawProjects.filter(project => project.visibility === 'private').length
   };
-  const stalled = projects.filter(project => project.status === 'paused').slice(0, 5);
-  const highPriority = projects.filter(project => project.priority === 'high' && project.status !== 'archived').slice(0, 5);
+  const stalled = activity.filter(item => item.project.status === 'paused').slice(0, 5);
+  const activeSignals = activity.filter(item => item.project.status !== 'archived').slice(0, 5);
   return <div className="grid gap-5">
     <Panel raised className="p-6 md:p-8">
       <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
@@ -43,15 +50,21 @@ export default async function ProjectsPage() {
         </div>
       </Panel>
       <Panel raised className="p-5 md:p-6">
-        <SectionHeader label="需要处理" value="高优先级 / 卡住项" />
+        <SectionHeader label="需要处理" value="动态热度 / 卡住项" />
         <div className="grid gap-4 md:grid-cols-2">
           <div>
-            <div className="caption mb-2">高优先级</div>
-            {highPriority.map(project => <div key={project.slug} className="border-b border-[var(--border)] py-2 text-sm leading-6 last:border-b-0">{project.title}</div>)}
+            <div className="caption mb-2">当前最热</div>
+            {activeSignals.map(item => <div key={item.project.slug} className="border-b border-[var(--border)] py-2 text-sm leading-6 last:border-b-0">
+              <div className="font-medium text-[var(--ink)]">{item.project.title}</div>
+              <div className="caption mt-1">heat {item.score} / {item.reason}</div>
+            </div>)}
           </div>
           <div>
             <div className="caption mb-2">暂停/卡住</div>
-            {stalled.map(project => <div key={project.slug} className="border-b border-[var(--border)] py-2 text-sm leading-6 last:border-b-0">{project.title}</div>)}
+            {stalled.map(item => <div key={item.project.slug} className="border-b border-[var(--border)] py-2 text-sm leading-6 last:border-b-0">
+              <div className="font-medium text-[var(--ink)]">{item.project.title}</div>
+              <div className="caption mt-1">heat {item.score} / {item.reason}</div>
+            </div>)}
           </div>
         </div>
       </Panel>
@@ -64,10 +77,11 @@ export default async function ProjectsPage() {
     <ProjectStatusAdvisor enabled={isLoggedIn} />
 
     <Panel className="p-5 md:p-6">
-      <SectionHeader label="项目登记册" value={`${projects.length} 个项目`} />
+      <SectionHeader label="项目登记册" value="按当前工作信号排序" />
       <div>
         {projects.map(p => {
           const locked = p.visibility === 'private' && !isLoggedIn;
+          const signal = activityBySlug.get(p.slug);
           return <ItemLink key={p.slug} href={`/projects/${p.slug}`} title={p.title} meta={<div className="flex flex-wrap justify-end gap-2">{p.visibility === 'private' && <span className="mono inline-flex min-h-7 items-center rounded-full border border-[var(--ink)] px-3 text-[10px] uppercase text-[var(--ink)]">{locked ? 'locked' : '内部'}</span>}<PriorityBadge priority={p.priority} /><StatusBadge status={p.status} /></div>}>
             <span>{p.summary}</span>
             {locked && p.explanation && <div className="mt-3 text-sm leading-6 text-[var(--text-secondary)]"><span className="caption mr-2">公开简介</span>{p.explanation}</div>}
@@ -75,7 +89,7 @@ export default async function ProjectsPage() {
             {!locked && <div className="mt-5"><SegmentedProgress value={p.progress} /></div>}
             {!locked && p.prioritySuggestion && p.prioritySuggestion.suggestedPriority !== p.priority && <div className="caption mt-3">AI priority suggests {p.prioritySuggestion.suggestedPriority} / {p.prioritySuggestion.confidence} / score {p.prioritySuggestion.score}</div>}
             {!locked && p.progressEvaluation && <div className="caption mt-3">AI / {p.progressEvaluation.model} / {p.progressEvaluation.confidence} / {p.progressEvaluation.generatedAt}</div>}
-            <div className="caption mt-3">{p.domain && !locked ? `${p.domain} / ` : ''}更新于 / {p.updated}</div>
+            <div className="caption mt-3">{signal ? `heat ${signal.score} / ${signal.reason} / ` : ''}{p.domain && !locked ? `${p.domain} / ` : ''}更新于 / {p.updated}</div>
           </ItemLink>;
         })}
       </div>

@@ -1,4 +1,5 @@
 import { evaluateProjectHealth } from '@/lib/project-health';
+import { sortProjectsByActivity } from '@/lib/project-activity';
 import {
   getIdeas,
   getLogs,
@@ -86,8 +87,6 @@ export type TodayCockpit = {
 
 const taskPriorityRank: Record<Task['priority'], number> = { P0: 0, P1: 1, P2: 2 };
 const taskStatusRank: Record<Task['status'], number> = { doing: 0, next: 1, waiting: 2, done: 3, archived: 4 };
-const projectPriorityRank: Record<Project['priority'], number> = { high: 0, medium: 1, low: 2 };
-const projectStatusRank: Record<Project['status'], number> = { building: 0, idea: 1, paused: 2, shipped: 3, archived: 4 };
 const ideaStatusRank: Record<Idea['status'], number> = { building: 0, validated: 1, spark: 2, killed: 3 };
 
 function localIsoDate(date = new Date()) {
@@ -228,7 +227,7 @@ function selectMainLine(openTasks: Task[], projects: Project[], projectBySlug: M
 
   const project = projects
     .filter(item => item.status === 'building' && item.nextActions.length)
-    .sort((a, b) => projectPriorityRank[a.priority] - projectPriorityRank[b.priority] || b.updated.localeCompare(a.updated))[0];
+    .sort((a, b) => (b.prioritySuggestion?.score || 0) - (a.prioritySuggestion?.score || 0) || b.updated.localeCompare(a.updated))[0];
 
   if (project) {
     return {
@@ -373,32 +372,33 @@ export function generateTodayCockpit(input: { isLoggedIn?: boolean } = {}): Toda
     .filter(task => task.status !== 'done' && task.status !== 'archived')
     .sort((a, b) => taskPriorityRank[a.priority] - taskPriorityRank[b.priority] || taskStatusRank[a.status] - taskStatusRank[b.status] || b.updated.localeCompare(a.updated));
 
+  const activitySignals = sortProjectsByActivity({ projects, wikis, tasks, logs });
+  const activityScoreBySlug = new Map(activitySignals.map(signal => [signal.project.slug, signal.score]));
+  const activityReasonBySlug = new Map(activitySignals.map(signal => [signal.project.slug, signal.reason]));
+
   const projectSignals = projects
     .filter(project => project.status !== 'archived')
-    .map(project => projectToCockpit({
+    .map(project => {
+      const signal = projectToCockpit({
       project,
       wiki: wikiBySlug.get(project.slug),
       tasks: tasksByProject.get(project.slug) || [],
       logs: logsByProject.get(project.slug) || [],
       isLoggedIn
-    }));
+    });
+      const score = activityScoreBySlug.get(project.slug) || signal.healthScore;
+      const reason = activityReasonBySlug.get(project.slug) || signal.reason;
+      return { ...signal, healthScore: score, healthLabel: `heat ${score}`, reason };
+    });
 
   const hotProjects = projectSignals
-    .filter(project => project.status === 'building' || project.priority === 'high')
-    .sort((a, b) => {
-      const statusDiff = projectStatusRank[a.status] - projectStatusRank[b.status];
-      if (statusDiff) return statusDiff;
-      return projectPriorityRank[a.priority] - projectPriorityRank[b.priority] || b.healthScore - a.healthScore || b.updated.localeCompare(a.updated);
-    })
+    .filter(project => project.status !== 'archived')
+    .sort((a, b) => b.healthScore - a.healthScore || b.updated.localeCompare(a.updated))
     .slice(0, 3);
 
   const coldProjects = projectSignals
     .filter(project => project.status === 'paused' || project.healthScore < 52 || daysSince(project.updated) >= 14)
-    .sort((a, b) => {
-      const statusDiff = projectStatusRank[a.status] - projectStatusRank[b.status];
-      if (statusDiff) return statusDiff;
-      return a.healthScore - b.healthScore || projectPriorityRank[a.priority] - projectPriorityRank[b.priority] || a.updated.localeCompare(b.updated);
-    })
+    .sort((a, b) => a.healthScore - b.healthScore || a.updated.localeCompare(b.updated))
     .slice(0, 3);
 
   const cockpitBase = {

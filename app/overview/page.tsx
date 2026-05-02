@@ -1,7 +1,8 @@
 import { ButtonLink, ItemLink, Label, MiniMeter, Panel, SectionHeader, SegmentedProgress, Stat, StatusBadge } from '@/components/UI';
 import { ContributionHeatmap } from '@/components/activity/ContributionHeatmap';
 import { SyncStatus } from '@/components/sync/SyncStatus';
-import { getAllTasks, getContributionActivity, getIdeas, getKnowledge, getLogs, getProjects, getSyncJobs } from '@/lib/data';
+import { getAllTasks, getContributionActivity, getIdeas, getKnowledge, getLogs, getProjects, getProjectWikis, getSyncJobs, getTasks } from '@/lib/data';
+import { sortProjectsByActivity } from '@/lib/project-activity';
 
 export const dynamic = 'force-dynamic';
 
@@ -11,9 +12,13 @@ export default function Home() {
   const logs = getLogs();
   const knowledge = getKnowledge();
   const tasks = getAllTasks();
+  const taskRecords = getTasks();
+  const activeProjects = sortProjectsByActivity({ projects, wikis: getProjectWikis(), tasks: taskRecords, logs });
+  const rankedProjects = activeProjects.map(item => item.project);
+  const hottestProject = activeProjects.find(item => item.project.status !== 'archived');
   const contribution = getContributionActivity();
   const syncJobs = getSyncJobs();
-  const building = projects.filter(p => p.status === 'building');
+  const building = rankedProjects.filter(p => p.status === 'building');
   const active = building.length;
   const shipped = projects.filter(p => p.status === 'shipped').length;
   const stalled = projects.filter(p => p.status === 'paused').length;
@@ -36,7 +41,8 @@ export default function Home() {
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="border-t border-white/15 pt-4">
               <div className="caption text-white/40">NOW BUILDING</div>
-              <div className="mt-2 text-2xl font-semibold text-white">{building[0]?.title ?? 'No active project'}</div>
+              <div className="mt-2 text-2xl font-semibold text-white">{hottestProject?.project.title ?? 'No active project'}</div>
+              {hottestProject && <div className="caption mt-2 text-white/45">heat {hottestProject.score} / {hottestProject.reason}</div>}
             </div>
             <div className="border-t border-white/15 pt-4">
               <div className="caption text-white/40">LATEST SIGNAL</div>
@@ -68,9 +74,10 @@ export default function Home() {
       <Panel className="p-5 md:p-6">
         <SectionHeader label="正在推进" value={`${building.length} 个活跃项目`} />
         <div>
-          {building.map(p => <ItemLink key={p.slug} href={`/projects/${p.slug}`} title={p.title} meta={<StatusBadge status={p.status} />}>
+          {activeProjects.filter(item => item.project.status === 'building').map(({ project: p, score, reason }) => <ItemLink key={p.slug} href={`/projects/${p.slug}`} title={p.title} meta={<StatusBadge status={p.status} />}>
             <span>{p.summary}</span>
             <div className="mt-5"><SegmentedProgress value={p.progress} /></div>
+            <div className="caption mt-3">heat {score} / {reason}</div>
           </ItemLink>)}
         </div>
       </Panel>
