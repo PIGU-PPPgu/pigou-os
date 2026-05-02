@@ -1,5 +1,6 @@
-import { getIdeas, getKnowledge, getLogs, getProjects, getSyncJobs, getTasks, type Idea, type KnowledgeNote, type Log, type Project, type SyncJob, type Task } from '@/lib/data';
+import { getIdeas, getKnowledge, getLogs, getProjectWikis, getProjects, getSyncJobs, getTasks, type Idea, type KnowledgeNote, type Log, type Project, type ProjectWikiSnapshot, type SyncJob, type Task } from '@/lib/data';
 import { createChatJson, getLlmConfig } from '@/lib/ai-clients';
+import { sortProjectsByActivity, type ProjectActivitySignal } from '@/lib/project-activity';
 
 type BriefSource = 'projects' | 'tasks' | 'knowledge' | 'ideas' | 'logs' | 'sync';
 
@@ -18,6 +19,8 @@ export type WeeklyBriefProjectSignal = {
   status: Project['status'];
   priority: Project['priority'];
   progress: number;
+  activityScore: number;
+  heat: ProjectActivitySignal['heat'];
   updated: string;
   signal: string;
   nextActions: string[];
@@ -75,6 +78,7 @@ type WeeklyBriefInput = {
   knowledge: KnowledgeNote[];
   ideas: Idea[];
   logs: Log[];
+  wikis: ProjectWikiSnapshot[];
   syncJobs: SyncJob[];
 };
 
@@ -134,8 +138,23 @@ function briefInput(days: number): WeeklyBriefInput {
     knowledge: getKnowledge(),
     ideas: getIdeas(),
     logs: getLogs(),
+    wikis: getProjectWikis(),
     syncJobs: getSyncJobs()
   };
+}
+
+function projectActivity(input: WeeklyBriefInput) {
+  return sortProjectsByActivity({
+    projects: input.projects.filter(project => project.status !== 'archived'),
+    wikis: input.wikis,
+    tasks: input.tasks,
+    logs: input.logs
+  });
+}
+
+function activitySummary(item: ProjectActivitySignal) {
+  const evidence = item.evidence.slice(0, 4).join(' / ');
+  return evidence ? `heat ${item.score} / ${evidence}` : `heat ${item.score} / ${item.project.status} / ${item.project.priority}`;
 }
 
 function stats(input: WeeklyBriefInput): WeeklyBriefStats {
@@ -160,15 +179,16 @@ function stats(input: WeeklyBriefInput): WeeklyBriefStats {
 
 function highlightItems(input: WeeklyBriefInput): WeeklyBriefItem[] {
   const { start, end } = input.range;
-  const projectItems = input.projects
-    .filter(project => project.status === 'building' || project.priority === 'high' || inRange(project.updated, start, end))
-    .map(project => ({
-      title: project.title,
-      summary: project.progressEvaluation?.summary || project.summary,
+  const projectItems = projectActivity(input)
+    .filter(item => item.score >= 40 || item.project.status === 'building' || inRange(item.project.updated, start, end))
+    .slice(0, 6)
+    .map(item => ({
+      title: item.project.title,
+      summary: item.project.progressEvaluation?.summary || activitySummary(item),
       source: 'projects' as const,
-      slug: project.slug,
-      date: project.updated,
-      score: clampScore((project.priority === 'high' ? 30 : 0) + (project.status === 'building' ? 25 : 0) + project.progress)
+      slug: item.project.slug,
+      date: item.project.updated,
+      score: item.score
     }));
 
   const taskItems = input.tasks
@@ -219,7 +239,7 @@ function highlightItems(input: WeeklyBriefInput): WeeklyBriefItem[] {
     .filter(job => inRange(job.requestedAt, start, end) || job.status === 'failed' || job.status === 'needs-review')
     .map(job => ({
       title: job.repo.fullName,
-      summary: job.summary || job.error || job.event || 'Sync job waiting for worker',
+      summary: job.summary || job.error || job.event || job.status,
       source: 'sync' as const,
       slug: job.id,
       date: job.requestedAt,
@@ -238,28 +258,26 @@ function projectSignals(input: WeeklyBriefInput): WeeklyBriefProjectSignal[] {
     tasksByProject.set(task.projectSlug, [...(tasksByProject.get(task.projectSlug) || []), task]);
   });
 
-  return input.projects
-    .filter(project => project.status !== 'archived')
-    .map(project => {
+  return projectActivity(input)
+    .map(item => {
+      const { project } = item;
       const tasks = tasksByProject.get(project.slug) || [];
       const openTasks = tasks.filter(task => task.status !== 'done' && task.status !== 'archived');
-      const signal = project.progressEvaluation?.summary
-        || (openTasks[0] ? `${openTasks.length} open task(s), next: ${openTasks[0].title}` : project.summary);
+      const signal = openTasks[0]
+        ? `${activitySummary(item)} / next: ${openTasks[0].title}`
+        : project.progressEvaluation?.summary || activitySummary(item);
       return {
         slug: project.slug,
         title: project.title,
         status: project.status,
         priority: project.priority,
         progress: project.progress,
+        activityScore: item.score,
+        heat: item.heat,
         updated: project.updated,
         signal,
         nextActions: project.nextActions.slice(0, 3)
       };
-    })
-    .sort((a, b) => {
-      const statusA = a.status === 'building' ? 0 : a.status === 'paused' ? 1 : 2;
-      const statusB = b.status === 'building' ? 0 : b.status === 'paused' ? 1 : 2;
-      return statusA - statusB || b.updated.localeCompare(a.updated);
     })
     .slice(0, 8);
 }
@@ -270,7 +288,7 @@ function syncSignals(input: WeeklyBriefInput): WeeklyBriefSyncSignal[] {
     repo: job.repo.fullName,
     status: job.status,
     requestedAt: job.requestedAt,
-    summary: job.summary || job.error || job.event || 'waiting for worker'
+    summary: job.summary || job.error || job.event || job.status
   }));
 }
 
@@ -282,7 +300,8 @@ function localSynthesis(input: WeeklyBriefInput, computedStats: WeeklyBriefStats
   const p0Tasks = input.tasks.filter(task => task.priority === 'P0' && task.status !== 'done' && task.status !== 'archived');
   const linkedRatio = input.knowledge.length ? computedStats.linkedKnowledge / input.knowledge.length : 0;
   const focusScore = clampScore(48 + active.length * 7 + computedStats.doneTasks * 5 + linkedRatio * 18 - pausedHigh.length * 8 - reviewJobs.length * 7);
-  const leadProject = active[0] || input.projects.find(project => project.priority === 'high') || input.projects[0];
+  const leadActivity = projectActivity(input)[0];
+  const leadProject = leadActivity?.project || active[0] || input.projects.find(project => project.priority === 'high') || input.projects[0];
 
   const wins = [
     computedStats.updatedProjects ? `${computedStats.updatedProjects} project(s) changed during the week.` : 'Project registry stayed stable this week.',
@@ -310,7 +329,7 @@ function localSynthesis(input: WeeklyBriefInput, computedStats: WeeklyBriefStats
     model: 'deterministic-local',
     title: `${input.range.start} to ${input.range.end} weekly brief`,
     executiveSummary: leadProject
-      ? `${leadProject.title} is the main visible thread. The system shows ${computedStats.activeProjects} active project(s), ${computedStats.openTasks} open task(s), ${computedStats.knowledge} weekly knowledge change(s), and ${computedStats.syncNeedsReview} sync item(s) needing review.`
+      ? `${leadProject.title} is the main visible thread${leadActivity ? ` at heat ${leadActivity.score}` : ''}. The system shows ${computedStats.activeProjects} active project(s), ${computedStats.openTasks} open task(s), ${computedStats.knowledge} weekly knowledge change(s), and ${computedStats.syncNeedsReview} sync item(s) needing review.`
       : `The system has ${computedStats.projects} project(s), ${computedStats.openTasks} open task(s), and ${computedStats.knowledge} weekly knowledge change(s).`,
     focusScore,
     wins,

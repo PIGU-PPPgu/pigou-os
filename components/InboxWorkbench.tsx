@@ -218,13 +218,13 @@ export function InboxWorkbench({ stats, baseUrl }: { stats: InboxStats; baseUrl:
               </dl>
             </section>;
           })}
-          {!results.length && <p className="py-8 text-sm leading-6 text-[var(--text-secondary)]">No session routes.</p>}
+          {!results.length && <p className="py-8 text-sm leading-6 text-[var(--text-secondary)]">本次还没有投喂记录。</p>}
         </div>
       </Panel>
     </section>
 
     <details className="rounded-[8px] border border-[var(--border-visible)] bg-white/35 p-5">
-      <summary className="caption cursor-pointer text-[var(--text-primary)]">Mobile Ingress</summary>
+      <summary className="caption cursor-pointer text-[var(--text-primary)]">Mobile endpoints</summary>
       <MobileIngressPanel baseUrl={baseUrl} />
     </details>
   </div>;
@@ -242,7 +242,7 @@ function StatCell({ value, label }: { value: number; label: string }) {
 }
 
 function MobileIngressPanel({ baseUrl }: { baseUrl: string }) {
-  const secretHint = 'YOUR_PIGOU_INBOX_WEBHOOK_SECRET';
+  const secretHint = '<secret>';
   const shortcutUrl = `${baseUrl || 'https://pigou-os.intellicode.top'}/api/inbox/shortcut?secret=${secretHint}`;
   const feishuUrl = `${baseUrl || 'https://pigou-os.intellicode.top'}/api/inbox/feishu`;
   const wecomUrl = `${baseUrl || 'https://pigou-os.intellicode.top'}/api/inbox/wecom?secret=${secretHint}`;

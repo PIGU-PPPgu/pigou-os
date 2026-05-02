@@ -125,9 +125,9 @@ export default async function WeeklyPage() {
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
                 <div className="text-lg font-semibold leading-tight text-[var(--ink)]">{project.title}</div>
-                <div className="caption mt-1">{project.priority} / updated {project.updated}</div>
+                <div className="caption mt-1">{project.priority} / {project.heat} / updated {project.updated}</div>
               </div>
-              <div className="flex flex-wrap items-center gap-2"><StatusBadge status={project.status} /><span className="doto text-3xl leading-none text-[var(--ink)]">{project.progress}</span></div>
+              <div className="flex flex-wrap items-center gap-2"><StatusBadge status={project.status} /><span className="doto text-3xl leading-none text-[var(--ink)]">{project.activityScore}</span></div>
             </div>
             <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">{project.signal}</p>
             {project.nextActions.length > 0 && <div className="caption mt-3">{project.nextActions.join(' / ')}</div>}

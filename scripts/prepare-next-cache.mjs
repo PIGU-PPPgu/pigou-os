@@ -3,10 +3,32 @@ import os from 'node:os';
 import path from 'node:path';
 
 const projectNextDir = path.join(process.cwd(), '.next');
+const useExternalCache = Boolean(process.env.PIGOU_NEXT_CACHE_DIR);
 const cacheRoot = process.env.PIGOU_NEXT_CACHE_DIR || path.join(os.homedir(), 'Library', 'Caches', 'pigou-os-next');
+const resetCache = process.env.PIGOU_RESET_NEXT_CACHE === '1';
+
+if (!useExternalCache) {
+  try {
+    const stat = fs.lstatSync(projectNextDir);
+    if (stat.isSymbolicLink()) {
+      fs.unlinkSync(projectNextDir);
+      fs.mkdirSync(projectNextDir, { recursive: true });
+    } else if (resetCache) {
+      fs.rmSync(projectNextDir, { recursive: true, force: true });
+      fs.mkdirSync(projectNextDir, { recursive: true });
+    }
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
+    fs.mkdirSync(projectNextDir, { recursive: true });
+  }
+  console.log('Using project-local .next cache');
+  process.exit(0);
+}
 
 fs.mkdirSync(cacheRoot, { recursive: true });
-fs.rmSync(path.join(cacheRoot, 'dev'), { recursive: true, force: true });
+if (resetCache) {
+  fs.rmSync(path.join(cacheRoot, 'dev'), { recursive: true, force: true });
+}
 
 try {
   const stat = fs.lstatSync(projectNextDir);
