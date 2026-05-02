@@ -1,6 +1,7 @@
 import { ItemLink, Label, Panel, PriorityBadge, SectionHeader, SegmentedProgress, StatusBadge } from '@/components/UI';
 import { getProjects, getSyncJobs } from '@/lib/data';
 import { SyncStatus } from '@/components/sync/SyncStatus';
+import { ProjectPriorityAdvisor } from '@/components/projects/ProjectPriorityAdvisor';
 import { ProjectStatusAdvisor } from '@/components/projects/ProjectStatusAdvisor';
 import { cookies } from 'next/headers';
 import { getSessionUserFromCookieHeader } from '@/lib/auth';
@@ -58,6 +59,8 @@ export default async function ProjectsPage() {
 
     <SyncStatus jobs={syncJobs} />
 
+    <ProjectPriorityAdvisor enabled={isLoggedIn} />
+
     <ProjectStatusAdvisor enabled={isLoggedIn} />
 
     <Panel className="p-5 md:p-6">
@@ -70,6 +73,7 @@ export default async function ProjectsPage() {
             {locked && p.explanation && <div className="mt-3 text-sm leading-6 text-[var(--text-secondary)]"><span className="caption mr-2">公开简介</span>{p.explanation}</div>}
             {!locked && p.readme?.[0] && <div className="mt-3 text-sm leading-6 text-[var(--text-secondary)]"><span className="caption mr-2">README</span>{p.readme[0]}</div>}
             {!locked && <div className="mt-5"><SegmentedProgress value={p.progress} /></div>}
+            {!locked && p.prioritySuggestion && p.prioritySuggestion.suggestedPriority !== p.priority && <div className="caption mt-3">AI priority suggests {p.prioritySuggestion.suggestedPriority} / {p.prioritySuggestion.confidence} / score {p.prioritySuggestion.score}</div>}
             {!locked && p.progressEvaluation && <div className="caption mt-3">AI / {p.progressEvaluation.model} / {p.progressEvaluation.confidence} / {p.progressEvaluation.generatedAt}</div>}
             <div className="caption mt-3">{p.domain && !locked ? `${p.domain} / ` : ''}更新于 / {p.updated}</div>
           </ItemLink>;

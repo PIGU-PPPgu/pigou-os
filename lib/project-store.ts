@@ -45,6 +45,8 @@ export async function createProject(input: Omit<Project, 'slug' | 'updated'> & {
     progress: Math.max(0, Math.min(100, Math.round(input.progress))),
     progressEvaluation: input.progressEvaluation,
     statusSuggestionReview: input.statusSuggestionReview,
+    prioritySuggestion: input.prioritySuggestion,
+    prioritySuggestionReview: input.prioritySuggestionReview,
     goals: input.goals,
     nextActions: input.nextActions,
     links: input.links,

@@ -14,7 +14,8 @@ for (const slug of slugs) {
     continue;
   }
   refreshed += 1;
-  console.log(`Refreshed ${slug}: ${result.evaluation.status} ${result.evaluation.progress}%${result.log ? ` (log ${result.log.slug})` : ''}`);
+  const priority = result.prioritySuggestion ? ` / priority suggestion ${result.prioritySuggestion.suggestedPriority} (${result.prioritySuggestion.score})` : '';
+  console.log(`Refreshed ${slug}: ${result.evaluation.status} ${result.evaluation.progress}%${priority}${result.log ? ` (log ${result.log.slug})` : ''}`);
 }
 
 console.log(`Refreshed ${refreshed} project signal(s), skipped ${skipped}.`);

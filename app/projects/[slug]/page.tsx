@@ -95,6 +95,37 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
     <ProjectHealthPanel health={health} />
 
+    {project.prioritySuggestion && <Panel className="p-5 md:p-6">
+      <SectionHeader label="AI Priority Evaluation" value={`${project.prioritySuggestion.source} / ${project.prioritySuggestion.model} / ${project.prioritySuggestion.confidence}`} />
+      <div className="grid gap-5 lg:grid-cols-[.75fr_1.25fr]">
+        <div>
+          <div className="flex flex-wrap gap-2">
+            <div><div className="caption mb-1">current</div><PriorityBadge priority={project.priority} /></div>
+            <div><div className="caption mb-1">suggested</div><PriorityBadge priority={project.prioritySuggestion.suggestedPriority} /></div>
+          </div>
+          <div className="mt-5">
+            <span className="caption">priority score</span>
+            <div className="doto mt-1 text-6xl leading-none text-[var(--ink)]">{project.prioritySuggestion.score}</div>
+          </div>
+          <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">{project.prioritySuggestion.rationale}</p>
+          <div className="caption mt-4">generated / {project.prioritySuggestion.generatedAt}</div>
+        </div>
+        <div className="grid gap-3">
+          {project.prioritySuggestion.dimensions.map(dimension => <div key={dimension.name} className="border-b border-[var(--border)] pb-3 last:border-b-0">
+            <div className="mb-2 flex items-center justify-between gap-3">
+              <span className="caption">{dimension.name}</span>
+              <span className="caption text-[var(--text-primary)]">{dimension.score}/{dimension.max}</span>
+            </div>
+            <div className="h-1.5 overflow-hidden rounded-full bg-[var(--surface-soft)]"><div className="meter-fill h-full bg-[var(--accent)]" style={{ width: `${Math.max(0, Math.min(100, (dimension.score / dimension.max) * 100))}%` }} /></div>
+            <p className="mt-2 text-xs leading-5 text-[var(--text-secondary)]">{dimension.reason}</p>
+          </div>)}
+        </div>
+      </div>
+      <div className="mt-5 border-t border-[var(--border)] pt-4">
+        <EvidenceList title="Evidence" items={project.prioritySuggestion.evidence} />
+      </div>
+    </Panel>}
+
     {project.progressEvaluation && <Panel className="p-5 md:p-6">
       <SectionHeader label="AI Progress Evaluation" value={`${project.progressEvaluation.source} / ${project.progressEvaluation.model} / ${project.progressEvaluation.confidence}`} />
       <div className="grid gap-5 lg:grid-cols-[.9fr_1.1fr]">

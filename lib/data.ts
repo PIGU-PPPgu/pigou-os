@@ -27,9 +27,35 @@ export type ProjectStatusSuggestionReview = {
   summary: string;
 };
 
+export type ProjectPriority = 'high' | 'medium' | 'low';
+
+export type ProjectPrioritySuggestion = {
+  id: string;
+  generatedAt: string;
+  model: string;
+  source: 'ai' | 'algorithm';
+  currentPriority: ProjectPriority;
+  suggestedPriority: ProjectPriority;
+  confidence: 'low' | 'medium' | 'high';
+  score: number;
+  rationale: string;
+  evidence: string[];
+  dimensions: { name: string; score: number; max: number; reason: string }[];
+};
+
+export type ProjectPrioritySuggestionReview = {
+  id: string;
+  action: 'applied' | 'ignored';
+  reviewedAt: string;
+  suggestedPriority: ProjectPriority;
+  confidence: ProjectPrioritySuggestion['confidence'];
+  evidence: string[];
+  rationale: string;
+};
+
 export type Project = {
-  slug: string; title: string; status: 'idea'|'building'|'paused'|'shipped'|'archived'; priority: 'high'|'medium'|'low';
-  summary: string; explanation?: string; domain?: string; source?: string; visibility?: 'public'|'private'; readme?: string[]; images?: { src: string; alt: string; public?: boolean }[]; progress: number; progressEvaluation?: ProjectProgressEvaluation; statusSuggestionReview?: ProjectStatusSuggestionReview; goals: string[]; nextActions: string[]; links?: { label: string; url: string }[]; updated: string;
+  slug: string; title: string; status: 'idea'|'building'|'paused'|'shipped'|'archived'; priority: ProjectPriority;
+  summary: string; explanation?: string; domain?: string; source?: string; visibility?: 'public'|'private'; readme?: string[]; images?: { src: string; alt: string; public?: boolean }[]; progress: number; progressEvaluation?: ProjectProgressEvaluation; statusSuggestionReview?: ProjectStatusSuggestionReview; prioritySuggestion?: ProjectPrioritySuggestion; prioritySuggestionReview?: ProjectPrioritySuggestionReview; goals: string[]; nextActions: string[]; links?: { label: string; url: string }[]; updated: string;
 };
 export type KnowledgePlatform = 'github' | 'wechat' | 'xiaohongshu' | 'zhihu' | 'bilibili' | 'website' | 'paper' | 'manual' | 'other';
 export type KnowledgeAnalysis = {
