@@ -13,6 +13,7 @@ services:
       NODE_ENV: production
       PORT: 3888
       NEXT_TELEMETRY_DISABLED: "1"
+      PIGOU_INBOX_WEBHOOK_SECRET: ${PIGOU_INBOX_WEBHOOK_SECRET:-}
     ports:
       - "127.0.0.1:3888:3888"
     volumes:
@@ -36,6 +37,7 @@ services:
     environment:
       NODE_ENV: production
       NEXT_TELEMETRY_DISABLED: "1"
+      PIGOU_INBOX_WEBHOOK_SECRET: ${PIGOU_INBOX_WEBHOOK_SECRET:-}
       PIGOU_JOB_INTERVAL_SECONDS: ${PIGOU_JOB_INTERVAL_SECONDS:-300}
       PIGOU_OS_INTERNAL_URL: http://pigou-os:3888
     volumes:
