@@ -7,7 +7,7 @@
   "explanation": "这是所有个人项目的入口，不追求博客式展示，而是把 GitHub 项目、idea 池、下一步行动和复盘记录组织成一个私人驾驶舱。",
   "domain": "personal-os",
   "source": "github:PIGU-PPPgu/pigou-os",
-  "progress": 81,
+  "progress": 90,
   "goals": [
     "建立个人项目总览",
     "管理 idea 池",
@@ -15,8 +15,7 @@
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Add one approved public screenshot or product surface image.",
-    "重建 Pigou OS 全局 LLM Wiki 图谱"
+    "Add one approved public screenshot or product surface image."
   ],
   "links": [
     {
@@ -24,12 +23,12 @@
       "url": "https://github.com/PIGU-PPPgu/pigou-os"
     }
   ],
-  "updated": "2026-05-03",
+  "updated": "2026-05-04",
   "progressEvaluation": {
-    "generatedAt": "2026-05-03",
+    "generatedAt": "2026-05-04",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 81,
+    "progress": 90,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -78,13 +77,12 @@
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Add one approved public screenshot or product surface image.",
-      "重建 Pigou OS 全局 LLM Wiki 图谱"
+      "Add one approved public screenshot or product surface image."
     ]
   },
   "prioritySuggestion": {
-    "id": "1885dk3",
-    "generatedAt": "2026-05-03",
+    "id": "1kz5hxf",
+    "generatedAt": "2026-05-04",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
@@ -98,7 +96,7 @@
       "last push: 2026-05-02",
       "recent logs: 1",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 81% building"
+      "progress evaluation: 90% building"
     ],
     "dimensions": [
       {

@@ -12,7 +12,7 @@
     "- /harness init - 初始化 Harness 工程结构\n- /harness audit - 审计智能体可读性\n- /harness enforce - 强制架构约束\n- /harness garden - 清理过时文档和代码\n- /harness golden-rules - 应用黄金原则重构",
     "支持以下 AI CLI 工具：\n- Claude Code (≥ 1.0)\n- Codex (≥ 0.5)\n- OpenCode (≥ 0.3)\n- OpenClaw (≥ 0.2)"
   ],
-  "progress": 50,
+  "progress": 42,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -29,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/harness-skill"
     }
   ],
-  "updated": "2026-05-03",
+  "updated": "2026-05-04",
   "progressEvaluation": {
-    "generatedAt": "2026-05-03",
+    "generatedAt": "2026-05-04",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 50,
+    "progress": 42,
     "status": "idea",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -86,8 +86,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "33dshf",
-    "generatedAt": "2026-05-03",
+    "id": "kfnfww",
+    "generatedAt": "2026-05-04",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -100,7 +100,7 @@
       "repo files: 9",
       "last push: 2026-03-31",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 50% idea"
+      "progress evaluation: 42% idea"
     ],
     "dimensions": [
       {

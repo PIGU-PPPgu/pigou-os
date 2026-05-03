@@ -7,7 +7,7 @@
   "explanation": "这是 Pigou 在 agentic engineering 方向的工程方法实验，试图把需求、实现、测试、部署串成可复用的智能体协作流程。",
   "domain": "agentic-engineering",
   "source": "github:PIGU-PPPgu/harness-skill-v2",
-  "progress": 68,
+  "progress": 63,
   "goals": [
     "建立 PRD 到部署的流水线",
     "集成质量检查工具",
@@ -24,12 +24,12 @@
       "url": "https://github.com/PIGU-PPPgu/harness-skill-v2"
     }
   ],
-  "updated": "2026-05-03",
+  "updated": "2026-05-04",
   "progressEvaluation": {
-    "generatedAt": "2026-05-03",
+    "generatedAt": "2026-05-04",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 68,
+    "progress": 63,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -61,7 +61,7 @@
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
@@ -82,8 +82,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "m6x6oh",
-    "generatedAt": "2026-05-03",
+    "id": "d729dm",
+    "generatedAt": "2026-05-04",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -96,7 +96,7 @@
       "repo files: 26",
       "last push: 2026-04-02",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 68% building"
+      "progress evaluation: 63% building"
     ],
     "dimensions": [
       {
