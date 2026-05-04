@@ -144,7 +144,7 @@ export type ProjectWikiSnapshot = {
     nextQuestions: string[];
   };
 };
-export type Idea = { slug: string; title: string; status: 'spark'|'validated'|'building'|'killed'; score: number; summary: string; tags: string[]; next?: string; analysis?: IdeaAnalysis; relatedKnowledge?: string[]; analyzedAt?: string; updated: string };
+export type Idea = { slug: string; title: string; status: 'spark'|'validated'|'building'|'killed'; score: number; summary: string; tags: string[]; projectSlug?: string; next?: string; analysis?: IdeaAnalysis; relatedKnowledge?: string[]; analyzedAt?: string; updated: string };
 export type Log = { slug: string; title: string; date: string; content: string; tags: string[] };
 export type ContributionDay = { date: string; count: number; weekday: number };
 export type ContributionActivity = { owner: string; generatedAt: string; totalContributions: number; days: ContributionDay[] };

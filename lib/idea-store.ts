@@ -46,6 +46,7 @@ export async function createIdea(input: Omit<Idea, 'slug' | 'updated'> & { slug?
     score,
     summary: input.summary,
     tags: input.tags.length ? input.tags : ['inbox'],
+    projectSlug: input.projectSlug,
     next: input.next,
     analysis: input.analysis,
     relatedKnowledge: input.relatedKnowledge,

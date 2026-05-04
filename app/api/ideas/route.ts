@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { createChatJson, getLlmConfig } from '@/lib/ai-clients';
 import { isAuthenticatedRequest } from '@/lib/auth';
-import { getIdea, getKnowledge, getProjects } from '@/lib/data';
+import { getIdea, getKnowledge, getProject, getProjects } from '@/lib/data';
 import type { Idea } from '@/lib/data';
 import { analyzeIdea, localDate } from '@/lib/brain-analysis';
 import { createIdea, updateIdea } from '@/lib/idea-store';
@@ -97,6 +97,7 @@ export async function POST(request: Request) {
   const fallback = fallbackParse(source);
   const parsed = await aiParse(source, fallback).catch(() => fallback);
   const status = ideaStatuses.includes(body?.status) ? body.status : parsed.status;
+  const projectSlug = typeof body?.projectSlug === 'string' && body.projectSlug.trim() && getProject(body.projectSlug.trim()) ? body.projectSlug.trim() : undefined;
 
   try {
     let idea = await createIdea({
@@ -105,10 +106,11 @@ export async function POST(request: Request) {
       score: Number.isFinite(body?.score) ? Number(body.score) : parsed.score,
       summary: manualSummary || parsed.summary,
       tags: splitList(body?.tags).length ? splitList(body.tags) : parsed.tags,
+      projectSlug,
       next: typeof body?.next === 'string' && body.next.trim() ? body.next.trim() : parsed.next
     });
     const analysis = await analyzeIdea(idea, getKnowledge(), getProjects()).catch(() => undefined);
-    if (analysis) idea = await updateIdea({ ...idea, analysis, relatedKnowledge: analysis.evidenceLinks, analyzedAt: localDate() });
+    if (analysis) idea = await updateIdea({ ...idea, analysis: { ...analysis, suggestedProject: idea.projectSlug || analysis.suggestedProject }, relatedKnowledge: analysis.evidenceLinks, analyzedAt: localDate() });
     return NextResponse.json({
       ok: true,
       idea,
@@ -140,6 +142,7 @@ export async function PATCH(request: Request) {
       score: Number.isFinite(body?.score) ? Math.max(1, Math.min(100, Math.round(Number(body.score)))) : idea.score,
       summary: typeof body?.summary === 'string' && body.summary.trim() ? body.summary.trim() : idea.summary,
       tags: splitList(body?.tags).length ? splitList(body.tags) : idea.tags,
+      projectSlug: typeof body?.projectSlug === 'string' ? body.projectSlug.trim() && getProject(body.projectSlug.trim()) ? body.projectSlug.trim() : undefined : idea.projectSlug,
       next: typeof body?.next === 'string' ? body.next.trim() || undefined : idea.next,
       relatedKnowledge: splitList(body?.relatedKnowledge).length ? splitList(body.relatedKnowledge) : idea.relatedKnowledge
     });

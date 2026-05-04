@@ -25,7 +25,7 @@ function deriveTask(body: Record<string, unknown>) {
     const idea = getIdea(sourceSlug);
     title = idea?.analysis?.nextExperiment || idea?.next || `验证想法：${idea?.title || sourceSlug}`;
     summary = summary || idea?.summary || '';
-    projectSlug = projectSlug || idea?.analysis?.suggestedProject;
+    projectSlug = projectSlug || idea?.projectSlug || idea?.analysis?.suggestedProject;
   }
   if (!title && sourceType === 'project') {
     const project = getProject(sourceSlug);

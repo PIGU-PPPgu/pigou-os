@@ -4,7 +4,7 @@ import { FormEvent, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { AuthOnly, DeleteContentButton, LoginRequired } from '@/components/auth/AuthControls';
 import { Label, MiniMeter, Panel, Pill, SectionHeader, StatusBadge } from '@/components/UI';
-import type { Idea } from '@/lib/data';
+import type { Idea, Project } from '@/lib/data';
 
 const statusLabel: Record<Idea['status'] | 'all' | 'high', string> = {
   all: '全部',
@@ -21,7 +21,7 @@ function ideaBucket(idea: Idea) {
   return 'cold';
 }
 
-export function IdeasWorkbench({ ideas: initialIdeas }: { ideas: Idea[] }) {
+export function IdeasWorkbench({ ideas: initialIdeas, projects }: { ideas: Idea[]; projects: Project[] }) {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
   const [ideas, setIdeas] = useState(initialIdeas);
@@ -49,11 +49,12 @@ export function IdeasWorkbench({ ideas: initialIdeas }: { ideas: Idea[] }) {
     const target = event.currentTarget;
     const form = new FormData(target);
     const input = String(form.get('input') || '').trim();
+    const projectSlug = String(form.get('projectSlug') || '').trim();
     const response = await fetch('/api/ideas', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       credentials: 'same-origin',
-      body: JSON.stringify({ input })
+      body: JSON.stringify({ input, projectSlug })
     });
     const result = await response.json().catch(() => null);
     if (!response.ok || !result?.ok) {
@@ -92,7 +93,7 @@ export function IdeasWorkbench({ ideas: initialIdeas }: { ideas: Idea[] }) {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       credentials: 'same-origin',
-      body: JSON.stringify({ sourceType: 'idea', sourceSlug: idea.slug, priority: idea.score >= 80 ? 'P0' : 'P1' })
+      body: JSON.stringify({ sourceType: 'idea', sourceSlug: idea.slug, projectSlug: idea.projectSlug || idea.analysis?.suggestedProject, priority: idea.score >= 80 ? 'P0' : 'P1' })
     });
     const result = await response.json().catch(() => null);
     setState(response.ok && result?.ok ? `task created: ${result.task.title}` : result?.message || 'task failed');
@@ -108,11 +109,24 @@ export function IdeasWorkbench({ ideas: initialIdeas }: { ideas: Idea[] }) {
     });
     const result = await response.json().catch(() => null);
     if (response.ok && result?.ok) {
-      setIdeas(current => current.map(item => item.slug === idea.slug ? { ...item, status: 'building', analysis: item.analysis ? { ...item.analysis, suggestedProject: result.project.slug } : item.analysis } : item));
+      setIdeas(current => current.map(item => item.slug === idea.slug ? { ...item, status: 'building', projectSlug: result.project.slug, analysis: item.analysis ? { ...item.analysis, suggestedProject: result.project.slug } : item.analysis } : item));
       setState(`project created: ${result.project.title}`);
       router.refresh();
     } else {
       setState(result?.message || 'promote failed');
+    }
+  }
+
+  async function patchIdea(idea: Idea, patch: Partial<Idea>) {
+    setState('saving idea');
+    const result = await patchIdeaRequest(idea, patch);
+    if (result?.ok) {
+      setIdeas(current => current.map(item => item.slug === idea.slug ? result.idea : item));
+      setSelectedSlug(result.idea.slug);
+      setState('idea saved');
+      router.refresh();
+    } else {
+      setState(result?.message || 'save failed');
     }
   }
 
@@ -138,6 +152,10 @@ export function IdeasWorkbench({ ideas: initialIdeas }: { ideas: Idea[] }) {
           <AuthOnly fallback={<LoginRequired />}>
             <form ref={formRef} onSubmit={submit} className="grid gap-4">
               <textarea name="input" required rows={7} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 py-3 text-sm leading-6 outline-none focus:border-[var(--ink)]" placeholder="Idea / scene / opportunity..." />
+              <select name="projectSlug" defaultValue="" className="min-h-11 rounded-full border border-[var(--border-visible)] bg-white/55 px-4 text-sm">
+                <option value="">不绑定项目</option>
+                {projects.map(project => <option key={project.slug} value={project.slug}>{project.title}</option>)}
+              </select>
               <div className="flex flex-wrap items-center gap-3">
                 <button type="submit" className="primary-action mono inline-flex min-h-11 items-center rounded-full px-6 text-[12px] uppercase transition">capture idea</button>
                 <span className="caption">{state}</span>
@@ -178,6 +196,7 @@ export function IdeasWorkbench({ ideas: initialIdeas }: { ideas: Idea[] }) {
               </div>
               <p className="mt-3 max-w-3xl text-sm leading-6 text-[var(--text-secondary)]">{idea.summary}</p>
               {idea.analysis && <div className="mt-3 rounded-[8px] border border-[var(--border)] bg-white/45 px-4 py-3 text-sm text-[var(--text-primary)]"><span className="caption mr-2">AI</span>{idea.analysis.opportunity}</div>}
+              {(idea.projectSlug || idea.analysis?.suggestedProject) && <div className="caption mt-3">关联项目 / {projectTitle(projects, idea.projectSlug || idea.analysis?.suggestedProject)}</div>}
               <div className="mono mt-3 flex flex-wrap gap-x-3 gap-y-1 text-[10px] uppercase text-[var(--text-disabled)]">{idea.tags.map(tag => <button key={tag} type="button" onClick={event => { event.stopPropagation(); setQuery(tag); }}>#{tag}</button>)}</div>
             </section>)}
             {!filtered.length && <p className="py-8 text-sm leading-6 text-[var(--text-secondary)]">No idea matches this filter.</p>}
@@ -202,6 +221,16 @@ export function IdeasWorkbench({ ideas: initialIdeas }: { ideas: Idea[] }) {
         </div> : null}
         {selected.relatedKnowledge?.length ? <div className="mt-5 rounded-[8px] border border-[var(--border)] bg-white/45 px-4 py-3"><div className="caption mb-2">Evidence Links</div><div className="mono flex flex-wrap gap-2 text-[10px] uppercase text-[var(--text-disabled)]">{selected.relatedKnowledge.map(slug => <span key={slug}>/{slug}</span>)}</div></div> : null}
         <AuthOnly>
+          <div className="mt-5 rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
+            <div className="caption mb-2">关联项目</div>
+            <select value={selected.projectSlug || ''} onChange={event => patchIdea(selected, { projectSlug: event.target.value || undefined })} className="min-h-10 w-full rounded-full border border-[var(--border-visible)] bg-white/65 px-4 text-sm">
+              <option value="">不绑定项目</option>
+              {projects.map(project => <option key={project.slug} value={project.slug}>{project.title}</option>)}
+            </select>
+            {selected.analysis?.suggestedProject && selected.analysis.suggestedProject !== selected.projectSlug && <div className="caption mt-2">AI 建议 / {projectTitle(projects, selected.analysis.suggestedProject)}</div>}
+          </div>
+        </AuthOnly>
+        <AuthOnly>
           <div className="mt-5 flex flex-wrap items-center gap-3">
             <button type="button" onClick={() => reanalyze(selected)} className="primary-action mono inline-flex min-h-10 items-center rounded-full px-4 text-[10px] uppercase">reanalyze</button>
             <button type="button" onClick={() => createTask(selected)} className="mono inline-flex min-h-10 items-center rounded-full border border-[var(--border-visible)] px-4 text-[10px] uppercase hover:border-[var(--ink)]">create task</button>
@@ -212,6 +241,21 @@ export function IdeasWorkbench({ ideas: initialIdeas }: { ideas: Idea[] }) {
       </Panel>}
     </section>
   </div>;
+}
+
+async function patchIdeaRequest(idea: Idea, patch: Partial<Idea>) {
+  const response = await fetch('/api/ideas', {
+    method: 'PATCH',
+    headers: { 'content-type': 'application/json' },
+    credentials: 'same-origin',
+    body: JSON.stringify({ slug: idea.slug, ...patch })
+  });
+  return response.json().catch(() => null);
+}
+
+function projectTitle(projects: Project[], slug?: string) {
+  if (!slug) return '未绑定';
+  return projects.find(project => project.slug === slug)?.title || slug;
 }
 
 function Detail({ label, value }: { label: string; value: string }) {
