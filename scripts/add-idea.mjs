@@ -21,7 +21,7 @@ function slugify(input) {
 }
 
 if (!title || !summary) {
-  console.error('Usage: pnpm idea "想法标题" "一句话说明" --tags education,agent --score 70 --next "下一步"');
+  console.error('Usage: pnpm idea "想法标题" "一句话说明" --tags education,agent --score 70 --project headteacher-helper --next "下一步"');
   process.exit(1);
 }
 
@@ -39,6 +39,7 @@ const idea = {
   score: Number(readFlag('score', '60')),
   summary,
   tags: readFlag('tags', 'inbox').split(',').map(tag => tag.trim()).filter(Boolean),
+  projectSlug: readFlag('project', '') || undefined,
   next: readFlag('next', '补充使用场景和判断标准。'),
   updated: new Date().toISOString().slice(0, 10)
 };

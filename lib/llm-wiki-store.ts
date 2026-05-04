@@ -162,9 +162,9 @@ export async function buildLlmWikiGraph(input: LlmWikiBuildInput) {
     for (const evidenceSlug of idea.relatedKnowledge || idea.analysis?.evidenceLinks || []) {
       addEdge(edges, { from: nodeId('knowledge', evidenceSlug), to: nodeId('idea', idea.slug), type: 'validates', reason: 'Idea analysis uses this knowledge as evidence.', confidence: 'medium' });
     }
-    const projectSlug = idea.projectSlug || idea.analysis?.suggestedProject;
+    const projectSlug = idea.projectSlug;
     if (projectSlug) {
-      addEdge(edges, { from: nodeId('idea', idea.slug), to: nodeId('project', projectSlug), type: 'becomes', reason: idea.projectSlug ? 'Idea was manually assigned to this project.' : 'Idea analysis suggests this project target.', confidence: idea.projectSlug ? 'high' : 'medium' });
+      addEdge(edges, { from: nodeId('idea', idea.slug), to: nodeId('project', projectSlug), type: 'becomes', reason: 'Idea was manually assigned to this project.', confidence: 'high' });
     }
     for (const tag of idea.tags.map(normalizeTopic).filter(tag => topicSet.has(tag))) {
       addEdge(edges, { from: nodeId('idea', idea.slug), to: nodeId('topic', tag), type: 'inspires', reason: `Idea carries topic: ${tag}`, confidence: 'medium' });

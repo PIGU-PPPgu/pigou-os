@@ -21,6 +21,11 @@ function ideaBucket(idea: Idea) {
   return 'cold';
 }
 
+function projectOptionLabel(project: Project) {
+  const repo = project.source?.startsWith('github:') ? project.source.replace('github:', '') : '';
+  return repo ? `${project.title} / ${repo}` : project.title;
+}
+
 export function IdeasWorkbench({ ideas: initialIdeas, projects }: { ideas: Idea[]; projects: Project[] }) {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
@@ -93,7 +98,7 @@ export function IdeasWorkbench({ ideas: initialIdeas, projects }: { ideas: Idea[
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       credentials: 'same-origin',
-      body: JSON.stringify({ sourceType: 'idea', sourceSlug: idea.slug, projectSlug: idea.projectSlug || idea.analysis?.suggestedProject, priority: idea.score >= 80 ? 'P0' : 'P1' })
+      body: JSON.stringify({ sourceType: 'idea', sourceSlug: idea.slug, projectSlug: idea.projectSlug, priority: idea.score >= 80 ? 'P0' : 'P1' })
     });
     const result = await response.json().catch(() => null);
     setState(response.ok && result?.ok ? `task created: ${result.task.title}` : result?.message || 'task failed');
@@ -109,7 +114,7 @@ export function IdeasWorkbench({ ideas: initialIdeas, projects }: { ideas: Idea[
     });
     const result = await response.json().catch(() => null);
     if (response.ok && result?.ok) {
-      setIdeas(current => current.map(item => item.slug === idea.slug ? { ...item, status: 'building', projectSlug: result.project.slug, analysis: item.analysis ? { ...item.analysis, suggestedProject: result.project.slug } : item.analysis } : item));
+      setIdeas(current => current.map(item => item.slug === idea.slug ? { ...item, status: 'building', projectSlug: result.project.slug } : item));
       setState(`project created: ${result.project.title}`);
       router.refresh();
     } else {
@@ -153,8 +158,8 @@ export function IdeasWorkbench({ ideas: initialIdeas, projects }: { ideas: Idea[
             <form ref={formRef} onSubmit={submit} className="grid gap-4">
               <textarea name="input" required rows={7} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 py-3 text-sm leading-6 outline-none focus:border-[var(--ink)]" placeholder="Idea / scene / opportunity..." />
               <select name="projectSlug" defaultValue="" className="min-h-11 rounded-full border border-[var(--border-visible)] bg-white/55 px-4 text-sm">
-                <option value="">不绑定项目</option>
-                {projects.map(project => <option key={project.slug} value={project.slug}>{project.title}</option>)}
+                <option value="">不绑定项目 / 仓库</option>
+                {projects.map(project => <option key={project.slug} value={project.slug}>{projectOptionLabel(project)}</option>)}
               </select>
               <div className="flex flex-wrap items-center gap-3">
                 <button type="submit" className="primary-action mono inline-flex min-h-11 items-center rounded-full px-6 text-[12px] uppercase transition">capture idea</button>
@@ -196,7 +201,7 @@ export function IdeasWorkbench({ ideas: initialIdeas, projects }: { ideas: Idea[
               </div>
               <p className="mt-3 max-w-3xl text-sm leading-6 text-[var(--text-secondary)]">{idea.summary}</p>
               {idea.analysis && <div className="mt-3 rounded-[8px] border border-[var(--border)] bg-white/45 px-4 py-3 text-sm text-[var(--text-primary)]"><span className="caption mr-2">AI</span>{idea.analysis.opportunity}</div>}
-              {(idea.projectSlug || idea.analysis?.suggestedProject) && <div className="caption mt-3">关联项目 / {projectTitle(projects, idea.projectSlug || idea.analysis?.suggestedProject)}</div>}
+              {idea.projectSlug ? <div className="caption mt-3">绑定项目 / {projectTitle(projects, idea.projectSlug)}</div> : idea.analysis?.suggestedProject ? <div className="caption mt-3">AI 建议 / {projectTitle(projects, idea.analysis.suggestedProject)}</div> : null}
               <div className="mono mt-3 flex flex-wrap gap-x-3 gap-y-1 text-[10px] uppercase text-[var(--text-disabled)]">{idea.tags.map(tag => <button key={tag} type="button" onClick={event => { event.stopPropagation(); setQuery(tag); }}>#{tag}</button>)}</div>
             </section>)}
             {!filtered.length && <p className="py-8 text-sm leading-6 text-[var(--text-secondary)]">No idea matches this filter.</p>}
@@ -222,10 +227,10 @@ export function IdeasWorkbench({ ideas: initialIdeas, projects }: { ideas: Idea[
         {selected.relatedKnowledge?.length ? <div className="mt-5 rounded-[8px] border border-[var(--border)] bg-white/45 px-4 py-3"><div className="caption mb-2">Evidence Links</div><div className="mono flex flex-wrap gap-2 text-[10px] uppercase text-[var(--text-disabled)]">{selected.relatedKnowledge.map(slug => <span key={slug}>/{slug}</span>)}</div></div> : null}
         <AuthOnly>
           <div className="mt-5 rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
-            <div className="caption mb-2">关联项目</div>
+            <div className="caption mb-2">绑定项目 / 仓库</div>
             <select value={selected.projectSlug || ''} onChange={event => patchIdea(selected, { projectSlug: event.target.value || undefined })} className="min-h-10 w-full rounded-full border border-[var(--border-visible)] bg-white/65 px-4 text-sm">
-              <option value="">不绑定项目</option>
-              {projects.map(project => <option key={project.slug} value={project.slug}>{project.title}</option>)}
+              <option value="">不绑定项目 / 仓库</option>
+              {projects.map(project => <option key={project.slug} value={project.slug}>{projectOptionLabel(project)}</option>)}
             </select>
             {selected.analysis?.suggestedProject && selected.analysis.suggestedProject !== selected.projectSlug && <div className="caption mt-2">AI 建议 / {projectTitle(projects, selected.analysis.suggestedProject)}</div>}
           </div>

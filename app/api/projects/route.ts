@@ -23,7 +23,7 @@ export async function POST(request: Request) {
       const idea = getIdea(ideaSlug);
       if (!idea) return NextResponse.json({ ok: false, message: 'Idea not found.' }, { status: 404 });
       const project = await createProjectFromIdea(idea);
-      await updateIdea({ ...idea, status: 'building', projectSlug: project.slug, analysis: idea.analysis ? { ...idea.analysis, suggestedProject: project.slug } : idea.analysis });
+      await updateIdea({ ...idea, status: 'building', projectSlug: project.slug });
       return NextResponse.json({ ok: true, project });
     }
 

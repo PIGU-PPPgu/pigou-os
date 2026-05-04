@@ -168,7 +168,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
 function getProjectRelations(projectSlug: string) {
   const knowledge = getKnowledge().filter(note => note.relatedProjects?.includes(projectSlug) || note.analysis?.projectLinks?.includes(projectSlug) || note.tags.includes(projectSlug)).slice(0, 6);
-  const ideas = getIdeas().filter(idea => idea.projectSlug === projectSlug || idea.analysis?.suggestedProject === projectSlug || idea.tags.includes(projectSlug) || idea.relatedKnowledge?.some(slug => knowledge.some(note => note.slug === slug))).slice(0, 6);
+  const ideas = getIdeas().filter(idea => idea.projectSlug === projectSlug || idea.tags.includes(projectSlug) || idea.relatedKnowledge?.some(slug => knowledge.some(note => note.slug === slug))).slice(0, 6);
   const tasks = getTasks().filter(task => task.projectSlug === projectSlug || task.sourceSlug === projectSlug).slice(0, 6);
   const logs = getLogs().filter(log => log.tags.includes(projectSlug) || log.content.toLowerCase().includes(projectSlug.toLowerCase())).slice(0, 4);
   return { knowledge, ideas, tasks, logs };

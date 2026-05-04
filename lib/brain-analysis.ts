@@ -57,7 +57,7 @@ function fallbackIdeaAnalysis(idea: Idea, knowledge: KnowledgeNote[], projects: 
     .filter(note => note.tags.some(tag => idea.tags.includes(tag) || text.includes(tag.toLowerCase())) || note.summary.toLowerCase().includes(idea.title.toLowerCase()))
     .map(note => note.slug)
     .slice(0, 6);
-  const suggestedProject = idea.projectSlug || projects.find(project => idea.tags.some(tag => project.summary.toLowerCase().includes(tag.toLowerCase()) || project.title.toLowerCase().includes(tag.toLowerCase())))?.slug;
+  const suggestedProject = projects.find(project => idea.tags.some(tag => project.summary.toLowerCase().includes(tag.toLowerCase()) || project.title.toLowerCase().includes(tag.toLowerCase())))?.slug;
   return {
     userPain: /老师|学生|班主任|用户|客户/.test(text) ? '已经出现明确用户场景，需要继续收集真实使用证据。' : '用户痛点还比较抽象，需要补充具体人群和使用场景。',
     opportunity: idea.score >= 75 ? '分数较高，值得进入小实验或项目草稿。' : '可以先作为低成本假设保留，等待更多证据。',
@@ -162,7 +162,7 @@ export async function analyzeIdea(idea: Idea, knowledge: KnowledgeNote[], projec
     feasibility: asText(parsed?.feasibility, fallback.feasibility),
     risks: asTextList(parsed?.risks, fallback.risks).slice(0, 5),
     evidenceLinks: Array.isArray(parsed?.evidenceLinks) ? parsed.evidenceLinks.filter(slug => knowledge.some(note => note.slug === slug)).slice(0, 6) : fallback.evidenceLinks,
-    suggestedProject: idea.projectSlug || (typeof parsed?.suggestedProject === 'string' && projects.some(project => project.slug === parsed.suggestedProject) ? parsed.suggestedProject : fallback.suggestedProject),
+    suggestedProject: typeof parsed?.suggestedProject === 'string' && projects.some(project => project.slug === parsed.suggestedProject) ? parsed.suggestedProject : fallback.suggestedProject,
     nextExperiment: asText(parsed?.nextExperiment, fallback.nextExperiment)
   };
 }

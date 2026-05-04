@@ -110,7 +110,7 @@ export async function POST(request: Request) {
       next: typeof body?.next === 'string' && body.next.trim() ? body.next.trim() : parsed.next
     });
     const analysis = await analyzeIdea(idea, getKnowledge(), getProjects()).catch(() => undefined);
-    if (analysis) idea = await updateIdea({ ...idea, analysis: { ...analysis, suggestedProject: idea.projectSlug || analysis.suggestedProject }, relatedKnowledge: analysis.evidenceLinks, analyzedAt: localDate() });
+    if (analysis) idea = await updateIdea({ ...idea, analysis, relatedKnowledge: analysis.evidenceLinks, analyzedAt: localDate() });
     return NextResponse.json({
       ok: true,
       idea,

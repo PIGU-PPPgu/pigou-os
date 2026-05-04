@@ -16,7 +16,7 @@ export async function POST(request: Request) {
 
   try {
     const analysis = await analyzeIdea(idea, getKnowledge(), getProjects());
-    const updated = await updateIdea({ ...idea, analysis: { ...analysis, suggestedProject: idea.projectSlug || analysis.suggestedProject }, relatedKnowledge: analysis.evidenceLinks, analyzedAt: localDate() });
+    const updated = await updateIdea({ ...idea, analysis, relatedKnowledge: analysis.evidenceLinks, analyzedAt: localDate() });
     return NextResponse.json({ ok: true, idea: updated });
   } catch (error) {
     if (error instanceof StorageConfigurationError) {

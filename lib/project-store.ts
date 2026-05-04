@@ -58,7 +58,7 @@ export async function createProject(input: Omit<Project, 'slug' | 'updated'> & {
 
 export async function createProjectFromIdea(idea: Idea) {
   return createProject({
-    title: idea.analysis?.suggestedProject || idea.title,
+    title: idea.title,
     status: 'idea',
     priority: idea.score >= 80 ? 'high' : idea.score >= 65 ? 'medium' : 'low',
     summary: idea.summary,

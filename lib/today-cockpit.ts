@@ -252,7 +252,7 @@ function selectIdea(ideas: Idea[], projectBySlug: Map<string, Project>, isLogged
   const idea = ideas
     .filter(item => item.status !== 'killed')
     .sort((a, b) => b.score - a.score || ideaStatusRank[a.status] - ideaStatusRank[b.status] || b.updated.localeCompare(a.updated))[0];
-  const linkedProjectSlug = idea?.projectSlug || idea?.analysis?.suggestedProject;
+  const linkedProjectSlug = idea?.projectSlug;
   const project = linkedProjectSlug ? projectBySlug.get(linkedProjectSlug) : undefined;
 
   if (!idea) {
