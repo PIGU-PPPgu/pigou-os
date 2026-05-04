@@ -6,44 +6,44 @@
     "url": "https://github.com/PIGU-PPPgu/DeepTutor",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-04-27T09:14:53Z",
+    "pushedAt": "2026-05-04T05:25:17Z",
     "language": "Python"
   },
-  "generatedAt": "2026-05-03T21:03:19.913Z",
+  "generatedAt": "2026-05-04T21:20:39.054Z",
   "readme": {
     "title": "DeepTutor: Agent-Native Personalized Tutoring",
     "summary": [
       "<img src=\"assets/logo-ver2.png\" alt=\"DeepTutor\" width=\"140\" style=\"border-radius: 15px;\"",
       "DeepTutor: Agent-Native Personalized Tutoring",
       "<a href=\"https://trendshift.io/repositories/17099\" target=\"blank\"<img src=\"https://trendshift.io/api/badge/repositories/17099\" alt=\"HKUDS%2FDeepTutor Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/</a",
-      "[](https://www.python.org/downloads/) [](https://nextjs.org/) [](LICENSE) [](https://github.com/HKUDS/DeepTutor/releases) []()",
+      "[](https://www.python.org/downloads/) [](https://nextjs.org/) [](LICENSE) [](https://github.com/HKUDS/DeepTutor/releases) [](https://arxiv.org/abs/2604.26962)",
       "[](https://discord.gg/eRsjPgMU4t) [](./Communication.md) [](https://github.com/HKUDS/DeepTutor/issues/78)",
       "Features · Get Started · Explore · TutorBot · CLI · Roadmap · Community"
     ]
   },
   "fileTree": {
-    "totalFiles": 944,
+    "totalFiles": 1042,
     "truncated": false,
     "topDirectories": [
       {
         "name": "deeptutor",
-        "count": 531
+        "count": 535
       },
       {
         "name": "web",
-        "count": 188
+        "count": 232
       },
       {
         "name": "tests",
-        "count": 118
+        "count": 157
       },
       {
         "name": "assets",
-        "count": 46
+        "count": 57
       },
       {
         "name": "[root]",
-        "count": 21
+        "count": 20
       },
       {
         "name": "deeptutor_cli",
@@ -61,43 +61,43 @@
     "extensions": [
       {
         "ext": ".py",
-        "count": 538
-      },
-      {
-        "ext": ".yaml",
-        "count": 108
+        "count": 591
       },
       {
         "ext": ".tsx",
-        "count": 104
+        "count": 131
       },
       {
-        "ext": ".md",
-        "count": 63
+        "ext": ".yaml",
+        "count": 99
       },
       {
         "ext": ".ts",
-        "count": 56
+        "count": 75
+      },
+      {
+        "ext": ".md",
+        "count": 74
       },
       {
         "ext": ".png",
-        "count": 19
+        "count": 17
+      },
+      {
+        "ext": ".json",
+        "count": 9
       },
       {
         "ext": ".yml",
         "count": 9
       },
       {
-        "ext": ".json",
+        "ext": ".txt",
         "count": 8
       },
       {
-        "ext": ".txt",
-        "count": 7
-      },
-      {
         "ext": ".mjs",
-        "count": 5
+        "count": 6
       }
     ]
   },
@@ -108,20 +108,18 @@
       "build",
       "start",
       "lint",
+      "test:node",
       "perf:check",
       "build:perf",
       "i18n:parity",
       "i18n:audit",
       "i18n:audit:strict",
-      "i18n:check",
-      "audit"
+      "i18n:check"
     ],
     "dependencies": [
-      "@types/d3",
       "chart.js",
       "clsx",
       "cytoscape",
-      "d3",
       "framer-motion",
       "html2canvas",
       "i18next",
@@ -172,11 +170,11 @@
         "scripts/_cli_kit.py",
         "scripts/audit_prompts.py",
         "scripts/check_install.py",
-        "scripts/extract_numbered_items.sh",
         "scripts/generate_roster.py",
         "scripts/migrate_kb.py",
         "scripts/migrate_user_data.py",
-        "scripts/start_tour.py"
+        "scripts/start_tour.py",
+        "scripts/start_web.py"
       ]
     }
   ],

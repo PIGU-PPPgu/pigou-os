@@ -11,7 +11,7 @@
   "readme": [
     "项目示例学习，制作学生信息数据小程序，增值评价模型研究。"
   ],
-  "progress": 69,
+  "progress": 84,
   "goals": [
     "保留早期学习轨迹",
     "记录增值评价模型萌芽",
@@ -22,12 +22,12 @@
     "Clarify runtime stack and entrypoint because package metadata is missing.",
     "Add one approved public screenshot or product surface image."
   ],
-  "updated": "2026-05-04",
+  "updated": "2026-05-05",
   "progressEvaluation": {
-    "generatedAt": "2026-05-04",
+    "generatedAt": "2026-05-05",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 69,
+    "progress": 84,
     "status": "archived",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -79,8 +79,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "v974nk",
-    "generatedAt": "2026-05-04",
+    "id": "1foo6xf",
+    "generatedAt": "2026-05-05",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "low",
@@ -93,7 +93,7 @@
       "repo files: 3",
       "last push: 2024-07-29",
       "status penalty: archived",
-      "progress evaluation: 69% archived"
+      "progress evaluation: 84% archived"
     ],
     "dimensions": [
       {
@@ -116,7 +116,7 @@
       },
       {
         "name": "maturity_or_impact",
-        "score": 13,
+        "score": 17,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },

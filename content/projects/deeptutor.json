@@ -13,7 +13,7 @@
     "<a href=\"https://trendshift.io/repositories/17099\" target=\"blank\"<img src=\"https://trendshift.io/api/badge/repositories/17099\" alt=\"HKUDS%2FDeepTutor  Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/</a",
     "[](https://www.python.org/downloads/)\n[](https://nextjs.org/)\n[](LICENSE)\n[](https://github.com/HKUDS/DeepTutor/releases)\n[]()"
   ],
-  "progress": 92,
+  "progress": 97,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -29,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/DeepTutor"
     }
   ],
-  "updated": "2026-05-04",
+  "updated": "2026-05-05",
   "progressEvaluation": {
-    "generatedAt": "2026-05-04",
+    "generatedAt": "2026-05-05",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 92,
+    "progress": 97,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -72,8 +72,8 @@
       }
     ],
     "evidence": [
-      "repo files: 944",
-      "last push: 2026-04-27",
+      "repo files: 1042",
+      "last push: 2026-05-04",
       "frameworks: Next.js, React, Tailwind CSS, Python"
     ],
     "risks": [
@@ -85,8 +85,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "1lal9nb",
-    "generatedAt": "2026-05-04",
+    "id": "1rbx4j0",
+    "generatedAt": "2026-05-05",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -96,10 +96,10 @@
     "rationale": "综合分 41/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 944",
-      "last push: 2026-04-27",
+      "repo files: 1042",
+      "last push: 2026-05-04",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 92% building"
+      "progress evaluation: 97% building"
     ],
     "dimensions": [
       {

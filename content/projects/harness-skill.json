@@ -12,7 +12,7 @@
     "- /harness init - 初始化 Harness 工程结构\n- /harness audit - 审计智能体可读性\n- /harness enforce - 强制架构约束\n- /harness garden - 清理过时文档和代码\n- /harness golden-rules - 应用黄金原则重构",
     "支持以下 AI CLI 工具：\n- Claude Code (≥ 1.0)\n- Codex (≥ 0.5)\n- OpenCode (≥ 0.3)\n- OpenClaw (≥ 0.2)"
   ],
-  "progress": 42,
+  "progress": 34,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -29,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/harness-skill"
     }
   ],
-  "updated": "2026-05-04",
+  "updated": "2026-05-05",
   "progressEvaluation": {
-    "generatedAt": "2026-05-04",
+    "generatedAt": "2026-05-05",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 42,
+    "progress": 34,
     "status": "idea",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -86,21 +86,21 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "kfnfww",
-    "generatedAt": "2026-05-04",
+    "id": "7bnk4w",
+    "generatedAt": "2026-05-05",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 33,
-    "rationale": "综合分 33/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 32,
+    "rationale": "综合分 32/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 9",
       "last push: 2026-03-31",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 42% idea"
+      "progress evaluation: 34% idea"
     ],
     "dimensions": [
       {
@@ -123,7 +123,7 @@
       },
       {
         "name": "maturity_or_impact",
-        "score": 13,
+        "score": 7,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },

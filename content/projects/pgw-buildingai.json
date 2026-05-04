@@ -23,9 +23,9 @@
       "url": "https://github.com/PIGU-PPPgu/pgw-buildingai"
     }
   ],
-  "updated": "2026-05-04",
+  "updated": "2026-05-05",
   "progressEvaluation": {
-    "generatedAt": "2026-05-04",
+    "generatedAt": "2026-05-05",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 92,
@@ -80,7 +80,7 @@
   },
   "prioritySuggestion": {
     "id": "fijeth",
-    "generatedAt": "2026-05-04",
+    "generatedAt": "2026-05-05",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "low",

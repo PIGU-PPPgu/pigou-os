@@ -32,7 +32,7 @@
       "alt": "Mission Control screenshot"
     }
   ],
-  "progress": 45,
+  "progress": 37,
   "goals": [
     "统一教师 AI 工作台",
     "重构科研同屏协作交付链路",
@@ -43,12 +43,12 @@
     "Clarify runtime stack and entrypoint because package metadata is missing.",
     "Add one approved public screenshot or product surface image."
   ],
-  "updated": "2026-05-04",
+  "updated": "2026-05-05",
   "progressEvaluation": {
-    "generatedAt": "2026-05-04",
+    "generatedAt": "2026-05-05",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 45,
+    "progress": 37,
     "status": "idea",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -101,8 +101,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "bt4yb3",
-    "generatedAt": "2026-05-04",
+    "id": "196txsa",
+    "generatedAt": "2026-05-05",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
@@ -115,7 +115,7 @@
       "repo files: 0",
       "last push: 2026-04-15",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 45% idea"
+      "progress evaluation: 37% idea"
     ],
     "dimensions": [
       {
