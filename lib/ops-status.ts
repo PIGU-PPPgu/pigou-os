@@ -136,7 +136,7 @@ function deployInfo() {
 }
 
 function readOpsJson<T>(name: string): T | null {
-  const file = path.join(process.cwd(), 'content', 'ops', `${name}.json`);
+  const file = path.join(/*turbopackIgnore: true*/ process.cwd(), 'content', 'ops', `${name}.json`);
   if (!fs.existsSync(file)) return null;
   try {
     return JSON.parse(fs.readFileSync(file, 'utf8')) as T;
@@ -148,7 +148,7 @@ function readOpsJson<T>(name: string): T | null {
 function latestBuildMarker() {
   const candidates = ['.next/BUILD_ID', '.next/server/app-paths-manifest.json', 'package.json'];
   const stats = candidates
-    .map(file => fileStat(path.join(process.cwd(), file)))
+    .map(file => fileStat(path.join(/*turbopackIgnore: true*/ process.cwd(), file)))
     .filter((item): item is FileStat => Boolean(item))
     .sort((a, b) => b.mtimeMs - a.mtimeMs);
   return stats[0]?.mtime;
@@ -160,7 +160,7 @@ function fileStat(file: string): FileStat | null {
     if (!stat.isFile()) return null;
     return {
       file,
-      relativePath: path.relative(process.cwd(), file),
+      relativePath: path.relative(/*turbopackIgnore: true*/ process.cwd(), file),
       mtimeMs: stat.mtimeMs,
       mtime: stat.mtime.toISOString()
     };
@@ -170,7 +170,7 @@ function fileStat(file: string): FileStat | null {
 }
 
 function latestContentWrite() {
-  const contentDir = path.join(process.cwd(), 'content');
+  const contentDir = path.join(/*turbopackIgnore: true*/ process.cwd(), 'content');
   const files: FileStat[] = [];
   function walk(dir: string) {
     if (!fs.existsSync(dir)) return;
@@ -189,8 +189,8 @@ function latestContentWrite() {
 
 function readHeartbeat() {
   const candidates = [
-    path.join(process.cwd(), 'content', 'ops', 'worker-heartbeat.json'),
-    path.join(process.cwd(), 'content', 'ops', 'heartbeat.json')
+    path.join(/*turbopackIgnore: true*/ process.cwd(), 'content', 'ops', 'worker-heartbeat.json'),
+    path.join(/*turbopackIgnore: true*/ process.cwd(), 'content', 'ops', 'heartbeat.json')
   ];
   for (const file of candidates) {
     if (!fs.existsSync(file)) continue;
@@ -199,7 +199,7 @@ function readHeartbeat() {
       const at = raw.heartbeatAt || raw.checkedAt || raw.updatedAt || raw.generatedAt || raw.lastTaskFinishedAt || raw.lastFullSyncAt || undefined;
       if (!at) continue;
       const summary = raw.summary || raw.currentTask || raw.lastTask || raw.state || raw.status;
-      return { at, status: raw.status || raw.state, summary, error: raw.error, path: path.relative(process.cwd(), file) };
+      return { at, status: raw.status || raw.state, summary, error: raw.error, path: path.relative(/*turbopackIgnore: true*/ process.cwd(), file) };
     } catch {
       return null;
     }
