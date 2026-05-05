@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/DeepTutor",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-05-04T05:25:17Z",
+    "pushedAt": "2026-05-05T11:18:48Z",
     "language": "Python"
   },
-  "generatedAt": "2026-05-04T21:20:39.054Z",
+  "generatedAt": "2026-05-05T21:14:42.113Z",
   "readme": {
     "title": "DeepTutor: Agent-Native Personalized Tutoring",
     "summary": [
@@ -22,28 +22,28 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1042,
+    "totalFiles": 1083,
     "truncated": false,
     "topDirectories": [
       {
         "name": "deeptutor",
-        "count": 535
+        "count": 554
       },
       {
         "name": "web",
-        "count": 232
+        "count": 247
       },
       {
         "name": "tests",
-        "count": 157
+        "count": 161
       },
       {
         "name": "assets",
-        "count": 57
+        "count": 58
       },
       {
         "name": "[root]",
-        "count": 20
+        "count": 21
       },
       {
         "name": "deeptutor_cli",
@@ -51,7 +51,7 @@
       },
       {
         "name": "scripts",
-        "count": 13
+        "count": 14
       },
       {
         "name": ".github",
@@ -61,11 +61,11 @@
     "extensions": [
       {
         "ext": ".py",
-        "count": 591
+        "count": 614
       },
       {
         "ext": ".tsx",
-        "count": 131
+        "count": 139
       },
       {
         "ext": ".yaml",
@@ -73,15 +73,15 @@
       },
       {
         "ext": ".ts",
-        "count": 75
+        "count": 79
       },
       {
         "ext": ".md",
-        "count": 74
+        "count": 76
       },
       {
         "ext": ".png",
-        "count": 17
+        "count": 19
       },
       {
         "ext": ".json",
@@ -164,7 +164,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "13 file(s) under scripts/"
+        "14 file(s) under scripts/"
       ],
       "files": [
         "scripts/_cli_kit.py",

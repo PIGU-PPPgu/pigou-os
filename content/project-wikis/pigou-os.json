@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/pigou-os",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-05-04T06:55:01Z",
+    "pushedAt": "2026-05-05T16:57:26Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-05-04T21:20:54.487Z",
+  "generatedAt": "2026-05-05T21:14:54.327Z",
   "readme": {
     "title": "Pigou OS",
     "summary": [
@@ -22,16 +22,16 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 230,
+    "totalFiles": 234,
     "truncated": false,
     "topDirectories": [
       {
         "name": "content",
-        "count": 73
+        "count": 76
       },
       {
         "name": "app",
-        "count": 42
+        "count": 43
       },
       {
         "name": "lib",
@@ -61,7 +61,7 @@
     "extensions": [
       {
         "ext": ".json",
-        "count": 76
+        "count": 79
       },
       {
         "ext": ".ts",
@@ -69,7 +69,7 @@
       },
       {
         "ext": ".tsx",
-        "count": 42
+        "count": 43
       },
       {
         "ext": ".png",
@@ -147,7 +147,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "42 file(s) under app/"
+        "43 file(s) under app/"
       ],
       "files": [
         "app/about/page.tsx",
@@ -215,7 +215,7 @@
       "name": "content",
       "kind": "Local content source",
       "evidence": [
-        "73 file(s) under content/"
+        "76 file(s) under content/"
       ],
       "files": [
         "content/activity/github-contributions.json",

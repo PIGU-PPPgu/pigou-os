@@ -23,9 +23,9 @@
       "url": "https://github.com/PIGU-PPPgu/pigou-os"
     }
   ],
-  "updated": "2026-05-05",
+  "updated": "2026-05-06",
   "progressEvaluation": {
-    "generatedAt": "2026-05-05",
+    "generatedAt": "2026-05-06",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 90,
@@ -66,8 +66,8 @@
       }
     ],
     "evidence": [
-      "repo files: 230",
-      "last push: 2026-05-04",
+      "repo files: 234",
+      "last push: 2026-05-05",
       "frameworks: Next.js, React, Tailwind CSS",
       "linked tasks: 1",
       "linked logs: 1"
@@ -81,8 +81,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "v05a11",
-    "generatedAt": "2026-05-05",
+    "id": "8vlu9s",
+    "generatedAt": "2026-05-06",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
@@ -92,8 +92,8 @@
     "rationale": "综合分 42/100，建议为 medium。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 230",
-      "last push: 2026-05-04",
+      "repo files: 234",
+      "last push: 2026-05-05",
       "recent logs: 1",
       "strategic OS/workflow signal in project text",
       "progress evaluation: 90% building"

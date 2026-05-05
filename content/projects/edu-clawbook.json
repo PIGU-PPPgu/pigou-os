@@ -32,7 +32,7 @@
       "alt": "Mission Control screenshot"
     }
   ],
-  "progress": 37,
+  "progress": 31,
   "goals": [
     "统一教师 AI 工作台",
     "重构科研同屏协作交付链路",
@@ -43,12 +43,12 @@
     "Clarify runtime stack and entrypoint because package metadata is missing.",
     "Add one approved public screenshot or product surface image."
   ],
-  "updated": "2026-05-05",
+  "updated": "2026-05-06",
   "progressEvaluation": {
-    "generatedAt": "2026-05-05",
+    "generatedAt": "2026-05-06",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 37,
+    "progress": 31,
     "status": "idea",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -101,21 +101,21 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "196txsa",
-    "generatedAt": "2026-05-05",
+    "id": "gy770t",
+    "generatedAt": "2026-05-06",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 35,
-    "rationale": "综合分 35/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 34,
+    "rationale": "综合分 34/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 0",
       "last push: 2026-04-15",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 37% idea"
+      "progress evaluation: 31% idea"
     ],
     "dimensions": [
       {
@@ -138,7 +138,7 @@
       },
       {
         "name": "maturity_or_impact",
-        "score": 16,
+        "score": 10,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },
