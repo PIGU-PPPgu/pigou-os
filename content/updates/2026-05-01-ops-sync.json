@@ -1,0 +1,25 @@
+{
+  "slug": "2026-05-01-ops-sync",
+  "version": "v0.7.0",
+  "date": "2026-05-01",
+  "title": "Ops + Sync Layer",
+  "type": "ops",
+  "status": "shipped",
+  "summary": "上线 Docker 部署、隐藏统计、GitHub 同步和 worker 心跳。",
+  "highlights": [
+    "新增隐藏后台统计 /ops",
+    "新增 pageview / referrer / device 统计",
+    "新增 GitHub webhook sync job",
+    "新增 ops health / worker heartbeat"
+  ],
+  "commits": [
+    {
+      "hash": "e919687",
+      "title": "chore: sync Pigou OS project data"
+    },
+    {
+      "hash": "719b3d9",
+      "title": "chore: sync Pigou OS project data"
+    }
+  ]
+}

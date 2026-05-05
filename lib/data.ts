@@ -188,6 +188,17 @@ export type KnowledgeNote = {
   capturedAt: string;
   updated: string;
 };
+export type UpdateLog = {
+  slug: string;
+  version: string;
+  date: string;
+  title: string;
+  type: 'release' | 'deploy' | 'design' | 'sync' | 'ops';
+  status: 'shipped' | 'internal' | 'planned';
+  summary: string;
+  highlights: string[];
+  commits?: { hash: string; title: string }[];
+};
 
 function readJson<T>(dir: string): T[] {
   const full = path.join(process.cwd(), 'content', dir);
@@ -199,6 +210,7 @@ export const getIdeas = () => readJson<Idea>('ideas').sort((a,b) => b.updated.lo
 export const getLogs = () => readJson<Log>('log').sort((a,b) => b.date.localeCompare(a.date));
 export const getKnowledge = () => readJson<KnowledgeNote>('knowledge').sort((a,b) => b.updated.localeCompare(a.updated));
 export const getTasks = () => readJson<Task>('tasks').sort((a,b) => b.updated.localeCompare(a.updated));
+export const getUpdates = () => readJson<UpdateLog>('updates').sort((a,b) => b.date.localeCompare(a.date) || b.version.localeCompare(a.version));
 export const getLlmWikiGraphs = () => readJson<LlmWikiGraph>('llm-wiki').sort((a,b) => b.generatedAt.localeCompare(a.generatedAt));
 export const getLlmWikiGraph = () => getLlmWikiGraphs()[0] ?? null;
 export const getProjectWikis = () => readJson<ProjectWikiSnapshot>('project-wikis');

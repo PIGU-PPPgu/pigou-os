@@ -1,0 +1,25 @@
+{
+  "slug": "2026-05-05-daily-cockpit",
+  "version": "v0.7.1",
+  "date": "2026-05-05",
+  "title": "Daily Cockpit",
+  "type": "release",
+  "status": "shipped",
+  "summary": "Today 成为默认入口，项目驾驶舱和知识脑开始联动。",
+  "highlights": [
+    "登录后首页进入 Today",
+    "新增 yesterday done / hot projects / cold projects / idea 信号",
+    "LLM Wiki 支持点击聚焦、拖拽、缩放和 fullscreen",
+    "Ideas 可以绑定 Project 并生成行动"
+  ],
+  "commits": [
+    {
+      "hash": "520d5c8",
+      "title": "Let ideas bind to projects explicitly"
+    },
+    {
+      "hash": "9ad88ef",
+      "title": "Fix weekly activity signals"
+    }
+  ]
+}

@@ -13,6 +13,7 @@ const privateNav = [
   ['/ideas', '想法'],
   ['/llm-wiki', 'LLM Wiki'],
   ['/tasks', '行动'],
+  ['/updates', '更新'],
   ['/weekly', 'Weekly'],
   ['/work', 'Work'],
   ['/log', '日志'],
@@ -23,6 +24,7 @@ const publicNav = [
   ['/', 'Home'],
   ['/work', 'Work'],
   ['/projects', 'Projects'],
+  ['/updates', 'Updates'],
   ['/about', 'About']
 ];
 

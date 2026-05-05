@@ -1,0 +1,25 @@
+{
+  "slug": "2026-05-06-console-copy",
+  "version": "v0.7.2",
+  "date": "2026-05-06",
+  "title": "Console Copy Pass",
+  "type": "design",
+  "status": "shipped",
+  "summary": "删掉解释性文案，收紧 Today / Home / Knowledge / Weekly 的控制台语气。",
+  "highlights": [
+    "首页切回 Pigou Workshop 作品入口",
+    "Today 删除长句判断，只保留主线、数字和状态",
+    "Knowledge fallback 改成 pending / relation",
+    "线上已同步到 pigou-os.intellicode.top"
+  ],
+  "commits": [
+    {
+      "hash": "b4632cd",
+      "title": "polish: reduce explanatory console copy"
+    },
+    {
+      "hash": "80c10db",
+      "title": "chore: tighten ops runtime path tracing"
+    }
+  ]
+}
