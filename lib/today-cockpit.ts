@@ -240,9 +240,9 @@ function selectMainLine(openTasks: Task[], projects: Project[], projectBySlug: M
   }
 
   return {
-    title: 'Capture one concrete next action',
-    action: 'Pick one project, write the smallest visible next action, then stop expanding scope.',
-    reason: 'No open task or active project action is available.',
+    title: 'Next action',
+    action: 'P0/P1',
+    reason: 'manual',
     href: '/tasks',
     source: 'manual'
   };
@@ -258,8 +258,8 @@ function selectIdea(ideas: Idea[], projectBySlug: Map<string, Project>, isLogged
   if (!idea) {
     return {
       title: 'No idea selected',
-      summary: "The idea pool has no active idea. Capture one only after today's main line moves.",
-      next: 'Keep the idea lane closed until execution has a fresh result.',
+      summary: 'No active idea.',
+      next: 'closed',
       score: 0,
       href: '/ideas',
       linkedProject: undefined
@@ -281,7 +281,7 @@ function selectNotToday(input: { openTasks: Task[]; coldProjects: TodayCockpitPr
   if (waiting) {
     return {
       title: `Do not pull "${waiting.title}" into active work`,
-      reason: 'It is marked waiting, so today should not spend execution energy pretending it is unblocked.',
+      reason: 'waiting',
       href: '/tasks'
     };
   }
@@ -290,7 +290,7 @@ function selectNotToday(input: { openTasks: Task[]; coldProjects: TodayCockpitPr
   if (cold) {
     return {
       title: `Do not revive ${cold.title} today`,
-      reason: `It is a cold lane (${cold.healthLabel}). Only touch it if the main line is done.`,
+      reason: cold.healthLabel,
       href: cold.href
     };
   }
@@ -299,14 +299,14 @@ function selectNotToday(input: { openTasks: Task[]; coldProjects: TodayCockpitPr
   if (manyIdeas) {
     return {
       title: 'Do not open a second idea thread',
-      reason: 'The dashboard already picked one idea worth continuing; extra novelty would dilute the day.',
+      reason: 'idea limit',
       href: '/ideas'
     };
   }
 
   return {
     title: 'Do not reorganize the cockpit',
-    reason: 'Use the current dashboard as an operating surface; save meta-work for the evening log.',
+    reason: 'meta-work',
     href: '/today'
   };
 }

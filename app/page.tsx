@@ -38,15 +38,12 @@ export default async function HomePage() {
           </div>
 
           <div>
-            <h2 className="hero-title max-w-[9ch] text-5xl font-semibold leading-[.92] text-white sm:max-w-3xl sm:text-6xl md:text-8xl">Build useful tools for teachers.</h2>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-white/62">
-              I make small, durable AI products for education: classroom workflows, teacher assistants, learning analytics, and the personal systems that keep those projects moving.
-            </p>
+            <h2 className="hero-title max-w-[9ch] text-5xl font-semibold leading-[.92] text-white sm:max-w-3xl sm:text-6xl md:text-8xl">Pigou Workshop</h2>
           </div>
 
           <div className="flex flex-wrap gap-3">
             <ButtonLink primary href="/work">View work</ButtonLink>
-            <Link href="/about" className="mono inline-flex min-h-11 items-center rounded-full border border-white/35 px-6 text-[12px] uppercase text-white transition hover:bg-white hover:text-black">About Pigou</Link>
+            <ButtonLink href="/about">About Pigou</ButtonLink>
           </div>
         </div>
       </Panel>
@@ -61,13 +58,6 @@ export default async function HomePage() {
                 <span className="text-lg font-semibold leading-tight text-[var(--ink)]">{item}</span>
               </div>)}
             </div>
-          </div>
-
-          <div className="border-t border-[var(--border)] pt-5">
-            <div className="caption">Now</div>
-            <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">
-              Most of the work starts in real school operations, then becomes reusable software, prompts, dashboards, or product notes.
-            </p>
           </div>
         </div>
       </Panel>
@@ -87,9 +77,11 @@ export default async function HomePage() {
           <Label>Pigou Workshop</Label>
           <h3 className="mt-3 text-4xl font-semibold leading-none text-[var(--ink)] md:text-6xl">Projects, notes, and experiments.</h3>
         </div>
-        <p className="text-sm leading-7 text-[var(--text-secondary)]">
-          I keep a public trail of shipped tools and experiments here, while the day-to-day project system stays quiet in the background.
-        </p>
+        <div className="grid grid-cols-3 gap-3 text-right">
+          <div><div className="doto text-4xl leading-none text-[var(--ink)]">{selectedWork.length}</div><div className="caption mt-1">selected</div></div>
+          <div><div className="doto text-4xl leading-none text-[var(--ink)]">{projects.filter(project => project.status === 'shipped').length}</div><div className="caption mt-1">shipped</div></div>
+          <div><div className="doto text-4xl leading-none text-[var(--ink)]">{projects.length}</div><div className="caption mt-1">projects</div></div>
+        </div>
       </div>
     </Panel>
   </div>;

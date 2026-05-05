@@ -192,9 +192,9 @@ function KnowledgeDetail({ note, state, onAnalyze, onCreateTask, onPatch }: { no
     <h3 className="text-3xl font-semibold leading-tight text-[var(--ink)]">{note.title}</h3>
     <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">{note.summary}</p>
     <div className="mt-5 grid gap-3">
-      <Block title="AI Intent" body={note.analysis?.intent || '尚未生成 AI intent。'} />
-      <Block title="Usefulness" body={note.analysis?.usefulness || '尚未生成 usefulness。'} />
-      <Block title="Relation Reasoning" body={note.analysis?.relationReasoning || '尚未生成关系解释。'} />
+      <Block title="AI Intent" body={note.analysis?.intent || 'pending'} />
+      <Block title="Usefulness" body={note.analysis?.usefulness || 'pending'} />
+      <Block title="Relation" body={note.analysis?.relationReasoning || 'pending'} />
     </div>
     {note.analysis?.actionSuggestions.length ? <div className="mt-5">
       <div className="caption mb-2">AI Action Suggestions</div>

@@ -311,7 +311,7 @@ function localSynthesis(input: WeeklyBriefInput, computedStats: WeeklyBriefStats
   const risks = [
     ...pausedHigh.map(project => `${project.title} is high priority but paused.`),
     ...reviewJobs.slice(0, 3).map(job => `${job.repo.fullName} sync is ${job.status}.`),
-    ...(computedStats.openTasks > 8 ? [`${computedStats.openTasks} open task(s) may dilute execution focus.`] : [])
+    ...(computedStats.openTasks > 8 ? [`${computedStats.openTasks} open task(s).`] : [])
   ].slice(0, 5);
   const nextActions = [
     ...p0Tasks.slice(0, 3).map(task => task.title),

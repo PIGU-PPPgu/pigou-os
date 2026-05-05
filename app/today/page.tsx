@@ -28,7 +28,6 @@ export default async function TodayPage() {
             <div className="mt-6 max-w-3xl border-y border-white/15 py-5">
               <div className="caption text-white/40">MAIN LINE</div>
               <h2 className="mt-2 text-2xl font-semibold leading-tight text-white md:text-4xl">{cockpit.mainLine.title}</h2>
-              <p className="mt-3 max-w-2xl text-sm leading-6 text-white/58">{cockpit.mainLine.action}</p>
             </div>
           </div>
 
@@ -48,7 +47,6 @@ export default async function TodayPage() {
         <div className="grid gap-5">
           <div>
             <h3 className="text-3xl font-semibold leading-tight text-[var(--ink)]">{cockpit.mainLine.title}</h3>
-            <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">{cockpit.mainLine.action}</p>
           </div>
           <Link href={cockpit.mainLine.href} className="mono inline-flex min-h-10 w-fit items-center rounded-full border border-[var(--border-visible)] px-4 text-[10px] uppercase hover:border-[var(--ink)]">
             {cockpit.mainLine.source}
@@ -72,22 +70,21 @@ export default async function TodayPage() {
       </Panel>
 
       <Panel raised className="p-5 md:p-6">
-        <SectionHeader label="What Not To Do Today" value="scope guard" />
+        <SectionHeader label="Scope Guard" value="not today" />
         <Link href={cockpit.notToday.href} className="block transition hover:bg-[var(--surface-soft)]/55 md:-mx-3 md:px-3">
           <h3 className="text-2xl font-semibold leading-tight text-[var(--ink)]">{cockpit.notToday.title}</h3>
-          <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">{cockpit.notToday.reason}</p>
         </Link>
       </Panel>
     </section>
 
     <section className="grid gap-5 xl:grid-cols-2">
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="Hot Projects" value="advance these" />
+        <SectionHeader label="Hot Projects" value={String(cockpit.hotProjects.length)} />
         <ProjectList projects={cockpit.hotProjects} empty="No hot project found" />
       </Panel>
 
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="Cold Projects" value="avoid silent drag" />
+        <SectionHeader label="Cold Projects" value={String(cockpit.coldProjects.length)} />
         <ProjectList projects={cockpit.coldProjects} empty="No cold project found" />
       </Panel>
     </section>
@@ -136,7 +133,6 @@ function ProjectList({ projects, empty }: { projects: TodayCockpitProject[]; emp
       </div>
       <h3 className="text-2xl font-semibold leading-tight text-[var(--ink)]">{project.title}</h3>
       <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">{project.summary}</p>
-      <div className="caption mt-3">{project.reason}</div>
     </Link>)}
     {!projects.length && <EmptyState title={empty} />}
   </div>;

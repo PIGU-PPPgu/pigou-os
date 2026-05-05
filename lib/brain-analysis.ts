@@ -41,12 +41,12 @@ function fallbackKnowledgeAnalysis(note: KnowledgeNote, projects: Project[], ide
   const projectLinks = Array.from(new Set([...(note.relatedProjects || []), ...projectMatches(text, projects)])).slice(0, 5);
   const ideaLinks = ideaMatches(text, ideas);
   return {
-    intent: note.type === 'source' ? '捕获外部资料，并判断它对 Pigou 当前项目是否有用。' : '沉淀一条可复用的个人判断或项目洞察。',
-    usefulness: projectLinks.length ? `可用于 ${projectLinks.join(', ')} 的判断、说明或下一步行动。` : '目前还没有强项目关联，适合先留在知识收件箱继续观察。',
+    intent: note.type === 'source' ? '外部资料' : '个人判断 / 项目洞察',
+    usefulness: projectLinks.length ? projectLinks.join(' / ') : 'inbox',
     projectLinks,
     ideaLinks,
-    actionSuggestions: [note.next || '判断这条内容应该转成任务、项目说明还是 idea 证据。'].filter(Boolean),
-    relationReasoning: '基于标题、摘要、标签、相似笔记和项目 slug 做本地规则关联。',
+    actionSuggestions: [note.next || 'route: task / project / idea'].filter(Boolean),
+    relationReasoning: 'title / summary / tags / slug',
     confidence: note.confidence
   };
 }
