@@ -23,9 +23,9 @@
       "url": "https://github.com/PIGU-PPPgu/pigou-os"
     }
   ],
-  "updated": "2026-05-06",
+  "updated": "2026-05-07",
   "progressEvaluation": {
-    "generatedAt": "2026-05-06",
+    "generatedAt": "2026-05-07",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 90,
@@ -82,7 +82,7 @@
   },
   "prioritySuggestion": {
     "id": "8vlu9s",
-    "generatedAt": "2026-05-06",
+    "generatedAt": "2026-05-07",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",

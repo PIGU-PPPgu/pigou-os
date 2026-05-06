@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/DeepTutor",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-05-05T11:18:48Z",
+    "pushedAt": "2026-05-06T02:23:43Z",
     "language": "Python"
   },
-  "generatedAt": "2026-05-05T21:14:42.113Z",
+  "generatedAt": "2026-05-06T21:37:02.946Z",
   "readme": {
     "title": "DeepTutor: Agent-Native Personalized Tutoring",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1083,
+    "totalFiles": 1088,
     "truncated": false,
     "topDirectories": [
       {
@@ -43,7 +43,7 @@
       },
       {
         "name": "[root]",
-        "count": 21
+        "count": 26
       },
       {
         "name": "deeptutor_cli",
@@ -84,11 +84,11 @@
         "count": 19
       },
       {
-        "ext": ".json",
-        "count": 9
+        "ext": ".yml",
+        "count": 10
       },
       {
-        "ext": ".yml",
+        "ext": ".json",
         "count": 9
       },
       {

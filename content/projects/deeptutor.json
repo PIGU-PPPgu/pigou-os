@@ -29,9 +29,9 @@
       "url": "https://github.com/PIGU-PPPgu/DeepTutor"
     }
   ],
-  "updated": "2026-05-06",
+  "updated": "2026-05-07",
   "progressEvaluation": {
-    "generatedAt": "2026-05-06",
+    "generatedAt": "2026-05-07",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 97,
@@ -72,8 +72,8 @@
       }
     ],
     "evidence": [
-      "repo files: 1083",
-      "last push: 2026-05-05",
+      "repo files: 1088",
+      "last push: 2026-05-06",
       "frameworks: Next.js, React, Tailwind CSS, Python"
     ],
     "risks": [
@@ -85,8 +85,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "1y30d5s",
-    "generatedAt": "2026-05-06",
+    "id": "bmm1wo",
+    "generatedAt": "2026-05-07",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -96,8 +96,8 @@
     "rationale": "综合分 41/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 1083",
-      "last push: 2026-05-05",
+      "repo files: 1088",
+      "last push: 2026-05-06",
       "strategic OS/workflow signal in project text",
       "progress evaluation: 97% building"
     ],

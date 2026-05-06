@@ -7,7 +7,7 @@
   "explanation": "这是 Pigou 教育 AI 产品线的核心展示项目，用来验证 K12 场景里 AI 家教、阅读陪伴、知识诊断和在线部署能否形成真实可用的学习产品。",
   "domain": "education-ai",
   "source": "github:PIGU-PPPgu/IntelliTutor",
-  "progress": 68,
+  "progress": 84,
   "goals": [
     "稳定深度解题和知识图谱",
     "打通在线部署",
@@ -15,8 +15,8 @@
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Clarify runtime stack and entrypoint because package metadata is missing.",
-    "Add one approved public screenshot or product surface image."
+    "Add one approved public screenshot or product surface image.",
+    "Clarify runtime stack and entrypoint because package metadata is missing."
   ],
   "links": [
     {
@@ -28,12 +28,12 @@
       "url": "https://tutor.intelliclass.online"
     }
   ],
-  "updated": "2026-05-06",
+  "updated": "2026-05-07",
   "progressEvaluation": {
-    "generatedAt": "2026-05-06",
+    "generatedAt": "2026-05-07",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 68,
+    "progress": 84,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -47,7 +47,7 @@
       },
       {
         "name": "technical_completeness",
-        "score": 10,
+        "score": 16,
         "max": 20,
         "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
@@ -71,23 +71,22 @@
       }
     ],
     "evidence": [
-      "repo files: 32",
-      "last push: 2026-05-05",
-      "frameworks: Python"
+      "repo files: 74",
+      "last push: 2026-05-06",
+      "frameworks: Taro / WeChat Mini Program, Python"
     ],
     "risks": [
-      "package.json could not be found or parsed.",
       "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Clarify runtime stack and entrypoint because package metadata is missing.",
-      "Add one approved public screenshot or product surface image."
+      "Add one approved public screenshot or product surface image.",
+      "Clarify runtime stack and entrypoint because package metadata is missing."
     ]
   },
   "prioritySuggestion": {
-    "id": "19g1ihe",
-    "generatedAt": "2026-05-06",
+    "id": "h8nwep",
+    "generatedAt": "2026-05-07",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
@@ -97,10 +96,10 @@
     "rationale": "综合分 40/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 32",
-      "last push: 2026-05-05",
+      "repo files: 74",
+      "last push: 2026-05-06",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 68% building"
+      "progress evaluation: 84% building"
     ],
     "dimensions": [
       {
@@ -123,7 +122,7 @@
       },
       {
         "name": "maturity_or_impact",
-        "score": 16,
+        "score": 20,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },
