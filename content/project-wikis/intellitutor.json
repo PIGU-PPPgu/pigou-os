@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/IntelliTutor",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-05-06T17:54:02Z",
+    "pushedAt": "2026-05-07T17:45:59Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-05-06T21:37:09.563Z",
+  "generatedAt": "2026-05-07T21:15:11.557Z",
   "readme": {
     "title": "IntelliTutor — K12 AI 智能学习伴侣",
     "summary": [
@@ -22,12 +22,12 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 74,
+    "totalFiles": 91,
     "truncated": false,
     "topDirectories": [
       {
         "name": "miniprogram",
-        "count": 40
+        "count": 54
       },
       {
         "name": "screenshots",
@@ -38,15 +38,15 @@
         "count": 12
       },
       {
+        "name": "docs",
+        "count": 5
+      },
+      {
         "name": ".github",
         "count": 2
       },
       {
         "name": "content",
-        "count": 2
-      },
-      {
-        "name": "docs",
         "count": 2
       },
       {
@@ -56,28 +56,32 @@
     ],
     "extensions": [
       {
+        "ext": ".md",
+        "count": 18
+      },
+      {
+        "ext": ".js",
+        "count": 17
+      },
+      {
         "ext": ".png",
         "count": 16
       },
       {
-        "ext": ".js",
-        "count": 14
-      },
-      {
-        "ext": ".md",
-        "count": 13
-      },
-      {
         "ext": ".json",
-        "count": 10
+        "count": 12
       },
       {
         "ext": ".wxss",
-        "count": 7
+        "count": 9
       },
       {
         "ext": ".wxml",
-        "count": 6
+        "count": 8
+      },
+      {
+        "ext": ".mjs",
+        "count": 2
       },
       {
         "ext": ".pdf",
@@ -88,11 +92,7 @@
         "count": 2
       },
       {
-        "ext": ".gitignore",
-        "count": 1
-      },
-      {
-        "ext": ".gitmodules",
+        "ext": ".cjs",
         "count": 1
       }
     ]
@@ -124,11 +124,14 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "2 file(s) under docs/"
+        "5 file(s) under docs/"
       ],
       "files": [
         "docs/PRD.md",
-        "docs/demo-luotuo-xiangzi.md"
+        "docs/agent-briefs/miniprogram-pr-design-brief.md",
+        "docs/demo-luotuo-xiangzi.md",
+        "docs/plans/2026-05-07-mini-program-tab-reframe.md",
+        "docs/plans/2026-05-07-mini-program-web-parity.md"
       ]
     }
   ],
