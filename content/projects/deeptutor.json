@@ -29,9 +29,9 @@
       "url": "https://github.com/PIGU-PPPgu/DeepTutor"
     }
   ],
-  "updated": "2026-05-08",
+  "updated": "2026-05-09",
   "progressEvaluation": {
-    "generatedAt": "2026-05-08",
+    "generatedAt": "2026-05-09",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 97,
@@ -73,7 +73,7 @@
     ],
     "evidence": [
       "repo files: 1088",
-      "last push: 2026-05-06",
+      "last push: 2026-05-08",
       "frameworks: Next.js, React, Tailwind CSS, Python"
     ],
     "risks": [
@@ -85,8 +85,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "bmm1wo",
-    "generatedAt": "2026-05-08",
+    "id": "1nj2syu",
+    "generatedAt": "2026-05-09",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -97,7 +97,7 @@
     "evidence": [
       "no open linked tasks",
       "repo files: 1088",
-      "last push: 2026-05-06",
+      "last push: 2026-05-08",
       "strategic OS/workflow signal in project text",
       "progress evaluation: 97% building"
     ],
