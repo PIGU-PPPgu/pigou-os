@@ -7,7 +7,7 @@
   "explanation": "它是教师科研方向的产品原型，专注把一个研究主题展开成更规范的课题申报材料。",
   "domain": "teacher-research",
   "source": "github:PIGU-PPPgu/keti-ai-assistant",
-  "progress": 97,
+  "progress": 92,
   "goals": [
     "生成课题申报书初稿",
     "沉淀教育科研写作结构",
@@ -23,12 +23,12 @@
       "url": "https://github.com/PIGU-PPPgu/keti-ai-assistant"
     }
   ],
-  "updated": "2026-05-09",
+  "updated": "2026-05-10",
   "progressEvaluation": {
-    "generatedAt": "2026-05-09",
+    "generatedAt": "2026-05-10",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 97,
+    "progress": 92,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -60,7 +60,7 @@
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
@@ -79,8 +79,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "o1byt",
-    "generatedAt": "2026-05-09",
+    "id": "1gw9q40",
+    "generatedAt": "2026-05-10",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -93,7 +93,7 @@
       "repo files: 1709",
       "last push: 2026-04-09",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 97% building"
+      "progress evaluation: 92% building"
     ],
     "dimensions": [
       {
