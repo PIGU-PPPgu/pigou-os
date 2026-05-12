@@ -23,9 +23,9 @@
       "url": "https://github.com/PIGU-PPPgu/keti-ai-assistant"
     }
   ],
-  "updated": "2026-05-12",
+  "updated": "2026-05-13",
   "progressEvaluation": {
-    "generatedAt": "2026-05-12",
+    "generatedAt": "2026-05-13",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 92,
@@ -80,7 +80,7 @@
   },
   "prioritySuggestion": {
     "id": "1gw9q40",
-    "generatedAt": "2026-05-12",
+    "generatedAt": "2026-05-13",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
