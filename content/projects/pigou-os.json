@@ -23,9 +23,9 @@
       "url": "https://github.com/PIGU-PPPgu/pigou-os"
     }
   ],
-  "updated": "2026-05-13",
+  "updated": "2026-05-14",
   "progressEvaluation": {
-    "generatedAt": "2026-05-13",
+    "generatedAt": "2026-05-14",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 90,
@@ -67,7 +67,7 @@
     ],
     "evidence": [
       "repo files: 234",
-      "last push: 2026-05-11",
+      "last push: 2026-05-12",
       "frameworks: Next.js, React, Tailwind CSS",
       "linked tasks: 1",
       "linked logs: 1"
@@ -81,8 +81,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "3wfvl1",
-    "generatedAt": "2026-05-13",
+    "id": "1qo0d5y",
+    "generatedAt": "2026-05-14",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
@@ -93,7 +93,7 @@
     "evidence": [
       "no open linked tasks",
       "repo files: 234",
-      "last push: 2026-05-11",
+      "last push: 2026-05-12",
       "recent logs: 1",
       "strategic OS/workflow signal in project text",
       "progress evaluation: 90% building"
