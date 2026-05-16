@@ -45,9 +45,9 @@
       "url": "https://github.com/PIGU-PPPgu/Headteacher-helper"
     }
   ],
-  "updated": "2026-05-16",
+  "updated": "2026-05-17",
   "progressEvaluation": {
-    "generatedAt": "2026-05-16",
+    "generatedAt": "2026-05-17",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 92,
@@ -104,7 +104,7 @@
   },
   "prioritySuggestion": {
     "id": "p941yk",
-    "generatedAt": "2026-05-16",
+    "generatedAt": "2026-05-17",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
