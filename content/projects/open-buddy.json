@@ -24,9 +24,9 @@
       "url": "https://github.com/PIGU-PPPgu/open-buddy"
     }
   ],
-  "updated": "2026-05-17",
+  "updated": "2026-05-18",
   "progressEvaluation": {
-    "generatedAt": "2026-05-17",
+    "generatedAt": "2026-05-18",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 80,
@@ -83,7 +83,7 @@
   },
   "prioritySuggestion": {
     "id": "10t2gp9",
-    "generatedAt": "2026-05-17",
+    "generatedAt": "2026-05-18",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",

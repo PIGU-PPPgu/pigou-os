@@ -1,43 +1,8 @@
 {
   "owner": "PIGU-PPPgu",
-  "generatedAt": "2026-05-16T21:05:07.147Z",
-  "totalContributions": 254,
+  "generatedAt": "2026-05-17T21:09:02.095Z",
+  "totalContributions": 255,
   "days": [
-    {
-      "date": "2025-05-11",
-      "count": 0,
-      "weekday": 0
-    },
-    {
-      "date": "2025-05-12",
-      "count": 0,
-      "weekday": 1
-    },
-    {
-      "date": "2025-05-13",
-      "count": 2,
-      "weekday": 2
-    },
-    {
-      "date": "2025-05-14",
-      "count": 0,
-      "weekday": 3
-    },
-    {
-      "date": "2025-05-15",
-      "count": 0,
-      "weekday": 4
-    },
-    {
-      "date": "2025-05-16",
-      "count": 0,
-      "weekday": 5
-    },
-    {
-      "date": "2025-05-17",
-      "count": 0,
-      "weekday": 6
-    },
     {
       "date": "2025-05-18",
       "count": 0,
@@ -1855,8 +1820,13 @@
     },
     {
       "date": "2026-05-16",
-      "count": 0,
+      "count": 1,
       "weekday": 6
+    },
+    {
+      "date": "2026-05-17",
+      "count": 0,
+      "weekday": 0
     }
   ]
 }
