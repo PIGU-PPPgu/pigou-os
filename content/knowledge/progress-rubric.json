@@ -3,7 +3,7 @@
   "title": "进度分数衡量运营成熟度，而不是投入时间",
   "type": "pattern",
   "status": "processed",
-  "summary": "项目进度是一个手动运营信号，基于项目是否可运行、可解释、可使用，而不是严格的工程百分比。",
+  "summary": "项目进度来自运行、使用、代码、截图、任务和日志信号。",
   "keyPoints": [
     "0-25 表示想法、笔记或空仓库。",
     "26-50 表示已有原型或核心模块。",
@@ -13,7 +13,7 @@
   "tags": ["project-management", "metric", "rubric"],
   "relatedProjects": ["pigou-os"],
   "confidence": "medium",
-  "next": "把这个口径展示在项目进度附近，保证以后更新项目时一致。",
+  "next": "进度读数交给信号引擎和 AI 复核。",
   "capturedAt": "2026-04-27",
   "updated": "2026-04-27"
 }

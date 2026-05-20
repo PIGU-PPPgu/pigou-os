@@ -167,19 +167,19 @@ export async function buildLlmWikiGraph(input: LlmWikiBuildInput) {
       addEdge(edges, { from: nodeId('idea', idea.slug), to: nodeId('project', projectSlug), type: 'becomes', reason: 'Idea was manually assigned to this project.', confidence: 'high' });
     }
     for (const tag of idea.tags.map(normalizeTopic).filter(tag => topicSet.has(tag))) {
-      addEdge(edges, { from: nodeId('idea', idea.slug), to: nodeId('topic', tag), type: 'inspires', reason: `Idea carries topic: ${tag}`, confidence: 'medium' });
+      addEdge(edges, { from: nodeId('idea', idea.slug), to: nodeId('topic', tag), type: 'inspires', reason: `idea / ${tag}`, confidence: 'medium' });
     }
   }
 
   for (const task of tasks) {
-    addEdge(edges, { from: nodeId(task.sourceType, task.sourceSlug), to: nodeId('task', task.slug), type: 'becomes', reason: 'Task was generated from this source.', confidence: 'high' });
-    if (task.projectSlug) addEdge(edges, { from: nodeId('task', task.slug), to: nodeId('project', task.projectSlug), type: 'relates', reason: 'Task is assigned to this project.', confidence: 'high' });
+    addEdge(edges, { from: nodeId(task.sourceType, task.sourceSlug), to: nodeId('task', task.slug), type: 'becomes', reason: 'source / task', confidence: 'high' });
+    if (task.projectSlug) addEdge(edges, { from: nodeId('task', task.slug), to: nodeId('project', task.projectSlug), type: 'relates', reason: 'task / project', confidence: 'high' });
   }
 
   for (const project of projects) {
     const text = `${project.title}\n${project.summary}\n${project.domain || ''}`;
     for (const topic of topics.filter(topic => hasTopic(text, topic.topic)).slice(0, 3)) {
-      addEdge(edges, { from: nodeId('project', project.slug), to: nodeId('topic', topic.topic), type: 'relates', reason: `Project matches topic: ${topic.topic}`, confidence: 'low' });
+      addEdge(edges, { from: nodeId('project', project.slug), to: nodeId('topic', topic.topic), type: 'relates', reason: `project / ${topic.topic}`, confidence: 'low' });
     }
   }
 
@@ -193,9 +193,9 @@ export async function buildLlmWikiGraph(input: LlmWikiBuildInput) {
     nodes,
     edges: filteredEdges,
     analysis: {
-      summary: `Built from ${projects.length} project(s), ${ideas.length} idea(s), ${knowledge.length} knowledge note(s), and ${tasks.length} task(s).`,
-      clusters: topics.slice(0, 6).map(topic => ({ topic: topic.topic, nodes: nodes.filter(node => hasTopic(`${node.title}\n${node.summary || ''}`, topic.topic)).map(node => node.id).slice(0, 8), reason: 'Shared tags, domains, titles, or summaries.' })),
-      nextActions: ['重建图谱后优先查看高置信 edge。', '把高信号 idea 转为 task 或 project。', '补齐 raw knowledge 的平台和分析。'],
+      summary: `${projects.length} projects / ${ideas.length} ideas / ${knowledge.length} notes / ${tasks.length} tasks.`,
+      clusters: topics.slice(0, 6).map(topic => ({ topic: topic.topic, nodes: nodes.filter(node => hasTopic(`${node.title}\n${node.summary || ''}`, topic.topic)).map(node => node.id).slice(0, 8), reason: 'tags / domains / titles / summaries' })),
+      nextActions: ['high-confidence edges', 'idea -> task/project', 'raw note analysis'],
       notableConnections
     }
   };
