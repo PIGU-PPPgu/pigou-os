@@ -43,9 +43,9 @@ function readProjects() {
     .map(file => JSON.parse(fs.readFileSync(path.join(projectsDir, file), 'utf8')));
 }
 
-function hookExists(repo) {
+function findHook(repo) {
   const hooks = JSON.parse(runGh(['api', `repos/${repo}/hooks`, '--paginate']));
-  return hooks.some(hook => hook?.config?.url === webhookUrl);
+  return hooks.find(hook => hook?.config?.url === webhookUrl);
 }
 
 function installHook(repo) {
@@ -63,19 +63,35 @@ function installHook(repo) {
   ]);
 }
 
+function updateHook(repo, hookId) {
+  runGh([
+    'api',
+    `repos/${repo}/hooks/${hookId}`,
+    '-X', 'PATCH',
+    '-F', 'active=true',
+    '-f', `config[url]=${webhookUrl}`,
+    '-f', 'config[content_type]=json',
+    '-f', 'config[insecure_ssl]=0',
+    ...(secret ? ['-f', `config[secret]=${secret}`] : []),
+    ...events.flatMap(event => ['-f', `events[]=${event}`])
+  ]);
+}
+
 if (!secret) {
   console.log('[github-webhooks] GITHUB_WEBHOOK_SECRET is empty; GitHub payloads will not be signed.');
 }
 
 const repos = Array.from(new Set(readProjects().map(githubRepoFromProject).filter(Boolean))).sort();
 let created = 0;
-let skipped = 0;
+let updated = 0;
 
 for (const repo of repos) {
   try {
-    if (hookExists(repo)) {
-      console.log(`[github-webhooks] exists ${repo}`);
-      skipped += 1;
+    const hook = findHook(repo);
+    if (hook?.id) {
+      updateHook(repo, hook.id);
+      console.log(`[github-webhooks] updated ${repo}`);
+      updated += 1;
       continue;
     }
     installHook(repo);
@@ -86,4 +102,4 @@ for (const repo of repos) {
   }
 }
 
-console.log(`[github-webhooks] done: ${created} created, ${skipped} existing, ${repos.length} repo(s), url=${webhookUrl}`);
+console.log(`[github-webhooks] done: ${created} created, ${updated} updated, ${repos.length} repo(s), url=${webhookUrl}`);
