@@ -4,6 +4,7 @@ import path from 'node:path';
 
 loadEnv('.env');
 loadEnv('.env.local');
+if (process.env.GITHUB_TOKEN && !process.env.GH_TOKEN) process.env.GH_TOKEN = process.env.GITHUB_TOKEN;
 
 const projectsDir = path.join(process.cwd(), 'content', 'projects');
 const baseUrl = (process.env.PIGOU_PUBLIC_BASE_URL || 'https://pigou-os.intellicode.top').replace(/\/+$/, '');
