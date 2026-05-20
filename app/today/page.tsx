@@ -10,6 +10,21 @@ export const dynamic = 'force-dynamic';
 export default async function TodayPage() {
   const cookieHeader = (await cookies()).toString();
   const isLoggedIn = Boolean(getSessionUserFromCookieHeader(cookieHeader));
+  if (!isLoggedIn) {
+    return <div className="grid gap-5">
+      <Panel dark className="console-screen relative min-h-[420px] overflow-hidden p-6 md:p-8">
+        <div className="motion-grid absolute inset-0 text-white/10 dot-grid" />
+        <div className="scanline" />
+        <div className="relative flex h-full flex-col justify-between gap-10">
+          <div>
+            <Label>Private Today</Label>
+            <h1 className="mt-8 max-w-[8ch] text-6xl font-semibold leading-[.9] text-white md:text-8xl">Locked</h1>
+          </div>
+          <Link href="/login" className="mono inline-flex min-h-10 w-fit items-center rounded-full border border-white/40 px-4 text-[10px] uppercase text-white">登录查看</Link>
+        </div>
+      </Panel>
+    </div>;
+  }
   const cockpit = generateTodayCockpit({ isLoggedIn });
 
   return <div className="grid gap-5">
