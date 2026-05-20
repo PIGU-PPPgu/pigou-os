@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { enqueueSyncJob, verifyGitHubSignature } from '@/lib/sync-jobs';
 import { StorageConfigurationError } from '@/lib/storage-guard';
+import { kickSyncJobProcessor } from '@/lib/sync-kick';
 
 export const runtime = 'nodejs';
 
@@ -46,7 +47,8 @@ export async function POST(request: Request) {
       warmDeepWiki: process.env.PIGOU_SYNC_WARM_DEEPWIKI !== 'false',
       summary: `${event} received for ${repo.full_name}`
     });
-    return NextResponse.json({ ok: true, job });
+    const processor = kickSyncJobProcessor(3);
+    return NextResponse.json({ ok: true, job, processor });
   } catch (error) {
     if (error instanceof StorageConfigurationError) {
       return NextResponse.json({ ok: false, message: error.message }, { status: 501 });

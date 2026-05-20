@@ -3,6 +3,7 @@ import { isAuthenticatedRequest } from '@/lib/auth';
 import { getSyncJobs } from '@/lib/data';
 import { enqueueSyncJob } from '@/lib/sync-jobs';
 import { StorageConfigurationError } from '@/lib/storage-guard';
+import { kickSyncJobProcessor } from '@/lib/sync-kick';
 
 export async function GET(request: Request) {
   if (!isAuthenticatedRequest(request)) {
@@ -31,7 +32,8 @@ export async function POST(request: Request) {
         event: 'rebuild-llm-wiki',
         summary: 'Manual LLM Wiki rebuild requested'
       });
-      return NextResponse.json({ ok: true, job });
+      const processor = kickSyncJobProcessor(3);
+      return NextResponse.json({ ok: true, job, processor });
     } catch (error) {
       if (error instanceof StorageConfigurationError) return NextResponse.json({ ok: false, message: error.message }, { status: 501 });
       throw error;
@@ -60,7 +62,8 @@ export async function POST(request: Request) {
       warmDeepWiki: body?.warmDeepWiki !== false,
       summary: `Manual sync requested for ${fullName}`
     });
-    return NextResponse.json({ ok: true, job });
+    const processor = kickSyncJobProcessor(3);
+    return NextResponse.json({ ok: true, job, processor });
   } catch (error) {
     if (error instanceof StorageConfigurationError) return NextResponse.json({ ok: false, message: error.message }, { status: 501 });
     throw error;
