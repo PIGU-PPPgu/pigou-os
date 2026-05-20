@@ -56,6 +56,26 @@ on_error() {
 }
 trap on_error ERR
 
+compose_up_with_retry() {
+  local service="$1"
+  shift
+  local args=("$@")
+
+  for attempt in {1..6}; do
+    if docker compose "${args[@]}" up -d --build "$service"; then
+      return 0
+    fi
+
+    if [[ "$attempt" == "6" ]]; then
+      echo "[deploy-production] docker compose failed for $service after $attempt attempts" >&2
+      return 1
+    fi
+
+    echo "[deploy-production] docker compose is busy for $service, retrying in $((attempt * 5))s..." >&2
+    sleep $((attempt * 5))
+  done
+}
+
 write_deploy_status "running"
 
 if [[ -x "$APP_DIR/scripts/backup-content.sh" ]]; then
@@ -91,8 +111,8 @@ if [[ "$(id -u)" == "0" ]]; then
   chown -R "$CONTENT_UID:$CONTENT_GID" "$CONTENT_DIR"
 fi
 
-docker compose up -d --build pigou-os
-docker compose --profile worker up -d --build pigou-os-worker
+compose_up_with_retry pigou-os
+compose_up_with_retry pigou-os-worker --profile worker
 
 for attempt in {1..20}; do
   if docker compose exec -T pigou-os wget -qO- http://127.0.0.1:3888/api/auth/session >/dev/null 2>&1; then
