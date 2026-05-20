@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/pigou-os",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-05-18T21:38:33Z",
+    "pushedAt": "2026-05-20T07:38:06Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-05-19T21:46:48.302Z",
+  "generatedAt": "2026-05-20T22:04:20.595Z",
   "readme": {
     "title": "Pigou OS",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 234,
+    "totalFiles": 238,
     "truncated": false,
     "topDirectories": [
       {
@@ -35,7 +35,7 @@
       },
       {
         "name": "lib",
-        "count": 27
+        "count": 29
       },
       {
         "name": "public",
@@ -47,7 +47,7 @@
       },
       {
         "name": "scripts",
-        "count": 17
+        "count": 19
       },
       {
         "name": "[root]",
@@ -65,7 +65,7 @@
       },
       {
         "ext": ".ts",
-        "count": 52
+        "count": 54
       },
       {
         "ext": ".tsx",
@@ -77,7 +77,7 @@
       },
       {
         "ext": ".mjs",
-        "count": 17
+        "count": 19
       },
       {
         "ext": ".jpg",
@@ -111,11 +111,11 @@
       "typecheck",
       "sync:github",
       "sync:contrib",
+      "sync:activity",
       "sync:wiki",
       "sync:jobs",
       "sync:signals",
-      "sync:llm-wiki",
-      "rebuild:llm-wiki"
+      "sync:llm-wiki"
     ],
     "dependencies": [
       "@mdx-js/loader",
@@ -181,24 +181,24 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "27 file(s) under lib/"
+        "29 file(s) under lib/"
       ],
       "files": [
         "lib/ai-clients.ts",
         "lib/analytics-store.ts",
         "lib/auth.ts",
         "lib/brain-analysis.ts",
+        "lib/daily-activity.ts",
         "lib/data.ts",
         "lib/embedding-store.ts",
-        "lib/idea-store.ts",
-        "lib/inbox-capture.ts"
+        "lib/idea-store.ts"
       ]
     },
     {
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "17 file(s) under scripts/"
+        "19 file(s) under scripts/"
       ],
       "files": [
         "scripts/add-idea.mjs",
@@ -206,9 +206,9 @@
         "scripts/backup-content.sh",
         "scripts/deploy-production.sh",
         "scripts/evaluate-project-progress.mjs",
+        "scripts/install-github-webhooks.mjs",
         "scripts/install-production-webhook.sh",
-        "scripts/prepare-next-build.mjs",
-        "scripts/prepare-next-cache.mjs"
+        "scripts/prepare-next-build.mjs"
       ]
     },
     {
