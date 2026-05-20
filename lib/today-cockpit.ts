@@ -1,5 +1,6 @@
 import { evaluateProjectHealth } from '@/lib/project-health';
 import { sortProjectsByActivity } from '@/lib/project-activity';
+import { buildDailyActivity, type DailyActivity, type DailyActivityEvent } from '@/lib/daily-activity';
 import {
   getIdeas,
   getLogs,
@@ -54,6 +55,7 @@ export type TodayCockpit = {
     count: number;
     href: string;
   };
+  activity: DailyActivity;
   hotProjects: TodayCockpitProject[];
   coldProjects: TodayCockpitProject[];
   idea: {
@@ -126,9 +128,10 @@ function projectTitle(project?: Project, isLoggedIn = true) {
   return project.visibility === 'private' && !isLoggedIn ? 'Private project' : project.title;
 }
 
-function doneSummary(tasks: Task[], logs: Log[], yesterday: string) {
+function doneSummary(tasks: Task[], logs: Log[], yesterday: string, activityEvents: DailyActivityEvent[]) {
   const doneTasks = tasks.filter(task => task.status === 'done' && task.updated.slice(0, 10) === yesterday);
   const yesterdayLogs = logs.filter(log => log.date.slice(0, 10) === yesterday);
+  const yesterdayActivity = activityEvents.filter(event => event.date === yesterday);
 
   if (doneTasks.length) {
     return {
@@ -145,6 +148,15 @@ function doneSummary(tasks: Task[], logs: Log[], yesterday: string) {
       summary: firstText([yesterdayLogs[0].content], 'Yesterday has a log entry.'),
       count: yesterdayLogs.length,
       href: '/log'
+    };
+  }
+
+  if (yesterdayActivity.length) {
+    return {
+      title: yesterdayActivity[0].title,
+      summary: yesterdayActivity.slice(0, 4).map(event => `${event.type}: ${event.title}`).join(' / '),
+      count: yesterdayActivity.length,
+      href: yesterdayActivity[0].href
     };
   }
 
@@ -352,6 +364,7 @@ export function generateTodayCockpit(input: { isLoggedIn?: boolean } = {}): Toda
   const ideas = getIdeas();
   const logs = getLogs();
   const wikis = getProjectWikis();
+  const activity = buildDailyActivity({ isLoggedIn });
   const projectBySlug = new Map(projects.map(project => [project.slug, project]));
   const wikiBySlug = new Map(wikis.map(wiki => [wiki.slug, wiki]));
 
@@ -407,14 +420,15 @@ export function generateTodayCockpit(input: { isLoggedIn?: boolean } = {}): Toda
     today,
     yesterday,
     mainLine: selectMainLine(openTasks, projects, projectBySlug, isLoggedIn),
-    yesterdayDone: doneSummary(tasks, logs, yesterday),
+    yesterdayDone: doneSummary(tasks, logs, yesterday, activity.latest),
+    activity,
     hotProjects,
     coldProjects,
     idea: selectIdea(ideas, projectBySlug, isLoggedIn),
     queue: openTasks.slice(0, 5).map(task => taskToCockpit(task, projectBySlug, isLoggedIn)),
     stats: {
       openTasks: openTasks.length,
-      doneYesterday: tasks.filter(task => task.status === 'done' && task.updated.slice(0, 10) === yesterday).length,
+      doneYesterday: activity.yesterdayCount || tasks.filter(task => task.status === 'done' && task.updated.slice(0, 10) === yesterday).length,
       hotProjects: hotProjects.length,
       coldProjects: coldProjects.length,
       ideas: ideas.filter(idea => idea.status !== 'killed').length

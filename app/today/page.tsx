@@ -31,9 +31,10 @@ export default async function TodayPage() {
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-5">
             <DarkReadout label="Open" value={cockpit.stats.openTasks} detail="tasks" />
             <DarkReadout label="Done" value={cockpit.stats.doneYesterday} detail="yesterday" />
+            <DarkReadout label="Proof" value={cockpit.activity.todayCount} detail="today" />
             <DarkReadout label="Hot" value={cockpit.stats.hotProjects} detail="projects" />
             <DarkReadout label="Cold" value={cockpit.stats.coldProjects} detail="projects" />
           </div>
@@ -51,6 +52,26 @@ export default async function TodayPage() {
           <Link href={cockpit.mainLine.href} className="mono inline-flex min-h-10 w-fit items-center rounded-full border border-[var(--border-visible)] px-4 text-[10px] uppercase hover:border-[var(--ink)]">
             {cockpit.mainLine.source}
           </Link>
+        </div>
+      </Panel>
+    </section>
+
+    <section className="grid gap-5 lg:grid-cols-[.78fr_1.22fr]">
+      <Panel raised className="p-5 md:p-6">
+        <SectionHeader label="Achievement Pulse" value={cockpit.activity.generatedAt.slice(0, 10)} />
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <PulseNumber value={cockpit.activity.todayCount} label="today" />
+          <PulseNumber value={cockpit.activity.last7Count} label="7d" />
+          <PulseNumber value={cockpit.activity.commitCount} label="commits" />
+          <PulseNumber value={cockpit.activity.streakDays} label="streak" />
+        </div>
+      </Panel>
+
+      <Panel className="p-5 md:p-6">
+        <SectionHeader label="Proof Stream" value={cockpit.activity.latest[0]?.date || cockpit.today} />
+        <div className="grid gap-3">
+          {(cockpit.activity.todayEvents.length ? cockpit.activity.todayEvents : cockpit.activity.latest.slice(0, 6)).map(event => <ActivityRow key={event.id} event={event} />)}
+          {!cockpit.activity.latest.length && <EmptyState title="No activity signal" />}
         </div>
       </Panel>
     </section>
@@ -161,6 +182,24 @@ function DarkReadout({ label, value, detail }: { label: string; value: number; d
       <span className="caption mb-2 text-white/45">{detail}</span>
     </div>
   </div>;
+}
+
+function PulseNumber({ value, label }: { value: number; label: string }) {
+  return <div className="border-t border-[var(--border)] pt-4">
+    <div className="doto text-5xl leading-none text-[var(--ink)]">{String(value).padStart(2, '0')}</div>
+    <div className="caption mt-2">{label}</div>
+  </div>;
+}
+
+function ActivityRow({ event }: { event: { type: string; title: string; meta: string; date: string; href: string } }) {
+  return <Link href={event.href} className="grid gap-3 border-b border-[var(--border)] pb-3 transition last:border-b-0 hover:bg-[var(--surface-soft)]/55 md:grid-cols-[88px_1fr_92px] md:px-3">
+    <span className="mono w-fit rounded-full border border-[var(--border-visible)] px-3 py-1 text-[10px] uppercase text-[var(--text-secondary)]">{event.type}</span>
+    <span>
+      <span className="block text-sm font-semibold leading-6 text-[var(--ink)]">{event.title}</span>
+      <span className="caption mt-1 block">{event.meta}</span>
+    </span>
+    <span className="caption md:text-right">{event.date}</span>
+  </Link>;
 }
 
 function EmptyState({ title }: { title: string }) {

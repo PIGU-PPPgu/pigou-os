@@ -148,6 +148,28 @@ export type Idea = { slug: string; title: string; status: 'spark'|'validated'|'b
 export type Log = { slug: string; title: string; date: string; content: string; tags: string[] };
 export type ContributionDay = { date: string; count: number; weekday: number };
 export type ContributionActivity = { owner: string; generatedAt: string; totalContributions: number; days: ContributionDay[] };
+export type GithubActivityEvent = {
+  id: string;
+  type: 'commit';
+  repo: {
+    owner: string;
+    name: string;
+    fullName: string;
+    url: string;
+    private: boolean;
+  };
+  projectSlug?: string;
+  sha: string;
+  message: string;
+  url: string;
+  authorDate: string;
+};
+export type GithubActivityFeed = {
+  owner: string;
+  generatedAt: string;
+  since: string;
+  events: GithubActivityEvent[];
+};
 export type SyncJob = {
   id: string;
   source: 'github-webhook' | 'manual' | 'cron';
@@ -216,6 +238,7 @@ export const getLlmWikiGraph = () => getLlmWikiGraphs()[0] ?? null;
 export const getProjectWikis = () => readJson<ProjectWikiSnapshot>('project-wikis');
 export const getSyncJobs = () => readJson<SyncJob>('sync-jobs').sort((a,b) => b.requestedAt.localeCompare(a.requestedAt));
 export const getContributionActivity = () => readJson<ContributionActivity>('activity')[0] ?? { owner: 'PIGU-PPPgu', generatedAt: '', totalContributions: 0, days: [] };
+export const getGithubActivity = () => readJson<GithubActivityFeed>('activity').find(feed => Array.isArray(feed.events)) ?? { owner: 'PIGU-PPPgu', generatedAt: '', since: '', events: [] };
 export const getProject = (slug: string) => getProjects().find(p => p.slug === slug);
 export const getProjectWikiSnapshot = (slug: string) => getProjectWikis().find(wiki => wiki.slug === slug);
 export const getKnowledgeNote = (slug: string) => getKnowledge().find(note => note.slug === slug);

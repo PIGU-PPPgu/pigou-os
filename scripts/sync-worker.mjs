@@ -44,6 +44,7 @@ while (true) {
   writeHeartbeat({ state: 'idle' });
   if (!lastFullSync || now - lastFullSync >= fullIntervalSeconds * 1000) {
     run('sync contribution heatmap', 'node', ['scripts/sync-github-contributions.mjs']);
+    run('sync github activity feed', 'node', ['scripts/sync-github-activity.mjs']);
     run('sync github project drafts', 'node', ['scripts/sync-github-projects.mjs']);
     run('sync project wiki snapshots', 'node', ['scripts/sync-project-wikis.mjs']);
     run('refresh project status signals', 'node', ['scripts/refresh-project-signals.mjs']);
