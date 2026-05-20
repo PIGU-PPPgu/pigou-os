@@ -32,7 +32,7 @@ export async function POST(request: Request) {
         event: 'rebuild-llm-wiki',
         summary: 'Manual LLM Wiki rebuild requested'
       });
-      const processor = kickSyncJobProcessor(3);
+      const processor = kickSyncJobProcessor(10);
       return NextResponse.json({ ok: true, job, processor });
     } catch (error) {
       if (error instanceof StorageConfigurationError) return NextResponse.json({ ok: false, message: error.message }, { status: 501 });
@@ -62,7 +62,7 @@ export async function POST(request: Request) {
       warmDeepWiki: body?.warmDeepWiki !== false,
       summary: `Manual sync requested for ${fullName}`
     });
-    const processor = kickSyncJobProcessor(3);
+    const processor = kickSyncJobProcessor(10);
     return NextResponse.json({ ok: true, job, processor });
   } catch (error) {
     if (error instanceof StorageConfigurationError) return NextResponse.json({ ok: false, message: error.message }, { status: 501 });

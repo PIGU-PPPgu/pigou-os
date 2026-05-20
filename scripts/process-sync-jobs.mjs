@@ -11,6 +11,7 @@ const projectDir = path.join(process.cwd(), 'content', 'projects');
 const wikiDir = path.join(process.cwd(), 'content', 'project-wikis');
 const limitArg = process.argv.find(arg => arg.startsWith('--limit='))?.split('=')[1];
 const limit = Number(limitArg || '5');
+const statusPriority = { queued: 0, failed: 1, 'needs-review': 2 };
 
 function loadEnvLocal() {
   const file = path.join(process.cwd(), '.env.local');
@@ -194,7 +195,13 @@ const files = fs.readdirSync(jobDir)
   .filter(file => file.endsWith('.json'))
   .map(file => path.join(jobDir, file))
   .filter(file => ['queued', 'failed', 'needs-review'].includes(readJson(file).status))
-  .sort((a, b) => readJson(a).requestedAt.localeCompare(readJson(b).requestedAt))
+  .sort((a, b) => {
+    const jobA = readJson(a);
+    const jobB = readJson(b);
+    const priority = (statusPriority[jobA.status] ?? 9) - (statusPriority[jobB.status] ?? 9);
+    if (priority) return priority;
+    return jobB.requestedAt.localeCompare(jobA.requestedAt);
+  })
   .slice(0, limit);
 
 let processed = 0;

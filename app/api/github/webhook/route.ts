@@ -47,7 +47,7 @@ export async function POST(request: Request) {
       warmDeepWiki: process.env.PIGOU_SYNC_WARM_DEEPWIKI !== 'false',
       summary: `${event} received for ${repo.full_name}`
     });
-    const processor = kickSyncJobProcessor(3);
+    const processor = kickSyncJobProcessor(10);
     return NextResponse.json({ ok: true, job, processor });
   } catch (error) {
     if (error instanceof StorageConfigurationError) {
