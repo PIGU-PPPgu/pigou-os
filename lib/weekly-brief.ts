@@ -319,9 +319,9 @@ function localSynthesis(input: WeeklyBriefInput, computedStats: WeeklyBriefStats
     ...(leadProject?.nextActions.slice(0, 2) || [])
   ].filter((action, index, list) => action && list.indexOf(action) === index).slice(0, 6);
   const questions = [
-    leadProject ? `What would make ${leadProject.title} visibly more real by next week?` : 'Which project should become the main weekly bet?',
-    reviewJobs.length ? 'Which sync failure is blocking the freshest project evidence?' : 'Which external signal should be synced before the next progress evaluation?',
-    highlights[0] ? `Does "${highlights[0].title}" deserve a concrete task or project update?` : 'What evidence is missing from the private brain?'
+    leadProject ? `${leadProject.title} / next visible artifact?` : 'main bet?',
+    reviewJobs.length ? 'sync blocker?' : 'next external signal?',
+    highlights[0] ? `${highlights[0].title} / task or project?` : 'missing evidence?'
   ];
 
   return {
@@ -329,8 +329,8 @@ function localSynthesis(input: WeeklyBriefInput, computedStats: WeeklyBriefStats
     model: 'deterministic-local',
     title: `${input.range.start} to ${input.range.end} weekly brief`,
     executiveSummary: leadProject
-      ? `${leadProject.title} is the main visible thread${leadActivity ? ` at heat ${leadActivity.score}` : ''}. The system shows ${computedStats.activeProjects} active project(s), ${computedStats.openTasks} open task(s), ${computedStats.knowledge} weekly knowledge change(s), and ${computedStats.syncNeedsReview} sync item(s) needing review.`
-      : `The system has ${computedStats.projects} project(s), ${computedStats.openTasks} open task(s), and ${computedStats.knowledge} weekly knowledge change(s).`,
+      ? `${leadProject.title}${leadActivity ? ` / heat ${leadActivity.score}` : ''} / ${computedStats.activeProjects} active / ${computedStats.openTasks} open / ${computedStats.knowledge} knowledge / ${computedStats.syncNeedsReview} sync review.`
+      : `${computedStats.projects} projects / ${computedStats.openTasks} open / ${computedStats.knowledge} knowledge.`,
     focusScore,
     wins,
     risks: risks.length ? risks : ['No sharp weekly risk surfaced from the local data.'],

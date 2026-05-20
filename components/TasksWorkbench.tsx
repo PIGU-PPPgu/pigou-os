@@ -87,24 +87,24 @@ export function TasksWorkbench({ tasks: initialTasks, projects }: { tasks: Task[
 
   return <div className="grid gap-5">
     <Panel raised className="p-6 md:p-8">
-      <Label>Tasks / Action Queue</Label>
-      <h2 className="mt-3 text-5xl font-semibold leading-none text-[var(--ink)] md:text-7xl">What happens next?</h2>
+      <Label>Tasks / Queue</Label>
+      <h2 className="mt-3 text-5xl font-semibold leading-none text-[var(--ink)] md:text-7xl">Next Actions</h2>
     </Panel>
 
     <section className="grid gap-5 lg:grid-cols-[.85fr_1.15fr]">
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="Queue Readout" value={`${tasks.length} local task(s)`} />
+        <SectionHeader label="Queue" value={`${tasks.length}`} />
         <div className="grid grid-cols-2 gap-3">
           <div><span className="caption">Next</span><div className="doto mt-2 text-5xl leading-none text-[var(--ink)]">{nextCount}</div></div>
           <div><span className="caption">Doing</span><div className="doto mt-2 text-5xl leading-none text-[var(--ink)]">{doingCount}</div></div>
         </div>
       </Panel>
       <Panel raised className="p-5 md:p-6">
-        <SectionHeader label="Manual Task" />
+        <SectionHeader label="New" />
         <AuthOnly fallback={<LoginRequired />}>
           <form onSubmit={createManual} className="grid gap-3">
             <input name="title" required className="min-h-11 rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 text-sm outline-none" placeholder="Task title" />
-            <textarea name="summary" rows={3} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 py-3 text-sm leading-6 outline-none" placeholder="Why this matters / expected output" />
+            <textarea name="summary" rows={3} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 py-3 text-sm leading-6 outline-none" placeholder="Signal / output" />
             <div className="grid gap-3 sm:grid-cols-2">
               <select name="priority" defaultValue="P1" className="min-h-11 rounded-full border border-[var(--border-visible)] bg-white/55 px-4 text-sm"><option value="P0">P0</option><option value="P1">P1</option><option value="P2">P2</option></select>
               <select name="projectSlug" defaultValue="" className="min-h-11 rounded-full border border-[var(--border-visible)] bg-white/55 px-4 text-sm"><option value="">No project</option>{projects.map(project => <option key={project.slug} value={project.slug}>{project.title}</option>)}</select>
@@ -117,7 +117,7 @@ export function TasksWorkbench({ tasks: initialTasks, projects }: { tasks: Task[
 
     <section className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_360px]">
     <Panel className="p-5 md:p-6">
-      <SectionHeader label="Task Index" value={`${filtered.length} visible`} />
+      <SectionHeader label="Index" value={`${filtered.length}`} />
       <div className="mb-5 grid gap-3 md:grid-cols-4">
         <input value={query} onChange={event => setQuery(event.target.value)} className="min-h-10 rounded-full border border-[var(--border-visible)] bg-white/45 px-4 text-sm outline-none focus:border-[var(--ink)]" placeholder="Search tasks..." />
         <select value={status} onChange={event => setStatus(event.target.value as Task['status'] | 'all')} className="min-h-10 rounded-full border border-[var(--border-visible)] bg-white/55 px-4 text-sm">{Object.entries(statusLabel).map(([key, label]) => <option key={key} value={key}>{label}</option>)}</select>
@@ -141,7 +141,7 @@ export function TasksWorkbench({ tasks: initialTasks, projects }: { tasks: Task[
             </div>
           </AuthOnly>
         </section>)}
-        {!filtered.length && <p className="py-8 text-sm leading-6 text-[var(--text-secondary)]">No local tasks.</p>}
+        {!filtered.length && <p className="py-8 text-sm leading-6 text-[var(--text-secondary)]">Clear.</p>}
       </div>
     </Panel>
     {selected && <TaskDetail task={selected} projects={projects} message={message} onPatch={patch => patchTask(selected, patch)} />}
@@ -155,7 +155,7 @@ function priorityWeight(priority: Task['priority']) {
 
 function TaskDetail({ task, projects, message, onPatch }: { task: Task; projects: Project[]; message: string; onPatch: (patch: Partial<Task>) => void }) {
   return <Panel raised className="p-5 md:p-6">
-    <SectionHeader label="Task Detail" value={task.updated} />
+    <SectionHeader label="Detail" value={task.updated} />
     <h3 className="text-3xl font-semibold leading-tight text-[var(--ink)]">{task.title}</h3>
     <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">{task.summary}</p>
     <div className="mono mt-4 flex flex-wrap gap-2 text-[10px] uppercase text-[var(--text-disabled)]">

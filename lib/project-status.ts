@@ -176,14 +176,14 @@ function fallbackEvaluation(project: Project, wiki?: ProjectWikiSnapshot, tasks:
     progress: suggestedProgress,
     status: suggestedStatus,
     confidence: wiki && (tasks.length || logs.length || wiki.readme?.summary?.length) ? 'medium' : 'low',
-    summary: '基于 GitHub/wiki 快照、任务、日志、图片素材和项目文本自动计算的进度建议。',
-    rationale: '未调用到 LLM 时，Pigou OS 使用本地信号引擎生成可解释的候选分数；有模型配置时会优先交给 AI 复核。',
+    summary: 'GitHub / wiki / tasks / logs / media.',
+    rationale: 'local signal engine; AI when configured.',
     dimensions: [
-      { name: 'product_readiness', score: product, max: 25, reason: '项目状态、可用性描述和产品形态信号。' },
-      { name: 'technical_completeness', score: technical, max: 20, reason: '仓库文件规模、框架、入口、模块和代码洞察。' },
-      { name: 'usage_validation', score: usage, max: 25, reason: '是否已经上线、投入使用、可演示或有真实截图。' },
-      { name: 'documentation_knowledge', score: documentation, max: 15, reason: 'README、wiki、代码理解和项目说明完整度。' },
-      { name: 'momentum', score: momentum, max: 15, reason: '近期提交、任务推进和日志记录。' }
+      { name: 'product_readiness', score: product, max: 25, reason: 'status / usage / shape' },
+      { name: 'technical_completeness', score: technical, max: 20, reason: 'repo / framework / entry / modules' },
+      { name: 'usage_validation', score: usage, max: 25, reason: 'production / demo / media' },
+      { name: 'documentation_knowledge', score: documentation, max: 15, reason: 'README / wiki / code' },
+      { name: 'momentum', score: momentum, max: 15, reason: 'commits / tasks / logs' }
     ],
     evidence: [
       wiki ? `repo files: ${wiki.fileTree.totalFiles}` : 'no GitHub/wiki snapshot',

@@ -116,7 +116,9 @@ function visibleProjectSummary(project: Project, isLoggedIn: boolean) {
   if (project.visibility === 'private' && !isLoggedIn) {
     return project.explanation || 'Private project. Public view shows only the operating shell.';
   }
-  return project.progressEvaluation?.summary || project.summary;
+  const autoSummary = project.progressEvaluation?.summary || '';
+  if (autoSummary && !autoSummary.toLowerCase().startsWith('github sync processed')) return autoSummary;
+  return project.summary;
 }
 
 function projectHref(project?: Project) {
@@ -167,7 +169,7 @@ function doneSummary(tasks: Task[], logs: Log[], yesterday: string, activityEven
   if (latestDone) {
     return {
       title: latestDone.title,
-      summary: `No done item was captured yesterday; latest completed task was updated ${latestDone.updated}.`,
+      summary: `latest done / ${latestDone.updated}`,
       count: 0,
       href: '/tasks'
     };
@@ -175,10 +177,10 @@ function doneSummary(tasks: Task[], logs: Log[], yesterday: string, activityEven
 
   const latestLog = logs[0];
   return {
-    title: latestLog ? latestLog.title : 'No explicit done record',
+    title: latestLog ? latestLog.title : 'Quiet',
     summary: latestLog
-      ? `No done item was captured yesterday; latest log is from ${latestLog.date}.`
-      : 'No completion signal has been captured yet. End today with one concrete log.',
+      ? `latest log / ${latestLog.date}`
+      : 'no signal',
     count: 0,
     href: latestLog ? '/log' : '/tasks'
   };
@@ -204,11 +206,11 @@ function projectToCockpit(input: { project: Project; wiki?: ProjectWikiSnapshot;
   const openTasks = tasks.filter(task => task.status !== 'done' && task.status !== 'archived');
   const age = daysSince(project.updated);
   const reason = firstText([
-    openTasks[0] ? `${openTasks.length} open task(s); next is ${openTasks[0].title}.` : undefined,
-    project.nextActions[0] ? `Next action: ${project.nextActions[0]}` : undefined,
+    openTasks[0] ? `${openTasks.length} task(s) / ${openTasks[0].title}` : undefined,
+    project.nextActions[0] ? `next / ${project.nextActions[0]}` : undefined,
     health.blockers[0],
     project.progressEvaluation?.summary
-  ], `${project.status} project updated ${project.updated}.`);
+  ], `${project.status} / ${project.updated}`);
 
   return {
     slug: project.slug,
@@ -252,11 +254,11 @@ function selectMainLine(openTasks: Task[], projects: Project[], projectBySlug: M
   }
 
   return {
-    title: 'Next action',
+    title: 'Pick one visible artifact',
     action: 'P0/P1',
-    reason: 'manual',
+    reason: 'queue',
     href: '/tasks',
-    source: 'manual'
+    source: 'task'
   };
 }
 
@@ -269,8 +271,8 @@ function selectIdea(ideas: Idea[], projectBySlug: Map<string, Project>, isLogged
 
   if (!idea) {
     return {
-      title: 'No idea selected',
-      summary: 'No active idea.',
+      title: 'Quiet',
+      summary: 'parked',
       next: 'closed',
       score: 0,
       href: '/ideas',
@@ -281,7 +283,7 @@ function selectIdea(ideas: Idea[], projectBySlug: Map<string, Project>, isLogged
   return {
     title: idea.title,
     summary: idea.summary,
-    next: idea.next || idea.analysis?.nextExperiment || 'Turn this into one small validation step.',
+    next: idea.next || idea.analysis?.nextExperiment || 'one small test',
     score: idea.score,
     href: '/ideas',
     linkedProject: projectTitle(project, isLoggedIn)
@@ -292,7 +294,7 @@ function selectNotToday(input: { openTasks: Task[]; coldProjects: TodayCockpitPr
   const waiting = input.openTasks.find(task => task.status === 'waiting');
   if (waiting) {
     return {
-      title: `Do not pull "${waiting.title}" into active work`,
+      title: `Park: ${waiting.title}`,
       reason: 'waiting',
       href: '/tasks'
     };
@@ -301,7 +303,7 @@ function selectNotToday(input: { openTasks: Task[]; coldProjects: TodayCockpitPr
   const cold = input.coldProjects[0];
   if (cold) {
     return {
-      title: `Do not revive ${cold.title} today`,
+      title: `Keep cold: ${cold.title}`,
       reason: cold.healthLabel,
       href: cold.href
     };
@@ -310,14 +312,14 @@ function selectNotToday(input: { openTasks: Task[]; coldProjects: TodayCockpitPr
   const manyIdeas = input.ideas.filter(idea => idea.status !== 'killed').length > 1;
   if (manyIdeas) {
     return {
-      title: 'Do not open a second idea thread',
+      title: 'Hold the second idea',
       reason: 'idea limit',
       href: '/ideas'
     };
   }
 
   return {
-    title: 'Do not reorganize the cockpit',
+    title: 'No meta-work',
     reason: 'meta-work',
     href: '/today'
   };

@@ -48,7 +48,7 @@ function statusLabel(status: Project['status']) {
 }
 
 function firstUseful(items: (string | undefined | false)[]) {
-  return items.find(Boolean) || '暂无足够信号，需要补充任务、日志或 wiki 快照。';
+  return items.find(Boolean) || '信号不足。';
 }
 
 function unique(items: string[]) {
@@ -59,39 +59,39 @@ function localStatus(project: Project, health: ProjectHealth, tasks: Task[]) {
   const doing = tasks.filter(task => task.status === 'doing');
   const waiting = tasks.filter(task => task.status === 'waiting');
   if (project.progress >= 80 || project.status === 'shipped') {
-    return `${statusLabel(project.status)}，已经有较高完成度，重点应放在发布质量、证据沉淀和后续维护。`;
+    return `${statusLabel(project.status)} / 高完成度。`;
   }
   if (waiting.length) {
-    return `${statusLabel(project.status)}，但有 ${waiting.length} 个任务卡在 waiting，推进节奏需要重新排障。`;
+    return `${statusLabel(project.status)} / ${waiting.length} waiting。`;
   }
   if (doing.length) {
-    return `${statusLabel(project.status)}，当前有 ${doing.length} 个 doing 任务，适合继续收敛到可验证交付。`;
+    return `${statusLabel(project.status)} / ${doing.length} doing。`;
   }
   if (health.score < 46) {
-    return `${statusLabel(project.status)}，健康度偏低，当前更像一个需要重新澄清边界的项目。`;
+    return `${statusLabel(project.status)} / 健康度低。`;
   }
-  return `${statusLabel(project.status)}，进度 ${project.progress}%，目前可以继续用小步验证来推进。`;
+  return `${statusLabel(project.status)} / ${project.progress}%。`;
 }
 
 function recentChanges(project: Project, wiki: ProjectWikiSnapshot | undefined, tasks: Task[], logs: Log[]) {
   const wikiChanges = wiki ? [
-    wiki.repo.pushedAt ? `GitHub 最近推送在 ${dayText(wiki.repo.pushedAt)}，仓库 ${wiki.repo.owner}/${wiki.repo.name} 已进入项目页信号。` : undefined,
-    `wiki 快照生成于 ${dayText(wiki.generatedAt) || wiki.generatedAt.slice(0, 10)}，覆盖 ${wiki.fileTree.totalFiles} 个文件。`,
-    wiki.frameworks.length ? `检测到技术栈：${wiki.frameworks.slice(0, 4).join(' / ')}。` : undefined,
-    wiki.codeInsights ? `源码洞察已更新：${wiki.codeInsights.architectureSummary}` : undefined
-  ].filter(Boolean) as string[] : ['还没有 GitHub/wiki 快照，最近变化只能从项目卡片、任务和日志推断。'];
+    wiki.repo.pushedAt ? `GitHub / ${dayText(wiki.repo.pushedAt)} / ${wiki.repo.owner}/${wiki.repo.name}` : undefined,
+    `wiki / ${dayText(wiki.generatedAt) || wiki.generatedAt.slice(0, 10)} / ${wiki.fileTree.totalFiles} files`,
+    wiki.frameworks.length ? `stack / ${wiki.frameworks.slice(0, 4).join(' / ')}` : undefined,
+    wiki.codeInsights ? `code / ${wiki.codeInsights.architectureSummary}` : undefined
+  ].filter(Boolean) as string[] : ['no wiki snapshot'];
 
   const taskChanges = tasks
     .slice()
     .sort((a, b) => b.updated.localeCompare(a.updated))
     .slice(0, 2)
-    .map(task => `任务更新：${task.title}（${task.status}，${dayText(task.updated) || task.updated}）。`);
+    .map(task => `task / ${task.status} / ${dayText(task.updated) || task.updated} / ${task.title}`);
 
   const logChanges = logs
     .slice()
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, 2)
-    .map(log => `日志记录：${log.title}（${log.date}）。`);
+    .map(log => `log / ${log.date} / ${log.title}`);
 
   return unique([...wikiChanges, ...taskChanges, ...logChanges]).slice(0, 5);
 }
@@ -106,10 +106,10 @@ function biggestRisk(project: Project, wiki: ProjectWikiSnapshot | undefined, ta
   return firstUseful([
     highCodeRisk && `${highCodeRisk.title}：${highCodeRisk.detail}`,
     health.blockers[0],
-    waiting.length ? `${waiting.length} 个任务处于 waiting，说明当前执行链路存在阻塞。` : undefined,
-    !wiki && '缺少 GitHub/wiki 快照，无法判断代码真实状态和最近变化。',
-    project.status === 'paused' && '项目已暂停，风险是继续占用注意力但没有明确恢复条件。',
-    '最大风险不是技术本身，而是下一步验证动作还不够具体。'
+    waiting.length ? `${waiting.length} waiting task(s)` : undefined,
+    !wiki && 'no wiki snapshot',
+    project.status === 'paused' && 'paused',
+    'next step too fuzzy'
   ]);
 }
 
@@ -121,11 +121,11 @@ function nextBestAction(project: Project, wiki: ProjectWikiSnapshot | undefined,
   const next = tasks.find(task => task.status === 'next');
 
   return firstUseful([
-    doing && `先收尾 doing 任务：${doing.title}。`,
-    next && `启动下一个 P${next.priority.replace('P', '')} 任务：${next.title}。`,
-    wiki?.gaps[0] && `补齐 wiki 缺口：${wiki.gaps[0]}`,
+    doing && `finish / ${doing.title}`,
+    next && `${next.priority} / ${next.title}`,
+    wiki?.gaps[0] && `wiki gap / ${wiki.gaps[0]}`,
     project.nextActions[0],
-    '定义一个 30 分钟内能完成的最小验证动作，并写入任务队列。'
+    'one visible artifact'
   ]);
 }
 
@@ -135,18 +135,18 @@ function verdict(project: Project, health: ProjectHealth, tasks: Task[]) {
   const signalScore = clamp(progress * 0.45 + health.score * 0.45 + Math.min(10, openTasks * 2));
 
   if (project.status === 'archived') {
-    return { label: '不建议继续投入', tone: 'red' as const, reason: '项目已归档，除非有新的外部证据，否则不应重新占用主线注意力。' };
+    return { label: 'Park', tone: 'red' as const, reason: 'archived' };
   }
   if (project.status === 'paused' && health.score < 55) {
-    return { label: '先暂停，补证据', tone: 'yellow' as const, reason: '当前健康度和推进信号不足，应该先明确恢复条件。' };
+    return { label: 'Hold', tone: 'yellow' as const, reason: 'low signal' };
   }
   if (signalScore >= 68) {
-    return { label: '值得继续推进', tone: 'green' as const, reason: '进度、健康度和执行队列合在一起，说明它仍然有继续产出的机会。' };
+    return { label: 'Push', tone: 'green' as const, reason: 'strong signal' };
   }
   if (signalScore >= 45) {
-    return { label: '谨慎推进', tone: 'yellow' as const, reason: '项目还有价值，但下一步必须更小、更可验证，避免继续发散。' };
+    return { label: 'Narrow', tone: 'yellow' as const, reason: 'make it smaller' };
   }
-  return { label: '暂缓投入', tone: 'red' as const, reason: '当前缺少足够的进展、证据或健康度支撑。' };
+  return { label: 'Cool', tone: 'red' as const, reason: 'weak signal' };
 }
 
 export function generateProjectBrief(input: { project: Project; wikiSnapshot?: ProjectWikiSnapshot; tasks?: Task[]; logs?: Log[]; health: ProjectHealth }): ProjectAutoBrief {
@@ -166,7 +166,7 @@ export function generateProjectBrief(input: { project: Project; wikiSnapshot?: P
       openTasks: tasks.filter(task => !['done', 'archived'].includes(task.status)).length,
       repoPushedAt: wikiSnapshot?.repo.pushedAt,
       wikiGeneratedAt: wikiSnapshot?.generatedAt,
-      source: aiEvaluation ? `引用已有 AI 评估：${aiEvaluation.model}` : '本地 deterministic signals'
+      source: aiEvaluation ? `AI / ${aiEvaluation.model}` : 'local signals'
     }
   };
 }

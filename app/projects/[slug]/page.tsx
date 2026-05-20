@@ -33,35 +33,35 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     <Panel raised className="overflow-hidden p-6 md:p-8">
       <div className="grid gap-8 lg:grid-cols-[1fr_360px]">
         <div>
-          <div className="flex flex-wrap items-center gap-2">{project.visibility === 'private' && <span className="mono inline-flex min-h-7 items-center rounded-full border border-[var(--ink)] px-3 text-[10px] uppercase text-[var(--ink)]">{locked ? '公开简介' : '内部项目'}</span>}<StatusBadge status={project.status} />{!locked && <PriorityBadge priority={project.priority} />}{project.domain && <span className="mono inline-flex min-h-7 items-center rounded-full border border-[var(--border-visible)] px-3 text-[10px] uppercase text-[var(--text-secondary)]">{project.domain}</span>}</div>
+          <div className="flex flex-wrap items-center gap-2">{project.visibility === 'private' && <span className="mono inline-flex min-h-7 items-center rounded-full border border-[var(--ink)] px-3 text-[10px] uppercase text-[var(--ink)]">{locked ? 'brief' : 'private'}</span>}<StatusBadge status={project.status} />{!locked && <PriorityBadge priority={project.priority} />}{project.domain && <span className="mono inline-flex min-h-7 items-center rounded-full border border-[var(--border-visible)] px-3 text-[10px] uppercase text-[var(--text-secondary)]">{project.domain}</span>}</div>
           <h2 className="mt-5 text-5xl font-semibold leading-[.95] text-[var(--ink)] md:text-8xl">{project.title}</h2>
           <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--text-secondary)]">{project.summary}</p>
           {locked && project.explanation && <p className="mt-4 max-w-3xl text-sm leading-7 text-[var(--text-secondary)]">{project.explanation}</p>}
         </div>
         <div className="surface-dark panel-corners p-5">
-          <Label>进度读数</Label>
+          <Label>Progress</Label>
           <div className="mt-6 flex items-end gap-3">
             <span className="doto text-8xl leading-none text-white">{locked ? '--' : project.progress}</span>
-            <span className="caption mb-3 text-white/45">{locked ? '仅展示公开简介' : '百分比'}</span>
+            <span className="caption mb-3 text-white/45">{locked ? 'private' : '%'}</span>
           </div>
           {!locked && <div className="mt-7"><SegmentedProgress value={project.progress} /></div>}
-          <div className="caption mt-5 text-white/45">{locked ? '登录后可查看完整进展' : `更新于 / ${project.updated}`}</div>
+          <div className="caption mt-5 text-white/45">{locked ? 'locked' : `updated / ${project.updated}`}</div>
         </div>
       </div>
     </Panel>
 
     {locked ? <>
     {visibleImages.length > 0 && <Panel className="p-5 md:p-6">
-      <SectionHeader label="公开素材" value={`${visibleImages.length} 张`} />
+      <SectionHeader label="Media" value={String(visibleImages.length)} />
       <ImageGallery images={visibleImages} />
     </Panel>}
-    <a href="/login" className="mono inline-flex min-h-10 w-fit items-center rounded-full border border-[var(--ink)] px-4 text-[10px] uppercase text-[var(--ink)]">登录查看完整项目</a>
+    <a href="/login" className="mono inline-flex min-h-10 w-fit items-center rounded-full border border-[var(--ink)] px-4 text-[10px] uppercase text-[var(--ink)]">login</a>
     </> : <>
     <ProjectAutoBrief brief={brief} />
 
     <section className="grid gap-5 lg:grid-cols-[.9fr_.9fr_.7fr]">
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="目标" value={`${project.goals.length} 项`} />
+        <SectionHeader label="Goals" value={String(project.goals.length)} />
         <ul className="space-y-3">
           {project.goals.map((goal, index) => <li key={goal} className="grid grid-cols-[34px_1fr] gap-3 border-b border-[var(--border)] pb-3 text-sm leading-6 last:border-b-0 last:pb-0">
             <span className="doto text-2xl leading-none text-[var(--text-disabled)]">{index + 1}</span>
@@ -70,7 +70,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </ul>
       </Panel>
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="下一步行动" value="接下来做" />
+        <SectionHeader label="Next" value={String(project.nextActions.length)} />
         <ul className="space-y-3">
           {project.nextActions.map((action, index) => <li key={action} className="grid grid-cols-[22px_1fr] gap-3 border-b border-[var(--border)] pb-3 text-sm leading-6 last:border-b-0 last:pb-0">
             <span className="mt-1.5 h-3 w-3 rounded-full border border-[var(--border-visible)] bg-white" />
@@ -79,7 +79,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </ul>
       </Panel>
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="链接" value={project.visibility === 'private' ? '仅自己可见' : project.links?.length ? '外部链接' : '暂无链接'} />
+        <SectionHeader label="Links" value={project.visibility === 'private' ? 'private' : project.links?.length ? String(project.links.length) : 'none'} />
         <div className="grid gap-2">
           {project.visibility === 'private' ? null : project.links?.length ? project.links.map(link => <a key={link.url} href={link.url} target="_blank" className="mono rounded-full border border-[var(--border-visible)] bg-white/45 px-4 py-3 text-center text-[11px] uppercase text-[var(--text-secondary)] transition hover:border-[var(--ink)] hover:text-[var(--ink)]">{link.label}</a>) : <div className="caption">暂无公开链接</div>}
         </div>
@@ -89,19 +89,19 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     <ProjectHealthPanel health={health} />
 
     {project.prioritySuggestion && <Panel className="p-5 md:p-6">
-      <SectionHeader label="AI 优先级建议" value={`${project.prioritySuggestion.source} / ${project.prioritySuggestion.model} / ${project.prioritySuggestion.confidence}`} />
+      <SectionHeader label="Priority" value={`${project.prioritySuggestion.source} / ${project.prioritySuggestion.model} / ${project.prioritySuggestion.confidence}`} />
       <div className="grid gap-5 lg:grid-cols-[.75fr_1.25fr]">
         <div>
           <div className="flex flex-wrap gap-2">
-            <div><div className="caption mb-1">当前</div><PriorityBadge priority={project.priority} /></div>
-            <div><div className="caption mb-1">建议</div><PriorityBadge priority={project.prioritySuggestion.suggestedPriority} /></div>
+            <div><div className="caption mb-1">Now</div><PriorityBadge priority={project.priority} /></div>
+            <div><div className="caption mb-1">AI</div><PriorityBadge priority={project.prioritySuggestion.suggestedPriority} /></div>
           </div>
           <div className="mt-5">
-            <span className="caption">优先级分数</span>
+            <span className="caption">Score</span>
             <div className="doto mt-1 text-6xl leading-none text-[var(--ink)]">{project.prioritySuggestion.score}</div>
           </div>
           <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">{project.prioritySuggestion.rationale}</p>
-          <div className="caption mt-4">生成于 / {project.prioritySuggestion.generatedAt}</div>
+          <div className="caption mt-4">generated / {project.prioritySuggestion.generatedAt}</div>
         </div>
         <div className="grid gap-3">
           {project.prioritySuggestion.dimensions.map(dimension => <div key={dimension.name} className="border-b border-[var(--border)] pb-3 last:border-b-0">
@@ -120,12 +120,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     </Panel>}
 
     {project.progressEvaluation && <Panel className="p-5 md:p-6">
-      <SectionHeader label="AI 进度判断" value={`${project.progressEvaluation.source} / ${project.progressEvaluation.model} / ${project.progressEvaluation.confidence}`} />
+      <SectionHeader label="Progress AI" value={`${project.progressEvaluation.source} / ${project.progressEvaluation.model} / ${project.progressEvaluation.confidence}`} />
       <div className="grid gap-5 lg:grid-cols-[.9fr_1.1fr]">
         <div>
           <p className="text-sm leading-7 text-[var(--text-primary)]">{project.progressEvaluation.summary}</p>
           <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">{project.progressEvaluation.rationale}</p>
-          <div className="caption mt-4">生成于 / {project.progressEvaluation.generatedAt}</div>
+          <div className="caption mt-4">generated / {project.progressEvaluation.generatedAt}</div>
         </div>
         <div className="grid gap-3">
           {project.progressEvaluation.dimensions.map(dimension => <div key={dimension.name} className="border-b border-[var(--border)] pb-3 last:border-b-0">
@@ -139,21 +139,21 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </div>
       </div>
       <div className="mt-5 grid gap-4 border-t border-[var(--border)] pt-4 md:grid-cols-3">
-        <EvidenceList title="依据" items={project.progressEvaluation.evidence} />
-        <EvidenceList title="风险" items={project.progressEvaluation.risks} />
-        <EvidenceList title="建议下一步" items={project.progressEvaluation.nextActions} />
+        <EvidenceList title="Evidence" items={project.progressEvaluation.evidence} />
+        <EvidenceList title="Risk" items={project.progressEvaluation.risks} />
+        <EvidenceList title="Next" items={project.progressEvaluation.nextActions} />
       </div>
     </Panel>}
 
     {(project.readme?.length || project.images?.length) && <section className="grid gap-5 lg:grid-cols-[.85fr_1.15fr]">
       {project.readme?.length && <Panel className="p-5 md:p-6">
-        <SectionHeader label="README 摘要" value={project.visibility === 'private' ? '本地摘录' : '项目说明'} />
+        <SectionHeader label="README" value={project.visibility === 'private' ? 'local' : 'public'} />
         <div className="space-y-3">
           {project.readme.map((item, index) => <p key={index} className="border-b border-[var(--border)] pb-3 text-sm leading-7 text-[var(--text-secondary)] last:border-b-0 last:pb-0">{item}</p>)}
         </div>
       </Panel>}
       {visibleImages.length > 0 && <Panel className="p-5 md:p-6">
-        <SectionHeader label="README 图片" value={`${visibleImages.length} 张`} />
+        <SectionHeader label="Media" value={String(visibleImages.length)} />
         <ImageGallery images={visibleImages} />
       </Panel>}
     </section>}
@@ -162,7 +162,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     <ProjectOperatingPanel projectSlug={project.slug} related={related} />
     </>}
 
-    <div className="flex flex-wrap gap-3"><ButtonLink href="/projects">返回项目列表</ButtonLink><DeleteContentButton type="projects" slug={project.slug} /></div>
+    <div className="flex flex-wrap gap-3"><ButtonLink href="/projects">Projects</ButtonLink><DeleteContentButton type="projects" slug={project.slug} /></div>
   </div>;
 }
 
@@ -176,7 +176,7 @@ function getProjectRelations(projectSlug: string) {
 
 function ProjectOperatingPanel({ projectSlug, related }: { projectSlug: string; related: { knowledge: KnowledgeNote[]; ideas: Idea[]; tasks: Task[]; logs: Log[] } }) {
   return <Panel className="p-5 md:p-6">
-    <SectionHeader label="关联线索" value={projectSlug} />
+    <SectionHeader label="Relations" value={projectSlug} />
     <div className="grid gap-5 lg:grid-cols-4">
       <RelationColumn title="知识" href="/knowledge" items={related.knowledge.map(note => ({ key: note.slug, title: note.title, meta: note.status }))} />
       <RelationColumn title="想法" href="/ideas" items={related.ideas.map(idea => ({ key: idea.slug, title: idea.title, meta: String(idea.score) }))} />

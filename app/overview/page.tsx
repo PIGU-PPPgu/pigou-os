@@ -32,11 +32,11 @@ export default function Home() {
         <div className="scanline" />
         <div className="relative flex h-full flex-col justify-between gap-10">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <Label>Overview / Local Console</Label>
+            <Label>Overview / Signal</Label>
             <span className="live-pill mono hidden rounded-full border border-white/20 px-3 py-1 text-[10px] uppercase text-white/55 sm:inline-flex">Live snapshot</span>
           </div>
           <div>
-            <h2 className="hero-title max-w-[9ch] text-5xl font-semibold leading-[.92] text-white sm:max-w-3xl sm:text-6xl md:text-8xl">Private Brain Console</h2>
+            <h2 className="hero-title max-w-[9ch] text-5xl font-semibold leading-[.92] text-white sm:max-w-3xl sm:text-6xl md:text-8xl">Brain Console</h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="border-t border-white/15 pt-4">
@@ -46,7 +46,7 @@ export default function Home() {
             </div>
             <div className="border-t border-white/15 pt-4">
               <div className="caption text-white/40">LATEST SIGNAL</div>
-              <div className="mt-2 text-sm leading-6 text-white/70">{knowledge[0]?.title ?? tasks[0]?.task ?? 'Capture the next move'}</div>
+              <div className="mt-2 text-sm leading-6 text-white/70">{knowledge[0]?.title ?? tasks[0]?.task ?? 'Quiet'}</div>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function Home() {
           <Stat value={shipped} label="已发布" />
         </section>
         <Panel raised className="p-5">
-          <SectionHeader label="系统脉搏" value="行动感 / 沉淀度" />
+          <SectionHeader label="Pulse" value="work / memory" />
           <div className="grid gap-4">
             <MiniMeter label="活跃占比" value={projects.length ? Math.round((active / projects.length) * 100) : 0} />
             <MiniMeter label="知识关联" value={knowledge.length ? Math.round((linkedKnowledge / knowledge.length) * 100) : 0} />
@@ -72,7 +72,7 @@ export default function Home() {
 
     <section className="grid gap-5 lg:grid-cols-[1.2fr_.8fr]">
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="正在推进" value={`${building.length} 个活跃项目`} />
+        <SectionHeader label="Building" value={String(building.length)} />
         <div>
           {activeProjects.filter(item => item.project.status === 'building').map(({ project: p, score, reason }) => <ItemLink key={p.slug} href={`/projects/${p.slug}`} title={p.title} meta={<StatusBadge status={p.status} />}>
             <span>{p.summary}</span>
@@ -82,7 +82,7 @@ export default function Home() {
         </div>
       </Panel>
       <Panel raised className="p-5 md:p-6">
-        <SectionHeader label="下一步行动" value="按优先级排序" />
+        <SectionHeader label="Queue" value="priority" />
         <ol className="space-y-4">
           {tasks.slice(0, 7).map((t, i) => <li key={`${t.slug}-${t.index}`} className="grid grid-cols-[42px_1fr] gap-3 border-b border-[var(--border)] pb-4 last:border-b-0 last:pb-0">
             <span className="doto text-3xl leading-none text-[var(--text-disabled)]">{String(i + 1).padStart(2,'0')}</span>
@@ -93,7 +93,7 @@ export default function Home() {
     </section>
 
     <Panel className="p-5 md:p-6">
-      <SectionHeader label="贡献热力" value={contribution.owner} />
+      <SectionHeader label="Heatmap" value={contribution.owner} />
       <ContributionHeatmap days={contribution.days} total={contribution.totalContributions} />
     </Panel>
 
@@ -101,22 +101,22 @@ export default function Home() {
 
     <section className="grid gap-5 lg:grid-cols-[.95fr_1.05fr]">
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="知识脑" value={`${linkedKnowledge}/${knowledge.length} 已关联`} />
+        <SectionHeader label="Knowledge" value={`${linkedKnowledge}/${knowledge.length}`} />
         <div>{knowledge.slice(0, 4).map(note => <ItemLink key={note.slug} href="/knowledge" title={note.title} meta={<StatusBadge status={note.status} />}>{note.summary}</ItemLink>)}</div>
       </Panel>
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="想法雷达" value="评分 / 100" />
+        <SectionHeader label="Ideas" value="score / 100" />
         <div>{ideas.map(i => <ItemLink key={i.slug} href="/ideas" title={i.title} meta={<span className="doto text-3xl text-[var(--ink)]">{i.score}</span>}>{i.summary}</ItemLink>)}</div>
       </Panel>
     </section>
 
     <section className="grid gap-5 lg:grid-cols-2">
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="最近日志" value={logs[0]?.date} />
+        <SectionHeader label="Log" value={logs[0]?.date} />
         <div>{logs.slice(0, 3).map(l => <ItemLink key={l.slug} href="/log" title={l.title} meta={<span className="caption">{l.date}</span>}>{l.content}</ItemLink>)}</div>
       </Panel>
       <Panel raised className="p-5 md:p-6">
-        <SectionHeader label="暂停/卡住" value={`${stalled} 个项目`} />
+        <SectionHeader label="Cold" value={String(stalled)} />
         <div className="space-y-4">
           <MiniMeter label="最高想法信号" value={topIdea?.score ?? 0} />
         </div>

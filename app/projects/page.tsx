@@ -35,8 +35,8 @@ export default async function ProjectsPage() {
     <Panel raised className="p-6 md:p-8">
       <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
         <div>
-          <Label>{isLoggedIn ? '项目 / 清单' : 'Projects / Pigou Workshop'}</Label>
-          <h2 className="mt-3 text-5xl font-semibold leading-none text-[var(--ink)] md:text-7xl">{isLoggedIn ? '现在有哪些项目？' : '正在做和做过的东西'}</h2>
+          <Label>{isLoggedIn ? 'Projects / Signals' : 'Projects / Pigou Workshop'}</Label>
+          <h2 className="mt-3 text-5xl font-semibold leading-none text-[var(--ink)] md:text-7xl">{isLoggedIn ? 'Projects' : 'Work'}</h2>
         </div>
         <span className="doto text-7xl leading-none text-[var(--ink)]">{String(projects.length).padStart(2, '0')}</span>
       </div>
@@ -44,7 +44,7 @@ export default async function ProjectsPage() {
 
     {isLoggedIn && <section className="grid gap-5 lg:grid-cols-[.9fr_1.1fr]">
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="项目态势" value="状态分布" />
+        <SectionHeader label="Status" value="live" />
         <div className="grid grid-cols-2 gap-3">
           <div className="border-b border-[var(--border)] pb-3"><span className="caption">推进中</span><div className="doto mt-2 text-5xl leading-none text-[var(--ink)]">{statusCounts.building}</div></div>
           <div className="border-b border-[var(--border)] pb-3"><span className="caption">暂停/卡住</span><div className="doto mt-2 text-5xl leading-none text-[var(--ink)]">{statusCounts.paused}</div></div>
@@ -53,17 +53,17 @@ export default async function ProjectsPage() {
         </div>
       </Panel>
       <Panel raised className="p-5 md:p-6">
-        <SectionHeader label="需要处理" value="动态热度 / 卡住项" />
+        <SectionHeader label="Signals" value="heat / blocks" />
         <div className="grid gap-4 md:grid-cols-2">
           <div>
-            <div className="caption mb-2">当前最热</div>
+            <div className="caption mb-2">Hot</div>
             {activeSignals.map(item => <div key={item.project.slug} className="border-b border-[var(--border)] py-2 text-sm leading-6 last:border-b-0">
               <div className="font-medium text-[var(--ink)]">{item.project.title}</div>
               <div className="caption mt-1">信号 {item.score} / {item.reason}</div>
             </div>)}
           </div>
           <div>
-            <div className="caption mb-2">暂停/卡住</div>
+            <div className="caption mb-2">Cold</div>
             {stalled.map(item => <div key={item.project.slug} className="border-b border-[var(--border)] py-2 text-sm leading-6 last:border-b-0">
               <div className="font-medium text-[var(--ink)]">{item.project.title}</div>
               <div className="caption mt-1">信号 {item.score} / {item.reason}</div>
@@ -80,14 +80,14 @@ export default async function ProjectsPage() {
     <ProjectStatusAdvisor enabled={isLoggedIn} />
 
     <Panel className="p-5 md:p-6">
-      <SectionHeader label={isLoggedIn ? '项目登记册' : '项目索引'} value={isLoggedIn ? '按当前工作信号排序' : '公开展示'} />
+      <SectionHeader label={isLoggedIn ? 'Index' : 'Public Index'} value={isLoggedIn ? 'signal sorted' : 'public'} />
       <div>
         {projects.map(p => {
           const locked = p.visibility === 'private' && !isLoggedIn;
           const signal = activityBySlug.get(p.slug);
           return <ItemLink key={p.slug} href={`/projects/${p.slug}`} title={p.title} meta={<div className="flex flex-wrap justify-end gap-2">{p.visibility === 'private' && <span className="mono inline-flex min-h-7 items-center rounded-full border border-[var(--ink)] px-3 text-[10px] uppercase text-[var(--ink)]">{locked ? '公开简介' : '内部'}</span>}{isLoggedIn && <PriorityBadge priority={p.priority} />}<StatusBadge status={p.status} /></div>}>
             <span>{p.summary}</span>
-            {locked && p.explanation && <div className="mt-3 text-sm leading-6 text-[var(--text-secondary)]"><span className="caption mr-2">公开简介</span>{p.explanation}</div>}
+            {locked && p.explanation && <div className="mt-3 text-sm leading-6 text-[var(--text-secondary)]"><span className="caption mr-2">Brief</span>{p.explanation}</div>}
             {!locked && p.readme?.[0] && <div className="mt-3 text-sm leading-6 text-[var(--text-secondary)]"><span className="caption mr-2">README</span>{p.readme[0]}</div>}
             {!locked && <div className="mt-5"><SegmentedProgress value={p.progress} /></div>}
             {isLoggedIn && !locked && p.prioritySuggestion && p.prioritySuggestion.suggestedPriority !== p.priority && <div className="caption mt-3">AI 建议优先级 {p.prioritySuggestion.suggestedPriority} / {p.prioritySuggestion.confidence} / 分数 {p.prioritySuggestion.score}</div>}

@@ -123,7 +123,7 @@ export function KnowledgeBoard({ notes: initialNotes }: { notes: KnowledgeNote[]
   return <section className="grid gap-5 xl:grid-cols-[1.05fr_.95fr]">
     <div className="grid gap-5">
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="Knowledge Index" value={`${filtered.length} visible / ${notes.length} total`} />
+        <SectionHeader label="Index" value={`${filtered.length}/${notes.length}`} />
         <div className="mb-5 grid gap-3 md:grid-cols-5">
           <select value={platform} onChange={event => setPlatform(event.target.value as KnowledgePlatform | 'all')} className="min-h-10 rounded-full border border-[var(--border-visible)] bg-white/55 px-4 text-sm outline-none"><option value="all">{platformLabel.all}</option>{Object.entries(platformLabel).filter(([key]) => key !== 'all').map(([key, label]) => <option key={key} value={key}>{label}</option>)}</select>
           <select value={type} onChange={event => setType(event.target.value as KnowledgeNote['type'] | 'all')} className="min-h-10 rounded-full border border-[var(--border-visible)] bg-white/55 px-4 text-sm outline-none">{Object.entries(typeLabel).map(([key, label]) => <option key={key} value={key}>{label}</option>)}</select>
@@ -131,7 +131,7 @@ export function KnowledgeBoard({ notes: initialNotes }: { notes: KnowledgeNote[]
           <select value={confidence} onChange={event => setConfidence(event.target.value as KnowledgeNote['confidence'] | 'all')} className="min-h-10 rounded-full border border-[var(--border-visible)] bg-white/55 px-4 text-sm outline-none">{Object.entries(confidenceLabel).map(([key, label]) => <option key={key} value={key}>{label}</option>)}</select>
           <select value={sort} onChange={event => setSort(event.target.value as SortKey)} className="min-h-10 rounded-full border border-[var(--border-visible)] bg-white/55 px-4 text-sm outline-none"><option value="updated">最新优先</option><option value="confidence">高置信优先</option><option value="related">最多关联</option><option value="raw">待处理优先</option><option value="platform">平台分组</option></select>
         </div>
-        <input value={query} onChange={event => setQuery(event.target.value)} className="mb-3 min-h-10 w-full rounded-full border border-[var(--border-visible)] bg-white/45 px-4 text-sm outline-none focus:border-[var(--ink)]" placeholder="Search notes, AI analysis, tags, project links..." />
+        <input value={query} onChange={event => setQuery(event.target.value)} className="mb-3 min-h-10 w-full rounded-full border border-[var(--border-visible)] bg-white/45 px-4 text-sm outline-none focus:border-[var(--ink)]" placeholder="Search notes, tags, projects..." />
         <div>
           {filtered.map(note => <section key={note.slug} className={`cursor-pointer border-b border-[var(--border)] py-5 last:border-b-0 md:px-3 ${selected?.slug === note.slug ? 'bg-white/45' : ''}`} onClick={() => setSelectedSlug(note.slug)}>
             <div className="flex items-start justify-between gap-4">
@@ -147,14 +147,14 @@ export function KnowledgeBoard({ notes: initialNotes }: { notes: KnowledgeNote[]
               {note.tags.slice(0, 5).map(tag => <button key={tag} type="button" onClick={event => { event.stopPropagation(); setQuery(tag); }}>#{tag}</button>)}
             </div>
           </section>)}
-          {!filtered.length && <p className="py-8 text-sm leading-6 text-[var(--text-secondary)]">No notes match this filter.</p>}
+          {!filtered.length && <p className="py-8 text-sm leading-6 text-[var(--text-secondary)]">Empty.</p>}
         </div>
       </Panel>
     </div>
 
     <div className="grid gap-5">
       <Panel raised className="p-5 md:p-6">
-        <SectionHeader label="Quick Capture" value="link / text / AI" />
+        <SectionHeader label="Capture" value="AI" />
         <AuthOnly fallback={<LoginRequired />}>
           <KnowledgeCapture onCaptured={note => { setNotes(current => [note, ...current]); setSelectedSlug(note.slug); }} />
         </AuthOnly>
@@ -163,14 +163,14 @@ export function KnowledgeBoard({ notes: initialNotes }: { notes: KnowledgeNote[]
       {selected && <KnowledgeDetail note={selected} state={state} onAnalyze={reanalyze} onCreateTask={createTask} onPatch={patchNote} />}
 
       <details className="rounded-[8px] border border-[var(--border-visible)] bg-white/35 p-5">
-        <summary className="caption cursor-pointer">Open local mini graph</summary>
+        <summary className="caption cursor-pointer">Mini graph</summary>
         <div className="mt-4">
           <KnowledgeGraph notes={notes} selectedSlug={selected?.slug} onSelect={setSelectedSlug} />
         </div>
       </details>
 
       <details className="rounded-[8px] border border-[var(--border-visible)] bg-white/35 p-5">
-        <summary className="caption cursor-pointer">Open topic clusters / {clusters.length}</summary>
+        <summary className="caption cursor-pointer">Topics / {clusters.length}</summary>
         <div className="mt-4 grid gap-3">
           {clusters.slice(0, 8).map(cluster => <button key={cluster.name} type="button" onClick={() => setQuery(cluster.name)} className="grid grid-cols-[1fr_auto] items-center gap-3 border-b border-[var(--border)] pb-3 text-left last:border-b-0 last:pb-0">
             <span className="text-sm font-medium text-[var(--ink)]">{cluster.name}</span>
@@ -188,26 +188,26 @@ function relationCount(note: KnowledgeNote) {
 
 function KnowledgeDetail({ note, state, onAnalyze, onCreateTask, onPatch }: { note: KnowledgeNote; state: string; onAnalyze: (note: KnowledgeNote) => void; onCreateTask: (note: KnowledgeNote) => void; onPatch: (note: KnowledgeNote, patch: Partial<KnowledgeNote>) => void }) {
   return <Panel className="p-5 md:p-6">
-    <SectionHeader label="Note Detail" value={note.analyzedAt || note.updated} />
+    <SectionHeader label="Detail" value={note.analyzedAt || note.updated} />
     <h3 className="text-3xl font-semibold leading-tight text-[var(--ink)]">{note.title}</h3>
     <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">{note.summary}</p>
     <div className="mt-5 grid gap-3">
-      <Block title="AI Intent" body={note.analysis?.intent || 'pending'} />
-      <Block title="Usefulness" body={note.analysis?.usefulness || 'pending'} />
+      <Block title="Intent" body={note.analysis?.intent || 'pending'} />
+      <Block title="Value" body={note.analysis?.usefulness || 'pending'} />
       <Block title="Relation" body={note.analysis?.relationReasoning || 'pending'} />
     </div>
     {note.analysis?.actionSuggestions.length ? <div className="mt-5">
-      <div className="caption mb-2">AI Action Suggestions</div>
+      <div className="caption mb-2">Action</div>
       <ol className="grid gap-2">
         {note.analysis.actionSuggestions.map((item, index) => <li key={item} className="grid grid-cols-[28px_1fr] gap-3 text-sm leading-6 text-[var(--text-secondary)]"><span className="doto text-2xl leading-none">{index + 1}</span>{item}</li>)}
       </ol>
     </div> : null}
     {note.rawExtract && <details className="mt-5 rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
-      <summary className="caption cursor-pointer">Raw Extract</summary>
+      <summary className="caption cursor-pointer">Source</summary>
       <p className="mt-3 max-h-64 overflow-auto whitespace-pre-wrap text-xs leading-6 text-[var(--text-secondary)]">{note.rawExtract}</p>
     </details>}
     {note.similar?.length ? <div className="mt-5 rounded-[8px] border border-[var(--border)] bg-white/45 px-4 py-3">
-      <div className="caption mb-2">Similar Notes</div>
+      <div className="caption mb-2">Nearby</div>
       <div className="grid gap-1">{note.similar.slice(0, 4).map(item => <span key={item.slug} className="text-xs leading-5 text-[var(--text-secondary)]">{item.title}<span className="caption ml-2">{Math.round(item.score * 100)}%</span></span>)}</div>
     </div> : null}
     <AuthOnly>

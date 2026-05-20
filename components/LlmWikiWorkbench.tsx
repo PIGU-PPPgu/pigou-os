@@ -249,13 +249,13 @@ export function LlmWikiWorkbench({ graph: initialGraph }: { graph: LlmWikiGraph 
         sourceType,
         sourceSlug,
         title,
-        summary: node.summary ? `Generated from LLM Wiki ${node.type} node. ${node.summary}` : `Generated from LLM Wiki ${node.type} node: ${node.title}.`,
+        summary: node.summary ? `${node.type} / ${node.summary}` : `${node.type} / ${node.title}`,
         priority: node.score && node.score >= 80 ? 'P0' : 'P1',
         status: 'next'
       })
     });
     const result = await response.json().catch(() => null);
-    setTaskMessage(response.ok && result?.ok ? `task draft created: ${result.task.title}` : result?.message || 'task draft failed');
+    setTaskMessage(response.ok && result?.ok ? `created: ${result.task.title}` : result?.message || 'failed');
   }
 
   function resetView() {
@@ -330,7 +330,7 @@ export function LlmWikiWorkbench({ graph: initialGraph }: { graph: LlmWikiGraph 
       <div className="scanline" />
       <div className="relative grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
         <div>
-          <Label>LLM Wiki / Global Brain Graph</Label>
+          <Label>LLM Wiki / Brain Graph</Label>
           <h2 className="mt-5 text-5xl font-semibold leading-none text-white md:text-8xl">LLM Wiki</h2>
         </div>
         <div className="grid grid-cols-3 gap-4 text-right">
@@ -343,7 +343,7 @@ export function LlmWikiWorkbench({ graph: initialGraph }: { graph: LlmWikiGraph 
 
     <section className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_340px]">
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="Graph Surface" value={graph.generatedAt.slice(0, 10)} />
+        <SectionHeader label="Graph" value={graph.generatedAt.slice(0, 10)} />
         <div className="mb-4 rounded-[8px] border border-[var(--border)] bg-white/55 p-4">
           <div className="grid grid-cols-3 gap-2 text-center">
             {focusStats.map(item => <div key={item.label} className="rounded-[8px] border border-[var(--border)] bg-[var(--surface)] p-3">
@@ -359,7 +359,7 @@ export function LlmWikiWorkbench({ graph: initialGraph }: { graph: LlmWikiGraph 
           <select value={confidence} onChange={event => setConfidence(event.target.value as LlmWikiGraph['edges'][number]['confidence'] | 'all')} className="min-h-10 rounded-full border border-[var(--border-visible)] bg-white/65 px-4 text-sm outline-none">{Object.entries(confidenceLabels).map(([key, label]) => <option key={key} value={key}>{label}</option>)}</select>
         </div>
         <div className="mb-4 grid gap-3 md:grid-cols-[1fr_auto]">
-          <input value={query} onChange={event => setQuery(event.target.value)} className="min-h-10 rounded-full border border-[var(--border-visible)] bg-white/45 px-4 text-sm outline-none focus:border-[var(--ink)]" placeholder="Search node title, summary, platform, status..." />
+          <input value={query} onChange={event => setQuery(event.target.value)} className="min-h-10 rounded-full border border-[var(--border-visible)] bg-white/45 px-4 text-sm outline-none focus:border-[var(--ink)]" placeholder="Search nodes..." />
           <button type="button" onClick={() => setFull(true)} className="mono min-h-10 rounded-full border border-[var(--border-visible)] px-4 text-[10px] uppercase hover:border-[var(--ink)]">fullscreen</button>
         </div>
         {renderCanvas()}
@@ -367,7 +367,7 @@ export function LlmWikiWorkbench({ graph: initialGraph }: { graph: LlmWikiGraph 
 
       <div className="grid content-start gap-5">
         {selected && <Panel raised className="p-5 md:p-6">
-          <SectionHeader label="Selected Node" value={selected.type} />
+          <SectionHeader label="Node" value={selected.type} />
           <h3 className="text-3xl font-semibold leading-tight text-[var(--ink)]">{selected.title}</h3>
           {selected.summary && <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">{selected.summary}</p>}
           <div className="mono mt-4 flex flex-wrap gap-2 text-[10px] uppercase text-[var(--text-disabled)]"><span>/{selected.id}</span>{selected.status && <span>{selected.status}</span>}{selected.platform && <span>{selected.platform}</span>}</div>
@@ -378,7 +378,7 @@ export function LlmWikiWorkbench({ graph: initialGraph }: { graph: LlmWikiGraph 
             </div>
           </AuthOnly>
           <div className="mt-5 rounded-[8px] border border-[var(--border)] bg-white/55 p-3">
-            <div className="caption text-[var(--text-disabled)]">Why related</div>
+            <div className="caption text-[var(--text-disabled)]">Relations</div>
             <div className="mt-2 grid grid-cols-2 gap-2">
               <div className="rounded-[8px] border border-[var(--border)] bg-[var(--surface)] p-3"><div className="doto text-2xl text-[var(--ink)]">{selectedEdges.length}</div><div className="caption">relations</div></div>
               <div className="rounded-[8px] border border-[var(--border)] bg-[var(--surface)] p-3"><div className="doto text-2xl text-[var(--ink)]">{relationGroups.length}</div><div className="caption">types</div></div>
@@ -399,28 +399,28 @@ export function LlmWikiWorkbench({ graph: initialGraph }: { graph: LlmWikiGraph 
         </Panel>}
 
         <Panel className="p-5 md:p-6">
-          <SectionHeader label="Graph Insight" value="reasoning" />
+          <SectionHeader label="Signal" value="relations" />
           <div className="grid gap-4">
-            <InsightBlock title="Strongest relation" empty="none">
+            <InsightBlock title="Strongest" empty="none">
               {graphInsight.strongest && <button type="button" onClick={() => { setSelectedId(graphInsight.strongest!.from.id); setFocusId(graphInsight.strongest!.from.id); }} className="text-left">
                 <div className="text-sm font-semibold leading-5 text-[var(--ink)]">{graphInsight.strongest.from.title} {'->'} {graphInsight.strongest.to.title}</div>
                 <p className="mt-1 text-xs leading-5 text-[var(--text-secondary)]">{edgeLabels[graphInsight.strongest.edge.type]} / {graphInsight.strongest.edge.confidence}: {graphInsight.strongest.edge.reason}</p>
               </button>}
             </InsightBlock>
-            <InsightBlock title="Weak spots" empty="No isolated nodes or low-confidence edges in this graph.">
+            <InsightBlock title="Weak" empty="clear">
               {graphInsight.weakSpots.length ? graphInsight.weakSpots.map(item => <button key={item.id} type="button" onClick={() => { setSelectedId(item.nodeId); setFocusId(item.nodeId); }} className="border-b border-[var(--border)] pb-2 text-left last:border-b-0">
                 <div className="caption">{item.kind}</div>
                 <p className="text-xs leading-5 text-[var(--text-secondary)]">{item.text}</p>
               </button>) : null}
             </InsightBlock>
-            <InsightBlock title="Next step" empty="none">
+            <InsightBlock title="Next" empty="none">
               {graphInsight.nextSteps.length ? graphInsight.nextSteps.map(step => <p key={step} className="border-b border-[var(--border)] pb-2 text-xs leading-5 text-[var(--text-secondary)] last:border-b-0">{step}</p>) : null}
             </InsightBlock>
           </div>
         </Panel>
 
         <Panel className="p-5 md:p-6">
-          <SectionHeader label="AI Analysis" value={graph.scope} />
+          <SectionHeader label="Analysis" value={graph.scope} />
           {graph.analysis?.summary && <p className="text-sm leading-6 text-[var(--text-secondary)]">{graph.analysis.summary}</p>}
           <div className="mt-4 grid gap-3">
             {graph.analysis?.clusters.slice(0, 4).map(cluster => <button key={cluster.topic} type="button" className="border-b border-[var(--border)] pb-3 text-left last:border-b-0" onClick={() => { setLens('focus'); setNodeType('topic'); setQuery(cluster.topic); }}>
@@ -432,7 +432,7 @@ export function LlmWikiWorkbench({ graph: initialGraph }: { graph: LlmWikiGraph 
 
         <AuthOnly>
           <Panel className="p-5 md:p-6">
-            <SectionHeader label="Graph Control" value="login only" />
+            <SectionHeader label="Control" value="private" />
             <button type="button" onClick={rebuild} className="primary-action mono inline-flex min-h-10 items-center rounded-full px-4 text-[10px] uppercase">AI rebuild graph</button>
             <div className="caption mt-3">{message}</div>
           </Panel>
@@ -501,7 +501,7 @@ function buildGraphInsight(graph: LlmWikiGraph, nodeMap: Map<string, GraphNode>)
     id: `isolated-${node.id}`,
     nodeId: node.id,
     kind: 'isolated node',
-    text: `${node.title} has no direct edge yet. Add evidence or connect it to a topic before relying on it.`
+    text: `${node.title} / no edge`
   }));
   const lowConfidence = graph.edges.filter(edge => edge.confidence === 'low').slice(0, 3).map(edge => {
     const from = nodeMap.get(edge.from);
@@ -517,7 +517,7 @@ function buildGraphInsight(graph: LlmWikiGraph, nodeMap: Map<string, GraphNode>)
   const nextSteps = [
     ...(graph.analysis?.nextActions || []),
     isolated.length ? `Connect ${isolated[0].text.split(' has ')[0]} to a topic or project.` : '',
-    lowConfidence.length ? 'Review low-confidence relationships before promoting them into tasks.' : ''
+    lowConfidence.length ? 'review low-confidence edges' : ''
   ].filter(Boolean).slice(0, 4);
 
   return { strongest, weakSpots, nextSteps };

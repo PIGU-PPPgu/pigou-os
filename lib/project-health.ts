@@ -52,13 +52,13 @@ export function evaluateProjectHealth(input: { project: Project; wiki?: ProjectW
   const risk = clamp(100 - riskPenalty);
   const score = clamp(product * 0.32 + momentum * 0.2 + clarity * 0.2 + evidence * 0.18 + risk * 0.1);
   const tone = score >= 72 ? 'green' : score >= 46 ? 'yellow' : 'red';
-  const label = tone === 'green' ? '健康' : tone === 'yellow' ? '需要关注' : '风险较高';
+  const label = tone === 'green' ? 'green' : tone === 'yellow' ? 'watch' : 'red';
   const blockers = [
-    !wiki ? '没有 GitHub/wiki 快照。' : '',
-    !wiki?.codeInsights ? '缺少 LLM code insight。' : '',
-    !project.images?.some(image => image.public) ? '缺少可公开截图。' : '',
-    staleDays > 90 ? `最近 ${staleDays} 天没有明显更新。` : '',
-    waitingTasks.length ? `${waitingTasks.length} 个任务处于 waiting。` : ''
+    !wiki ? 'no wiki snapshot' : '',
+    !wiki?.codeInsights ? 'no code insight' : '',
+    !project.images?.some(image => image.public) ? 'no public media' : '',
+    staleDays > 90 ? `${staleDays}d quiet` : '',
+    waitingTasks.length ? `${waitingTasks.length} waiting` : ''
   ].filter(Boolean);
 
   return {
@@ -66,11 +66,11 @@ export function evaluateProjectHealth(input: { project: Project; wiki?: ProjectW
     tone,
     label,
     dimensions: [
-      { key: 'product', label: '产品成熟度', score: product, reason: '来自 AI 进度评估或项目当前进度。' },
-      { key: 'momentum', label: '推进动能', score: momentum, reason: '近期更新、doing 任务、日志和开放任务。' },
-      { key: 'clarity', label: '说明清晰度', score: clarity, reason: '项目说明、README、截图、wiki 和代码洞察。' },
-      { key: 'evidence', label: '证据强度', score: evidence, reason: '已发布状态、仓库快照、截图和 AI 置信度。' },
-      { key: 'risk', label: '风险余量', score: risk, reason: '等待任务、长期停滞和 AI 风险条目会降低分数。' }
+      { key: 'product', label: 'product', score: product, reason: 'AI progress / project progress' },
+      { key: 'momentum', label: 'momentum', score: momentum, reason: 'updates / doing / logs / open tasks' },
+      { key: 'clarity', label: 'clarity', score: clarity, reason: 'README / media / wiki / code' },
+      { key: 'evidence', label: 'evidence', score: evidence, reason: 'shipped / snapshot / media / confidence' },
+      { key: 'risk', label: 'risk', score: risk, reason: 'waiting / stale / AI risks' }
     ],
     blockers
   };

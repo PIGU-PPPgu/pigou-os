@@ -42,7 +42,7 @@ export default function AboutPage() {
 
     <section className="grid gap-5 lg:grid-cols-[.8fr_1.2fr]">
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="Focus Areas" value="what I keep building" />
+        <SectionHeader label="Focus" value="building" />
         <div className="grid gap-3">
           {focus.map((item, index) => <div key={item} className="grid grid-cols-[38px_1fr] gap-3 border-b border-[var(--border)] pb-3 last:border-b-0">
             <span className="doto text-3xl leading-none text-[var(--text-disabled)]">{index + 1}</span>

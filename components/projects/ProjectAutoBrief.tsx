@@ -16,27 +16,27 @@ function Signal({ label, value }: { label: string; value: string | number }) {
 
 export function ProjectAutoBrief({ brief }: { brief: ProjectAutoBriefData }) {
   return <Panel className="p-5 md:p-6">
-    <SectionHeader label="自动项目简报" value={<span className={toneClass(brief.verdict.tone)}>{brief.verdict.label}</span>} />
+    <SectionHeader label="Signal Brief" value={<span className={toneClass(brief.verdict.tone)}>{brief.verdict.label}</span>} />
     <div className="grid gap-5 xl:grid-cols-[1.1fr_.9fr]">
       <div className="grid gap-4">
         <div className="rounded-[8px] border border-[var(--border)] bg-white/50 p-4">
-          <div className="caption mb-2">现在是什么状态</div>
+          <div className="caption mb-2">State</div>
           <p className="text-sm leading-7 text-[var(--text-primary)]">{brief.status}</p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
           <div className="rounded-[8px] border border-[var(--danger)]/35 bg-white/45 p-4">
-            <div className="caption mb-2 text-[var(--text-primary)]">当前最大风险</div>
+            <div className="caption mb-2 text-[var(--text-primary)]">Risk</div>
             <p className="text-sm leading-7 text-[var(--text-secondary)]">{brief.biggestRisk}</p>
           </div>
           <div className="rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
-            <div className="caption mb-2">下一步最该做什么</div>
+            <div className="caption mb-2">Next</div>
             <p className="text-sm leading-7 text-[var(--text-secondary)]">{brief.nextBestAction}</p>
           </div>
         </div>
 
         <div className="rounded-[8px] border border-[var(--border)] bg-white/35 p-4">
-          <div className="caption mb-2">是否值得继续推进</div>
+          <div className="caption mb-2">Verdict</div>
           <div className={`text-2xl font-semibold leading-tight ${toneClass(brief.verdict.tone)}`}>{brief.verdict.label}</div>
           <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">{brief.verdict.reason}</p>
         </div>
@@ -44,14 +44,14 @@ export function ProjectAutoBrief({ brief }: { brief: ProjectAutoBriefData }) {
 
       <div className="grid gap-4">
         <div className="rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
-          <div className="caption mb-3">最近 GitHub / wiki / 工作流变化</div>
+          <div className="caption mb-3">Recent</div>
           <ul className="grid gap-3">
             {brief.recentChanges.map(change => <li key={change} className="border-b border-[var(--border)] pb-3 text-sm leading-6 text-[var(--text-secondary)] last:border-b-0 last:pb-0">{change}</li>)}
           </ul>
         </div>
 
         <div className="rounded-[8px] border border-[var(--border)] bg-white/35 p-4">
-          <div className="caption mb-3">信号来源</div>
+          <div className="caption mb-3">Source</div>
           <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-1">
             <Signal label="source" value={brief.signals.source} />
             <Signal label="progress" value={`${brief.signals.progress}%`} />

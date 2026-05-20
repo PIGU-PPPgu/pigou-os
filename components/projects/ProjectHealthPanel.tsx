@@ -9,7 +9,7 @@ function toneClass(tone: ProjectHealth['tone']) {
 
 export function ProjectHealthPanel({ health }: { health: ProjectHealth }) {
   return <Panel className="p-5 md:p-6">
-    <SectionHeader label="Project Health" value={<span className={toneClass(health.tone)}>{health.label}</span>} />
+    <SectionHeader label="Health" value={<span className={toneClass(health.tone)}>{health.label}</span>} />
     <div className="grid gap-5 lg:grid-cols-[220px_1fr]">
       <div className="rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
         <div className="caption">health score</div>
@@ -27,7 +27,7 @@ export function ProjectHealthPanel({ health }: { health: ProjectHealth }) {
       </div>
     </div>
     {health.blockers.length > 0 && <div className="mt-5 rounded-[8px] border border-[var(--warning)]/45 bg-white/45 p-4">
-      <div className="caption mb-2">需要注意</div>
+      <div className="caption mb-2">Watch</div>
       <ul className="grid gap-2 text-sm leading-6 text-[var(--text-secondary)] md:grid-cols-2">
         {health.blockers.map(blocker => <li key={blocker}>{blocker}</li>)}
       </ul>

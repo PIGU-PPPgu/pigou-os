@@ -37,18 +37,18 @@ export function ProjectDeepWiki({ project, snapshot }: { project: Project; snaps
   const brief = codeBrief(project, snapshot);
 
   return <Panel className="p-5 md:p-6">
-    <SectionHeader label="DeepWiki / 代码理解" value={<span className="inline-flex items-center gap-2"><Confidence value={wiki.confidence} />{wiki.snapshot ? '真实索引' : '推断草稿'}</span>} />
+    <SectionHeader label="DeepWiki" value={<span className="inline-flex items-center gap-2"><Confidence value={wiki.confidence} />{wiki.snapshot ? 'indexed' : 'draft'}</span>} />
     <div className="mb-5 grid gap-4 lg:grid-cols-[1.1fr_.9fr]">
       <div className="rounded-[8px] border border-[var(--border)] bg-white/55 p-4">
-        <div className="caption mb-3">这个项目是干嘛的</div>
+        <div className="caption mb-3">Purpose</div>
         <p className="text-sm leading-7 text-[var(--text-secondary)]">{brief.purpose}</p>
-        <div className="caption mt-4">核心结构</div>
+        <div className="caption mt-4">Structure</div>
         <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">{brief.architecture}</p>
       </div>
       <div className="rounded-[8px] border border-[var(--border)] bg-white/35 p-4">
-        <div className="caption mb-3">从哪里开始看</div>
+        <div className="caption mb-3">Entry</div>
         <p className="mono text-[11px] leading-6 text-[var(--ink)]">{brief.entry}</p>
-        <div className="caption mt-4">下一轮 DeepWiki 应该回答</div>
+        <div className="caption mt-4">Next scan</div>
         <ul className="mt-2 grid gap-2">
           {brief.inspect.map(item => <li key={item} className="text-xs leading-5 text-[var(--text-secondary)]">{item}</li>)}
         </ul>
@@ -57,7 +57,7 @@ export function ProjectDeepWiki({ project, snapshot }: { project: Project; snaps
     <div className="grid gap-5 xl:grid-cols-[.95fr_1.05fr]">
       <div className="grid gap-4">
         <div className="rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
-          <div className="caption mb-3">已知事实</div>
+          <div className="caption mb-3">Facts</div>
           <ul className="space-y-2">
             {wiki.facts.map(fact => <li key={fact} className="text-sm leading-6 text-[var(--text-secondary)]">{fact}</li>)}
           </ul>
@@ -68,7 +68,7 @@ export function ProjectDeepWiki({ project, snapshot }: { project: Project; snaps
         </div>
 
         {wiki.snapshot && <div className="rounded-[8px] border border-[var(--border)] bg-white/35 p-4">
-          <div className="caption mb-3">仓库读数</div>
+          <div className="caption mb-3">Repo</div>
           <div className="grid grid-cols-2 gap-3">
             <div>
               <div className="doto text-5xl leading-none text-[var(--ink)]">{wiki.snapshot.fileTree.totalFiles}</div>
@@ -85,16 +85,16 @@ export function ProjectDeepWiki({ project, snapshot }: { project: Project; snaps
         </div>}
 
         {wiki.snapshot?.codeInsights && <div className="rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
-          <div className="caption mb-3">源码洞察</div>
+          <div className="caption mb-3">Code</div>
           <p className="text-sm leading-7 text-[var(--text-secondary)]">{wiki.snapshot.codeInsights.architectureSummary}</p>
-          <div className="caption mt-4">分析文件 / {wiki.snapshot.codeInsights.filesAnalyzed.length}</div>
+          <div className="caption mt-4">Files / {wiki.snapshot.codeInsights.filesAnalyzed.length}</div>
           <div className="mt-2 grid gap-1">
             {wiki.snapshot.codeInsights.filesAnalyzed.slice(0, 6).map(file => <span key={file.path} className="mono text-[10px] text-[var(--text-disabled)]">{file.path}</span>)}
           </div>
         </div>}
 
         {wiki.snapshot?.codeInsights?.dataFlow.length ? <div className="rounded-[8px] border border-[var(--border)] bg-white/35 p-4">
-          <div className="caption mb-3">数据流 / 工作流</div>
+          <div className="caption mb-3">Flow</div>
           <ol className="space-y-3">
             {wiki.snapshot.codeInsights.dataFlow.map((item, index) => <li key={item} className="grid grid-cols-[28px_1fr] gap-3 text-sm leading-6 text-[var(--text-secondary)]">
               <span className="doto text-2xl leading-none text-[var(--text-disabled)]">{index + 1}</span>
@@ -118,7 +118,7 @@ export function ProjectDeepWiki({ project, snapshot }: { project: Project; snaps
 
       <div className="grid gap-4">
         <div className="rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
-          <div className="caption mb-3">推断模块</div>
+          <div className="caption mb-3">Modules</div>
           <div className="grid gap-3">
             {wiki.inferredModules.map(module => <div key={module.name} className="border-b border-[var(--border)] pb-3 last:border-b-0 last:pb-0">
               <div className="flex flex-wrap items-center justify-between gap-2">
@@ -131,7 +131,7 @@ export function ProjectDeepWiki({ project, snapshot }: { project: Project; snaps
         </div>
 
         {wiki.snapshot?.importantFiles.length ? <div className="rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
-          <div className="caption mb-3">关键文件</div>
+          <div className="caption mb-3">Key files</div>
           <div className="grid gap-2">
             {wiki.snapshot.importantFiles.map(file => <div key={file.path} className="grid gap-1 border-b border-[var(--border)] pb-2 last:border-b-0 last:pb-0">
               <span className="mono text-[11px] text-[var(--ink)]">{file.path}</span>
@@ -141,7 +141,7 @@ export function ProjectDeepWiki({ project, snapshot }: { project: Project; snaps
         </div> : null}
 
         {wiki.snapshot?.codeInsights?.modules.length ? <div className="rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
-          <div className="caption mb-3">LLM 模块摘要</div>
+          <div className="caption mb-3">LLM modules</div>
           <div className="grid gap-3">
             {wiki.snapshot.codeInsights.modules.map(module => <div key={module.name} className="border-b border-[var(--border)] pb-3 last:border-b-0 last:pb-0">
               <h3 className="text-xl font-semibold leading-tight text-[var(--ink)]">{module.name}</h3>
@@ -154,7 +154,7 @@ export function ProjectDeepWiki({ project, snapshot }: { project: Project; snaps
         </div> : null}
 
         {wiki.snapshot?.codeInsights?.risks.length ? <div className="rounded-[8px] border border-[var(--danger)]/35 bg-white/45 p-4">
-          <div className="caption mb-3 text-[var(--text-primary)]">风险点</div>
+          <div className="caption mb-3 text-[var(--text-primary)]">Risks</div>
           <div className="grid gap-3">
             {wiki.snapshot.codeInsights.risks.map(risk => <div key={`${risk.level}-${risk.title}`} className="border-b border-[var(--border)] pb-3 last:border-b-0 last:pb-0">
               <div className="flex flex-wrap items-center justify-between gap-2">

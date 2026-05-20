@@ -51,7 +51,7 @@ export default async function HomePage() {
       <Panel raised className="p-5 md:p-6">
         <div className="flex h-full flex-col justify-between gap-8">
           <div>
-            <Label>What I Keep Building</Label>
+            <Label>Focus</Label>
             <div className="mt-5 grid gap-3">
               {publicFocus.map((item, index) => <div key={item} className="grid grid-cols-[42px_1fr] gap-3 border-b border-[var(--border)] pb-4 last:border-b-0">
                 <span className="doto text-4xl leading-none text-[var(--text-disabled)]">{String(index + 1).padStart(2, '0')}</span>
@@ -75,7 +75,7 @@ export default async function HomePage() {
       <div className="grid gap-5 md:grid-cols-[.75fr_1.25fr] md:items-end">
         <div>
           <Label>Pigou Workshop</Label>
-          <h3 className="mt-3 text-4xl font-semibold leading-none text-[var(--ink)] md:text-6xl">Projects, notes, and experiments.</h3>
+          <h3 className="mt-3 text-4xl font-semibold leading-none text-[var(--ink)] md:text-6xl">Projects. Notes. Experiments.</h3>
         </div>
         <div className="grid grid-cols-3 gap-3 text-right">
           <div><div className="doto text-4xl leading-none text-[var(--ink)]">{selectedWork.length}</div><div className="caption mt-1">selected</div></div>

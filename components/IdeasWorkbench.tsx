@@ -140,7 +140,7 @@ export function IdeasWorkbench({ ideas: initialIdeas, projects }: { ideas: Idea[
       <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
         <div>
           <Label>Ideas / Radar</Label>
-          <h2 className="mt-3 text-5xl font-semibold leading-none text-[var(--ink)] md:text-7xl">What is worth incubating?</h2>
+          <h2 className="mt-3 text-5xl font-semibold leading-none text-[var(--ink)] md:text-7xl">Idea Radar</h2>
         </div>
         <div className="grid grid-cols-3 gap-5 text-right">
           <div><div className="doto text-6xl leading-none text-[var(--ink)]">{String(ideas.length).padStart(2, '0')}</div><div className="caption mt-1">ideas</div></div>
@@ -153,10 +153,10 @@ export function IdeasWorkbench({ ideas: initialIdeas, projects }: { ideas: Idea[
     <section className="grid gap-5 xl:grid-cols-[.95fr_1.05fr]">
       <div className="grid gap-5">
         <Panel className="p-5 md:p-6">
-          <SectionHeader label="Quick Capture" value="AI scoring" />
+          <SectionHeader label="Capture" value="scoring" />
           <AuthOnly fallback={<LoginRequired />}>
             <form ref={formRef} onSubmit={submit} className="grid gap-4">
-              <textarea name="input" required rows={7} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 py-3 text-sm leading-6 outline-none focus:border-[var(--ink)]" placeholder="Idea / scene / opportunity..." />
+              <textarea name="input" required rows={7} className="resize-none rounded-[8px] border border-[var(--border-visible)] bg-white/60 px-4 py-3 text-sm leading-6 outline-none focus:border-[var(--ink)]" placeholder="Idea / scene / signal..." />
               <select name="projectSlug" defaultValue="" className="min-h-11 rounded-full border border-[var(--border-visible)] bg-white/55 px-4 text-sm">
                 <option value="">不绑定项目 / 仓库</option>
                 {projects.map(project => <option key={project.slug} value={project.slug}>{projectOptionLabel(project)}</option>)}
@@ -170,10 +170,10 @@ export function IdeasWorkbench({ ideas: initialIdeas, projects }: { ideas: Idea[
         </Panel>
 
         <details className="rounded-[8px] border border-[var(--border-visible)] bg-white/35 p-5">
-          <summary className="caption cursor-pointer">Open incubation queue / {incubating} active signal(s)</summary>
+          <summary className="caption cursor-pointer">Signal queue / {incubating}</summary>
           <div className="mt-4 grid gap-5">
-            <MiniMeter value={Math.min(100, high * 20)} label="high signal density" />
-            <MiniMeter value={Math.min(100, incubating * 25)} label="incubation load" />
+            <MiniMeter value={Math.min(100, high * 20)} label="high signal" />
+            <MiniMeter value={Math.min(100, incubating * 25)} label="load" />
             <div className="grid gap-3">
               {ideas.filter(idea => idea.score >= 75).slice(0, 4).map(idea => <button key={idea.slug} type="button" onClick={() => setSelectedSlug(idea.slug)} className="grid grid-cols-[54px_1fr_auto] items-center gap-3 border-b border-[var(--border)] pb-3 text-left last:border-b-0 last:pb-0">
                 <span className="doto text-3xl leading-none text-[var(--ink)]">{idea.score}</span>
@@ -185,10 +185,10 @@ export function IdeasWorkbench({ ideas: initialIdeas, projects }: { ideas: Idea[
         </details>
 
         <Panel className="p-5 md:p-6">
-          <SectionHeader label="Idea Index" value={`${filtered.length} visible`} />
+          <SectionHeader label="Index" value={`${filtered.length}`} />
           <div className="mb-5 flex flex-wrap items-center gap-3">
             {(['all', 'high', 'spark', 'validated', 'building', 'killed'] as const).map(item => <button key={item} type="button" onClick={() => setFilter(item)}><Pill active={filter === item}>{statusLabel[item]}</Pill></button>)}
-            <input value={query} onChange={event => setQuery(event.target.value)} className="min-h-10 min-w-[220px] flex-1 rounded-full border border-[var(--border-visible)] bg-white/45 px-4 text-sm outline-none focus:border-[var(--ink)]" placeholder="Search ideas, AI analysis, tags..." />
+            <input value={query} onChange={event => setQuery(event.target.value)} className="min-h-10 min-w-[220px] flex-1 rounded-full border border-[var(--border-visible)] bg-white/45 px-4 text-sm outline-none focus:border-[var(--ink)]" placeholder="Search ideas, tags..." />
           </div>
           <div>
             {filtered.map(idea => <section key={idea.slug} onClick={() => setSelectedSlug(idea.slug)} className={`cursor-pointer border-b border-[var(--border)] py-5 last:border-b-0 md:px-3 ${selected?.slug === idea.slug ? 'bg-white/45' : ''}`}>
@@ -204,27 +204,27 @@ export function IdeasWorkbench({ ideas: initialIdeas, projects }: { ideas: Idea[
               {idea.projectSlug ? <div className="caption mt-3">绑定项目 / {projectTitle(projects, idea.projectSlug)}</div> : idea.analysis?.suggestedProject ? <div className="caption mt-3">AI 建议 / {projectTitle(projects, idea.analysis.suggestedProject)}</div> : null}
               <div className="mono mt-3 flex flex-wrap gap-x-3 gap-y-1 text-[10px] uppercase text-[var(--text-disabled)]">{idea.tags.map(tag => <button key={tag} type="button" onClick={event => { event.stopPropagation(); setQuery(tag); }}>#{tag}</button>)}</div>
             </section>)}
-            {!filtered.length && <p className="py-8 text-sm leading-6 text-[var(--text-secondary)]">No idea matches this filter.</p>}
+            {!filtered.length && <p className="py-8 text-sm leading-6 text-[var(--text-secondary)]">Empty.</p>}
           </div>
         </Panel>
       </div>
 
       {selected && <Panel className="p-5 md:p-6">
-        <SectionHeader label="Idea Detail" value={selected.analyzedAt || selected.updated} />
+        <SectionHeader label="Detail" value={selected.analyzedAt || selected.updated} />
         <div className="flex flex-wrap items-center gap-3"><StatusBadge status={selected.status} /><span className="doto text-5xl leading-none text-[var(--ink)]">{selected.score}</span></div>
         <h3 className="mt-4 text-4xl font-semibold leading-tight text-[var(--ink)]">{selected.title}</h3>
         <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">{selected.summary}</p>
         <div className="mt-5 grid gap-3">
-          <Detail label="User Pain" value={selected.analysis?.userPain || '尚未生成用户痛点分析。'} />
-          <Detail label="Opportunity" value={selected.analysis?.opportunity || '尚未生成机会判断。'} />
-          <Detail label="Feasibility" value={selected.analysis?.feasibility || '尚未生成可行性判断。'} />
-          <Detail label="Next Experiment" value={selected.analysis?.nextExperiment || selected.next || '尚未定义下一步实验。'} />
+          <Detail label="Pain" value={selected.analysis?.userPain || 'pending'} />
+          <Detail label="Upside" value={selected.analysis?.opportunity || 'pending'} />
+          <Detail label="Feasibility" value={selected.analysis?.feasibility || 'pending'} />
+          <Detail label="Test" value={selected.analysis?.nextExperiment || selected.next || 'pending'} />
         </div>
         {selected.analysis?.risks.length ? <div className="mt-5">
           <div className="caption mb-2">Risks</div>
           <ul className="grid gap-2">{selected.analysis.risks.map(risk => <li key={risk} className="text-sm leading-6 text-[var(--text-secondary)]">{risk}</li>)}</ul>
         </div> : null}
-        {selected.relatedKnowledge?.length ? <div className="mt-5 rounded-[8px] border border-[var(--border)] bg-white/45 px-4 py-3"><div className="caption mb-2">Evidence Links</div><div className="mono flex flex-wrap gap-2 text-[10px] uppercase text-[var(--text-disabled)]">{selected.relatedKnowledge.map(slug => <span key={slug}>/{slug}</span>)}</div></div> : null}
+        {selected.relatedKnowledge?.length ? <div className="mt-5 rounded-[8px] border border-[var(--border)] bg-white/45 px-4 py-3"><div className="caption mb-2">Evidence</div><div className="mono flex flex-wrap gap-2 text-[10px] uppercase text-[var(--text-disabled)]">{selected.relatedKnowledge.map(slug => <span key={slug}>/{slug}</span>)}</div></div> : null}
         <AuthOnly>
           <div className="mt-5 rounded-[8px] border border-[var(--border)] bg-white/45 p-4">
             <div className="caption mb-2">绑定项目 / 仓库</div>

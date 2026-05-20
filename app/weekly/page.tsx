@@ -31,7 +31,7 @@ function LockScreen() {
     <Panel dark className="console-screen min-h-[430px] p-6 md:p-8">
       <Label>Weekly Brief / Private</Label>
       <h2 className="mt-8 max-w-[8ch] text-6xl font-semibold leading-[.9] text-white md:text-8xl">周回顾</h2>
-      <p className="mt-6 max-w-xl text-sm leading-7 text-white/55">这里汇总私人项目、日志和同步信号，登录后查看。</p>
+      <p className="mt-6 max-w-xl text-sm leading-7 text-white/55">Login only.</p>
       <Link href="/login" className="mono mt-8 inline-flex min-h-10 w-fit items-center rounded-full border border-white/40 px-4 text-[10px] uppercase text-white">登录查看</Link>
     </Panel>
   </div>;
@@ -52,7 +52,7 @@ export default async function WeeklyPage() {
       <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
         <div>
           <Label>Weekly Brief / {brief.range.start} - {brief.range.end}</Label>
-          <h2 className="mt-3 text-5xl font-semibold leading-none text-[var(--ink)] md:text-7xl">Internal Weekly Brief</h2>
+          <h2 className="mt-3 text-5xl font-semibold leading-none text-[var(--ink)] md:text-7xl">Weekly Brief</h2>
         </div>
         <div className="text-left lg:text-right">
           <div className="doto text-7xl leading-none text-[var(--ink)]">{brief.synthesis.focusScore}</div>
@@ -94,7 +94,7 @@ export default async function WeeklyPage() {
       </Panel>
 
       <Panel raised className="p-5 md:p-6">
-        <SectionHeader label="Questions" value={`${brief.synthesis.questions.length} prompts`} />
+        <SectionHeader label="Questions" value={String(brief.synthesis.questions.length)} />
         <ol className="grid gap-4">
           {brief.synthesis.questions.map((question, index) => <li key={question} className="grid grid-cols-[42px_1fr] gap-3 border-b border-[var(--border)] pb-4 last:border-b-0 last:pb-0">
             <span className="doto text-3xl leading-none text-[var(--text-disabled)]">{String(index + 1).padStart(2, '0')}</span>
@@ -105,7 +105,7 @@ export default async function WeeklyPage() {
     </section>
 
     <Panel className="p-5 md:p-6">
-      <SectionHeader label="Weekly Highlights" value={`${brief.highlights.length} signals`} />
+      <SectionHeader label="Highlights" value={String(brief.highlights.length)} />
       <div className="grid gap-2">
         {brief.highlights.map(item => <Link key={`${item.source}-${item.slug || item.title}`} href={sourceHref[item.source]} className="grid gap-2 border-b border-[var(--border)] py-4 transition last:border-b-0 hover:bg-[var(--surface-soft)]/55 md:grid-cols-[120px_1fr_auto] md:items-start md:px-3">
           <div className="caption">{sourceLabel[item.source]}{item.date ? ` / ${item.date.slice(0, 10)}` : ''}</div>
@@ -120,7 +120,7 @@ export default async function WeeklyPage() {
 
     <section className="grid gap-5 lg:grid-cols-[1.2fr_.8fr]">
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="Project Signals" value={`${brief.projectSignals.length} visible threads`} />
+        <SectionHeader label="Projects" value={String(brief.projectSignals.length)} />
         <div className="grid gap-3">
           {brief.projectSignals.map(project => <Link key={project.slug} href={`/projects/${project.slug}`} className="rounded-[8px] border border-[var(--border)] bg-white/35 p-4 transition hover:border-[var(--border-visible)]">
             <div className="flex flex-wrap items-start justify-between gap-3">
@@ -137,7 +137,7 @@ export default async function WeeklyPage() {
       </Panel>
 
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="Sync Signals" value={`${brief.syncSignals.length} latest jobs`} />
+        <SectionHeader label="Sync" value={String(brief.syncSignals.length)} />
         <div className="grid gap-3">
           {brief.syncSignals.map(job => <div key={job.id} className="border-b border-[var(--border)] pb-3 last:border-b-0 last:pb-0">
             <div className="flex flex-wrap items-center justify-between gap-3">

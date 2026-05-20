@@ -110,15 +110,15 @@ export function computeProjectPrioritySuggestion(input: { project: Project; wiki
   ]);
   const confidence = confidenceFromSignals(wiki, tasks, logs, evidence);
   const dimensions = [
-    { name: 'urgency', score: urgency, max: 100, reason: 'Open P0/P1 tasks and active doing items.' },
-    { name: 'momentum', score: momentum, max: 100, reason: 'Recent repository pushes, project updates, and log activity.' },
-    { name: 'strategic_fit', score: strategic, max: 100, reason: 'Current lifecycle state plus Pigou OS/workflow/life-state relevance.' },
-    { name: 'maturity_or_impact', score: maturity, max: 100, reason: 'Progress, shipped/use signals, screenshots, and repository scale.' },
-    { name: 'staleness_penalty', score: clampScore(stalenessPenalty), max: 100, reason: 'Paused, archived, or stale projects should cool down unless other signals are strong.' }
+    { name: 'urgency', score: urgency, max: 100, reason: 'P0/P1 / doing' },
+    { name: 'momentum', score: momentum, max: 100, reason: 'repo / updates / logs' },
+    { name: 'strategic_fit', score: strategic, max: 100, reason: 'lifecycle / OS fit' },
+    { name: 'maturity_or_impact', score: maturity, max: 100, reason: 'progress / shipped / media / scale' },
+    { name: 'staleness_penalty', score: clampScore(stalenessPenalty), max: 100, reason: 'paused / archived / stale' }
   ];
   const rationale = [
-    `综合分 ${score}/100，建议为 ${suggestedPriority}。`,
-    '这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。'
+    `${score}/100 / ${suggestedPriority}`,
+    'urgency / momentum / fit / maturity / staleness'
   ].join(' ');
   const id = stableHash(JSON.stringify({
     slug: project.slug,
