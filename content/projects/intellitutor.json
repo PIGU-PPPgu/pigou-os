@@ -27,9 +27,9 @@
       "url": "https://tutor.intelliclass.online"
     }
   ],
-  "updated": "2026-05-22",
+  "updated": "2026-05-23",
   "progressEvaluation": {
-    "generatedAt": "2026-05-22",
+    "generatedAt": "2026-05-23",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 84,
@@ -83,15 +83,15 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "og4u3f",
-    "generatedAt": "2026-05-22",
+    "id": "197uarf",
+    "generatedAt": "2026-05-23",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 40,
-    "rationale": "综合分 40/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 37,
+    "rationale": "综合分 37/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 91",
@@ -108,7 +108,7 @@
       },
       {
         "name": "momentum",
-        "score": 34,
+        "score": 22,
         "max": 100,
         "reason": "Recent repository pushes, project updates, and log activity."
       },
