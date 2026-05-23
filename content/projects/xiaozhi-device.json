@@ -28,9 +28,9 @@
       "url": "https://github.com/PIGU-PPPgu/xiaozhi-esp32"
     }
   ],
-  "updated": "2026-05-23",
+  "updated": "2026-05-24",
   "progressEvaluation": {
-    "generatedAt": "2026-05-23",
+    "generatedAt": "2026-05-24",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 80,
@@ -87,7 +87,7 @@
   },
   "prioritySuggestion": {
     "id": "1k2ityj",
-    "generatedAt": "2026-05-23",
+    "generatedAt": "2026-05-24",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
