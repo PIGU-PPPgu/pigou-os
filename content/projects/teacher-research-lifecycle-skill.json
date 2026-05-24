@@ -7,7 +7,7 @@
   "explanation": "它把课题申报、研究设计、过程材料、阶段总结和结题复盘串成一条教师研究工作流，服务于教育科研场景。",
   "domain": "teacher-research",
   "source": "github:PIGU-PPPgu/teacher-research-lifecycle-skill",
-  "progress": 38,
+  "progress": 33,
   "goals": [
     "定义课题研究生命周期节点",
     "沉淀材料生成和审校模板",
@@ -24,12 +24,12 @@
       "url": "https://github.com/PIGU-PPPgu/teacher-research-lifecycle-skill"
     }
   ],
-  "updated": "2026-05-24",
+  "updated": "2026-05-25",
   "progressEvaluation": {
-    "generatedAt": "2026-05-24",
+    "generatedAt": "2026-05-25",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 38,
+    "progress": 33,
     "status": "idea",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -61,7 +61,7 @@
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
@@ -82,21 +82,21 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "w7ug40",
-    "generatedAt": "2026-05-24",
+    "id": "gpw7dm",
+    "generatedAt": "2026-05-25",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 33,
-    "rationale": "综合分 33/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 32,
+    "rationale": "综合分 32/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 15",
       "last push: 2026-04-24",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 38% idea"
+      "progress evaluation: 33% idea"
     ],
     "dimensions": [
       {
@@ -119,7 +119,7 @@
       },
       {
         "name": "maturity_or_impact",
-        "score": 13,
+        "score": 7,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },
