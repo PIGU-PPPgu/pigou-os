@@ -43,9 +43,9 @@
     "Clarify runtime stack and entrypoint because package metadata is missing.",
     "Add one approved public screenshot or product surface image."
   ],
-  "updated": "2026-05-25",
+  "updated": "2026-05-26",
   "progressEvaluation": {
-    "generatedAt": "2026-05-25",
+    "generatedAt": "2026-05-26",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 26,
@@ -102,7 +102,7 @@
   },
   "prioritySuggestion": {
     "id": "1r5wicr",
-    "generatedAt": "2026-05-25",
+    "generatedAt": "2026-05-26",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
