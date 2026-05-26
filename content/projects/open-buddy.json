@@ -7,7 +7,7 @@
   "explanation": "这是 Pigou 的 AI 硬件接口实验：把多智能体协作状态、优先级、声音提醒和静音模式放进一个可触摸的实体设备。",
   "domain": "hardware-agent",
   "source": "github:PIGU-PPPgu/open-buddy",
-  "progress": 80,
+  "progress": 75,
   "goals": [
     "稳定 BLE bridge",
     "显示多智能体优先级状态",
@@ -24,12 +24,12 @@
       "url": "https://github.com/PIGU-PPPgu/open-buddy"
     }
   ],
-  "updated": "2026-05-26",
+  "updated": "2026-05-27",
   "progressEvaluation": {
-    "generatedAt": "2026-05-26",
+    "generatedAt": "2026-05-27",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 80,
+    "progress": 75,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -61,7 +61,7 @@
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
@@ -82,8 +82,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "10t2gp9",
-    "generatedAt": "2026-05-26",
+    "id": "1xinvc7",
+    "generatedAt": "2026-05-27",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -96,7 +96,7 @@
       "repo files: 91",
       "last push: 2026-04-25",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 80% building"
+      "progress evaluation: 75% building"
     ],
     "dimensions": [
       {

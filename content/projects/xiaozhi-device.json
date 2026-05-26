@@ -7,7 +7,7 @@
   "explanation": "它代表 Pigou OS 的硬件入口方向：让 AI 协作不只停留在网页和命令行，而能通过实体设备、声音提醒和状态显示进入日常环境。",
   "domain": "hardware-agent",
   "source": "github:PIGU-PPPgu/open-buddy",
-  "progress": 80,
+  "progress": 75,
   "goals": [
     "稳定唤醒 OpenClaw",
     "完善语音交互体验",
@@ -28,12 +28,12 @@
       "url": "https://github.com/PIGU-PPPgu/xiaozhi-esp32"
     }
   ],
-  "updated": "2026-05-26",
+  "updated": "2026-05-27",
   "progressEvaluation": {
-    "generatedAt": "2026-05-26",
+    "generatedAt": "2026-05-27",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 80,
+    "progress": 75,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -65,7 +65,7 @@
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
@@ -86,8 +86,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "1k2ityj",
-    "generatedAt": "2026-05-26",
+    "id": "17hyj5t",
+    "generatedAt": "2026-05-27",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -100,7 +100,7 @@
       "repo files: 91",
       "last push: 2026-04-25",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 80% building"
+      "progress evaluation: 75% building"
     ],
     "dimensions": [
       {
