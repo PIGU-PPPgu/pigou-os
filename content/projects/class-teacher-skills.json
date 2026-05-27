@@ -24,9 +24,9 @@
       "url": "https://github.com/PIGU-PPPgu/class-teacher-skills"
     }
   ],
-  "updated": "2026-05-27",
+  "updated": "2026-05-28",
   "progressEvaluation": {
-    "generatedAt": "2026-05-27",
+    "generatedAt": "2026-05-28",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 76,
@@ -82,15 +82,15 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "19eb3uk",
-    "generatedAt": "2026-05-27",
+    "id": "n9e89o",
+    "generatedAt": "2026-05-28",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 40,
-    "rationale": "综合分 40/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 37,
+    "rationale": "综合分 37/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 213",
@@ -107,7 +107,7 @@
       },
       {
         "name": "momentum",
-        "score": 34,
+        "score": 22,
         "max": 100,
         "reason": "Recent repository pushes, project updates, and log activity."
       },

@@ -45,9 +45,9 @@
       "url": "https://github.com/PIGU-PPPgu/Headteacher-helper"
     }
   ],
-  "updated": "2026-05-27",
+  "updated": "2026-05-28",
   "progressEvaluation": {
-    "generatedAt": "2026-05-27",
+    "generatedAt": "2026-05-28",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 92,
@@ -82,7 +82,7 @@
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
@@ -104,7 +104,7 @@
   },
   "prioritySuggestion": {
     "id": "p941yk",
-    "generatedAt": "2026-05-27",
+    "generatedAt": "2026-05-28",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",

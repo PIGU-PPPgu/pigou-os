@@ -29,9 +29,9 @@
       "url": "https://github.com/PIGU-PPPgu/DeepTutor"
     }
   ],
-  "updated": "2026-05-27",
+  "updated": "2026-05-28",
   "progressEvaluation": {
-    "generatedAt": "2026-05-27",
+    "generatedAt": "2026-05-28",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 97,
@@ -86,7 +86,7 @@
   },
   "prioritySuggestion": {
     "id": "1io1nyg",
-    "generatedAt": "2026-05-27",
+    "generatedAt": "2026-05-28",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
