@@ -1,0 +1,137 @@
+{
+  "slug": "obsidian-teacher-vault",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "obsidian-teacher-vault",
+    "url": "https://github.com/PIGU-PPPgu/obsidian-teacher-vault",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-05-30T15:30:16Z",
+    "language": "Python"
+  },
+  "generatedAt": "2026-05-30T21:15:01.060Z",
+  "readme": {
+    "title": "📚 Obsidian Teacher Vault",
+    "summary": [
+      "一套精心设计的 Obsidian 模板和工具集，专门为中国的班主任和学科教师打造。",
+      "不是泛化的\"第二大脑\"，而是围绕教师真实工作流：备课、班级管理、家校沟通、成绩分析、自媒体运营。",
+      "- 🎯 22 个专业模板 — 涵盖日常、班级管理、家校沟通、教学、自媒体、个人六大类 - 🔄 Templater 自动化 — 日期自动填充、弹窗交互、批量生成 - 📊 Dataview 智能查询 — 自动汇总成绩、出勤、沟通记录 - 🎨 教师专用 CSS 主题 — 柔和配色、表格美化、打印优化 - 🐍 Python 辅助脚本 — 从 Excel 批量导入学生、自动生成成绩分析报告 - 📱 示例文档 — 每个模板都有填写好的示例供参考 - 🤖 AI 增强场景 — 与 class-teacher-skills 打通",
+      "1. 下载本项目 2. 将 .obsidian/templates/ 下的 tp-.md 文件复制到你的 vault 的模板文件夹 3. 将 .obsidian/css/snippets/teacher-custom.css 复制到你的 vault 的 .obsidian/css/snippets/ 4. 在 Obsidian 设置中启用该 CSS 代码片段",
+      "1. git clone 到本地 2. 打开 Obsidian → 打开仓库 → 选择 obsidian-teacher-vault 文件夹 3. 安装推荐插件（见下方）",
+      "插件 用途 必需 ------------:----: Templater 模板引擎，驱动所有模板 ✅ Dataview 数据查询，自动汇总 ✅ Calendar 日历视图 推荐 Periodic Notes 周期性笔记（日/周/月） 推荐 Tag Wrangler 标签管理 可选 Checklist 任务汇总 可选"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 65,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": ".obsidian",
+        "count": 28
+      },
+      {
+        "name": "01-班级管理",
+        "count": 5
+      },
+      {
+        "name": "02-教学",
+        "count": 5
+      },
+      {
+        "name": "[root]",
+        "count": 4
+      },
+      {
+        "name": "03-自媒体",
+        "count": 4
+      },
+      {
+        "name": "05-个人",
+        "count": 3
+      },
+      {
+        "name": "06-知识库",
+        "count": 3
+      },
+      {
+        "name": "examples",
+        "count": 3
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".md",
+        "count": 28
+      },
+      {
+        "ext": ".gitkeep",
+        "count": 26
+      },
+      {
+        "ext": ".json",
+        "count": 5
+      },
+      {
+        "ext": ".py",
+        "count": 3
+      },
+      {
+        "ext": ".css",
+        "count": 1
+      },
+      {
+        "ext": ".gitignore",
+        "count": 1
+      },
+      {
+        "ext": "[none]",
+        "count": 1
+      }
+    ]
+  },
+  "frameworks": [
+    "Python"
+  ],
+  "modules": [
+    {
+      "name": "scripts",
+      "kind": "Automation scripts",
+      "evidence": [
+        "3 file(s) under scripts/"
+      ],
+      "files": [
+        "scripts/export_weekly.py",
+        "scripts/grade_analyzer.py",
+        "scripts/import_students.py"
+      ]
+    }
+  ],
+  "entrypoints": [],
+  "importantFiles": [
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "obsidian-teacher-vault",
+      "label": "indexes"
+    },
+    {
+      "from": "Python",
+      "to": "obsidian-teacher-vault",
+      "label": "powers"
+    },
+    {
+      "from": "scripts",
+      "to": "obsidian-teacher-vault",
+      "label": "contains"
+    }
+  ],
+  "gaps": [
+    "package.json could not be found or parsed.",
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+  ]
+}

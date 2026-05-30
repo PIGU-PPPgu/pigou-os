@@ -1,74 +1,62 @@
 {
-  "slug": "edu-clawbook",
-  "title": "Edu-Claw",
-  "status": "idea",
-  "priority": "high",
-  "summary": "面向教师场景的 AI 工作台，覆盖课堂教学与教案生成、教师科研全周期交付、校园 AI 配置和运行监控。",
-  "explanation": "这是 Pigou 教育 AI 产品线里最接近统一工作台的 private 项目：把教师真正面对的聊天、文稿、证据、配图、Agent 编排和导出交付放到同一个操作界面。",
-  "domain": "teacher-workbench",
-  "visibility": "private",
-  "source": "private:edu-clawbook",
+  "slug": "obsidian-teacher-vault",
+  "title": "obsidian-teacher-vault",
+  "status": "building",
+  "priority": "medium",
+  "summary": "🎒 拎包入住的 Obsidian 教师模板库 — 22个专业模板 + CSS主题 + Python脚本，专为中学班主任设计",
+  "domain": "python",
+  "visibility": "public",
+  "source": "github:PIGU-PPPgu/obsidian-teacher-vault",
   "readme": [
-    "Edu-Claw 是一个面向教师场景的 AI 工作台，当前重点覆盖课堂教学与教案生成、教师科研全周期交付、校园 AI 配置、额度与运行监控。",
-    "当前重点是把科研工作台从“独立聊天 + 独立文稿”推进到“同屏协作交付台”：文稿区支持块式编辑与分页预览，文稿 Agent 可直接嵌入科研界面。",
-    "关键路由包括 /chat、/research、/agent、/setup、/settings、/stats、/admin；技术栈为 Next.js、React、TypeScript、Supabase 和 API routes。",
-    "当前方向是让多 Agent 编排退到后台，教师只面对统一工作台；让正文、证据、配图、待确认字段走结构化通道。"
+    "中国教师的 Obsidian 模板库 — 拎包入住，专注教学",
+    "一套精心设计的 Obsidian 模板和工具集，专门为中国的班主任和学科教师打造。",
+    "不是泛化的\"第二大脑\"，而是围绕教师真实工作流：备课、班级管理、家校沟通、成绩分析、自媒体运营。",
+    "- 🎯 22 个专业模板 — 涵盖日常、班级管理、家校沟通、教学、自媒体、个人六大类\n- 🔄 Templater 自动化 — 日期自动填充、弹窗交互、批量生成\n- 📊 Dataview 智能查询 — 自动汇总成绩、出勤、沟通记录\n- 🎨 教师专用 CSS 主题 — 柔和配色、表格美化、打印优化\n- 🐍 Python 辅助脚本 — 从 Excel 批量导入学生、自动生成成绩分析报告\n- 📱 示例文档 — 每个模板都有填写好的示例供参考\n- 🤖 AI 增强场景 — 与  打通"
   ],
-  "images": [
-    {
-      "src": "/project-assets/edu-clawbook/landing-current.png",
-      "alt": "Edu-Claw landing screen"
-    },
-    {
-      "src": "/project-assets/edu-clawbook/agent-page.png",
-      "alt": "Agent monitor interface"
-    },
-    {
-      "src": "/project-assets/edu-clawbook/current-chat-ui.png",
-      "alt": "Current chat UI"
-    },
-    {
-      "src": "/project-assets/edu-clawbook/mission-control-github.png",
-      "alt": "Mission Control screenshot"
-    }
-  ],
-  "progress": 26,
+  "progress": 46,
   "goals": [
-    "统一教师 AI 工作台",
-    "重构科研同屏协作交付链路",
-    "把 Agent 编排隐藏到后台"
+    "整理项目定位",
+    "补充 README 摘要",
+    "确认展示边界"
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
     "Clarify runtime stack and entrypoint because package metadata is missing.",
-    "Add one approved public screenshot or product surface image."
+    "Add one approved public screenshot or product surface image.",
+    "检查自动导入内容"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/PIGU-PPPgu/obsidian-teacher-vault"
+    }
   ],
   "updated": "2026-05-31",
   "progressEvaluation": {
     "generatedAt": "2026-05-31",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 26,
-    "status": "idea",
+    "progress": 46,
+    "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
     "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
-        "score": 5,
+        "score": 16,
         "max": 25,
         "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
-        "score": 2,
+        "score": 16,
         "max": 20,
         "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
-        "score": 10,
+        "score": 4,
         "max": 25,
         "reason": "Launch/use wording, screenshots, and visible product proof."
       },
@@ -80,42 +68,43 @@
       },
       {
         "name": "momentum",
-        "score": 2,
+        "score": 8,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
-      "repo files: 0",
-      "last push: 2026-04-15",
-      "images: 4"
+      "repo files: 65",
+      "last push: 2026-05-30",
+      "frameworks: Python"
     ],
     "risks": [
       "package.json could not be found or parsed.",
-      "Repository file tree could not be fetched."
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
       "Clarify runtime stack and entrypoint because package metadata is missing.",
-      "Add one approved public screenshot or product surface image."
+      "Add one approved public screenshot or product surface image.",
+      "检查自动导入内容"
     ]
   },
   "prioritySuggestion": {
-    "id": "1r5wicr",
+    "id": "162yj7h",
     "generatedAt": "2026-05-31",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
-    "currentPriority": "high",
+    "currentPriority": "medium",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 34,
-    "rationale": "综合分 34/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 40,
+    "rationale": "综合分 40/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 0",
-      "last push: 2026-04-15",
+      "repo files: 65",
+      "last push: 2026-05-30",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 26% idea"
+      "progress evaluation: 46% building"
     ],
     "dimensions": [
       {
@@ -126,19 +115,19 @@
       },
       {
         "name": "momentum",
-        "score": 22,
+        "score": 34,
         "max": 100,
         "reason": "Recent repository pushes, project updates, and log activity."
       },
       {
         "name": "strategic_fit",
-        "score": 33,
+        "score": 38,
         "max": 100,
         "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
       },
       {
         "name": "maturity_or_impact",
-        "score": 10,
+        "score": 16,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },
