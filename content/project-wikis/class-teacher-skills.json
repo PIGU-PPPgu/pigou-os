@@ -6,38 +6,38 @@
     "url": "https://github.com/PIGU-PPPgu/class-teacher-skills",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-05-13T07:32:04Z",
+    "pushedAt": "2026-05-31T04:46:33Z",
     "language": "Python"
   },
-  "generatedAt": "2026-05-30T21:14:52.763Z",
+  "generatedAt": "2026-05-31T21:15:47.377Z",
   "readme": {
     "title": "Class Teacher Skills",
     "summary": [
-      "面向班主任的 AI 技能仓库，不是泛教育 prompt 集，而是围绕真实班务工作拆出来的一套可复用工作台。",
-      "- 家校沟通 - 学生记录 - 成绩与考勤分析 - 班级日报 / 周报 / 月报 - 台账、跟进表、清单、统计 - 发送前确认的工作流骨架",
-      "它更接近一个 班主任专属 AI 工作台，把高频、重复、容易漏的事务拆成可以直接复用的：",
-      "- 标准场景 - 固定模板 - 脱敏示例 - 本地脚本 - 面向 agent 的目录结构",
-      "1. 场景不是泛化的，是班主任高频任务直拆 覆盖重点围绕： - 家长群通知 - 一对一家长沟通 - 学生评语与观察记录 - 谈话、请假、家访、违纪留痕 - 作业催交、返校补课、重点学生跟踪 - 班级日报 / 周报 / 月报 - 班级事务待办、周统计、月统计",
-      "这套仓库专门补的是班主任真正累的地方： - 台账 - 表格 - 跟进表 - 周期汇总 - 数据统计 - 后续动作收口"
+      "给班主任用的 AI 技能仓库。不是泛教育 prompt 集，是围绕真实班务拆出来的可复用工作台。",
+      "覆盖： - 家校沟通（通知、评语、家长会） - 学生记录（谈话、违纪、跟踪、观察） - 成绩与考勤分析 - 班级日报/周报/月报 - 台账、跟进表、统计 - 座位编排、分组、班委、值日 - 积分系统、游戏化管理 - 课题申报",
+      "把仓库给 AI，直接下任务： - \"帮我写一个明天升旗穿校服的家长群通知\" - \"帮我把这次月考整理成重点学生分析\" - \"给全班50人写期末评语\" - \"出一版班级周报\"",
+      "A. 家校沟通（1-5） 1. 家长群日常通知 · 2. 一对一家长沟通 · 3. 学生评语 · 4. 成绩分析 · 5. 家长会发言提纲",
+      "B. 班务组织与记录（6-12） 6. 周计划 · 7. 谈话记录 · 8. 突发事件上报 · 9. 作业未交汇总 · 10. 班会提纲 · 11. 活动流程单 · 12. 值日轮值",
+      "C. 班级汇总与跟进（13-25） 13. 日报 · 14. 周报 · 15. 月报 · 16. 请假登记 · 17. 家访记录 · 18. 违纪记录 · 19. 表扬鼓励 · 20. 考试提醒总结 · 21. 重点学生跟踪 · 22. 日度班情 · 23. 周度复盘 · 24. 月度复盘 · 25. 家长会总结跟进"
     ]
   },
   "fileTree": {
-    "totalFiles": 213,
+    "totalFiles": 250,
     "truncated": false,
     "topDirectories": [
       {
         "name": "skills",
-        "count": 205
+        "count": 241
       },
       {
         "name": "[root]",
-        "count": 8
+        "count": 9
       }
     ],
     "extensions": [
       {
         "ext": ".md",
-        "count": 202
+        "count": 239
       },
       {
         "ext": ".py",
@@ -77,17 +77,17 @@
       "name": "skills",
       "kind": "Repository directory",
       "evidence": [
-        "205 file(s)"
+        "241 file(s)"
       ],
       "files": [
         "skills/README-class-teacher-skills.md",
         "skills/SCENARIO_STYLE_GUIDE.md",
+        "skills/VOICE_ANCHOR.md",
         "skills/class-assistant.skill",
         "skills/class-assistant/README.md",
         "skills/class-assistant/SCENARIOS_INDEX.md",
         "skills/class-assistant/SKILL.md",
-        "skills/class-assistant/examples/class_summary.sample.json",
-        "skills/class-assistant/examples/students.sample.csv"
+        "skills/class-assistant/examples/class_summary.sample.json"
       ]
     },
     {
