@@ -13,7 +13,7 @@
     "不是泛化的\"第二大脑\"，而是围绕教师真实工作流：备课、班级管理、家校沟通、成绩分析、自媒体运营。",
     "- 🎯 22 个专业模板 — 涵盖日常、班级管理、家校沟通、教学、自媒体、个人六大类\n- 🔄 Templater 自动化 — 日期自动填充、弹窗交互、批量生成\n- 📊 Dataview 智能查询 — 自动汇总成绩、出勤、沟通记录\n- 🎨 教师专用 CSS 主题 — 柔和配色、表格美化、打印优化\n- 🐍 Python 辅助脚本 — 从 Excel 批量导入学生、自动生成成绩分析报告\n- 📱 示例文档 — 每个模板都有填写好的示例供参考\n- 🤖 AI 增强场景 — 与  打通"
   ],
-  "progress": 64,
+  "progress": 76,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -30,12 +30,12 @@
       "url": "https://github.com/PIGU-PPPgu/obsidian-teacher-vault"
     }
   ],
-  "updated": "2026-06-01",
+  "updated": "2026-06-02",
   "progressEvaluation": {
-    "generatedAt": "2026-06-01",
+    "generatedAt": "2026-06-02",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 64,
+    "progress": 76,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -88,8 +88,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "11v3md9",
-    "generatedAt": "2026-06-01",
+    "id": "yc6pq6",
+    "generatedAt": "2026-06-02",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -102,7 +102,7 @@
       "repo files: 65",
       "last push: 2026-05-30",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 64% building"
+      "progress evaluation: 76% building"
     ],
     "dimensions": [
       {
@@ -125,7 +125,7 @@
       },
       {
         "name": "maturity_or_impact",
-        "score": 16,
+        "score": 20,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },
