@@ -24,9 +24,9 @@
       "url": "https://github.com/PIGU-PPPgu/class-teacher-skills"
     }
   ],
-  "updated": "2026-06-02",
+  "updated": "2026-06-03",
   "progressEvaluation": {
-    "generatedAt": "2026-06-02",
+    "generatedAt": "2026-06-03",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 76,
@@ -83,7 +83,7 @@
   },
   "prioritySuggestion": {
     "id": "1qdsqwr",
-    "generatedAt": "2026-06-02",
+    "generatedAt": "2026-06-03",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",

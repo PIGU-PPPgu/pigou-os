@@ -1,26 +1,34 @@
 {
-  "slug": "agent-swarm-dev-v2",
-  "title": "Agent Swarm Dev v2",
+  "slug": "oh-my-dynamic",
+  "title": "oh-my-Dynamic",
   "status": "building",
   "priority": "medium",
-  "summary": "集成 Harness 质量工具的多智能体协作软件开发框架。",
-  "explanation": "它记录 Pigou 对多智能体开发流程的探索：如何让多个 agent 分工、协作、验证，并最终交付可维护的软件。",
-  "domain": "agentic-engineering",
-  "source": "github:PIGU-PPPgu/agent-swarm-dev-v2",
-  "progress": 66,
+  "summary": "Multi-agent orchestration engine replicating Claude Dynamic Workflows. DAG execution + 5 stop conditions + TEA protocol + Anthropic 8 prompt principles. GLM-5.1 compatible.",
+  "domain": "python",
+  "visibility": "public",
+  "source": "github:PIGU-PPPgu/oh-my-Dynamic",
+  "readme": [
+    "用 GLM-5.1 实现的多 Agent 编排系统。",
+    "文件  作用 \n------------\n task.py  Task 状态机（todo→inprogress→review→done） \n agents.py  三种角色定义（planner/builder/reviewer） \n llmclient.py  GLM-5.1 API 调用层（zhipuai SDK 或 OpenAI 兼容） \n orchestrator.py  编排引擎（核心调度器） \n validator.py  验证框架（单元/集成/端到端测试）",
+    "Layer 1: 单元测试\n- 状态机转换是否合法\n- 依赖阻塞逻辑是否正确\n- Planner 输出解析器是否健壮",
+    "Layer 2: 集成测试\n- API 调用是否通畅\n- 重试机制是否工作\n- 超时处理是否正常"
+  ],
+  "progress": 38,
   "goals": [
-    "定义多 agent 分工方式",
-    "接入质量工具链",
-    "形成可复用开发流程"
+    "整理项目定位",
+    "补充 README 摘要",
+    "确认展示边界"
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Add one approved public screenshot or product surface image."
+    "Clarify runtime stack and entrypoint because package metadata is missing.",
+    "Add one approved public screenshot or product surface image.",
+    "检查自动导入内容"
   ],
   "links": [
     {
       "label": "GitHub",
-      "url": "https://github.com/PIGU-PPPgu/agent-swarm-dev-v2"
+      "url": "https://github.com/PIGU-PPPgu/oh-my-Dynamic"
     }
   ],
   "updated": "2026-06-03",
@@ -28,7 +36,7 @@
     "generatedAt": "2026-06-03",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 66,
+    "progress": 38,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -54,45 +62,49 @@
       },
       {
         "name": "documentation_knowledge",
-        "score": 6,
+        "score": 11,
         "max": 15,
         "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
-        "score": 2,
+        "score": 8,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
-      "repo files: 32",
-      "last push: 2026-04-01"
+      "repo files: 40",
+      "last push: 2026-06-02",
+      "frameworks: Python"
     ],
     "risks": [
+      "package.json could not be found or parsed.",
       "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Add one approved public screenshot or product surface image."
+      "Clarify runtime stack and entrypoint because package metadata is missing.",
+      "Add one approved public screenshot or product surface image.",
+      "检查自动导入内容"
     ]
   },
   "prioritySuggestion": {
-    "id": "80mvr7",
+    "id": "1xj6pv8",
     "generatedAt": "2026-06-03",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 34,
-    "rationale": "综合分 34/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 40,
+    "rationale": "综合分 40/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 32",
-      "last push: 2026-04-01",
+      "repo files: 40",
+      "last push: 2026-06-02",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 66% building"
+      "progress evaluation: 38% building"
     ],
     "dimensions": [
       {
@@ -103,7 +115,7 @@
       },
       {
         "name": "momentum",
-        "score": 10,
+        "score": 34,
         "max": 100,
         "reason": "Recent repository pushes, project updates, and log activity."
       },
