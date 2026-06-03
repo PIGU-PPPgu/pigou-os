@@ -6,32 +6,36 @@
     "url": "https://github.com/PIGU-PPPgu/oh-my-Dynamic",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-06-02T16:40:43Z",
+    "pushedAt": "2026-06-03T18:20:36Z",
     "language": "Python"
   },
-  "generatedAt": "2026-06-02T22:28:17.380Z",
+  "generatedAt": "2026-06-03T22:33:38.631Z",
   "readme": {
-    "title": "多 Agent 编排脚本",
+    "title": "oh-my-Dynamic 🔄",
     "summary": [
-      "文件 作用 ------------ task.py Task 状态机（todo→inprogress→review→done） agents.py 三种角色定义（planner/builder/reviewer） llmclient.py GLM-5.1 API 调用层（zhipuai SDK 或 OpenAI 兼容） orchestrator.py 编排引擎（核心调度器） validator.py 验证框架（单元/集成/端到端测试）",
-      "Layer 1: 单元测试 - 状态机转换是否合法 - 依赖阻塞逻辑是否正确 - Planner 输出解析器是否健壮",
-      "Layer 2: 集成测试 - API 调用是否通畅 - 重试机制是否工作 - 超时处理是否正常",
-      "Layer 3: 端到端测试 - 完整编排流程能否跑通 - 任务完成率 - 输出质量（人工+验证函数）",
-      "指标 含义 目标 ------------------ 任务完成率 completed / total ≥ 80% 一次通过率 首次 review 通过数 / total ≥ 50% 状态机正确性 无非法转换 100% 依赖正确性 B 总在 A 完成后执行 100% 输出质量 最终结果符合预期 人工判断",
-      "问题 应对策略 --------------- toolcall 不稳定 编排逻辑全写在 Python 里，模型只做文本生成 偶尔不听 system prompt 在 user prompt 里重复关键指令 说\"我来做\"但不做 prompt 里写\"直接输出结果\" 超时/429 内置指数退避重试 输出格式不规范 解析器容忍多种格式（中英文混合）"
+      "多 Agent 编排引擎 / Codex Native Dynamic Workflows 提案原型 —— 对齐 Anthropic Dynamic Workflows + VMAO 论文架构（arXiv 2603.11445），支持所有主流大模型。",
+      "Codex App 默认：当 App 内部 subagent tools/runtime 可用时，插件/skill 应默认走 Codex App internal subagent backend，使用真实 Codex subagents。 LLM 继承：这些 App-native subagents 默认继承当前 Codex App 内部 LLM，不需要 OPENAIAPIKEY 或其他外部模型 key。 当前项目边界：提供插件级编排与本地 Python runtime 原型；真正 App-native isolated sandboxes、tool permissions、DAG scheduler 和 trace 仍由 Codex runtime 提供。 oh-my-Dynamic bridges plugin-level orchestration, local runtime prototypes, and Codex App-native subagents.",
+      "- 🎯 明确目标：不是只做 prompt 技巧，而是为 Codex Native Dynamic Workflows 提供可验证原型和接口提案 - 🧠 Codex App internal subagent backend：在 Codex App 暴露 subagent tools/runtime 时，默认使用真实 Codex subagents，并继承当前 App 内部 LLM；无需 API key - 📨 A2A / Agent Broker：受控 message、artifact、handoff、review request/response 和 audit trace，让 subagents 不只是并行跑，还能有证据链地协作 - 🤖 多模型支持：GLM、OpenAI GPT、Claude、Gemini、DeepSeek、通义千问/Qwen、Moonshot/Kimi、硅基流动…… 自动识别模型名选择对应 provider - 🔗 串行编排（Orchestrator）：Planner → Builder → Reviewer 流水线，含自动重试和 review 打回 - 👥 并行团队（TeamEngine）：多 agent 并行抢任务，消息总线通信 - 🧪 Sandboxed Fan-out Runtime：本地原型可并发启动 10/50/100+ isolated workers，每个 worker 有独立 sandbox、context 和 tool grants - 🕸️ DAG 任务图：依赖感知的并行执行，自动拓扑排序 - 🔄 动态重规划（Dynamic Replan）：运行中根据中间结果调整计划 - 🧬 TEA 工具进化：LLM 驱动的工具自动分析、改进和回滚 - 📊 可视化：自动生成 DAG 的 DOT/SVG 图 - 🛡️ 安全：TEA 工具 AST 校验 + 子进程隔离、线程安全消息总线、循环超时保护",
+      "文件 作用 ------------ task.py Task 状态机（TaskStatus 枚举 + 合法转换表） agents.py 三种角色定义（planner/builder/reviewer） llmclient.py 通用 LLM 客户端（自动识别模型选择 provider） orchestrator.py 串行编排引擎（核心调度器） teamengine.py 并行团队引擎（多 agent 协作） dag.py DAG 任务图 + 并行执行器 dynamicreplan.py 动态重规划（运行中调整策略） teaprotocol.py TEA 工具进化协议（LLM 驱动的工具改进） messagebus.py Agent 间消息总线（文件系统队列，线程安全） agentbroker.py A2A-style 协作 broker：policy、messages、artifacts、handoff、review request/response、audit trace brokergateway.py 本地 HTTP/SSE gateway：Agent Card、agents/inbox、task snapshot、events、messages、artifacts、handoffs、review requests/responses codexappbridge.py Codex App subagent bridge：dispatch plan、subagent prompt、JSON envelope、broker ingestion nativeruntime.py sandboxed fan-out runtime 原型（isolated worker、tool grants、trace、reducer） pipeline.py 端到端 Pipeline（组合所有组件） stopconditions.py 停止条件（迭代上限 / token 预算 / 收敛检测） synthesis.py 结果汇总 tokentracker.py Token 预算追踪 validator.py 验证框架（单元/集成/端到端） promptkit.py Prompt 工程工具包 visualize.py DAG 可视化（DOT/SVG） worktree.py Git worktree 管理 protocoladapters.py MCP/A2A 风格协议适配层（tool descriptor、Agent Card、Task payload） examples/ 无需 API Key 的端到端 demo docs/CODEXNATIVEDYNAMICWORKFLOWS.md Codex 原生 dynamic workflows 能力提案",
+      "默认模式会优先使用 Codex App internal subagent backend：只要 Codex App 当前环境提供 subagent tools/runtime，插件/skill 就应启动真实 Codex subagents 来执行拆解、worker 分析、review、replan 和 synthesis。这些 subagents 默认继承当前 Codex App 内部 LLM，不需要配置 .env，也不需要 OPENAIAPIKEY、DEEPSEEKAPIKEY 或其他外部模型 key。",
+      "如果当前 Codex App 环境没有暴露 subagent tools/runtime，则退回到插件级 dynamic-workflow-style 编排：仍使用当前 Codex App 会话的内部 LLM 进行结构化拆解、分 lane 分析和汇总，但这不是 runtime 级 isolated subagents。"
     ]
   },
   "fileTree": {
-    "totalFiles": 40,
+    "totalFiles": 51,
     "truncated": false,
     "topDirectories": [
       {
         "name": "[root]",
-        "count": 23
+        "count": 31
       },
       {
-        "name": "__pycache__",
-        "count": 9
+        "name": "examples",
+        "count": 8
+      },
+      {
+        "name": ".agents",
+        "count": 4
       },
       {
         "name": ".orchestry",
@@ -42,30 +46,34 @@
         "count": 3
       },
       {
-        "name": ".agents",
+        "name": "docs",
         "count": 1
       }
     ],
     "extensions": [
       {
         "ext": ".py",
-        "count": 19
+        "count": 31
       },
       {
-        "ext": ".pyc",
-        "count": 9
+        "ext": ".md",
+        "count": 7
       },
       {
         "ext": ".jsonl",
         "count": 4
       },
       {
-        "ext": ".md",
+        "ext": ".json",
         "count": 3
       },
       {
-        "ext": ".json",
-        "count": 2
+        "ext": ".cff",
+        "count": 1
+      },
+      {
+        "ext": ".example",
+        "count": 1
       },
       {
         "ext": ".gitignore",
@@ -78,6 +86,10 @@
       {
         "ext": ".sh",
         "count": 1
+      },
+      {
+        "ext": ".toml",
+        "count": 1
       }
     ]
   },
@@ -86,75 +98,13 @@
   ],
   "modules": [
     {
-      "name": "__pycache__",
-      "kind": "Repository directory",
+      "name": "docs",
+      "kind": "Documentation",
       "evidence": [
-        "9 file(s)"
+        "1 file(s) under docs/"
       ],
       "files": [
-        "__pycache__/agents.cpython-313.pyc",
-        "__pycache__/demo.cpython-313.pyc",
-        "__pycache__/dynamic_replan.cpython-313.pyc",
-        "__pycache__/llm_client.cpython-313.pyc",
-        "__pycache__/message_bus.cpython-313.pyc",
-        "__pycache__/orchestrator.cpython-313.pyc",
-        "__pycache__/task.cpython-313.pyc",
-        "__pycache__/team_engine.cpython-313.pyc"
-      ]
-    },
-    {
-      "name": ".orchestry",
-      "kind": "Repository directory",
-      "evidence": [
-        "4 file(s)"
-      ],
-      "files": [
-        ".orchestry/messages/architect.jsonl",
-        ".orchestry/messages/collector.jsonl",
-        ".orchestry/messages/lead.jsonl",
-        ".orchestry/messages/qa-engineer.jsonl"
-      ]
-    },
-    {
-      "name": "codex-plugin",
-      "kind": "Repository directory",
-      "evidence": [
-        "3 file(s)"
-      ],
-      "files": [
-        "codex-plugin/.codex-plugin/plugin.json",
-        "codex-plugin/skills/multi-agent-run/SKILL.md",
-        "codex-plugin/skills/oh-my-dynamic/SKILL.md"
-      ]
-    },
-    {
-      "name": ".agents",
-      "kind": "Repository directory",
-      "evidence": [
-        "1 file(s)"
-      ],
-      "files": [
-        ".agents/plugins/marketplace.json"
-      ]
-    },
-    {
-      "name": ".gitignore",
-      "kind": "Repository directory",
-      "evidence": [
-        "1 file(s)"
-      ],
-      "files": [
-        ".gitignore"
-      ]
-    },
-    {
-      "name": "agents.py",
-      "kind": "Repository directory",
-      "evidence": [
-        "1 file(s)"
-      ],
-      "files": [
-        "agents.py"
+        "docs/CODEX_NATIVE_DYNAMIC_WORKFLOWS.md"
       ]
     }
   ],
@@ -177,27 +127,7 @@
       "label": "powers"
     },
     {
-      "from": "__pycache__",
-      "to": "oh-my-Dynamic",
-      "label": "contains"
-    },
-    {
-      "from": ".orchestry",
-      "to": "oh-my-Dynamic",
-      "label": "contains"
-    },
-    {
-      "from": "codex-plugin",
-      "to": "oh-my-Dynamic",
-      "label": "contains"
-    },
-    {
-      "from": ".agents",
-      "to": "oh-my-Dynamic",
-      "label": "contains"
-    },
-    {
-      "from": ".gitignore",
+      "from": "docs",
       "to": "oh-my-Dynamic",
       "label": "contains"
     }

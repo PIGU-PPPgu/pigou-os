@@ -13,7 +13,7 @@
     "Layer 1: 单元测试\n- 状态机转换是否合法\n- 依赖阻塞逻辑是否正确\n- Planner 输出解析器是否健壮",
     "Layer 2: 集成测试\n- API 调用是否通畅\n- 重试机制是否工作\n- 超时处理是否正常"
   ],
-  "progress": 38,
+  "progress": 56,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -22,8 +22,7 @@
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
     "Clarify runtime stack and entrypoint because package metadata is missing.",
-    "Add one approved public screenshot or product surface image.",
-    "检查自动导入内容"
+    "Add one approved public screenshot or product surface image."
   ],
   "links": [
     {
@@ -31,12 +30,12 @@
       "url": "https://github.com/PIGU-PPPgu/oh-my-Dynamic"
     }
   ],
-  "updated": "2026-06-03",
+  "updated": "2026-06-04",
   "progressEvaluation": {
-    "generatedAt": "2026-06-03",
+    "generatedAt": "2026-06-04",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 38,
+    "progress": 56,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -50,7 +49,7 @@
       },
       {
         "name": "technical_completeness",
-        "score": 10,
+        "score": 16,
         "max": 20,
         "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
@@ -74,8 +73,8 @@
       }
     ],
     "evidence": [
-      "repo files: 40",
-      "last push: 2026-06-02",
+      "repo files: 51",
+      "last push: 2026-06-03",
       "frameworks: Python"
     ],
     "risks": [
@@ -85,26 +84,26 @@
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
       "Clarify runtime stack and entrypoint because package metadata is missing.",
-      "Add one approved public screenshot or product surface image.",
-      "检查自动导入内容"
+      "Add one approved public screenshot or product surface image."
     ]
   },
   "prioritySuggestion": {
-    "id": "1xj6pv8",
-    "generatedAt": "2026-06-03",
+    "id": "1lyj3kr",
+    "generatedAt": "2026-06-04",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
-    "suggestedPriority": "low",
+    "suggestedPriority": "medium",
     "confidence": "medium",
-    "score": 40,
-    "rationale": "综合分 40/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 43,
+    "rationale": "综合分 43/100，建议为 medium。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 40",
-      "last push: 2026-06-02",
+      "repo files: 51",
+      "last push: 2026-06-03",
+      "launch/use signal in project text",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 38% building"
+      "progress evaluation: 56% building"
     ],
     "dimensions": [
       {
@@ -127,7 +126,7 @@
       },
       {
         "name": "maturity_or_impact",
-        "score": 16,
+        "score": 34,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },
