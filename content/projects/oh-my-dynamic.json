@@ -13,7 +13,7 @@
     "Layer 1: 单元测试\n- 状态机转换是否合法\n- 依赖阻塞逻辑是否正确\n- Planner 输出解析器是否健壮",
     "Layer 2: 集成测试\n- API 调用是否通畅\n- 重试机制是否工作\n- 超时处理是否正常"
   ],
-  "progress": 56,
+  "progress": 74,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -30,12 +30,12 @@
       "url": "https://github.com/PIGU-PPPgu/oh-my-Dynamic"
     }
   ],
-  "updated": "2026-06-04",
+  "updated": "2026-06-05",
   "progressEvaluation": {
-    "generatedAt": "2026-06-04",
+    "generatedAt": "2026-06-05",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 56,
+    "progress": 74,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -73,8 +73,8 @@
       }
     ],
     "evidence": [
-      "repo files: 51",
-      "last push: 2026-06-03",
+      "repo files: 57",
+      "last push: 2026-06-04",
       "frameworks: Python"
     ],
     "risks": [
@@ -88,22 +88,22 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "1lyj3kr",
-    "generatedAt": "2026-06-04",
+    "id": "ote4fx",
+    "generatedAt": "2026-06-05",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
     "suggestedPriority": "medium",
     "confidence": "medium",
-    "score": 43,
-    "rationale": "综合分 43/100，建议为 medium。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 44,
+    "rationale": "综合分 44/100，建议为 medium。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 51",
-      "last push: 2026-06-03",
+      "repo files: 57",
+      "last push: 2026-06-04",
       "launch/use signal in project text",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 56% building"
+      "progress evaluation: 74% building"
     ],
     "dimensions": [
       {
@@ -126,7 +126,7 @@
       },
       {
         "name": "maturity_or_impact",
-        "score": 34,
+        "score": 38,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },

@@ -29,9 +29,9 @@
       "url": "https://github.com/PIGU-PPPgu/agent-swarm-dev"
     }
   ],
-  "updated": "2026-06-04",
+  "updated": "2026-06-05",
   "progressEvaluation": {
-    "generatedAt": "2026-06-04",
+    "generatedAt": "2026-06-05",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 36,
@@ -85,7 +85,7 @@
   },
   "prioritySuggestion": {
     "id": "1f0qnt4",
-    "generatedAt": "2026-06-04",
+    "generatedAt": "2026-06-05",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
