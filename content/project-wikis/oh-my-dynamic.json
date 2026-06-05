@@ -6,35 +6,39 @@
     "url": "https://github.com/PIGU-PPPgu/oh-my-Dynamic",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-06-04T15:41:17Z",
+    "pushedAt": "2026-06-05T07:33:13Z",
     "language": "Python"
   },
-  "generatedAt": "2026-06-04T21:53:56.056Z",
+  "generatedAt": "2026-06-05T21:44:05.925Z",
   "readme": {
     "title": "oh-my-Dynamic 🔄",
     "summary": [
       "多 Agent 编排引擎 / Codex Native Dynamic Workflows 提案原型 —— 对齐 Anthropic Dynamic Workflows + VMAO 论文架构（arXiv 2603.11445），支持所有主流大模型。",
       "Codex App 默认：当 App 内部 subagent tools/runtime 可用时，插件/skill 应默认走 Codex App internal subagent backend，使用真实 Codex subagents。 LLM 继承：这些 App-native subagents 默认继承当前 Codex App 内部 LLM，不需要 OPENAIAPIKEY 或其他外部模型 key。 当前项目边界：提供插件级编排与本地 Python runtime 原型；真正 App-native isolated sandboxes、tool permissions、DAG scheduler 和 trace 仍由 Codex runtime 提供。 oh-my-Dynamic bridges plugin-level orchestration, local runtime prototypes, and Codex App-native subagents.",
-      "- 🎯 明确目标：不是只做 prompt 技巧，而是为 Codex Native Dynamic Workflows 提供可验证原型和接口提案 - 🧠 Codex App internal subagent backend：在 Codex App 暴露 subagent tools/runtime 时，默认使用真实 Codex subagents，并继承当前 App 内部 LLM；无需 API key - 📨 A2A / Agent Broker：受控 message、artifact、handoff、review request/response 和 audit trace，让 subagents 不只是并行跑，还能有证据链地协作 - 🧭 Dynamic Workflow v1.7：Codex CLI planner/replanner 先拆任务、运行后继续派生 agents，并由 broker-aware reducer 汇总 evidence - 🌿 Worktree 写入隔离：显式开启写代码并发时，每个 Codex CLI worker 使用独立 git worktree，默认只产出 patch/diff artifacts，不自动 merge - 🤖 多模型支持：GLM、OpenAI GPT、Claude、Gemini、DeepSeek、通义千问/Qwen、Moonshot/Kimi、硅基流动…… 自动识别模型名选择对应 provider - 🔗 串行编排（Orchestrator）：Planner → Builder → Reviewer 流水线，含自动重试和 review 打回 - 👥 并行团队（TeamEngine）：多 agent 并行抢任务，消息总线通信 - 🧪 Sandboxed Fan-out Runtime：本地原型可并发启动 10/50/100+ isolated workers，每个 worker 有独立 sandbox、context 和 tool grants - 🕸️ DAG 任务图：依赖感知的并行执行，自动拓扑排序 - 🔄 动态重规划（Dynamic Replan）：运行中根据中间结果调整计划 - 🧬 TEA 工具进化：LLM 驱动的工具自动分析、改进和回滚 - 📊 可视化：自动生成 DAG 的 DOT/SVG 图 - 🛡️ 安全：TEA 工具 AST 校验 + 子进程隔离、线程安全消息总线、循环超时保护",
-      "文件 作用 ------------ task.py Task 状态机（TaskStatus 枚举 + 合法转换表） agents.py 三种角色定义（planner/builder/reviewer） llmclient.py 通用 LLM 客户端（自动识别模型选择 provider） orchestrator.py 串行编排引擎（核心调度器） teamengine.py 并行团队引擎（多 agent 协作） dag.py DAG 任务图 + 并行执行器 dynamicreplan.py 动态重规划（运行中调整策略） teaprotocol.py TEA 工具进化协议（LLM 驱动的工具改进） messagebus.py Agent 间消息总线（文件系统队列，线程安全） agentbroker.py A2A-style 协作 broker：policy、messages、artifacts、handoff、review request/response、audit trace brokergateway.py 本地 HTTP/SSE gateway：Agent Card、agents/inbox、task snapshot、events、messages、artifacts、handoffs、review requests/responses brokerreducer.py Broker-aware reducer：读取 artifacts、失败、依赖图、review responses 和 worktree diff artifacts codexappbridge.py Codex App subagent bridge：dispatch plan、subagent prompt、JSON envelope、broker ingestion codexcliswarm.py Codex CLI swarm backend：并发启动多个 codex exec 进程，回收 JSON envelope，并写入 AgentBroker dynamicworkflow.py Planner/replanner dynamic workflow runtime：多轮派生 Codex CLI agents 并最终 reducer nativeruntime.py sandboxed fan-out runtime 原型（isolated worker、tool grants、trace、reducer） pipeline.py 端到端 Pipeline（组合所有组件） stopconditions.py 停止条件（迭代上限 / token 预算 / 收敛检测） synthesis.py 结果汇总 tokentracker.py Token 预算追踪 validator.py 验证框架（单元/集成/端到端） promptkit.py Prompt 工程工具包 visualize.py DAG 可视化（DOT/SVG） worktree.py Git worktree 管理 protocoladapters.py MCP/A2A 风格协议适配层（tool descriptor、Agent Card、Task payload） examples/ 无需 API Key 的端到端 demo docs/CODEXNATIVEDYNAMICWORKFLOWS.md Codex 原生 dynamic workflows 能力提案",
-      "安装完成后，重启 Codex App，或至少新开一个 thread，让插件与 skills 重新加载。",
-      "~/.agents/plugins/marketplace.json 中应包含 oh-my-dynamic，并指向当前 clone 的 codex-plugin 目录。安装脚本会保留 marketplace 中的其他插件条目；如果需要修改已有 JSON，会先创建 .bak.<timestamp 备份。当前安装方式使用符号链接，移动或删除这个仓库会让已安装插件失效；移动后重新运行 bash installplugin.sh 即可刷新路径。"
+      "- 🎯 明确目标：不是只做 prompt 技巧，而是为 Codex Native Dynamic Workflows 提供可验证原型和接口提案 - 🧠 Codex App internal subagent backend：在 Codex App 暴露 subagent tools/runtime 时，默认使用真实 Codex subagents，并继承当前 App 内部 LLM；无需 API key - 📨 A2A / Agent Broker：受控 message、artifact、handoff、review request/response 和 audit trace，让 subagents 不只是并行跑，还能有证据链地协作 - 🧭 Dynamic Workflow v1.9：Codex CLI planner/replanner 先拆任务、运行后继续派生 agents，并由 broker-aware reducer 汇总 evidence；支持流式事件、checkpoint/resume、coverage gate 和静态 observability dashboard - 🌿 Worktree 写入隔离：显式开启写代码并发时，每个 Codex CLI worker 使用独立 git worktree，默认只产出 patch/diff artifacts，不自动 merge - 🤖 多模型支持：GLM、OpenAI GPT、Claude、Gemini、DeepSeek、通义千问/Qwen、Moonshot/Kimi、硅基流动…… 自动识别模型名选择对应 provider - 🔗 串行编排（Orchestrator）：Planner → Builder → Reviewer 流水线，含自动重试和 review 打回 - 👥 并行团队（TeamEngine）：多 agent 并行抢任务，消息总线通信 - 🧪 Sandboxed Fan-out Runtime：本地原型可并发启动 10/50/100+ isolated workers，每个 worker 有独立 sandbox、context 和 tool grants - 🕸️ DAG 任务图：依赖感知的并行执行，自动拓扑排序 - 🔄 动态重规划（Dynamic Replan）：运行中根据中间结果调整计划 - 🧬 TEA 工具进化：LLM 驱动的工具自动分析、改进和回滚 - 📊 可视化：自动生成 DAG 的 DOT/SVG 图 - 🛡️ 安全：TEA 工具 AST 校验 + 子进程隔离、线程安全消息总线、循环超时保护",
+      "状态 能力 ------------ Stable Codex CLI swarm、dynamic workflow、broker reducer、真实 repo review demo、静态 observability dashboard Beta worktree patch mode、checkpoint/resume、streaming progress events、capability routing Experimental Codex App bridge、A2A gateway、TEA protocol",
+      "主线产品路径是 Codex CLI dynamic workflow。Codex App bridge、A2A gateway 和 TEA protocol 保留为 experimental contract / research track，不作为当前默认落地路径。",
+      "新增调度策略优先进入 dynamicworkflow.py；新增 worker 生命周期、trace、artifact 或 process 细节优先进入 swarm 执行层 helper。"
     ]
   },
   "fileTree": {
-    "totalFiles": 57,
+    "totalFiles": 71,
     "truncated": false,
     "topDirectories": [
       {
         "name": "[root]",
-        "count": 35
+        "count": 46
       },
       {
         "name": "examples",
-        "count": 9
+        "count": 10
       },
       {
         "name": ".orchestry",
+        "count": 4
+      },
+      {
+        "name": "docs",
         "count": 4
       },
       {
@@ -42,8 +46,8 @@
         "count": 3
       },
       {
-        "name": "docs",
-        "count": 3
+        "name": "scripts",
+        "count": 2
       },
       {
         "name": ".agents",
@@ -52,20 +56,16 @@
       {
         "name": ".github",
         "count": 1
-      },
-      {
-        "name": "scripts",
-        "count": 1
       }
     ],
     "extensions": [
       {
         "ext": ".py",
-        "count": 36
+        "count": 49
       },
       {
         "ext": ".md",
-        "count": 8
+        "count": 9
       },
       {
         "ext": ".jsonl",
@@ -109,22 +109,24 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "1 file(s) under scripts/"
+        "2 file(s) under scripts/"
       ],
       "files": [
-        "scripts/record_swarm_evidence.py"
+        "scripts/record_swarm_evidence.py",
+        "scripts/render_workflow_observability.py"
       ]
     },
     {
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "3 file(s) under docs/"
+        "4 file(s) under docs/"
       ],
       "files": [
         "docs/CODEX_CLI_SWARM_SMOKE.md",
         "docs/CODEX_NATIVE_DYNAMIC_WORKFLOWS.md",
-        "docs/RELEASE_CHECKLIST.md"
+        "docs/RELEASE_CHECKLIST.md",
+        "docs/evidence/README.md"
       ]
     }
   ],
