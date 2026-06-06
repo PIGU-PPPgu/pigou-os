@@ -6,74 +6,78 @@
     "url": "https://github.com/PIGU-PPPgu/oh-my-Dynamic",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-06-05T07:33:13Z",
+    "pushedAt": "2026-06-06T18:27:31Z",
     "language": "Python"
   },
-  "generatedAt": "2026-06-05T21:44:05.925Z",
+  "generatedAt": "2026-06-06T21:18:29.067Z",
   "readme": {
     "title": "oh-my-Dynamic 🔄",
     "summary": [
-      "多 Agent 编排引擎 / Codex Native Dynamic Workflows 提案原型 —— 对齐 Anthropic Dynamic Workflows + VMAO 论文架构（arXiv 2603.11445），支持所有主流大模型。",
-      "Codex App 默认：当 App 内部 subagent tools/runtime 可用时，插件/skill 应默认走 Codex App internal subagent backend，使用真实 Codex subagents。 LLM 继承：这些 App-native subagents 默认继承当前 Codex App 内部 LLM，不需要 OPENAIAPIKEY 或其他外部模型 key。 当前项目边界：提供插件级编排与本地 Python runtime 原型；真正 App-native isolated sandboxes、tool permissions、DAG scheduler 和 trace 仍由 Codex runtime 提供。 oh-my-Dynamic bridges plugin-level orchestration, local runtime prototypes, and Codex App-native subagents.",
-      "- 🎯 明确目标：不是只做 prompt 技巧，而是为 Codex Native Dynamic Workflows 提供可验证原型和接口提案 - 🧠 Codex App internal subagent backend：在 Codex App 暴露 subagent tools/runtime 时，默认使用真实 Codex subagents，并继承当前 App 内部 LLM；无需 API key - 📨 A2A / Agent Broker：受控 message、artifact、handoff、review request/response 和 audit trace，让 subagents 不只是并行跑，还能有证据链地协作 - 🧭 Dynamic Workflow v1.9：Codex CLI planner/replanner 先拆任务、运行后继续派生 agents，并由 broker-aware reducer 汇总 evidence；支持流式事件、checkpoint/resume、coverage gate 和静态 observability dashboard - 🌿 Worktree 写入隔离：显式开启写代码并发时，每个 Codex CLI worker 使用独立 git worktree，默认只产出 patch/diff artifacts，不自动 merge - 🤖 多模型支持：GLM、OpenAI GPT、Claude、Gemini、DeepSeek、通义千问/Qwen、Moonshot/Kimi、硅基流动…… 自动识别模型名选择对应 provider - 🔗 串行编排（Orchestrator）：Planner → Builder → Reviewer 流水线，含自动重试和 review 打回 - 👥 并行团队（TeamEngine）：多 agent 并行抢任务，消息总线通信 - 🧪 Sandboxed Fan-out Runtime：本地原型可并发启动 10/50/100+ isolated workers，每个 worker 有独立 sandbox、context 和 tool grants - 🕸️ DAG 任务图：依赖感知的并行执行，自动拓扑排序 - 🔄 动态重规划（Dynamic Replan）：运行中根据中间结果调整计划 - 🧬 TEA 工具进化：LLM 驱动的工具自动分析、改进和回滚 - 📊 可视化：自动生成 DAG 的 DOT/SVG 图 - 🛡️ 安全：TEA 工具 AST 校验 + 子进程隔离、线程安全消息总线、循环超时保护",
-      "状态 能力 ------------ Stable Codex CLI swarm、dynamic workflow、broker reducer、真实 repo review demo、静态 observability dashboard Beta worktree patch mode、checkpoint/resume、streaming progress events、capability routing Experimental Codex App bridge、A2A gateway、TEA protocol",
-      "主线产品路径是 Codex CLI dynamic workflow。Codex App bridge、A2A gateway 和 TEA protocol 保留为 experimental contract / research track，不作为当前默认落地路径。",
-      "新增调度策略优先进入 dynamicworkflow.py；新增 worker 生命周期、trace、artifact 或 process 细节优先进入 swarm 执行层 helper。"
+      "[](https://github.com/PIGU-PPPgu/oh-my-Dynamic/actions/workflows/tests.yml) [](https://github.com/PIGU-PPPgu/oh-my-Dynamic/actions/workflows/tests.yml) [](LICENSE)",
+      "多 Agent 编排引擎 / Codex Dynamic Workflows 原型 —— 对齐 Anthropic Dynamic Workflows + VMAO 论文架构（arXiv 2603.11445），支持 Codex App skill、Codex CLI swarm、adaptive planner/replanner 和主流大模型。",
+      "核心边界：当前可验证的大规模真实能力是 Codex CLI process swarm，不是 Codex App-native isolated subagents；App-native isolated subagents 仍取决于 Codex App runtime 是否暴露该能力。默认 read-only，并通过 broker/evidence/dashboard 留证。",
+      "入口 命令 证明什么 ---------------------- 5 分钟 dry-run python examples/realreporeview.py --dry-run --run-id five-minute-demo 安装、JSON/Markdown evidence 形状、无 API key 路径 真实 5-agent repo review python examples/realreporeview.py --agents 5 --max-parallel 3 --dashboard 真实 Codex CLI workers、broker reducer、dashboard v2.2+ adaptive replanner proof python scripts/recordadaptiveworkflowevidence.py --required-coverage security,tests,docs,replanner-proof --force-missing-coverage replanner-proof --max-rounds 2 --max-agents 12 --max-parallel 4 --dashboard planner 生成 agents，trigger policy 发现缺口，replanner 追加 follow-up agents v3.1 bounded benchmark python scripts/runbenchmark.py --real --allow-failures --mode single,fixed,adaptive --output docs/evidence/benchmarkv310.json 对 5 个固定 repo-review fixture 启动真实 Codex CLI workers，并记录 timeout/failure evidence",
+      "Latest release and committed evidence: <https://github.com/PIGU-PPPgu/oh-my-Dynamic/releases/latest",
+      "Gate Command --------------- Test + coverage python testsuite.py && python -m pytest tests -q && python -m coverage run -m pytest tests -q && python -m coverage report --fail-under=80 Security scan python -m bandit -r . -c pyproject.toml Local install doctor python -m doctor --json Deterministic benchmark python scripts/runbenchmark.py --suite benchmarks/reporeview.json --mode single,fixed,adaptive --output /tmp/benchmark.json Evidence redaction ! grep -R \"/Users/\" docs/evidence"
     ]
   },
   "fileTree": {
-    "totalFiles": 71,
+    "totalFiles": 165,
     "truncated": false,
     "topDirectories": [
       {
+        "name": "src",
+        "count": 53
+      },
+      {
         "name": "[root]",
-        "count": 46
+        "count": 52
+      },
+      {
+        "name": "docs",
+        "count": 30
       },
       {
         "name": "examples",
         "count": 10
       },
       {
+        "name": "scripts",
+        "count": 5
+      },
+      {
         "name": ".orchestry",
         "count": 4
       },
       {
-        "name": "docs",
+        "name": "tests",
         "count": 4
       },
       {
         "name": "codex-plugin",
         "count": 3
-      },
-      {
-        "name": "scripts",
-        "count": 2
-      },
-      {
-        "name": ".agents",
-        "count": 1
-      },
-      {
-        "name": ".github",
-        "count": 1
       }
     ],
     "extensions": [
       {
         "ext": ".py",
-        "count": 49
+        "count": 114
       },
       {
         "ext": ".md",
-        "count": 9
+        "count": 22
+      },
+      {
+        "ext": ".json",
+        "count": 14
+      },
+      {
+        "ext": ".html",
+        "count": 4
       },
       {
         "ext": ".jsonl",
         "count": 4
-      },
-      {
-        "ext": ".json",
-        "count": 2
       },
       {
         "ext": ".cff",
@@ -85,10 +89,6 @@
       },
       {
         "ext": ".gitignore",
-        "count": 1
-      },
-      {
-        "ext": ".html",
         "count": 1
       },
       {
@@ -106,27 +106,51 @@
   ],
   "modules": [
     {
+      "name": "src",
+      "kind": "Source root",
+      "evidence": [
+        "53 file(s) under src/"
+      ],
+      "files": [
+        "src/oh_my_dynamic/__init__.py",
+        "src/oh_my_dynamic/broker/__init__.py",
+        "src/oh_my_dynamic/broker/agent_broker.py",
+        "src/oh_my_dynamic/broker/broker_gateway.py",
+        "src/oh_my_dynamic/broker/broker_reducer.py",
+        "src/oh_my_dynamic/cli/__init__.py",
+        "src/oh_my_dynamic/cli/codex_swarm.py",
+        "src/oh_my_dynamic/cli/doctor.py"
+      ]
+    },
+    {
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "2 file(s) under scripts/"
+        "5 file(s) under scripts/"
       ],
       "files": [
+        "scripts/record_adaptive_workflow_evidence.py",
         "scripts/record_swarm_evidence.py",
-        "scripts/render_workflow_observability.py"
+        "scripts/render_workflow_observability.py",
+        "scripts/run_benchmark.py",
+        "scripts/run_quality_eval.py"
       ]
     },
     {
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "4 file(s) under docs/"
+        "30 file(s) under docs/"
       ],
       "files": [
         "docs/CODEX_CLI_SWARM_SMOKE.md",
         "docs/CODEX_NATIVE_DYNAMIC_WORKFLOWS.md",
         "docs/RELEASE_CHECKLIST.md",
-        "docs/evidence/README.md"
+        "docs/THREAT_MODEL.md",
+        "docs/V2_PRODUCTIZATION_PLAN.md",
+        "docs/V3_MIGRATION_GUIDE.md",
+        "docs/evidence/README.md",
+        "docs/evidence/adaptive_dry_v210.json"
       ]
     }
   ],
@@ -147,6 +171,11 @@
       "from": "Python",
       "to": "oh-my-Dynamic",
       "label": "powers"
+    },
+    {
+      "from": "src",
+      "to": "oh-my-Dynamic",
+      "label": "contains"
     },
     {
       "from": "scripts",
