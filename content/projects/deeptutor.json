@@ -13,7 +13,7 @@
     "<a href=\"https://trendshift.io/repositories/17099\" target=\"blank\"<img src=\"https://trendshift.io/api/badge/repositories/17099\" alt=\"HKUDS%2FDeepTutor  Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/</a",
     "[](https://www.python.org/downloads/)\n[](https://nextjs.org/)\n[](LICENSE)\n[](https://github.com/HKUDS/DeepTutor/releases)\n[]()"
   ],
-  "progress": 97,
+  "progress": 92,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -29,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/DeepTutor"
     }
   ],
-  "updated": "2026-06-07",
+  "updated": "2026-06-08",
   "progressEvaluation": {
-    "generatedAt": "2026-06-07",
+    "generatedAt": "2026-06-08",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 97,
+    "progress": 92,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -66,7 +66,7 @@
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
@@ -85,8 +85,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "1io1nyg",
-    "generatedAt": "2026-06-07",
+    "id": "10ud4d",
+    "generatedAt": "2026-06-08",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -99,7 +99,7 @@
       "repo files: 1088",
       "last push: 2026-05-08",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 97% building"
+      "progress evaluation: 92% building"
     ],
     "dimensions": [
       {

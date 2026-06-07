@@ -6,70 +6,70 @@
     "url": "https://github.com/PIGU-PPPgu/oh-my-Dynamic",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-06-06T18:27:31Z",
+    "pushedAt": "2026-06-07T18:49:34Z",
     "language": "Python"
   },
-  "generatedAt": "2026-06-06T21:18:29.067Z",
+  "generatedAt": "2026-06-07T21:36:23.841Z",
   "readme": {
-    "title": "oh-my-Dynamic 🔄",
+    "title": "Safe: no key, no real workers, writes outside repo",
     "summary": [
-      "[](https://github.com/PIGU-PPPgu/oh-my-Dynamic/actions/workflows/tests.yml) [](https://github.com/PIGU-PPPgu/oh-my-Dynamic/actions/workflows/tests.yml) [](LICENSE)",
-      "多 Agent 编排引擎 / Codex Dynamic Workflows 原型 —— 对齐 Anthropic Dynamic Workflows + VMAO 论文架构（arXiv 2603.11445），支持 Codex App skill、Codex CLI swarm、adaptive planner/replanner 和主流大模型。",
-      "核心边界：当前可验证的大规模真实能力是 Codex CLI process swarm，不是 Codex App-native isolated subagents；App-native isolated subagents 仍取决于 Codex App runtime 是否暴露该能力。默认 read-only，并通过 broker/evidence/dashboard 留证。",
-      "入口 命令 证明什么 ---------------------- 5 分钟 dry-run python examples/realreporeview.py --dry-run --run-id five-minute-demo 安装、JSON/Markdown evidence 形状、无 API key 路径 真实 5-agent repo review python examples/realreporeview.py --agents 5 --max-parallel 3 --dashboard 真实 Codex CLI workers、broker reducer、dashboard v2.2+ adaptive replanner proof python scripts/recordadaptiveworkflowevidence.py --required-coverage security,tests,docs,replanner-proof --force-missing-coverage replanner-proof --max-rounds 2 --max-agents 12 --max-parallel 4 --dashboard planner 生成 agents，trigger policy 发现缺口，replanner 追加 follow-up agents v3.1 bounded benchmark python scripts/runbenchmark.py --real --allow-failures --mode single,fixed,adaptive --output docs/evidence/benchmarkv310.json 对 5 个固定 repo-review fixture 启动真实 Codex CLI workers，并记录 timeout/failure evidence",
-      "Latest release and committed evidence: <https://github.com/PIGU-PPPgu/oh-my-Dynamic/releases/latest",
-      "Gate Command --------------- Test + coverage python testsuite.py && python -m pytest tests -q && python -m coverage run -m pytest tests -q && python -m coverage report --fail-under=80 Security scan python -m bandit -r . -c pyproject.toml Local install doctor python -m doctor --json Deterministic benchmark python scripts/runbenchmark.py --suite benchmarks/reporeview.json --mode single,fixed,adaptive --output /tmp/benchmark.json Evidence redaction ! grep -R \"/Users/\" docs/evidence"
+      "<div align=\"center\" <img src=\"assets/icon.svg\" alt=\"oh-my-Dynamic\" width=\"112\" height=\"112\" <h1oh-my-Dynamic</h1 <p<strongDynamic workflow tooling for Codex.</strong</p <p<a href=\"https://github.com/PIGU-PPPgu/oh-my-Dynamic/actions/workflows/tests.yml\"<img src=\"https://github.com/PIGU-PPPgu/oh-my-Dynamic/actions/workflows/tests.yml/badge.svg\" alt=\"tests\"</a <a href=\"https://github.com/PIGU-PPPgu/oh-my-Dynamic/actions/workflows/tests.yml\"<img src=\"https://img.shields.io/badge/coverage-82%25-brightgreen\" alt=\"coverage\"</a <a href=\"LICENSE\"<img src=\"https://img.shields.io/badge/license-MIT-blue\" alt=\"license\"</a</p <p<a href=\"README.zh-CN.md\"中文说明</a</p </div",
+      "https://github.com/user-attachments/assets/a48d5943-620f-4eac-bd36-a4ea02b4cec6",
+      "Boundary: verified large-scale execution is Codex CLI process swarm. Codex App-native isolated subagents still depend on Codex App exposing that runtime. Defaults are read-only.",
+      "Plugin install mutates local ~/.agents symlinks and marketplace JSON. Runtime workers remain read-only by default.",
+      "Bilingual report: docs/evidence/improvementv311.md",
+      "This is controlled same-fixture rubric scoring, not live model quality proof. Pair it with real Codex CLI evidence before making runtime claims."
     ]
   },
   "fileTree": {
-    "totalFiles": 165,
+    "totalFiles": 222,
     "truncated": false,
     "topDirectories": [
+      {
+        "name": "docs",
+        "count": 59
+      },
+      {
+        "name": "[root]",
+        "count": 53
+      },
       {
         "name": "src",
         "count": 53
       },
       {
-        "name": "[root]",
-        "count": 52
-      },
-      {
-        "name": "docs",
-        "count": 30
-      },
-      {
         "name": "examples",
-        "count": 10
+        "count": 12
+      },
+      {
+        "name": "showcase",
+        "count": 11
+      },
+      {
+        "name": "assets",
+        "count": 7
       },
       {
         "name": "scripts",
-        "count": 5
-      },
-      {
-        "name": ".orchestry",
-        "count": 4
+        "count": 7
       },
       {
         "name": "tests",
-        "count": 4
-      },
-      {
-        "name": "codex-plugin",
-        "count": 3
+        "count": 6
       }
     ],
     "extensions": [
       {
         "ext": ".py",
-        "count": 114
+        "count": 120
       },
       {
         "ext": ".md",
-        "count": 22
+        "count": 50
       },
       {
         "ext": ".json",
-        "count": 14
+        "count": 21
       },
       {
         "ext": ".html",
@@ -80,28 +80,50 @@
         "count": 4
       },
       {
+        "ext": ".png",
+        "count": 4
+      },
+      {
+        "ext": ".svg",
+        "count": 4
+      },
+      {
+        "ext": ".tsx",
+        "count": 3
+      },
+      {
+        "ext": ".yml",
+        "count": 3
+      },
+      {
         "ext": ".cff",
-        "count": 1
-      },
-      {
-        "ext": ".example",
-        "count": 1
-      },
-      {
-        "ext": ".gitignore",
-        "count": 1
-      },
-      {
-        "ext": ".sh",
-        "count": 1
-      },
-      {
-        "ext": ".toml",
         "count": 1
       }
     ]
   },
+  "package": {
+    "scripts": [
+      "studio",
+      "still",
+      "poster",
+      "render",
+      "typecheck"
+    ],
+    "dependencies": [
+      "@remotion/cli",
+      "react",
+      "react-dom",
+      "remotion"
+    ],
+    "devDependencies": [
+      "@types/node",
+      "@types/react",
+      "@types/react-dom",
+      "typescript"
+    ]
+  },
   "frameworks": [
+    "React",
     "Python"
   ],
   "modules": [
@@ -126,13 +148,15 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "5 file(s) under scripts/"
+        "7 file(s) under scripts/"
       ],
       "files": [
+        "scripts/measure_improvement.py",
         "scripts/record_adaptive_workflow_evidence.py",
         "scripts/record_swarm_evidence.py",
         "scripts/render_workflow_observability.py",
         "scripts/run_benchmark.py",
+        "scripts/run_demo_validation.py",
         "scripts/run_quality_eval.py"
       ]
     },
@@ -140,22 +164,28 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "30 file(s) under docs/"
+        "59 file(s) under docs/"
       ],
       "files": [
+        "docs/ADOPTION_VALIDATION.md",
+        "docs/ADOPTION_VALIDATION.zh-CN.md",
         "docs/CODEX_CLI_SWARM_SMOKE.md",
         "docs/CODEX_NATIVE_DYNAMIC_WORKFLOWS.md",
-        "docs/RELEASE_CHECKLIST.md",
-        "docs/THREAT_MODEL.md",
-        "docs/V2_PRODUCTIZATION_PLAN.md",
-        "docs/V3_MIGRATION_GUIDE.md",
-        "docs/evidence/README.md",
-        "docs/evidence/adaptive_dry_v210.json"
+        "docs/DEMOS.md",
+        "docs/DEMOS.zh-CN.md",
+        "docs/DEMO_SCRIPT.md",
+        "docs/DEMO_SCRIPT.zh-CN.md"
       ]
     }
   ],
-  "entrypoints": [],
+  "entrypoints": [
+    "showcase/package.json"
+  ],
   "importantFiles": [
+    {
+      "path": "showcase/package.json",
+      "reason": "Node package manifest"
+    },
     {
       "path": "README.md",
       "reason": "Human project explanation"
@@ -166,6 +196,11 @@
       "from": "GitHub repository",
       "to": "oh-my-Dynamic",
       "label": "indexes"
+    },
+    {
+      "from": "React",
+      "to": "oh-my-Dynamic",
+      "label": "powers"
     },
     {
       "from": "Python",
@@ -186,10 +221,14 @@
       "from": "docs",
       "to": "oh-my-Dynamic",
       "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
     }
   ],
   "gaps": [
-    "package.json could not be found or parsed.",
     "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
   ]
 }

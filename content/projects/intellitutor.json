@@ -7,7 +7,7 @@
   "explanation": "这是 Pigou 教育 AI 产品线的核心展示项目，用来验证 K12 场景里 AI 家教、阅读陪伴、知识诊断和在线部署能否形成真实可用的学习产品。",
   "domain": "education-ai",
   "source": "github:PIGU-PPPgu/IntelliTutor",
-  "progress": 84,
+  "progress": 79,
   "goals": [
     "稳定深度解题和知识图谱",
     "打通在线部署",
@@ -27,12 +27,12 @@
       "url": "https://tutor.intelliclass.online"
     }
   ],
-  "updated": "2026-06-07",
+  "updated": "2026-06-08",
   "progressEvaluation": {
-    "generatedAt": "2026-06-07",
+    "generatedAt": "2026-06-08",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 84,
+    "progress": 79,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -64,7 +64,7 @@
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
@@ -83,8 +83,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "197uarf",
-    "generatedAt": "2026-06-07",
+    "id": "1ev7909",
+    "generatedAt": "2026-06-08",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
@@ -97,7 +97,7 @@
       "repo files: 91",
       "last push: 2026-05-07",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 84% building"
+      "progress evaluation: 79% building"
     ],
     "dimensions": [
       {
