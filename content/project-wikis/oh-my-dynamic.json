@@ -6,28 +6,27 @@
     "url": "https://github.com/PIGU-PPPgu/oh-my-Dynamic",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-06-07T18:49:34Z",
+    "pushedAt": "2026-06-08T05:47:12Z",
     "language": "Python"
   },
-  "generatedAt": "2026-06-07T21:36:23.841Z",
+  "generatedAt": "2026-06-08T22:01:32.296Z",
   "readme": {
-    "title": "Safe: no key, no real workers, writes outside repo",
     "summary": [
       "<div align=\"center\" <img src=\"assets/icon.svg\" alt=\"oh-my-Dynamic\" width=\"112\" height=\"112\" <h1oh-my-Dynamic</h1 <p<strongDynamic workflow tooling for Codex.</strong</p <p<a href=\"https://github.com/PIGU-PPPgu/oh-my-Dynamic/actions/workflows/tests.yml\"<img src=\"https://github.com/PIGU-PPPgu/oh-my-Dynamic/actions/workflows/tests.yml/badge.svg\" alt=\"tests\"</a <a href=\"https://github.com/PIGU-PPPgu/oh-my-Dynamic/actions/workflows/tests.yml\"<img src=\"https://img.shields.io/badge/coverage-82%25-brightgreen\" alt=\"coverage\"</a <a href=\"LICENSE\"<img src=\"https://img.shields.io/badge/license-MIT-blue\" alt=\"license\"</a</p <p<a href=\"README.zh-CN.md\"中文说明</a</p </div",
       "https://github.com/user-attachments/assets/a48d5943-620f-4eac-bd36-a4ea02b4cec6",
-      "Boundary: verified large-scale execution is Codex CLI process swarm. Codex App-native isolated subagents still depend on Codex App exposing that runtime. Defaults are read-only.",
-      "Plugin install mutates local ~/.agents symlinks and marketplace JSON. Runtime workers remain read-only by default.",
-      "Bilingual report: docs/evidence/improvementv311.md",
-      "This is controlled same-fixture rubric scoring, not live model quality proof. Pair it with real Codex CLI evidence before making runtime claims."
+      "Positioning: Codex supports native parallel coding agents. oh-my-Dynamic does not compete with that runtime; it adds planning, replanning, broker evidence, benchmark reports, and adoption validation around Codex CLI/App workflows. The verified large-scale backend here is Codex CLI process swarm; defaults are read-only.",
+      "Codex native subagents execute the work. oh-my-Dynamic explains, plans, measures, records, and audits the work.",
+      "Layer Codex native agents oh-my-Dynamic ------------------------------------------- Execution First-party parallel agents, worktrees, cloud/app runtime Uses Codex CLI process swarm today; can later target native APIs Workflow Great direct coding UX Planner/replanner rounds, reducers, missing-coverage follow-up Evidence Codex task UI and diffs Compact JSON/MD/dashboard evidence for reviewers and releases Best fit Build, fix, refactor, review code Complex task decomposition, audit trails, benchmarks, external proof",
+      "Plugin install mutates local ~/.agents symlinks and marketplace JSON. Runtime workers remain read-only by default."
     ]
   },
   "fileTree": {
-    "totalFiles": 222,
+    "totalFiles": 224,
     "truncated": false,
     "topDirectories": [
       {
         "name": "docs",
-        "count": 59
+        "count": 61
       },
       {
         "name": "[root]",
@@ -65,7 +64,7 @@
       },
       {
         "ext": ".md",
-        "count": 50
+        "count": 52
       },
       {
         "ext": ".json",
@@ -164,17 +163,17 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "59 file(s) under docs/"
+        "61 file(s) under docs/"
       ],
       "files": [
         "docs/ADOPTION_VALIDATION.md",
         "docs/ADOPTION_VALIDATION.zh-CN.md",
         "docs/CODEX_CLI_SWARM_SMOKE.md",
         "docs/CODEX_NATIVE_DYNAMIC_WORKFLOWS.md",
+        "docs/CODEX_NATIVE_VS_OH_MY_DYNAMIC.md",
+        "docs/CODEX_NATIVE_VS_OH_MY_DYNAMIC.zh-CN.md",
         "docs/DEMOS.md",
-        "docs/DEMOS.zh-CN.md",
-        "docs/DEMO_SCRIPT.md",
-        "docs/DEMO_SCRIPT.zh-CN.md"
+        "docs/DEMOS.zh-CN.md"
       ]
     }
   ],

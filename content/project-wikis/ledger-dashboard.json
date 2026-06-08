@@ -1,0 +1,135 @@
+{
+  "slug": "ledger-dashboard",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "ledger-dashboard",
+    "url": "https://github.com/PIGU-PPPgu/ledger-dashboard",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-06-08T12:31:58Z",
+    "language": "Python"
+  },
+  "generatedAt": "2026-06-08T22:01:30.576Z",
+  "readme": {
+    "title": "💰 记账数据大屏",
+    "summary": [
+      "更新方式：每日 Cron 自动运行 notiondashboard.py 并推送到 GitHub Pages。"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 4,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "[root]",
+        "count": 4
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".html",
+        "count": 1
+      },
+      {
+        "ext": ".md",
+        "count": 1
+      },
+      {
+        "ext": ".nojekyll",
+        "count": 1
+      },
+      {
+        "ext": ".py",
+        "count": 1
+      }
+    ]
+  },
+  "frameworks": [
+    "Python"
+  ],
+  "modules": [
+    {
+      "name": ".nojekyll",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        ".nojekyll"
+      ]
+    },
+    {
+      "name": "index.html",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "index.html"
+      ]
+    },
+    {
+      "name": "notion_dashboard.py",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "notion_dashboard.py"
+      ]
+    },
+    {
+      "name": "README.md",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "README.md"
+      ]
+    }
+  ],
+  "entrypoints": [],
+  "importantFiles": [
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "ledger-dashboard",
+      "label": "indexes"
+    },
+    {
+      "from": "Python",
+      "to": "ledger-dashboard",
+      "label": "powers"
+    },
+    {
+      "from": ".nojekyll",
+      "to": "ledger-dashboard",
+      "label": "contains"
+    },
+    {
+      "from": "index.html",
+      "to": "ledger-dashboard",
+      "label": "contains"
+    },
+    {
+      "from": "notion_dashboard.py",
+      "to": "ledger-dashboard",
+      "label": "contains"
+    },
+    {
+      "from": "README.md",
+      "to": "ledger-dashboard",
+      "label": "contains"
+    }
+  ],
+  "gaps": [
+    "package.json could not be found or parsed.",
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+  ]
+}

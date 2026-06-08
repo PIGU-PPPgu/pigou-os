@@ -24,9 +24,9 @@
       "url": "https://github.com/PIGU-PPPgu/teacher-research-lifecycle-skill"
     }
   ],
-  "updated": "2026-06-08",
+  "updated": "2026-06-09",
   "progressEvaluation": {
-    "generatedAt": "2026-06-08",
+    "generatedAt": "2026-06-09",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 33,
@@ -82,15 +82,15 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "gpw7dm",
-    "generatedAt": "2026-06-08",
+    "id": "17bynlc",
+    "generatedAt": "2026-06-09",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 32,
-    "rationale": "综合分 32/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 29,
+    "rationale": "综合分 29/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 15",
@@ -107,7 +107,7 @@
       },
       {
         "name": "momentum",
-        "score": 22,
+        "score": 10,
         "max": 100,
         "reason": "Recent repository pushes, project updates, and log activity."
       },
