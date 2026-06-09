@@ -20,8 +20,7 @@
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
     "Clarify runtime stack and entrypoint because package metadata is missing.",
-    "Add one approved public screenshot or product surface image.",
-    "检查自动导入内容"
+    "Add one approved public screenshot or product surface image."
   ],
   "links": [
     {
@@ -29,9 +28,9 @@
       "url": "https://github.com/PIGU-PPPgu/ledger-dashboard"
     }
   ],
-  "updated": "2026-06-09",
+  "updated": "2026-06-10",
   "progressEvaluation": {
-    "generatedAt": "2026-06-09",
+    "generatedAt": "2026-06-10",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 38,
@@ -83,13 +82,12 @@
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
       "Clarify runtime stack and entrypoint because package metadata is missing.",
-      "Add one approved public screenshot or product surface image.",
-      "检查自动导入内容"
+      "Add one approved public screenshot or product surface image."
     ]
   },
   "prioritySuggestion": {
     "id": "niwczm",
-    "generatedAt": "2026-06-09",
+    "generatedAt": "2026-06-10",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
