@@ -1,17 +1,19 @@
 {
-  "slug": "ledger-dashboard",
-  "title": "ledger-dashboard",
+  "slug": "cc-glm-dynamic-shim",
+  "title": "cc-glm-dynamic-shim",
   "status": "idea",
   "priority": "medium",
-  "summary": "💰 记账数据大屏 - Hermes AI 自动生成",
-  "domain": "python",
+  "summary": "Anthropic Messages shim for using GLM Coding Plan models with cc dynamic workflows",
+  "domain": "javascript",
   "visibility": "public",
-  "source": "github:PIGU-PPPgu/ledger-dashboard",
+  "source": "github:PIGU-PPPgu/cc-glm-dynamic-shim",
   "readme": [
-    "由 Hermes AI 自动生成的记账数据可视化看板。",
-    "更新方式：每日 Cron 自动运行 notiondashboard.py 并推送到 GitHub Pages。"
+    "CC-GLM Dynamic Workflow Shim",
+    "Unofficial compatibility shim. This project is not affiliated with, endorsed\nby, or sponsored by Anthropic, Claude Code, Z.ai, or BigModel.",
+    "Local compatibility shim for using GLM Coding Plan models, especially\nglm-5.1, behind Claude Code's Anthropic Messages API surface.",
+    "It is useful when a tool expects Anthropic-compatible /v1/messages requests,\nbut your GLM Coding Plan access is exposed through an OpenAI-compatible\nchat/completions endpoint."
   ],
-  "progress": 38,
+  "progress": 41,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -19,13 +21,14 @@
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Clarify runtime stack and entrypoint because package metadata is missing.",
-    "Add one approved public screenshot or product surface image."
+    "Add one approved public screenshot or product surface image.",
+    "检查自动导入内容",
+    "补充项目截图"
   ],
   "links": [
     {
       "label": "GitHub",
-      "url": "https://github.com/PIGU-PPPgu/ledger-dashboard"
+      "url": "https://github.com/PIGU-PPPgu/cc-glm-dynamic-shim"
     }
   ],
   "updated": "2026-06-11",
@@ -33,7 +36,7 @@
     "generatedAt": "2026-06-11",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 38,
+    "progress": 41,
     "status": "idea",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -71,22 +74,21 @@
       }
     ],
     "evidence": [
-      "repo files: 4",
-      "last push: 2026-06-08",
-      "frameworks: Python"
+      "repo files: 15",
+      "last push: 2026-06-10"
     ],
     "risks": [
-      "package.json could not be found or parsed.",
       "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Clarify runtime stack and entrypoint because package metadata is missing.",
-      "Add one approved public screenshot or product surface image."
+      "Add one approved public screenshot or product surface image.",
+      "检查自动导入内容",
+      "补充项目截图"
     ]
   },
   "prioritySuggestion": {
-    "id": "niwczm",
+    "id": "gxva4g",
     "generatedAt": "2026-06-11",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
@@ -97,10 +99,10 @@
     "rationale": "综合分 36/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 4",
-      "last push: 2026-06-08",
+      "repo files: 15",
+      "last push: 2026-06-10",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 38% idea"
+      "progress evaluation: 41% idea"
     ],
     "dimensions": [
       {
