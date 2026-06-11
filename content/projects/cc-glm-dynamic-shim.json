@@ -21,9 +21,7 @@
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Add one approved public screenshot or product surface image.",
-    "检查自动导入内容",
-    "补充项目截图"
+    "Add one approved public screenshot or product surface image."
   ],
   "links": [
     {
@@ -31,9 +29,9 @@
       "url": "https://github.com/PIGU-PPPgu/cc-glm-dynamic-shim"
     }
   ],
-  "updated": "2026-06-11",
+  "updated": "2026-06-12",
   "progressEvaluation": {
-    "generatedAt": "2026-06-11",
+    "generatedAt": "2026-06-12",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 41,
@@ -82,14 +80,12 @@
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Add one approved public screenshot or product surface image.",
-      "检查自动导入内容",
-      "补充项目截图"
+      "Add one approved public screenshot or product surface image."
     ]
   },
   "prioritySuggestion": {
     "id": "gxva4g",
-    "generatedAt": "2026-06-11",
+    "generatedAt": "2026-06-12",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
