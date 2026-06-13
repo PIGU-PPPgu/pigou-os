@@ -6,19 +6,19 @@
     "url": "https://github.com/PIGU-PPPgu/cc-glm-dynamic-shim",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-06-12T00:24:24Z",
+    "pushedAt": "2026-06-13T16:06:38Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-06-12T22:01:01.467Z",
+  "generatedAt": "2026-06-13T21:38:35.681Z",
   "readme": {
     "title": "CC-GLM Dynamic Workflow Shim",
     "summary": [
       "Unofficial compatibility shim. This project is not affiliated with, endorsed by, or sponsored by Anthropic, Claude Code, Z.ai, or BigModel.",
-      "Local compatibility shim for using GLM Coding Plan models, especially glm-5.1, behind Claude Code's Anthropic Messages API surface.",
+      "Local compatibility shim for using GLM Coding Plan models, especially glm-5.2, behind Claude Code's Anthropic Messages API surface.",
       "It is useful when a tool expects Anthropic-compatible /v1/messages requests, but your GLM Coding Plan access is exposed through an OpenAI-compatible chat/completions endpoint.",
-      "Smoke-tested with Claude Code dynamic workflows:",
-      "- Claude Code v2.1.170 - Model id: glm-5.1 - /effort ultracode: accepted - Real Workflow(...) tool invocation: accepted - Minimal dynamic workflow: 1 agent, completed in 11 seconds, result OK",
-      "This confirms the runtime path works. Larger real-world workflows still need broader testing across repositories, task shapes, and Coding Plan tiers."
+      "- Claude Code v2.1.170 - Model id: glm-5.2 - Basic request: OK - Real tool use: Bash tooluse round-trip completed with result GLMTOOLOK - Real Claude Code requests: observed 60 to 153 tools passed through the shim - Dynamic workflow: previously verified with glm-5.1; full glm-5.2 workflow stress testing should be run separately",
+      "This confirms the runtime path works. Larger real-world workflows still need broader testing across repositories, task shapes, and Coding Plan tiers.",
+      "- POST /v1/messages - POST /anthropic/v1/messages"
     ]
   },
   "fileTree": {
