@@ -24,9 +24,9 @@
       "url": "https://github.com/PIGU-PPPgu/harness-skill-v2"
     }
   ],
-  "updated": "2026-06-16",
+  "updated": "2026-06-17",
   "progressEvaluation": {
-    "generatedAt": "2026-06-16",
+    "generatedAt": "2026-06-17",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 63,
@@ -83,7 +83,7 @@
   },
   "prioritySuggestion": {
     "id": "1lvzfof",
-    "generatedAt": "2026-06-16",
+    "generatedAt": "2026-06-17",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
