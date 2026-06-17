@@ -24,9 +24,9 @@
       "url": "https://github.com/PIGU-PPPgu/teacher-research-lifecycle-skill"
     }
   ],
-  "updated": "2026-06-17",
+  "updated": "2026-06-18",
   "progressEvaluation": {
-    "generatedAt": "2026-06-17",
+    "generatedAt": "2026-06-18",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 33,
@@ -83,7 +83,7 @@
   },
   "prioritySuggestion": {
     "id": "17bynlc",
-    "generatedAt": "2026-06-17",
+    "generatedAt": "2026-06-18",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
