@@ -28,9 +28,9 @@
       "url": "https://github.com/PIGU-PPPgu/ledger-dashboard"
     }
   ],
-  "updated": "2026-06-25",
+  "updated": "2026-06-26",
   "progressEvaluation": {
-    "generatedAt": "2026-06-25",
+    "generatedAt": "2026-06-26",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 38,
@@ -87,7 +87,7 @@
   },
   "prioritySuggestion": {
     "id": "19gbz7r",
-    "generatedAt": "2026-06-25",
+    "generatedAt": "2026-06-26",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",

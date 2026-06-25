@@ -23,9 +23,9 @@
       "url": "https://github.com/PIGU-PPPgu/feixiang-skill"
     }
   ],
-  "updated": "2026-06-25",
+  "updated": "2026-06-26",
   "progressEvaluation": {
-    "generatedAt": "2026-06-25",
+    "generatedAt": "2026-06-26",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 66,
@@ -79,7 +79,7 @@
   },
   "prioritySuggestion": {
     "id": "1rg3b41",
-    "generatedAt": "2026-06-25",
+    "generatedAt": "2026-06-26",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
