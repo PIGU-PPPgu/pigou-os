@@ -29,9 +29,9 @@
       "url": "https://github.com/PIGU-PPPgu/oh-my-Dynamic"
     }
   ],
-  "updated": "2026-06-27",
+  "updated": "2026-06-28",
   "progressEvaluation": {
-    "generatedAt": "2026-06-27",
+    "generatedAt": "2026-06-28",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 84,
@@ -86,7 +86,7 @@
   },
   "prioritySuggestion": {
     "id": "rxoyqx",
-    "generatedAt": "2026-06-27",
+    "generatedAt": "2026-06-28",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",

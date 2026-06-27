@@ -27,9 +27,9 @@
       "url": "https://tutor.intelliclass.online"
     }
   ],
-  "updated": "2026-06-27",
+  "updated": "2026-06-28",
   "progressEvaluation": {
-    "generatedAt": "2026-06-27",
+    "generatedAt": "2026-06-28",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 79,
@@ -84,7 +84,7 @@
   },
   "prioritySuggestion": {
     "id": "1q6nqka",
-    "generatedAt": "2026-06-27",
+    "generatedAt": "2026-06-28",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
