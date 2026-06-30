@@ -7,7 +7,7 @@
   "explanation": "这是 Pigou 最贴近真实工作流的 AI skill 集合：把班主任日常事务拆成可确认、可复用、可持续扩展的能力模块。",
   "domain": "teacher-agent",
   "source": "github:PIGU-PPPgu/class-teacher-skills",
-  "progress": 76,
+  "progress": 71,
   "goals": [
     "沉淀班主任高频事务 skill",
     "建立确认后外发的安全工作流",
@@ -24,12 +24,12 @@
       "url": "https://github.com/PIGU-PPPgu/class-teacher-skills"
     }
   ],
-  "updated": "2026-06-30",
+  "updated": "2026-07-01",
   "progressEvaluation": {
-    "generatedAt": "2026-06-30",
+    "generatedAt": "2026-07-01",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 76,
+    "progress": 71,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -61,7 +61,7 @@
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
@@ -82,8 +82,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "3s5uu3",
-    "generatedAt": "2026-06-30",
+    "id": "yh0dcs",
+    "generatedAt": "2026-07-01",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
@@ -96,7 +96,7 @@
       "repo files: 250",
       "last push: 2026-05-31",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 76% building"
+      "progress evaluation: 71% building"
     ],
     "dimensions": [
       {
