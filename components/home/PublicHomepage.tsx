@@ -9,19 +9,31 @@ type PublicHomepageProps = {
 };
 
 const brainNodes = [
-  { label: '教育 AI', detail: 'teacher tools', className: 'brain-node--top-left' },
-  { label: '教师工作流', detail: 'classroom ops', className: 'brain-node--top-right' },
-  { label: '个人知识系统', detail: 'thinking OS', className: 'brain-node--left' },
+  { label: '教育现场', detail: 'real problems', className: 'brain-node--top-left' },
+  { label: 'AI 产品', detail: 'usable tools', className: 'brain-node--top-right' },
+  { label: '班主任工作流', detail: 'teacher ops', className: 'brain-node--left' },
   { label: '数据分析', detail: 'learning signals', className: 'brain-node--right' },
-  { label: 'Agent 工程', detail: 'tool chains', className: 'brain-node--bottom-left' },
-  { label: '产品交付', detail: 'shipped proof', className: 'brain-node--bottom-right' }
+  { label: '个人 OS', detail: 'knowledge system', className: 'brain-node--bottom-left' },
+  { label: '全栈交付', detail: 'ship end to end', className: 'brain-node--bottom-right' }
 ];
 
 const capabilityRows = [
-  { index: '01', title: 'AI education products', text: '把真实教师工作流拆成可使用的小程序、数据系统和 AI 工作台。' },
-  { index: '02', title: 'Personal OS building', text: '用项目、知识、想法、行动和日志串起自己的长期操作系统。' },
-  { index: '03', title: 'Full-stack shipping', text: '从 Next.js 前台、内容结构、自动同步到 VPS 部署都能闭环。' },
-  { index: '04', title: 'Evidence-first iteration', text: '用截图、项目状态、更新日志和同步信号证明进展，而不是只写愿景。' }
+  { index: '01', title: '懂教育现场', text: '不是只做 demo，而是从教师、班主任、教学管理这些真实流程里找问题。' },
+  { index: '02', title: '能把想法做成工具', text: '小程序、数据分析系统、AI 工作台和个人 OS，都尽量做到能被真实使用。' },
+  { index: '03', title: '能自己闭环交付', text: '从 Next.js 前台、内容结构、自动同步、GitHub Actions 到 VPS 部署都能接起来。' },
+  { index: '04', title: '习惯用证据说话', text: '用截图、上线状态、更新日志和项目数据解释我做过什么，而不是只写一句“热爱 AI”。' }
+];
+
+const profileSignals = [
+  { label: '定位', value: 'AI + Education Builder' },
+  { label: '关键词', value: '教师工作流 / 数据分析 / 个人知识系统' },
+  { label: '现在', value: '把教育场景里的重复劳动，做成可复用的软件和 AI 工具。' }
+];
+
+const fitRows = [
+  '想了解一个既懂教育现场、又能写代码交付的人。',
+  '想看 AI 如何落到教师工作流、班级管理、成绩分析里。',
+  '想找能独立搭产品原型、内容系统和部署链路的合作者。'
 ];
 
 export function PublicHomepage({ projects, updates }: PublicHomepageProps) {
@@ -46,19 +58,19 @@ export function PublicHomepage({ projects, updates }: PublicHomepageProps) {
           </div>
           <div className="public-hero__copy grid gap-5 border-t border-white/15 pt-5 md:grid-cols-[1fr_auto] md:items-end">
             <div>
-              <h2 className="hero-title max-w-4xl text-4xl font-semibold leading-[.92] text-white sm:text-5xl lg:text-6xl xl:text-7xl">把教育现场、个人知识和 AI 工程接成一套操作系统。</h2>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-white/62 md:mt-5">这里不是普通主页，而是 Pigou 的公开思维站、作品证据和简历入口。</p>
+              <h2 className="hero-title max-w-4xl text-4xl font-semibold leading-[.92] text-white sm:text-5xl lg:text-6xl">我是 Pigou Wu，做教育 AI 产品和教师工作流工具。</h2>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-white/62 md:mt-5">这里是我的公开简历、作品证据和思维站。你可以快速看见：我关注什么问题、做过哪些东西、以及我如何把一个想法推进到可用。</p>
             </div>
             <div className="flex flex-wrap gap-3 md:justify-end">
-              <ButtonLink primary href="/work">View work</ButtonLink>
-              <ButtonLink href="/about">Resume</ButtonLink>
+              <ButtonLink primary href="/about">认识我</ButtonLink>
+              <ButtonLink href="/work">看作品</ButtonLink>
             </div>
           </div>
           <div className="brain-map public-hero__map" aria-label="Pigou Wu public thinking map">
             <div className="brain-node brain-node--center">
               <span className="caption text-white/45">CENTER NODE</span>
               <strong>Pigou Wu</strong>
-              <span>AI education builder / personal OS maker</span>
+              <span>AI education builder / full-stack shipper</span>
             </div>
             {brainNodes.map(node => <div key={node.label} className={`brain-node ${node.className}`}>
               <strong>{node.label}</strong>
@@ -70,6 +82,15 @@ export function PublicHomepage({ projects, updates }: PublicHomepageProps) {
 
       <aside className="grid gap-5">
         <Panel raised className="p-5 md:p-6">
+          <SectionHeader label="Who I Am" value="10 second read" />
+          <div className="grid gap-4">
+            {profileSignals.map(item => <div key={item.label} className="border-b border-[var(--border)] pb-4 last:border-b-0 last:pb-0">
+              <div className="caption">{item.label}</div>
+              <p className="mt-2 text-base font-semibold leading-7 text-[var(--ink)]">{item.value}</p>
+            </div>)}
+          </div>
+        </Panel>
+        <Panel raised className="p-5 md:p-6">
           <SectionHeader label="Signal" value="public proof" />
           <div className="grid grid-cols-3 gap-3">
             <Metric value={String(publicProjects.length).padStart(2, '0')} label="projects" />
@@ -78,7 +99,7 @@ export function PublicHomepage({ projects, updates }: PublicHomepageProps) {
           </div>
         </Panel>
         <Panel className="p-5 md:p-6">
-          <SectionHeader label="Resume Stack" value="what I keep building" />
+          <SectionHeader label="Resume Stack" value="what I can do" />
           <div className="grid gap-4">
             {capabilityRows.map(row => <div key={row.index} className="grid grid-cols-[42px_1fr] gap-3 border-b border-[var(--border)] pb-4 last:border-b-0 last:pb-0">
               <span className="doto text-4xl leading-none text-[var(--text-disabled)]">{row.index}</span>
@@ -94,7 +115,7 @@ export function PublicHomepage({ projects, updates }: PublicHomepageProps) {
 
     <section className="grid gap-5 lg:grid-cols-[1.15fr_.85fr]">
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="Selected Work" value={`${selectedWork.length} public signals`} />
+        <SectionHeader label="Proof Of Work" value={`${selectedWork.length} public cases`} />
         <div className="grid gap-5">
           {selectedWork.map(project => <Link key={project.slug} href={`/projects/${project.slug}`} className="group grid gap-4 border-b border-[var(--border)] pb-5 transition last:border-b-0 last:pb-0 hover:bg-white/40 md:grid-cols-[1fr_auto] md:p-3">
             <div>
@@ -109,8 +130,14 @@ export function PublicHomepage({ projects, updates }: PublicHomepageProps) {
       </Panel>
 
       <Panel className="p-5 md:p-6">
-        <SectionHeader label="Thinking System" value="updates / knowledge / meta" />
+        <SectionHeader label="Good Fit" value="why this site exists" />
         <div className="grid gap-5">
+          <div className="grid gap-3">
+            {fitRows.map((item, index) => <div key={item} className="grid grid-cols-[34px_1fr] gap-3 border-b border-[var(--border)] pb-3 last:border-b-0">
+              <span className="doto text-3xl leading-none text-[var(--text-disabled)]">{index + 1}</span>
+              <p className="text-sm leading-7 text-[var(--text-primary)]">{item}</p>
+            </div>)}
+          </div>
           {latestUpdates.map(update => <Link key={update.slug} href="/updates" className="block border-b border-[var(--border)] pb-4 last:border-b-0 last:pb-0">
             <div className="caption">{update.version} / {update.type} / {update.date}</div>
             <h3 className="mt-2 text-2xl font-semibold leading-tight text-[var(--ink)]">{update.title}</h3>
