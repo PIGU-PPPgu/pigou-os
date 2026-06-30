@@ -25,10 +25,11 @@ function Chip({ children, active = false }: { children: ReactNode; active?: bool
 }
 
 export default async function UpdatesPage() {
-  const updates = getUpdates();
-  const latest = updates[0];
   const cookieHeader = (await cookies()).toString();
   const isLoggedIn = Boolean(getSessionUserFromCookieHeader(cookieHeader));
+  const allUpdates = getUpdates();
+  const updates = isLoggedIn ? allUpdates : allUpdates.filter(update => update.status === 'shipped');
+  const latest = updates[0];
 
   return <div className="grid gap-5">
     <section className="grid gap-5 lg:grid-cols-[1.1fr_.9fr]">
@@ -89,7 +90,7 @@ export default async function UpdatesPage() {
             <div className="caption mt-2">updates</div>
           </div>
           <div>
-            <div className="doto text-6xl font-black leading-none text-[var(--ink)]">{updates.filter(update => update.status === 'shipped').length}</div>
+            <div className="doto text-6xl font-black leading-none text-[var(--ink)]">{allUpdates.filter(update => update.status === 'shipped').length}</div>
             <div className="caption mt-2">shipped</div>
           </div>
         </div>

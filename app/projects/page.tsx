@@ -6,6 +6,7 @@ import { ProjectStatusAdvisor } from '@/components/projects/ProjectStatusAdvisor
 import { sortProjectsByActivity } from '@/lib/project-activity';
 import { cookies } from 'next/headers';
 import { getSessionUserFromCookieHeader } from '@/lib/auth';
+import { isPublicProject } from '@/lib/public-projects';
 
 export const dynamic = 'force-dynamic';
 
@@ -20,7 +21,7 @@ export default async function ProjectsPage() {
   const activity = sortProjectsByActivity({ projects: rawProjects, wikis, tasks, logs });
   const visibleActivity = isLoggedIn
     ? activity
-    : activity.filter(item => item.project.visibility !== 'private' || item.project.status === 'shipped' || item.project.images?.some(image => image.public));
+    : activity.filter(item => isPublicProject(item.project));
   const projects = visibleActivity.map(item => item.project);
   const activityBySlug = new Map(visibleActivity.map(item => [item.project.slug, item]));
   const statusCounts = {

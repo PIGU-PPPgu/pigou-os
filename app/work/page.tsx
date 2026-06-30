@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { ImageGallery } from '@/components/ImageGallery';
 import { ButtonLink, Label, Panel, PriorityBadge, SectionHeader, StatusBadge } from '@/components/UI';
 import { getProjects } from '@/lib/data';
+import { getPublicProjects } from '@/lib/public-projects';
 
 export const dynamic = 'force-dynamic';
 
 export default function WorkPage() {
-  const projects = getProjects()
-    .filter(project => project.status === 'shipped' || project.images?.some(image => image.public) || project.visibility !== 'private')
+  const projects = getPublicProjects(getProjects())
     .sort((a, b) => Number(b.status === 'shipped') - Number(a.status === 'shipped') || b.progress - a.progress);
   const featured = projects.filter(project => project.status === 'shipped').slice(0, 3);
 

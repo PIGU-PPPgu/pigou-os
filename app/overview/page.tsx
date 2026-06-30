@@ -3,10 +3,19 @@ import { ContributionHeatmap } from '@/components/activity/ContributionHeatmap';
 import { SyncStatus } from '@/components/sync/SyncStatus';
 import { getAllTasks, getContributionActivity, getIdeas, getKnowledge, getLogs, getProjects, getProjectWikis, getSyncJobs, getTasks } from '@/lib/data';
 import { sortProjectsByActivity } from '@/lib/project-activity';
+import { InternalLock } from '@/components/InternalLock';
+import { cookies } from 'next/headers';
+import { getSessionUserFromCookieHeader } from '@/lib/auth';
 
 export const dynamic = 'force-dynamic';
+export const metadata = {
+  title: 'Private Console',
+  description: 'Login only.',
+};
 
-export default function Home() {
+export default async function Home() {
+  const cookieHeader = (await cookies()).toString();
+  if (!getSessionUserFromCookieHeader(cookieHeader)) return <InternalLock title="Private Console" />;
   const projects = getProjects();
   const ideas = getIdeas();
   const logs = getLogs();

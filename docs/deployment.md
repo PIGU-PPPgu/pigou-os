@@ -63,6 +63,16 @@ PIGOU_SESSION_SECRET=...
 
 Then add persistent storage before enabling capture/delete in production.
 
+### GitHub Actions split
+
+The repository has three separate automation paths:
+
+- `.github/workflows/ci.yml` runs type checking and the normal server build on pull requests and pushes to `main`.
+- `.github/workflows/deploy.yml` publishes the read-only public site to GitHub Pages with `GITHUB_PAGES=true`.
+- `.github/workflows/production-deploy.yml` deploys the full private OS to the VPS only when `PIGOU_PRODUCTION_DEPLOY_ENABLED=true`.
+
+GitHub Pages is for the public thinking/resume site. It does not run the write APIs, login-backed capture flows, or private OS server runtime.
+
 ## Daily LLM Wiki rebuild
 
 Set `PIGOU_LLM_WIKI_REBUILD_SECRET` on the deployment to enable cron-safe graph rebuilds through `GET /api/llm-wiki/rebuild`. Vercel reads the daily schedule from `vercel.json` and sends `CRON_SECRET` automatically when that platform secret is configured; Pigou OS accepts either `PIGOU_LLM_WIKI_REBUILD_SECRET` or `CRON_SECRET`.

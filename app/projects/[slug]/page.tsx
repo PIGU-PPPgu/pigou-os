@@ -11,21 +11,23 @@ import { evaluateProjectHealth } from '@/lib/project-health';
 import { generateProjectBrief } from '@/lib/project-brief';
 import { cookies } from 'next/headers';
 import { getSessionUserFromCookieHeader } from '@/lib/auth';
+import { getPublicProjects, isPublicProject } from '@/lib/public-projects';
 
 export const dynamic = 'force-dynamic';
 
-export function generateStaticParams() { return getProjects().map(p => ({ slug: p.slug })); }
+export function generateStaticParams() { return getPublicProjects(getProjects()).map(p => ({ slug: p.slug })); }
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) notFound();
+  const cookieHeader = (await cookies()).toString();
+  const isLoggedIn = Boolean(getSessionUserFromCookieHeader(cookieHeader));
+  if (!isLoggedIn && !isPublicProject(project)) notFound();
   const wikiSnapshot = getProjectWikiSnapshot(project.slug);
   const related = getProjectRelations(project.slug);
   const health = evaluateProjectHealth({ project, wiki: wikiSnapshot, tasks: related.tasks, logs: related.logs });
   const brief = generateProjectBrief({ project, wikiSnapshot, tasks: related.tasks, logs: related.logs, health });
-  const cookieHeader = (await cookies()).toString();
-  const isLoggedIn = Boolean(getSessionUserFromCookieHeader(cookieHeader));
   const locked = project.visibility === 'private' && !isLoggedIn;
   const visibleImages = project.images?.filter(image => !locked || image.public) ?? [];
 
