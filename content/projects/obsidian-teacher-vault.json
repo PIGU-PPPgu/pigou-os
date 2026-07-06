@@ -30,9 +30,9 @@
       "url": "https://github.com/PIGU-PPPgu/obsidian-teacher-vault"
     }
   ],
-  "updated": "2026-07-06",
+  "updated": "2026-07-07",
   "progressEvaluation": {
-    "generatedAt": "2026-07-06",
+    "generatedAt": "2026-07-07",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 71,
@@ -89,7 +89,7 @@
   },
   "prioritySuggestion": {
     "id": "exclix",
-    "generatedAt": "2026-07-06",
+    "generatedAt": "2026-07-07",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
