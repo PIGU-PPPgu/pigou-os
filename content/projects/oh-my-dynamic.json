@@ -13,7 +13,7 @@
     "Layer 1: 单元测试\n- 状态机转换是否合法\n- 依赖阻塞逻辑是否正确\n- Planner 输出解析器是否健壮",
     "Layer 2: 集成测试\n- API 调用是否通畅\n- 重试机制是否工作\n- 超时处理是否正常"
   ],
-  "progress": 84,
+  "progress": 79,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -29,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/oh-my-Dynamic"
     }
   ],
-  "updated": "2026-07-08",
+  "updated": "2026-07-09",
   "progressEvaluation": {
-    "generatedAt": "2026-07-08",
+    "generatedAt": "2026-07-09",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 84,
+    "progress": 79,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -66,7 +66,7 @@
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
@@ -85,8 +85,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "rxoyqx",
-    "generatedAt": "2026-07-08",
+    "id": "ygre17",
+    "generatedAt": "2026-07-09",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -99,7 +99,7 @@
       "repo files: 224",
       "last push: 2026-06-08",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 84% building"
+      "progress evaluation: 79% building"
     ],
     "dimensions": [
       {
