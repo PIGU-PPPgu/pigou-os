@@ -45,9 +45,9 @@
     "Generate LLM code insights for the most important source files.",
     "生成 LLM code insight：优先覆盖 src/App、核心 pages、analysis、ai、report/export、supabase 相关模块。"
   ],
-  "updated": "2026-07-10",
+  "updated": "2026-07-11",
   "progressEvaluation": {
-    "generatedAt": "2026-07-10",
+    "generatedAt": "2026-07-11",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 90,
@@ -101,7 +101,7 @@
   },
   "prioritySuggestion": {
     "id": "1jqvl9h",
-    "generatedAt": "2026-07-10",
+    "generatedAt": "2026-07-11",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
