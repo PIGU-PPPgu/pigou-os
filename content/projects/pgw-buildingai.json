@@ -1,7 +1,7 @@
 {
   "slug": "pgw-buildingai",
   "title": "PGW BuildingAI",
-  "status": "building",
+  "status": "paused",
   "priority": "low",
   "summary": "教育垂类 AI 平台方向的 BuildingAI 改造实验。",
   "explanation": "这是早期平台化探索，用来验证教育场景能否抽象成更通用的 AI 应用搭建与运营平台。",
@@ -23,20 +23,20 @@
       "url": "https://github.com/PIGU-PPPgu/pgw-buildingai"
     }
   ],
-  "updated": "2026-07-15",
+  "updated": "2026-07-16",
   "progressEvaluation": {
-    "generatedAt": "2026-07-15",
+    "generatedAt": "2026-07-16",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 92,
-    "status": "building",
+    "status": "paused",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
     "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
-        "score": 16,
+        "score": 10,
         "max": 25,
         "reason": "Project status, launch wording, and product surface signals."
       },
@@ -79,22 +79,23 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "fijeth",
-    "generatedAt": "2026-07-15",
+    "id": "doyvl2",
+    "generatedAt": "2026-07-16",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "low",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 39,
-    "rationale": "综合分 39/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 17,
+    "rationale": "综合分 17/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 3028",
       "last push: 2026-02-15",
       "launch/use signal in project text",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 92% building"
+      "status penalty: paused",
+      "progress evaluation: 92% paused"
     ],
     "dimensions": [
       {
@@ -111,7 +112,7 @@
       },
       {
         "name": "strategic_fit",
-        "score": 38,
+        "score": 20,
         "max": 100,
         "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
       },
@@ -123,7 +124,7 @@
       },
       {
         "name": "staleness_penalty",
-        "score": 0,
+        "score": 18,
         "max": 100,
         "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
       }
