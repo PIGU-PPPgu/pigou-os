@@ -13,7 +13,7 @@
     "Local compatibility shim for using GLM Coding Plan models, especially\nglm-5.1, behind Claude Code's Anthropic Messages API surface.",
     "It is useful when a tool expects Anthropic-compatible /v1/messages requests,\nbut your GLM Coding Plan access is exposed through an OpenAI-compatible\nchat/completions endpoint."
   ],
-  "progress": 41,
+  "progress": 36,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -29,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/cc-glm-dynamic-shim"
     }
   ],
-  "updated": "2026-07-16",
+  "updated": "2026-07-17",
   "progressEvaluation": {
-    "generatedAt": "2026-07-16",
+    "generatedAt": "2026-07-17",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 41,
+    "progress": 36,
     "status": "idea",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -66,7 +66,7 @@
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
@@ -84,8 +84,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "ne6z1c",
-    "generatedAt": "2026-07-16",
+    "id": "17uuhj4",
+    "generatedAt": "2026-07-17",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -98,7 +98,7 @@
       "repo files: 15",
       "last push: 2026-06-15",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 41% idea"
+      "progress evaluation: 36% idea"
     ],
     "dimensions": [
       {

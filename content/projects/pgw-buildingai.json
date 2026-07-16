@@ -7,7 +7,7 @@
   "explanation": "这是早期平台化探索，用来验证教育场景能否抽象成更通用的 AI 应用搭建与运营平台。",
   "domain": "education-platform",
   "source": "github:PIGU-PPPgu/pgw-buildingai",
-  "progress": 92,
+  "progress": 84,
   "goals": [
     "梳理教育 AI 平台能力",
     "验证应用搭建体验",
@@ -23,12 +23,12 @@
       "url": "https://github.com/PIGU-PPPgu/pgw-buildingai"
     }
   ],
-  "updated": "2026-07-16",
+  "updated": "2026-07-17",
   "progressEvaluation": {
-    "generatedAt": "2026-07-16",
+    "generatedAt": "2026-07-17",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 92,
+    "progress": 84,
     "status": "paused",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -79,8 +79,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "doyvl2",
-    "generatedAt": "2026-07-16",
+    "id": "1h3kq81",
+    "generatedAt": "2026-07-17",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "low",
@@ -95,7 +95,7 @@
       "launch/use signal in project text",
       "strategic OS/workflow signal in project text",
       "status penalty: paused",
-      "progress evaluation: 92% paused"
+      "progress evaluation: 84% paused"
     ],
     "dimensions": [
       {
