@@ -29,9 +29,9 @@
       "url": "https://github.com/PIGU-PPPgu/cc-glm-dynamic-shim"
     }
   ],
-  "updated": "2026-07-19",
+  "updated": "2026-07-20",
   "progressEvaluation": {
-    "generatedAt": "2026-07-19",
+    "generatedAt": "2026-07-20",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 36,
@@ -85,7 +85,7 @@
   },
   "prioritySuggestion": {
     "id": "17uuhj4",
-    "generatedAt": "2026-07-19",
+    "generatedAt": "2026-07-20",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
