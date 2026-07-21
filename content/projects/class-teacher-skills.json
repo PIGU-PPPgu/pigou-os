@@ -7,7 +7,7 @@
   "explanation": "这是 Pigou 最贴近真实工作流的 AI skill 集合：把班主任日常事务拆成可确认、可复用、可持续扩展的能力模块。",
   "domain": "teacher-agent",
   "source": "github:PIGU-PPPgu/class-teacher-skills",
-  "progress": 71,
+  "progress": 76,
   "goals": [
     "沉淀班主任高频事务 skill",
     "建立确认后外发的安全工作流",
@@ -24,12 +24,12 @@
       "url": "https://github.com/PIGU-PPPgu/class-teacher-skills"
     }
   ],
-  "updated": "2026-07-21",
+  "updated": "2026-07-22",
   "progressEvaluation": {
-    "generatedAt": "2026-07-21",
+    "generatedAt": "2026-07-22",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 71,
+    "progress": 76,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -61,14 +61,14 @@
       },
       {
         "name": "momentum",
-        "score": 2,
+        "score": 8,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
       "repo files: 250",
-      "last push: 2026-05-31",
+      "last push: 2026-07-21",
       "frameworks: Python"
     ],
     "risks": [
@@ -82,21 +82,21 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "14k30yn",
-    "generatedAt": "2026-07-21",
+    "id": "ezdczc",
+    "generatedAt": "2026-07-22",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 34,
-    "rationale": "综合分 34/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 40,
+    "rationale": "综合分 40/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 250",
-      "last push: 2026-05-31",
+      "last push: 2026-07-21",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 71% building"
+      "progress evaluation: 76% building"
     ],
     "dimensions": [
       {
@@ -107,7 +107,7 @@
       },
       {
         "name": "momentum",
-        "score": 10,
+        "score": 34,
         "max": 100,
         "reason": "Recent repository pushes, project updates, and log activity."
       },

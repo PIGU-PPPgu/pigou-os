@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/class-teacher-skills",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-05-31T04:46:33Z",
+    "pushedAt": "2026-07-21T13:41:51Z",
     "language": "Python"
   },
-  "generatedAt": "2026-07-20T21:32:37.786Z",
+  "generatedAt": "2026-07-21T21:33:31.074Z",
   "readme": {
     "title": "Class Teacher Skills",
     "summary": [
@@ -121,16 +121,6 @@
       ]
     },
     {
-      "name": "HOW_TO_USE_SKILLS.md",
-      "kind": "Repository directory",
-      "evidence": [
-        "1 file(s)"
-      ],
-      "files": [
-        "HOW_TO_USE_SKILLS.md"
-      ]
-    },
-    {
       "name": "INSTALL.md",
       "kind": "Repository directory",
       "evidence": [
@@ -138,6 +128,16 @@
       ],
       "files": [
         "INSTALL.md"
+      ]
+    },
+    {
+      "name": "LICENSE",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "LICENSE"
       ]
     }
   ],
@@ -180,7 +180,7 @@
       "label": "contains"
     },
     {
-      "from": "HOW_TO_USE_SKILLS.md",
+      "from": "INSTALL.md",
       "to": "Class Teacher Skills",
       "label": "contains"
     }
