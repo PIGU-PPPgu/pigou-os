@@ -18,7 +18,7 @@ export default function WorkPage() {
       <div className="relative flex h-full flex-col justify-between gap-10">
         <div>
           <Label>Work / Pigou Workshop</Label>
-          <h2 className="mt-8 max-w-2xl text-3xl font-semibold leading-[1.15] text-white sm:text-4xl lg:text-5xl">已上线的项目，和还在做的实验。</h2>
+          <h2 className="mt-8 max-w-2xl text-3xl font-semibold leading-[1.15] text-white sm:text-4xl lg:text-5xl" style={{ textWrap: 'balance' }}>已上线，和还在做的。</h2>
         </div>
       </div>
     </Panel>
