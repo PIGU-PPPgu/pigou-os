@@ -12,7 +12,9 @@ function slugPart(input: string) {
 
 export function verifyGitHubSignature(rawBody: string, signature: string | null) {
   const secret = process.env.GITHUB_WEBHOOK_SECRET;
-  if (!secret) return true;
+  // In production, an unauthenticated GitHub webhook endpoint would let anyone
+  // enqueue sync jobs (and trigger LLM calls). Refuse instead of allowing.
+  if (!secret) return process.env.NODE_ENV !== 'production';
   if (!signature?.startsWith('sha256=')) return false;
   const expected = `sha256=${createHmac('sha256', secret).update(rawBody).digest('hex')}`;
   const actualBuffer = Buffer.from(signature);

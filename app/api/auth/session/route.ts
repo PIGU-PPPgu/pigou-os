@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { SESSION_COOKIE, createSessionToken, getLoginPassword, getSessionUser, sessionMaxAge, verifyPassword } from '@/lib/auth';
+import { SESSION_COOKIE, createSessionToken, getLoginPassword, getSessionUser, isSessionSecretMisconfigured, sessionMaxAge, verifyPassword } from '@/lib/auth';
 
 export const runtime = 'nodejs';
 
@@ -21,6 +21,12 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   if (!getLoginPassword()) {
     return NextResponse.json({ ok: false, message: 'PIGOU_LOGIN_PASSWORD is not configured.' }, { status: 503 });
+  }
+  if (isSessionSecretMisconfigured()) {
+    return NextResponse.json(
+      { ok: false, message: 'PIGOU_SESSION_SECRET is missing or equals the login password. Set a distinct secret before signing sessions.' },
+      { status: 503 }
+    );
   }
 
   const body = await request.json().catch(() => null);

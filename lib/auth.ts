@@ -14,8 +14,30 @@ export function getLoginPassword() {
   return process.env.PIGOU_LOGIN_PASSWORD || '';
 }
 
+/**
+ * Secret used to sign session tokens. In production we refuse to fall back to
+ * the login password: reusing the password as the HMAC key couples two
+ * unrelated concerns and means a password change can't reliably revoke tokens.
+ * Dev keeps the fallback so a fresh checkout still works without extra setup.
+ */
 function getSessionSecret() {
-  return process.env.PIGOU_SESSION_SECRET || process.env.PIGOU_LOGIN_PASSWORD || '';
+  const explicit = process.env.PIGOU_SESSION_SECRET;
+  if (explicit) return explicit;
+  if (process.env.NODE_ENV === 'production') return '';
+  return process.env.PIGOU_LOGIN_PASSWORD || '';
+}
+
+/**
+ * True when the runtime is misconfigured for session signing. The login route
+ * uses this to return a clear 503 instead of silently issuing tokens that
+ * nobody can later verify (the old behavior emitted `encoded.` with an empty
+ * signature, which any client could forge).
+ */
+export function isSessionSecretMisconfigured() {
+  if (process.env.NODE_ENV !== 'production') return false;
+  const secret = process.env.PIGOU_SESSION_SECRET;
+  if (!secret) return true;
+  return secret === process.env.PIGOU_LOGIN_PASSWORD;
 }
 
 function digest(input: string) {
