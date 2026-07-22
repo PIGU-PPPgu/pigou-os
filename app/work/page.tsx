@@ -17,8 +17,8 @@ export default function WorkPage() {
       <div className="scanline" />
       <div className="relative flex h-full flex-col justify-between gap-10">
         <div>
-          <Label>作品集 / Pigou Workshop</Label>
-          <h2 className="mt-8 max-w-[10ch] text-5xl font-semibold leading-[.92] text-white md:text-8xl">做过的一些东西</h2>
+          <Label>Work / Pigou Workshop</Label>
+          <h2 className="mt-8 max-w-2xl text-3xl font-semibold leading-[1.15] text-white sm:text-4xl lg:text-5xl">已上线的项目，和还在做的实验。</h2>
         </div>
       </div>
     </Panel>

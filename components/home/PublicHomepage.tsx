@@ -54,13 +54,6 @@ export function PublicHomepage({ projects, updates }: PublicHomepageProps) {
         <div className="public-hero__body relative grid h-full gap-6 lg:gap-8">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <Label>Pigou Wu / Public Brain</Label>
-            <span className="live-pill mono rounded-full border border-white/20 px-3 py-1 text-[10px] uppercase text-white/55">Brain map</span>
-          </div>
-          <div className="public-hero__copy grid gap-5 border-t border-white/15 pt-5">
-            <div>
-              <h2 className="max-w-3xl text-2xl font-semibold leading-[1.15] text-white sm:text-3xl lg:text-[2.5rem]">我是班主任，自己写代码，把每天的工作流做成在跑的工具。</h2>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-white/62">班主任工作流小程序和成绩分析系统都已上线。这个站是它们的代码、更新和我对教育 AI 的一些判断。</p>
-            </div>
             <div className="flex flex-wrap gap-3">
               <ButtonLink primary href="/work">看作品</ButtonLink>
               <ButtonLink href="/about">认识我</ButtonLink>
