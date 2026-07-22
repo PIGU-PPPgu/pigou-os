@@ -3,23 +3,23 @@ import { Label, Panel, SectionHeader, StatusBadge } from '@/components/UI';
 import { getProjects } from '@/lib/data';
 
 const focus = [
-  '把教师和班主任的真实流程拆成可使用的软件工具',
-  '用 AI 做教育数据分析、工作流辅助和结构化记录',
-  '独立完成从产品原型、前端、内容数据到部署自动化的闭环',
-  '把个人知识、项目、想法和行动沉淀成长期操作系统'
+  '从班主任日常里长出来的工具，不是为 demo 做的',
+  '成绩分析系统从一次月考跑到现在',
+  '一个人的全栈：前端、数据、部署、自动化',
+  '所有进展都有 commit 和更新日志可查'
 ];
 
 const profile = [
-  { label: '我是谁', text: 'Pigou Wu，一个长期围绕教育现场、AI 工具和个人操作系统做产品实验的人。' },
-  { label: '我在解决什么', text: '教师日常里有很多重复记录、分析、沟通和归档，我关心的是如何把这些真实问题变成可持续使用的工具。' },
-  { label: '我的工作方式', text: '先从场景里找痛点，再做可用原型，用真实截图、状态、更新日志和部署结果证明进展。' }
+  { label: '身份', text: 'Pigou Wu。班主任，自己写代码。做的工具都在学校里跑。' },
+  { label: '在做', text: '班主任工作流小程序、成绩分析系统，以及这个把项目、代码、更新放在一起的个人站。' },
+  { label: '判断', text: '教育软件大多停在“能用”，因为做的人不在现场。我在现场，所以从自己的痛点开始做。' }
 ];
 
 const resumeBlocks = [
-  { title: '教育场景理解', text: '关注班主任管理、教学数据、教师工作流和学校内部协作，不把 AI 停在聊天窗口里。' },
-  { title: 'AI 产品化', text: '把 LLM、数据分析、知识结构和自动化流程接进真实工具，让 AI 能进入日常工作。' },
-  { title: '全栈交付', text: '能从 Next.js 界面、内容数据、GitHub Actions、VPS 部署到公开/私有边界一起处理。' },
-  { title: '个人知识系统', text: '用自己的项目站持续记录想法、任务、日志和作品，不断把经验沉淀成可复用资产。' }
+  { title: '现场', text: '班主任身份是底色。留痕、考勤、成绩、家长沟通这些每天要做的重复劳动，是所有工具的起点。' },
+  { title: 'shipped', text: '小程序和成绩分析系统都已上线，进度 90% 以上。停留在原型的项目不算交付。' },
+  { title: '闭环', text: 'Next.js 前端、内容数据、GitHub Actions、VPS 部署、公开/私有边界，一个人接到底。' },
+  { title: '公开', text: '项目状态、更新日志、commit 都在这个站上。说过的话都附得上证据。' }
 ];
 
 export const dynamic = 'force-dynamic';
@@ -36,8 +36,8 @@ export default function AboutPage() {
         <div className="relative flex h-full flex-col justify-between gap-10">
           <div>
             <Label>About / Pigou Wu</Label>
-            <h2 className="mt-8 max-w-[10ch] text-5xl font-semibold leading-[.92] text-white md:text-8xl">我在把教育现场的问题，做成 AI 工具和个人系统。</h2>
-            <p className="mt-6 max-w-2xl text-sm leading-7 text-white/62">如果你想快速理解我：我不是只写“AI 很重要”的人，我更关心一个工具能不能真的帮教师少一点重复劳动，多一点判断空间。</p>
+            <h2 className="mt-8 max-w-2xl text-2xl font-semibold leading-[1.2] text-white sm:text-3xl lg:text-[2.5rem]">班主任，自己写代码。做的工具都在学校里跑。</h2>
+            <p className="mt-6 max-w-2xl text-sm leading-7 text-white/62">这个站是我把项目、代码、更新日志和对教育 AI 的判断放在一起的地方。没有“热爱 AI”这种话，所有 claim 都附得上链接。</p>
           </div>
         </div>
       </Panel>

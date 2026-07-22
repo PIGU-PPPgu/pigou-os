@@ -18,22 +18,22 @@ const brainNodes = [
 ];
 
 const capabilityRows = [
-  { index: '01', title: '懂教育现场', text: '不是只做 demo，而是从教师、班主任、教学管理这些真实流程里找问题。' },
-  { index: '02', title: '能把想法做成工具', text: '小程序、数据分析系统、AI 工作台和个人 OS，都尽量做到能被真实使用。' },
-  { index: '03', title: '能自己闭环交付', text: '从 Next.js 前台、内容结构、自动同步、GitHub Actions 到 VPS 部署都能接起来。' },
-  { index: '04', title: '习惯用证据说话', text: '用截图、上线状态、更新日志和项目数据解释我做过什么，而不是只写一句“热爱 AI”。' }
+  { index: '01', title: '在现场，不在 PPT 里', text: '我是班主任。所有工具都从自己每天要处理的留痕、考勤、成绩、家长沟通里长出来，不是为 demo 设计的。' },
+  { index: '02', title: 'shipped 比规划重要', text: '班主任工作流小程序和成绩分析系统都已上线，进度 90% 以上。做出来的东西要被真实使用才算数。' },
+  { index: '03', title: '一个人闭环', text: '从需求、原型、Next.js 前端、数据结构、GitHub Actions 到 VPS 部署都自己接，少一层翻译和等待。' },
+  { index: '04', title: '证据公开', text: '项目状态、commit、更新日志都在这个站上。说做过什么，就附上链接和进度，不靠形容词。' }
 ];
 
 const profileSignals = [
-  { label: '定位', value: 'AI + Education Builder' },
-  { label: '关键词', value: '教师工作流 / 数据分析 / 个人知识系统' },
-  { label: '现在', value: '把教育场景里的重复劳动，做成可复用的软件和 AI 工具。' }
+  { label: '身份', value: '班主任 / 独立开发者' },
+  { label: '在做', value: '教育现场的工作流工具和数据分析系统' },
+  { label: '判断', value: '教育软件大多停在“能用”，因为做的人不在现场。我在。' }
 ];
 
 const fitRows = [
-  '想了解一个既懂教育现场、又能写代码交付的人。',
-  '想看 AI 如何落到教师工作流、班级管理、成绩分析里。',
-  '想找能独立搭产品原型、内容系统和部署链路的合作者。'
+  '想知道一个班主任怎么把日常痛点做成在跑的工具。',
+  '想看 AI 如何真的落到成绩分析、班级管理、教师工作流里。',
+  '找能独立从需求走到部署的合作者。'
 ];
 
 export function PublicHomepage({ projects, updates }: PublicHomepageProps) {
@@ -56,14 +56,14 @@ export function PublicHomepage({ projects, updates }: PublicHomepageProps) {
             <Label>Pigou Wu / Public Brain</Label>
             <span className="live-pill mono rounded-full border border-white/20 px-3 py-1 text-[10px] uppercase text-white/55">Brain map</span>
           </div>
-          <div className="public-hero__copy grid gap-5 border-t border-white/15 pt-5 md:grid-cols-[1fr_auto] md:items-end">
+          <div className="public-hero__copy grid gap-5 border-t border-white/15 pt-5">
             <div>
-              <h2 className="hero-title max-w-4xl text-4xl font-semibold leading-[.92] text-white sm:text-5xl lg:text-6xl">我是 Pigou Wu，做教育 AI 产品和教师工作流工具。</h2>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-white/62 md:mt-5">这里是我的公开简历、作品证据和思维站。你可以快速看见：我关注什么问题、做过哪些东西、以及我如何把一个想法推进到可用。</p>
+              <h2 className="max-w-3xl text-2xl font-semibold leading-[1.15] text-white sm:text-3xl lg:text-[2.5rem]">我是班主任，自己写代码，把每天的工作流做成在跑的工具。</h2>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-white/62">班主任工作流小程序和成绩分析系统都已上线。这个站是它们的代码、更新和我对教育 AI 的一些判断。</p>
             </div>
-            <div className="flex flex-wrap gap-3 md:justify-end">
-              <ButtonLink primary href="/about">认识我</ButtonLink>
-              <ButtonLink href="/work">看作品</ButtonLink>
+            <div className="flex flex-wrap gap-3">
+              <ButtonLink primary href="/work">看作品</ButtonLink>
+              <ButtonLink href="/about">认识我</ButtonLink>
             </div>
           </div>
           <div className="brain-map public-hero__map" aria-label="Pigou Wu public thinking map">
