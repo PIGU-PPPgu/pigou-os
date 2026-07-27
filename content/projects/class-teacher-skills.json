@@ -24,9 +24,9 @@
       "url": "https://github.com/PIGU-PPPgu/class-teacher-skills"
     }
   ],
-  "updated": "2026-07-27",
+  "updated": "2026-07-28",
   "progressEvaluation": {
-    "generatedAt": "2026-07-27",
+    "generatedAt": "2026-07-28",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 76,
@@ -67,8 +67,8 @@
       }
     ],
     "evidence": [
-      "repo files: 250",
-      "last push: 2026-07-21",
+      "repo files: 247",
+      "last push: 2026-07-27",
       "frameworks: Python"
     ],
     "risks": [
@@ -82,8 +82,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "ezdczc",
-    "generatedAt": "2026-07-27",
+    "id": "2a7ixk",
+    "generatedAt": "2026-07-28",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
@@ -93,8 +93,8 @@
     "rationale": "综合分 40/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 250",
-      "last push: 2026-07-21",
+      "repo files: 247",
+      "last push: 2026-07-27",
       "strategic OS/workflow signal in project text",
       "progress evaluation: 76% building"
     ],
