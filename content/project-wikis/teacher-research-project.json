@@ -1,0 +1,105 @@
+{
+  "slug": "teacher-research-project",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "teacher-research-project",
+    "url": "https://github.com/PIGU-PPPgu/teacher-research-project",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-07-28T06:02:44Z",
+    "language": null
+  },
+  "generatedAt": "2026-07-28T21:32:34.564Z",
+  "fileTree": {
+    "totalFiles": 5,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "references",
+        "count": 3
+      },
+      {
+        "name": "[root]",
+        "count": 1
+      },
+      {
+        "name": "agents",
+        "count": 1
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".md",
+        "count": 4
+      },
+      {
+        "ext": ".yaml",
+        "count": 1
+      }
+    ]
+  },
+  "frameworks": [],
+  "modules": [
+    {
+      "name": "references",
+      "kind": "Repository directory",
+      "evidence": [
+        "3 file(s)"
+      ],
+      "files": [
+        "references/quality-and-sources.md",
+        "references/stage-guides.md",
+        "references/work-templates.md"
+      ]
+    },
+    {
+      "name": "agents",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "name": "SKILL.md",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        "SKILL.md"
+      ]
+    }
+  ],
+  "entrypoints": [],
+  "importantFiles": [],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "teacher-research-project",
+      "label": "indexes"
+    },
+    {
+      "from": "references",
+      "to": "teacher-research-project",
+      "label": "contains"
+    },
+    {
+      "from": "agents",
+      "to": "teacher-research-project",
+      "label": "contains"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "teacher-research-project",
+      "label": "contains"
+    }
+  ],
+  "gaps": [
+    "README could not be fetched.",
+    "package.json could not be found or parsed.",
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+  ]
+}
