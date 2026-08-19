@@ -4,7 +4,7 @@
   "status": "shipped",
   "priority": "high",
   "summary": "已经投入正常使用的成绩分析系统，集成成绩分析、增值评价、AI 智能诊断与报告导出。",
-  "explanation": "这是 Pigou 教育数据方向的重要 private 项目：把考试、班级、教师、学生、知识点和 AI 诊断放进一个面向教学管理的分析平台，并已经在真实场景中使用。",
+  "explanation": "面向教学管理的数据分析平台：考试、班级、知识点与 AI 诊断的一体化分析，已在学校真实场景投入使用。涉及学生数据，细节不公开。",
   "domain": "education-data",
   "visibility": "private",
   "source": "private:edu-analysis",
@@ -45,9 +45,9 @@
     "Generate LLM code insights for the most important source files.",
     "生成 LLM code insight：优先覆盖 src/App、核心 pages、analysis、ai、report/export、supabase 相关模块。"
   ],
-  "updated": "2026-08-19",
+  "updated": "2026-07-22",
   "progressEvaluation": {
-    "generatedAt": "2026-08-19",
+    "generatedAt": "2026-07-22",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 90,
@@ -101,7 +101,7 @@
   },
   "prioritySuggestion": {
     "id": "1jqvl9h",
-    "generatedAt": "2026-08-19",
+    "generatedAt": "2026-07-22",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",

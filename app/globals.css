@@ -207,10 +207,6 @@ a { color: inherit; text-decoration: none; }
   border-color: rgba(255,255,255,.82);
 }
 
-.public-hero__copy {
-  order: 2;
-}
-
 .public-hero__map {
   order: 3;
 }
@@ -241,8 +237,6 @@ a { color: inherit; text-decoration: none; }
 
 .brain-line--top-left { transform: rotate(214deg); }
 .brain-line--top-right { transform: rotate(326deg); }
-.brain-line--left { transform: rotate(178deg); width: 30%; }
-.brain-line--right { transform: rotate(2deg); width: 30%; }
 .brain-line--bottom-left { transform: rotate(144deg); }
 .brain-line--bottom-right { transform: rotate(36deg); }
 
@@ -257,7 +251,6 @@ a { color: inherit; text-decoration: none; }
   padding: .85rem .95rem;
   color: rgba(255,255,255,.78);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
-  animation: node-flicker 4.8s steps(2, end) infinite;
 }
 
 .brain-node strong {
@@ -294,16 +287,10 @@ a { color: inherit; text-decoration: none; }
 
 .brain-node--top-left { left: 6%; top: 8%; }
 .brain-node--top-right { right: 5%; top: 12%; }
-.brain-node--left { left: 3%; top: 48%; }
-.brain-node--right { right: 3%; top: 48%; }
 .brain-node--bottom-left { left: 9%; bottom: 8%; }
 .brain-node--bottom-right { right: 8%; bottom: 7%; }
 
 @media (max-width: 1024px) {
-  .public-hero__copy {
-    order: 2;
-  }
-
   .public-hero__map {
     order: 3;
   }
@@ -341,11 +328,6 @@ a { color: inherit; text-decoration: none; }
 @keyframes signal-sweep {
   0%, 100% { opacity: .25; filter: brightness(.75); }
   50% { opacity: .75; filter: brightness(1.25); }
-}
-
-@keyframes node-flicker {
-  0%, 100% { border-color: rgba(255,255,255,.18); }
-  50% { border-color: rgba(255,255,255,.32); }
 }
 
 @media (max-width: 720px) {
