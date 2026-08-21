@@ -24,7 +24,7 @@
       "alt": "Education Monopoly format asset"
     }
   ],
-  "progress": 85,
+  "progress": 77,
   "goals": [
     "验证游戏化学习机制",
     "连接题库和德育任务",
@@ -34,12 +34,12 @@
     "Generate LLM code insights for the most important source files.",
     "Add one approved public screenshot or product surface image."
   ],
-  "updated": "2026-08-21",
+  "updated": "2026-08-22",
   "progressEvaluation": {
-    "generatedAt": "2026-08-21",
+    "generatedAt": "2026-08-22",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 85,
+    "progress": 77,
     "status": "paused",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -89,8 +89,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "e292a6",
-    "generatedAt": "2026-08-21",
+    "id": "172pfj7",
+    "generatedAt": "2026-08-22",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -103,7 +103,7 @@
       "repo files: 231",
       "last push: 2026-03-22",
       "status penalty: paused",
-      "progress evaluation: 85% paused"
+      "progress evaluation: 77% paused"
     ],
     "dimensions": [
       {
