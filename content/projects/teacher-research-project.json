@@ -8,7 +8,7 @@
   "visibility": "public",
   "source": "github:PIGU-PPPgu/teacher-research-project",
   "readme": [],
-  "progress": 27,
+  "progress": 22,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -25,12 +25,12 @@
       "url": "https://github.com/PIGU-PPPgu/teacher-research-project"
     }
   ],
-  "updated": "2026-08-27",
+  "updated": "2026-08-28",
   "progressEvaluation": {
-    "generatedAt": "2026-08-27",
+    "generatedAt": "2026-08-28",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 27,
+    "progress": 22,
     "status": "idea",
     "confidence": "low",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -62,7 +62,7 @@
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
@@ -83,8 +83,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "11mupha",
-    "generatedAt": "2026-08-27",
+    "id": "k2o7uj",
+    "generatedAt": "2026-08-28",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -97,7 +97,7 @@
       "repo files: 5",
       "last push: 2026-07-28",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 27% idea"
+      "progress evaluation: 22% idea"
     ],
     "dimensions": [
       {
