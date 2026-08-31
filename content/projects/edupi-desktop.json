@@ -1,27 +1,34 @@
 {
-  "slug": "student-grade-analysis",
-  "title": "Student Grade Analysis",
-  "status": "archived",
-  "priority": "low",
-  "summary": "学生成绩分析方向的早期项目，用于沉淀教育数据分析经验。",
-  "explanation": "虽然它不是当前主线，但它代表 Pigou 对教育数据分析、学生画像和教学诊断的早期积累，可以作为后续飞象/班主任项目的数据经验来源。",
-  "domain": "education-data",
-  "source": "github:PIGU-PPPgu/student-grade-analysis",
-  "progress": 100,
+  "slug": "edupi-desktop",
+  "title": "edupi-desktop",
+  "status": "building",
+  "priority": "medium",
+  "summary": "EduPi teacher agent desktop",
+  "domain": "typescript",
+  "visibility": "public",
+  "source": "github:PIGU-PPPgu/edupi-desktop",
+  "readme": [
+    "pi-agent-desktop is a local AI agent desktop app for macOS and Windows. It packages the agent capabilities of  into a standalone, installable application.",
+    "- Browse and resume past Pi sessions by project, without digging through terminal history or .jsonl files.\n- Talk to the agent in real time inside a desktop window, with thinking, tool calls, context usage, cost, and compaction state all visible.\n- Continue from any earlier message as a branch, or fork the conversation into an independent session.\n- Manage models, OAuth/API keys, custom model configuration, skills, and plugins.\n- Switch Git worktrees from the sidebar and browse project files.\n- Preview source code, diffs, Markdown, images, audio, PDF, and DOCX files.\n- Dark mode, automatic session naming, a completion sound, and restored run state.\n- A weekly check of the latest stable EduPi Desktop release, with an in-app notice only when the installed app is older.\n- One upgrade button installs a complete, signed new build of Pi Agent and restarts automatically.",
+    "Builds are available from :",
+    "- Apple Silicon Mac: download the aarch64.dmg, open it, and drag the app into Applications. Official releases do not build for Intel Macs.\n- Linux x64: download the .deb package and install it with your distribution's package manager."
+  ],
+  "progress": 53,
   "goals": [
-    "保留历史分析经验",
-    "提炼可复用指标",
-    "作为教育数据项目参考"
+    "整理项目定位",
+    "补充 README 摘要",
+    "确认展示边界"
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Clarify runtime stack and entrypoint because package metadata is missing.",
-    "Add one approved public screenshot or product surface image."
+    "Add one approved public screenshot or product surface image.",
+    "检查自动导入内容",
+    "补充项目截图"
   ],
   "links": [
     {
       "label": "GitHub",
-      "url": "https://github.com/PIGU-PPPgu/student-grade-analysis"
+      "url": "https://github.com/PIGU-PPPgu/edupi-desktop"
     }
   ],
   "updated": "2026-09-01",
@@ -29,21 +36,21 @@
     "generatedAt": "2026-09-01",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 100,
-    "status": "archived",
-    "confidence": "low",
+    "progress": 53,
+    "status": "building",
+    "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
     "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
-        "score": 5,
+        "score": 16,
         "max": 25,
         "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
-        "score": 10,
+        "score": 20,
         "max": 20,
         "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
@@ -55,48 +62,48 @@
       },
       {
         "name": "documentation_knowledge",
-        "score": 0,
+        "score": 11,
         "max": 15,
         "reason": "Project notes, README summary, and wiki/code insight completeness."
       },
       {
         "name": "momentum",
-        "score": 2,
+        "score": 8,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
-      "repo files: 1",
-      "last push: 2025-02-06"
+      "repo files: 668",
+      "last push: 2026-08-31",
+      "frameworks: Next.js, React, Tailwind CSS"
     ],
     "risks": [
-      "package.json could not be found or parsed.",
       "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Clarify runtime stack and entrypoint because package metadata is missing.",
-      "Add one approved public screenshot or product surface image."
+      "Add one approved public screenshot or product surface image.",
+      "检查自动导入内容",
+      "补充项目截图"
     ]
   },
   "prioritySuggestion": {
-    "id": "kf22jm",
+    "id": "i8leyn",
     "generatedAt": "2026-09-01",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
-    "currentPriority": "low",
+    "currentPriority": "medium",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 0,
-    "rationale": "综合分 0/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 40,
+    "rationale": "综合分 40/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 1",
-      "last push: 2025-02-06",
+      "repo files: 668",
+      "last push: 2026-08-31",
       "strategic OS/workflow signal in project text",
-      "status penalty: archived",
-      "progress evaluation: 100% archived"
+      "progress evaluation: 53% building"
     ],
     "dimensions": [
       {
@@ -107,25 +114,25 @@
       },
       {
         "name": "momentum",
-        "score": 10,
+        "score": 34,
         "max": 100,
         "reason": "Recent repository pushes, project updates, and log activity."
       },
       {
         "name": "strategic_fit",
-        "score": 20,
+        "score": 38,
         "max": 100,
         "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
       },
       {
         "name": "maturity_or_impact",
-        "score": 17,
+        "score": 20,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },
       {
         "name": "staleness_penalty",
-        "score": 55,
+        "score": 0,
         "max": 100,
         "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
       }

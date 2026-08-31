@@ -1,7 +1,7 @@
 {
   "slug": "harness-skill-v2",
   "title": "Harness Skill v2",
-  "status": "building",
+  "status": "paused",
   "priority": "medium",
   "summary": "智能体团队系统，实现从 PRD 到部署的全流程自动化。",
   "explanation": "这是 Pigou 在 agentic engineering 方向的工程方法实验，试图把需求、实现、测试、部署串成可复用的智能体协作流程。",
@@ -24,20 +24,20 @@
       "url": "https://github.com/PIGU-PPPgu/harness-skill-v2"
     }
   ],
-  "updated": "2026-08-31",
+  "updated": "2026-09-01",
   "progressEvaluation": {
-    "generatedAt": "2026-08-31",
+    "generatedAt": "2026-09-01",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 63,
-    "status": "building",
+    "status": "paused",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
     "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
-        "score": 16,
+        "score": 10,
         "max": 25,
         "reason": "Project status, launch wording, and product surface signals."
       },
@@ -82,21 +82,22 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "1lvzfof",
-    "generatedAt": "2026-08-31",
+    "id": "1ahzb75",
+    "generatedAt": "2026-09-01",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 33,
-    "rationale": "综合分 33/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 10,
+    "rationale": "综合分 10/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 26",
       "last push: 2026-04-02",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 63% building"
+      "status penalty: paused",
+      "progress evaluation: 63% paused"
     ],
     "dimensions": [
       {
@@ -113,7 +114,7 @@
       },
       {
         "name": "strategic_fit",
-        "score": 38,
+        "score": 20,
         "max": 100,
         "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
       },
@@ -125,7 +126,7 @@
       },
       {
         "name": "staleness_penalty",
-        "score": 0,
+        "score": 18,
         "max": 100,
         "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
       }

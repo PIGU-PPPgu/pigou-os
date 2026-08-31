@@ -25,9 +25,9 @@
       "url": "https://github.com/PIGU-PPPgu/teacher-research-project"
     }
   ],
-  "updated": "2026-08-31",
+  "updated": "2026-09-01",
   "progressEvaluation": {
-    "generatedAt": "2026-08-31",
+    "generatedAt": "2026-09-01",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 22,
@@ -84,7 +84,7 @@
   },
   "prioritySuggestion": {
     "id": "k2o7uj",
-    "generatedAt": "2026-08-31",
+    "generatedAt": "2026-09-01",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",

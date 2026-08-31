@@ -1,0 +1,351 @@
+{
+  "slug": "edupi-desktop",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "edupi-desktop",
+    "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-08-31T17:59:54Z",
+    "language": "TypeScript"
+  },
+  "generatedAt": "2026-08-31T23:51:27.513Z",
+  "readme": {
+    "title": "Pi Agent",
+    "summary": [
+      "pi-agent-desktop is a local AI agent desktop app for macOS and Windows. It packages the agent capabilities of pi into a standalone, installable application.",
+      "- Browse and resume past Pi sessions by project, without digging through terminal history or .jsonl files. - Talk to the agent in real time inside a desktop window, with thinking, tool calls, context usage, cost, and compaction state all visible. - Continue from any earlier message as a branch, or fork the conversation into an independent session. - Manage models, OAuth/API keys, custom model configuration, skills, and plugins. - Switch Git worktrees from the sidebar and browse project files. - Preview source code, diffs, Markdown, images, audio, PDF, and DOCX files. - Dark mode, automatic session naming, a completion sound, and restored run state. - A weekly check of the latest stable EduPi Desktop release, with an in-app notice only when the installed app is older. - One upgrade button installs a complete, signed new build of Pi Agent and restarts automatically.",
+      "⬇️ Download EduPi Desktop (macOS / Windows / Linux)",
+      "Source repository: PIGU-PPPgu/edupi-desktop",
+      "Builds are available from EduPi Desktop releases:",
+      "- Apple Silicon Mac: download the aarch64.dmg, open it, and drag the app into Applications. Official releases do not build for Intel Macs. - Linux x64: download the .deb package and install it with your distribution's package manager."
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 668,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "lib",
+        "count": 240
+      },
+      {
+        "name": "app",
+        "count": 85
+      },
+      {
+        "name": "components",
+        "count": 83
+      },
+      {
+        "name": "public",
+        "count": 71
+      },
+      {
+        "name": "src-tauri",
+        "count": 66
+      },
+      {
+        "name": "scripts",
+        "count": 42
+      },
+      {
+        "name": "docs",
+        "count": 32
+      },
+      {
+        "name": "[root]",
+        "count": 17
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".ts",
+        "count": 207
+      },
+      {
+        "ext": ".mjs",
+        "count": 190
+      },
+      {
+        "ext": ".svg",
+        "count": 64
+      },
+      {
+        "ext": ".tsx",
+        "count": 58
+      },
+      {
+        "ext": ".md",
+        "count": 35
+      },
+      {
+        "ext": ".rs",
+        "count": 35
+      },
+      {
+        "ext": ".json",
+        "count": 17
+      },
+      {
+        "ext": ".css",
+        "count": 13
+      },
+      {
+        "ext": ".png",
+        "count": 11
+      },
+      {
+        "ext": ".toml",
+        "count": 8
+      }
+    ]
+  },
+  "package": {
+    "manager": "npm",
+    "scripts": [
+      "dev",
+      "dev:edupi-c1-checkpoint",
+      "dev:lan",
+      "build",
+      "start",
+      "start:lan",
+      "desktop:dev",
+      "desktop:prepare",
+      "desktop:build",
+      "release:manifest",
+      "release:verify",
+      "drift"
+    ],
+    "dependencies": [
+      "@earendil-works/pi-agent-core",
+      "@earendil-works/pi-ai",
+      "@earendil-works/pi-coding-agent",
+      "@earendil-works/pi-tui",
+      "@tauri-apps/api",
+      "@tauri-apps/plugin-clipboard-manager",
+      "@tauri-apps/plugin-dialog",
+      "@tauri-apps/plugin-notification",
+      "@tauri-apps/plugin-process",
+      "@tauri-apps/plugin-updater",
+      "next",
+      "proper-lockfile",
+      "react",
+      "react-dom",
+      "typebox",
+      "undici"
+    ],
+    "devDependencies": [
+      "@lobehub/icons",
+      "@tailwindcss/postcss",
+      "@tauri-apps/cli",
+      "@types/node",
+      "@types/proper-lockfile",
+      "@types/react",
+      "@types/react-dom",
+      "@types/react-syntax-highlighter",
+      "eslint",
+      "eslint-config-next",
+      "jiti",
+      "katex",
+      "mammoth",
+      "mermaid",
+      "postcss",
+      "react-markdown",
+      "react-syntax-highlighter",
+      "rehype-katex",
+      "rehype-raw",
+      "rehype-sanitize",
+      "remark-gfm",
+      "remark-math",
+      "tailwindcss",
+      "typescript"
+    ]
+  },
+  "frameworks": [
+    "Next.js",
+    "React",
+    "Tailwind CSS"
+  ],
+  "modules": [
+    {
+      "name": "app",
+      "kind": "Next.js App Router surface",
+      "evidence": [
+        "85 file(s) under app/"
+      ],
+      "files": [
+        "app/api/agent/[id]/bash-output/route.ts",
+        "app/api/agent/[id]/events/route.ts",
+        "app/api/agent/[id]/route.ts",
+        "app/api/agent/events-route.test.mjs",
+        "app/api/agent/new/route.ts",
+        "app/api/agent/running/events/route.ts",
+        "app/api/agent/running/route.ts",
+        "app/api/auth/all-providers/route.ts"
+      ]
+    },
+    {
+      "name": "components",
+      "kind": "Reusable UI components",
+      "evidence": [
+        "83 file(s) under components/"
+      ],
+      "files": [
+        "components/AppSettings.tsx",
+        "components/AppSettingsUpdate.test.mjs",
+        "components/AppShell-session-reset.test.mjs",
+        "components/AppShell.tsx",
+        "components/BranchNavigator.tsx",
+        "components/ChatInput.dormancy.test.mjs",
+        "components/ChatInput.test.mjs",
+        "components/ChatInput.tsx"
+      ]
+    },
+    {
+      "name": "lib",
+      "kind": "Core application logic",
+      "evidence": [
+        "240 file(s) under lib/"
+      ],
+      "files": [
+        "lib/agent-client.ts",
+        "lib/agent-event-wire.test.mjs",
+        "lib/agent-event-wire.ts",
+        "lib/allowed-roots.ts",
+        "lib/ansi.test.mjs",
+        "lib/ansi.ts",
+        "lib/api-types.ts",
+        "lib/app-prefs.ts"
+      ]
+    },
+    {
+      "name": "scripts",
+      "kind": "Automation scripts",
+      "evidence": [
+        "42 file(s) under scripts/"
+      ],
+      "files": [
+        "scripts/bump-pi-agent-desktop-version.mjs",
+        "scripts/configure-updater-public-key.mjs",
+        "scripts/configure-updater-public-key.test.mjs",
+        "scripts/desktop-dev.mjs",
+        "scripts/desktop-platform.mjs",
+        "scripts/desktop-platform.test.mjs",
+        "scripts/desktop-upstream-state.json",
+        "scripts/desktop-upstream-state.mjs"
+      ]
+    },
+    {
+      "name": "public",
+      "kind": "Static assets",
+      "evidence": [
+        "71 file(s) under public/"
+      ],
+      "files": [
+        "public/icons/apple-touch-icon.png",
+        "public/icons/catppuccin/LICENSE",
+        "public/icons/catppuccin/README.md",
+        "public/icons/catppuccin/latte/_file.svg",
+        "public/icons/catppuccin/latte/_folder.svg",
+        "public/icons/catppuccin/latte/_folder_open.svg",
+        "public/icons/catppuccin/latte/bash.svg",
+        "public/icons/catppuccin/latte/bun-lock.svg"
+      ]
+    },
+    {
+      "name": "docs",
+      "kind": "Documentation",
+      "evidence": [
+        "32 file(s) under docs/"
+      ],
+      "files": [
+        "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
+        "docs/EDUPI_DESKTOP_IMPLEMENTATION_PLAN.md",
+        "docs/EDUPI_PRODUCT_MODEL_INTEGRATION.md",
+        "docs/EDUPI_WORKSPACE_PRESENTATION_DECISION.md",
+        "docs/LAUNCH_DEMO_SCRIPT.md",
+        "docs/SECURITY_EXCEPTIONS.md",
+        "docs/THIRD_PARTY_UI_REFERENCES.md",
+        "docs/assets/linux/pi-agent-linux-model-selector.png"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "package.json",
+    "app/page.tsx"
+  ],
+  "importantFiles": [
+    {
+      "path": "package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": "app/page.tsx",
+      "reason": "App Router home page"
+    },
+    {
+      "path": "app/api/agent/[id]/bash-output/route.ts",
+      "reason": "Server API route"
+    },
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "edupi-desktop",
+      "label": "indexes"
+    },
+    {
+      "from": "Next.js",
+      "to": "edupi-desktop",
+      "label": "powers"
+    },
+    {
+      "from": "React",
+      "to": "edupi-desktop",
+      "label": "powers"
+    },
+    {
+      "from": "Tailwind CSS",
+      "to": "edupi-desktop",
+      "label": "powers"
+    },
+    {
+      "from": "app",
+      "to": "edupi-desktop",
+      "label": "contains"
+    },
+    {
+      "from": "components",
+      "to": "edupi-desktop",
+      "label": "contains"
+    },
+    {
+      "from": "lib",
+      "to": "edupi-desktop",
+      "label": "contains"
+    },
+    {
+      "from": "scripts",
+      "to": "edupi-desktop",
+      "label": "contains"
+    },
+    {
+      "from": "public",
+      "to": "edupi-desktop",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": [
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+  ]
+}

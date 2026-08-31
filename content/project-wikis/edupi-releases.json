@@ -1,18 +1,23 @@
 {
-  "slug": "student-grade-analysis",
+  "slug": "edupi-releases",
   "repo": {
     "owner": "PIGU-PPPgu",
-    "name": "student-grade-analysis",
-    "url": "https://github.com/PIGU-PPPgu/student-grade-analysis",
+    "name": "edupi-releases",
+    "url": "https://github.com/PIGU-PPPgu/edupi-releases",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2025-02-06T12:49:41Z",
+    "pushedAt": "2026-08-31T06:39:44Z",
     "language": null
   },
-  "generatedAt": "2026-08-31T23:51:40.164Z",
+  "generatedAt": "2026-08-31T23:51:28.185Z",
   "readme": {
-    "title": "student-grade-analysis",
-    "summary": []
+    "title": "EduPi Desktop Releases",
+    "summary": [
+      "- macOS：Apple Silicon DMG - Windows：x64 安装程序 - Linux：x64 Debian 包 - 自动更新：Tauri latest.json 与签名资产",
+      "稳定版本会显示在右侧 Releases。EduPi Desktop 只会安装通过永久 updater 密钥验证的完整应用更新；不会在线替换单个脚本或依赖。",
+      "源码、设计文档和开发讨论位于公开的 EduPi Desktop 源码仓库。本仓库只保存安装包、版本说明、许可证与更新元数据，不包含教师数据或本机配置。",
+      "首个正式签名版本仍在发布前验证中。没有标记为正式 stable 的草稿或预览包不会触发客户端自动更新。"
+    ]
   },
   "fileTree": {
     "totalFiles": 1,
@@ -53,12 +58,12 @@
   "graph": [
     {
       "from": "GitHub repository",
-      "to": "Student Grade Analysis",
+      "to": "edupi-releases",
       "label": "indexes"
     },
     {
       "from": "README.md",
-      "to": "Student Grade Analysis",
+      "to": "edupi-releases",
       "label": "contains"
     }
   ],

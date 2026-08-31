@@ -1,36 +1,43 @@
 {
-  "slug": "websiteforedu",
-  "title": "Website for Edu",
-  "status": "archived",
-  "priority": "low",
-  "summary": "智慧教育管理系统，集成成绩管理、学生管理、智能分析和游戏化激励。",
-  "explanation": "这是 Pigou 对教育管理系统的一次较完整概念整合：成绩、学生、AI 分析、游戏化激励、教师管理都在同一个系统蓝图里。",
-  "domain": "education-platform",
-  "visibility": "private",
-  "source": "private:websiteforedu",
+  "slug": "edupi-releases",
+  "title": "edupi-releases",
+  "status": "idea",
+  "priority": "medium",
+  "summary": "Official EduPi Desktop installers and signed update metadata",
+  "domain": "github-project",
+  "visibility": "public",
+  "source": "github:PIGU-PPPgu/edupi-releases",
   "readme": [
-    "系统集成成绩管理、学生管理、智能分析和游戏化激励等功能。",
-    "智能分析包括 AI 辅助错题分析、个性化学习建议和知识点关联；游戏化激励包括班级大富翁、积分排行榜、成就系统和团队竞赛。",
-    "班级大富翁设计包括小组协作、投骰子、地产购买升级、随机事件卡片和每周固定机会。",
-    "技术栈包括 React、Ant Design、Vite、Axios、ECharts、Node.js、Express、MongoDB、JWT 和 DeepSeek AI API。"
+    "这里是 EduPi 教师智能体桌面端的官方二进制发布仓库。",
+    "- macOS：Apple Silicon DMG\n- Windows：x64 安装程序\n- Linux：x64 Debian 包\n- 自动更新：Tauri latest.json 与签名资产",
+    "稳定版本会显示在右侧 Releases。EduPi Desktop 只会安装通过永久 updater 密钥验证的完整应用更新；不会在线替换单个脚本或依赖。",
+    "源码、设计文档和开发讨论位于公开的 。本仓库只保存安装包、版本说明、许可证与更新元数据，不包含教师数据或本机配置。"
   ],
-  "progress": 100,
+  "progress": 33,
   "goals": [
-    "归档教育管理系统蓝图",
-    "提取游戏化激励经验",
-    "为 Education Monopoly 和 edu-analysis 提供历史线索"
+    "整理项目定位",
+    "补充 README 摘要",
+    "确认展示边界"
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Add one approved public screenshot or product surface image."
+    "Clarify runtime stack and entrypoint because package metadata is missing.",
+    "Add one approved public screenshot or product surface image.",
+    "检查自动导入内容"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/PIGU-PPPgu/edupi-releases"
+    }
   ],
   "updated": "2026-09-01",
   "progressEvaluation": {
     "generatedAt": "2026-09-01",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 100,
-    "status": "archived",
+    "progress": 33,
+    "status": "idea",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
     "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
@@ -43,7 +50,7 @@
       },
       {
         "name": "technical_completeness",
-        "score": 16,
+        "score": 10,
         "max": 20,
         "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
@@ -61,37 +68,43 @@
       },
       {
         "name": "momentum",
-        "score": 2,
+        "score": 8,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
-      "repo files: 211",
-      "last push: 2025-02-10"
+      "repo files: 1",
+      "last push: 2026-08-31"
     ],
-    "risks": [],
+    "risks": [
+      "package.json could not be found or parsed.",
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+    ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Add one approved public screenshot or product surface image."
+      "Clarify runtime stack and entrypoint because package metadata is missing.",
+      "Add one approved public screenshot or product surface image.",
+      "检查自动导入内容"
     ]
   },
   "prioritySuggestion": {
-    "id": "hqjctl",
+    "id": "5igex1",
     "generatedAt": "2026-09-01",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
-    "currentPriority": "low",
+    "currentPriority": "medium",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 0,
-    "rationale": "综合分 0/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 39,
+    "rationale": "综合分 39/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 211",
-      "last push: 2025-02-10",
-      "status penalty: archived",
-      "progress evaluation: 100% archived"
+      "repo files: 1",
+      "last push: 2026-08-31",
+      "launch/use signal in project text",
+      "strategic OS/workflow signal in project text",
+      "progress evaluation: 33% idea"
     ],
     "dimensions": [
       {
@@ -102,25 +115,25 @@
       },
       {
         "name": "momentum",
-        "score": 10,
+        "score": 34,
         "max": 100,
         "reason": "Recent repository pushes, project updates, and log activity."
       },
       {
         "name": "strategic_fit",
-        "score": 5,
+        "score": 28,
         "max": 100,
         "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
       },
       {
         "name": "maturity_or_impact",
-        "score": 20,
+        "score": 25,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },
       {
         "name": "staleness_penalty",
-        "score": 55,
+        "score": 0,
         "max": 100,
         "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
       }
