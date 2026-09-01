@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-08-31T17:59:54Z",
+    "pushedAt": "2026-09-01T19:13:28Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-08-31T23:51:27.513Z",
+  "generatedAt": "2026-09-01T22:36:52.215Z",
   "readme": {
     "title": "Pi Agent",
     "summary": [
@@ -22,20 +22,20 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 668,
+    "totalFiles": 743,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 240
-      },
-      {
-        "name": "app",
-        "count": 85
+        "count": 265
       },
       {
         "name": "components",
-        "count": 83
+        "count": 103
+      },
+      {
+        "name": "app",
+        "count": 94
       },
       {
         "name": "public",
@@ -47,37 +47,37 @@
       },
       {
         "name": "scripts",
-        "count": 42
+        "count": 47
       },
       {
         "name": "docs",
-        "count": 32
+        "count": 45
       },
       {
-        "name": "[root]",
-        "count": 17
+        "name": "hooks",
+        "count": 19
       }
     ],
     "extensions": [
       {
         "ext": ".ts",
-        "count": 207
+        "count": 226
       },
       {
         "ext": ".mjs",
-        "count": 190
+        "count": 224
+      },
+      {
+        "ext": ".tsx",
+        "count": 66
       },
       {
         "ext": ".svg",
         "count": 64
       },
       {
-        "ext": ".tsx",
-        "count": 58
-      },
-      {
         "ext": ".md",
-        "count": 35
+        "count": 49
       },
       {
         "ext": ".rs",
@@ -172,7 +172,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "85 file(s) under app/"
+        "94 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -189,7 +189,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "83 file(s) under components/"
+        "103 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -206,7 +206,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "240 file(s) under lib/"
+        "265 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -223,7 +223,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "42 file(s) under scripts/"
+        "47 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
@@ -257,7 +257,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "32 file(s) under docs/"
+        "45 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
@@ -267,7 +267,7 @@
         "docs/LAUNCH_DEMO_SCRIPT.md",
         "docs/SECURITY_EXCEPTIONS.md",
         "docs/THIRD_PARTY_UI_REFERENCES.md",
-        "docs/assets/linux/pi-agent-linux-model-selector.png"
+        "docs/architecture/ADR-001-edupi-living-teacher-agent.md"
       ]
     }
   ],

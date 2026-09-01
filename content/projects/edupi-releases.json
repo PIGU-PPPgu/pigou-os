@@ -22,8 +22,7 @@
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
     "Clarify runtime stack and entrypoint because package metadata is missing.",
-    "Add one approved public screenshot or product surface image.",
-    "检查自动导入内容"
+    "Add one approved public screenshot or product surface image."
   ],
   "links": [
     {
@@ -31,9 +30,9 @@
       "url": "https://github.com/PIGU-PPPgu/edupi-releases"
     }
   ],
-  "updated": "2026-09-01",
+  "updated": "2026-09-02",
   "progressEvaluation": {
-    "generatedAt": "2026-09-01",
+    "generatedAt": "2026-09-02",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 33,
@@ -84,13 +83,12 @@
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
       "Clarify runtime stack and entrypoint because package metadata is missing.",
-      "Add one approved public screenshot or product surface image.",
-      "检查自动导入内容"
+      "Add one approved public screenshot or product surface image."
     ]
   },
   "prioritySuggestion": {
     "id": "5igex1",
-    "generatedAt": "2026-09-01",
+    "generatedAt": "2026-09-02",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",

@@ -13,7 +13,7 @@
     "Builds are available from :",
     "- Apple Silicon Mac: download the aarch64.dmg, open it, and drag the app into Applications. Official releases do not build for Intel Macs.\n- Linux x64: download the .deb package and install it with your distribution's package manager."
   ],
-  "progress": 53,
+  "progress": 71,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -21,9 +21,7 @@
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Add one approved public screenshot or product surface image.",
-    "检查自动导入内容",
-    "补充项目截图"
+    "Add one approved public screenshot or product surface image."
   ],
   "links": [
     {
@@ -31,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/edupi-desktop"
     }
   ],
-  "updated": "2026-09-01",
+  "updated": "2026-09-02",
   "progressEvaluation": {
-    "generatedAt": "2026-09-01",
+    "generatedAt": "2026-09-02",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 53,
+    "progress": 71,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -74,8 +72,8 @@
       }
     ],
     "evidence": [
-      "repo files: 668",
-      "last push: 2026-08-31",
+      "repo files: 743",
+      "last push: 2026-09-01",
       "frameworks: Next.js, React, Tailwind CSS"
     ],
     "risks": [
@@ -83,27 +81,25 @@
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Add one approved public screenshot or product surface image.",
-      "检查自动导入内容",
-      "补充项目截图"
+      "Add one approved public screenshot or product surface image."
     ]
   },
   "prioritySuggestion": {
-    "id": "i8leyn",
-    "generatedAt": "2026-09-01",
+    "id": "1jmyvw4",
+    "generatedAt": "2026-09-02",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 40,
-    "rationale": "综合分 40/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 41,
+    "rationale": "综合分 41/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 668",
-      "last push: 2026-08-31",
+      "repo files: 743",
+      "last push: 2026-09-01",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 53% building"
+      "progress evaluation: 71% building"
     ],
     "dimensions": [
       {
@@ -126,7 +122,7 @@
       },
       {
         "name": "maturity_or_impact",
-        "score": 20,
+        "score": 24,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },
