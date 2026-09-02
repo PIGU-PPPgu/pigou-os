@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-01T19:13:28Z",
+    "pushedAt": "2026-09-02T16:17:30Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-09-01T22:36:52.215Z",
+  "generatedAt": "2026-09-02T22:39:19.102Z",
   "readme": {
     "title": "Pi Agent",
     "summary": [
@@ -22,20 +22,20 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 743,
+    "totalFiles": 769,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 265
+        "count": 275
       },
       {
         "name": "components",
-        "count": 103
+        "count": 105
       },
       {
         "name": "app",
-        "count": 94
+        "count": 99
       },
       {
         "name": "public",
@@ -43,15 +43,15 @@
       },
       {
         "name": "src-tauri",
-        "count": 66
-      },
-      {
-        "name": "scripts",
-        "count": 47
+        "count": 68
       },
       {
         "name": "docs",
-        "count": 45
+        "count": 50
+      },
+      {
+        "name": "scripts",
+        "count": 49
       },
       {
         "name": "hooks",
@@ -61,11 +61,11 @@
     "extensions": [
       {
         "ext": ".ts",
-        "count": 226
+        "count": 235
       },
       {
         "ext": ".mjs",
-        "count": 224
+        "count": 234
       },
       {
         "ext": ".tsx",
@@ -77,7 +77,7 @@
       },
       {
         "ext": ".md",
-        "count": 49
+        "count": 55
       },
       {
         "ext": ".rs",
@@ -172,7 +172,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "94 file(s) under app/"
+        "99 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -189,7 +189,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "103 file(s) under components/"
+        "105 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -206,7 +206,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "265 file(s) under lib/"
+        "275 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -223,7 +223,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "47 file(s) under scripts/"
+        "49 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
@@ -257,7 +257,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "45 file(s) under docs/"
+        "50 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
