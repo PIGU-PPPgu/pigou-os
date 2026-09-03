@@ -13,7 +13,7 @@
     "Builds are available from :",
     "- Apple Silicon Mac: download the aarch64.dmg, open it, and drag the app into Applications. Official releases do not build for Intel Macs.\n- Linux x64: download the .deb package and install it with your distribution's package manager."
   ],
-  "progress": 89,
+  "progress": 92,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -29,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/edupi-desktop"
     }
   ],
-  "updated": "2026-09-03",
+  "updated": "2026-09-04",
   "progressEvaluation": {
-    "generatedAt": "2026-09-03",
+    "generatedAt": "2026-09-04",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 89,
+    "progress": 92,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -72,8 +72,8 @@
       }
     ],
     "evidence": [
-      "repo files: 769",
-      "last push: 2026-09-02",
+      "repo files: 787",
+      "last push: 2026-09-03",
       "frameworks: Next.js, React, Tailwind CSS"
     ],
     "risks": [
@@ -85,8 +85,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "16zt6go",
-    "generatedAt": "2026-09-03",
+    "id": "1rcgfoz",
+    "generatedAt": "2026-09-04",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -96,10 +96,10 @@
     "rationale": "综合分 41/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 769",
-      "last push: 2026-09-02",
+      "repo files: 787",
+      "last push: 2026-09-03",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 89% building"
+      "progress evaluation: 92% building"
     ],
     "dimensions": [
       {

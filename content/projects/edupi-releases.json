@@ -30,9 +30,9 @@
       "url": "https://github.com/PIGU-PPPgu/edupi-releases"
     }
   ],
-  "updated": "2026-09-03",
+  "updated": "2026-09-04",
   "progressEvaluation": {
-    "generatedAt": "2026-09-03",
+    "generatedAt": "2026-09-04",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 33,
@@ -88,7 +88,7 @@
   },
   "prioritySuggestion": {
     "id": "5igex1",
-    "generatedAt": "2026-09-03",
+    "generatedAt": "2026-09-04",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
