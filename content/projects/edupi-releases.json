@@ -30,9 +30,9 @@
       "url": "https://github.com/PIGU-PPPgu/edupi-releases"
     }
   ],
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
   "progressEvaluation": {
-    "generatedAt": "2026-09-05",
+    "generatedAt": "2026-09-06",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 33,
@@ -74,7 +74,7 @@
     ],
     "evidence": [
       "repo files: 1",
-      "last push: 2026-08-31"
+      "last push: 2026-09-05"
     ],
     "risks": [
       "package.json could not be found or parsed.",
@@ -87,8 +87,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "5igex1",
-    "generatedAt": "2026-09-05",
+    "id": "wqc9c3",
+    "generatedAt": "2026-09-06",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -99,7 +99,7 @@
     "evidence": [
       "no open linked tasks",
       "repo files: 1",
-      "last push: 2026-08-31",
+      "last push: 2026-09-05",
       "launch/use signal in project text",
       "strategic OS/workflow signal in project text",
       "progress evaluation: 33% idea"

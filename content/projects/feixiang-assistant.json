@@ -7,7 +7,7 @@
   "explanation": "这个项目把日常教学平台操作变成可复用的 AI skill，目标是减少查询、统计、催交、诊断这些重复动作，让老师把时间放回教学判断。",
   "domain": "teaching-workflow",
   "source": "github:PIGU-PPPgu/feixiang-skill",
-  "progress": 58,
+  "progress": 53,
   "goals": [
     "自动查询作业提交情况",
     "分析正确率和薄弱知识点",
@@ -23,12 +23,12 @@
       "url": "https://github.com/PIGU-PPPgu/feixiang-skill"
     }
   ],
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
   "progressEvaluation": {
-    "generatedAt": "2026-09-05",
+    "generatedAt": "2026-09-06",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 58,
+    "progress": 53,
     "status": "paused",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -78,8 +78,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "z4bcw2",
-    "generatedAt": "2026-09-05",
+    "id": "cb1csp",
+    "generatedAt": "2026-09-06",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
@@ -93,7 +93,7 @@
       "last push: 2026-04-05",
       "strategic OS/workflow signal in project text",
       "status penalty: paused",
-      "progress evaluation: 58% paused"
+      "progress evaluation: 53% paused"
     ],
     "dimensions": [
       {

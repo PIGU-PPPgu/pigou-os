@@ -13,7 +13,7 @@
     "先在 OpenClaw 浏览器（profile=openclaw）中打开并登录飞象星球，然后运行：",
     "脚本会自动从浏览器读取 cookie、刷新 token、检测班级信息，一步完成。"
   ],
-  "progress": 58,
+  "progress": 53,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -29,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/feixiang-skill"
     }
   ],
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
   "progressEvaluation": {
-    "generatedAt": "2026-09-05",
+    "generatedAt": "2026-09-06",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 58,
+    "progress": 53,
     "status": "paused",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -84,8 +84,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "8jev0c",
-    "generatedAt": "2026-09-05",
+    "id": "1vln59z",
+    "generatedAt": "2026-09-06",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -100,7 +100,7 @@
       "launch/use signal in project text",
       "strategic OS/workflow signal in project text",
       "status penalty: paused",
-      "progress evaluation: 58% paused"
+      "progress evaluation: 53% paused"
     ],
     "dimensions": [
       {
