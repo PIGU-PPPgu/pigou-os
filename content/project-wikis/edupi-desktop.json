@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-05T18:44:31Z",
+    "pushedAt": "2026-09-06T20:45:43Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-09-05T22:03:40.304Z",
+  "generatedAt": "2026-09-06T22:07:46.448Z",
   "readme": {
     "title": "Pi Agent",
     "summary": [
@@ -22,36 +22,36 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 817,
+    "totalFiles": 857,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 286
-      },
-      {
-        "name": "app",
-        "count": 114
+        "count": 300
       },
       {
         "name": "components",
-        "count": 114
+        "count": 124
+      },
+      {
+        "name": "app",
+        "count": 118
+      },
+      {
+        "name": "src-tauri",
+        "count": 72
       },
       {
         "name": "public",
         "count": 71
       },
       {
-        "name": "src-tauri",
-        "count": 70
-      },
-      {
         "name": "docs",
-        "count": 59
+        "count": 61
       },
       {
         "name": "scripts",
-        "count": 50
+        "count": 54
       },
       {
         "name": "hooks",
@@ -61,19 +61,19 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 250
+        "count": 266
       },
       {
         "ext": ".ts",
-        "count": 250
+        "count": 261
       },
       {
         "ext": ".tsx",
-        "count": 72
+        "count": 77
       },
       {
         "ext": ".md",
-        "count": 65
+        "count": 69
       },
       {
         "ext": ".svg",
@@ -128,6 +128,7 @@
       "@tauri-apps/plugin-notification",
       "@tauri-apps/plugin-process",
       "@tauri-apps/plugin-updater",
+      "jszip",
       "next",
       "proper-lockfile",
       "react",
@@ -173,7 +174,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "114 file(s) under app/"
+        "118 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -190,7 +191,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "114 file(s) under components/"
+        "124 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -207,7 +208,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "286 file(s) under lib/"
+        "300 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -224,7 +225,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "50 file(s) under scripts/"
+        "54 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
@@ -258,7 +259,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "59 file(s) under docs/"
+        "61 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
