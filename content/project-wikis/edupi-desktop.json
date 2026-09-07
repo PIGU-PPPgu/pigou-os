@@ -6,23 +6,23 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-06T20:45:43Z",
+    "pushedAt": "2026-09-07T20:46:11Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-09-06T22:07:46.448Z",
+  "generatedAt": "2026-09-07T22:50:57.606Z",
   "readme": {
-    "title": "Pi Agent",
+    "title": "EduPi Desktop",
     "summary": [
-      "pi-agent-desktop is a local AI agent desktop app for macOS and Windows. It packages the agent capabilities of pi into a standalone, installable application.",
-      "- Browse and resume past Pi sessions by project, without digging through terminal history or .jsonl files. - Talk to the agent in real time inside a desktop window, with thinking, tool calls, context usage, cost, and compaction state all visible. - Continue from any earlier message as a branch, or fork the conversation into an independent session. - Manage models, OAuth/API keys, custom model configuration, skills, and plugins. - Switch Git worktrees from the sidebar and browse project files. - Preview source code, diffs, Markdown, images, audio, PDF, and DOCX files. - Dark mode, automatic session naming, a completion sound, and restored run state. - A weekly check of the latest stable EduPi Desktop release, with an in-app notice only when the installed app is older. - One upgrade button installs a complete, signed new build of Pi Agent and restarts automatically.",
-      "⬇️ Download EduPi Desktop (macOS / Windows / Linux)",
-      "Source repository: PIGU-PPPgu/edupi-desktop",
-      "Builds are available from EduPi Desktop releases:",
-      "- Apple Silicon Mac: download the aarch64.dmg, open it, and drag the app into Applications. Official releases do not build for Intel Macs. - Linux x64: download the .deb package and install it with your distribution's package manager."
+      "EduPi is a local AI workspace for teachers. It brings teaching tasks, student records, schedules, materials, and AI conversations into one desktop app. Start from today's work, open a task, inspect its artifacts and evidence, and review the result.",
+      "- Teaching and tasks: today's work, preparation, task boards, dedicated task conversations, run status, artifacts, and review. - Students and memory: student profiles, events, education memory, candidate information, and teacher review. - Schedules and materials: timetables, school calendars, material intake, and recognition results. - AI collaboration: streaming conversations, session history, branching, file previews, and model, authentication, skill, and plugin settings.",
+      "Availability depends on the pinned EduPi Core contract, configured models, and local permissions. Unsupported Core operations are not executed as supported capabilities.",
+      "Choose an asset from Releases. The release workflow targets Apple Silicon macOS, Windows x64, and Linux x64; consult each release for the assets actually available.",
+      "Platform Installer --- --- macOS Apple Silicon aarch64.dmg Windows x64 x64-setup.exe Linux x64 .deb",
+      "The desktop package includes the local Next.js server, Node.js, Pi SDK, and a pinned EduPi Core runtime. The installed app starts its own local server. Complete the teacher setup when opening the app, then configure an available model in Settings."
     ]
   },
   "fileTree": {
-    "totalFiles": 857,
+    "totalFiles": 863,
     "truncated": false,
     "topDirectories": [
       {
@@ -47,7 +47,7 @@
       },
       {
         "name": "docs",
-        "count": 61
+        "count": 67
       },
       {
         "name": "scripts",
@@ -73,11 +73,11 @@
       },
       {
         "ext": ".md",
-        "count": 69
+        "count": 70
       },
       {
         "ext": ".svg",
-        "count": 64
+        "count": 65
       },
       {
         "ext": ".rs",
@@ -85,7 +85,7 @@
       },
       {
         "ext": ".json",
-        "count": 17
+        "count": 19
       },
       {
         "ext": ".css",
@@ -259,7 +259,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "61 file(s) under docs/"
+        "67 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",

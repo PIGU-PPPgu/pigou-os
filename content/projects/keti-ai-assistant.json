@@ -7,7 +7,7 @@
   "explanation": "它是教师科研方向的产品原型，专注把一个研究主题展开成更规范的课题申报材料。",
   "domain": "teacher-research",
   "source": "github:PIGU-PPPgu/keti-ai-assistant",
-  "progress": 92,
+  "progress": 84,
   "goals": [
     "生成课题申报书初稿",
     "沉淀教育科研写作结构",
@@ -23,12 +23,12 @@
       "url": "https://github.com/PIGU-PPPgu/keti-ai-assistant"
     }
   ],
-  "updated": "2026-09-07",
+  "updated": "2026-09-08",
   "progressEvaluation": {
-    "generatedAt": "2026-09-07",
+    "generatedAt": "2026-09-08",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 92,
+    "progress": 84,
     "status": "paused",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -79,8 +79,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "1tuko52",
-    "generatedAt": "2026-09-07",
+    "id": "1pjt3pt",
+    "generatedAt": "2026-09-08",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -94,7 +94,7 @@
       "last push: 2026-04-09",
       "strategic OS/workflow signal in project text",
       "status penalty: paused",
-      "progress evaluation: 92% paused"
+      "progress evaluation: 84% paused"
     ],
     "dimensions": [
       {
