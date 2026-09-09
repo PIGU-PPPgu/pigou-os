@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-08T06:05:12Z",
+    "pushedAt": "2026-09-09T07:43:44Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-09-08T22:41:28.202Z",
+  "generatedAt": "2026-09-09T22:34:01.311Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,23 +22,27 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 863,
+    "totalFiles": 955,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 300
+        "count": 334
       },
       {
         "name": "components",
-        "count": 124
+        "count": 140
       },
       {
         "name": "app",
-        "count": 118
+        "count": 126
       },
       {
         "name": "src-tauri",
+        "count": 75
+      },
+      {
+        "name": "docs",
         "count": 72
       },
       {
@@ -46,34 +50,30 @@
         "count": 71
       },
       {
-        "name": "docs",
-        "count": 67
-      },
-      {
         "name": "scripts",
-        "count": 54
+        "count": 68
       },
       {
         "name": "hooks",
-        "count": 19
+        "count": 23
       }
     ],
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 266
+        "count": 318
       },
       {
         "ext": ".ts",
-        "count": 261
+        "count": 284
       },
       {
         "ext": ".tsx",
-        "count": 77
+        "count": 83
       },
       {
         "ext": ".md",
-        "count": 70
+        "count": 76
       },
       {
         "ext": ".svg",
@@ -81,23 +81,23 @@
       },
       {
         "ext": ".rs",
-        "count": 35
+        "count": 36
       },
       {
         "ext": ".json",
-        "count": 19
+        "count": 20
       },
       {
         "ext": ".css",
-        "count": 13
+        "count": 14
       },
       {
         "ext": ".png",
         "count": 11
       },
       {
-        "ext": ".toml",
-        "count": 8
+        "ext": "[none]",
+        "count": 9
       }
     ]
   },
@@ -128,6 +128,7 @@
       "@tauri-apps/plugin-notification",
       "@tauri-apps/plugin-process",
       "@tauri-apps/plugin-updater",
+      "@xmldom/xmldom",
       "jszip",
       "next",
       "proper-lockfile",
@@ -174,7 +175,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "118 file(s) under app/"
+        "126 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -191,7 +192,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "124 file(s) under components/"
+        "140 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -208,7 +209,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "300 file(s) under lib/"
+        "334 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -225,17 +226,17 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "54 file(s) under scripts/"
+        "68 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
         "scripts/configure-updater-public-key.mjs",
         "scripts/configure-updater-public-key.test.mjs",
+        "scripts/create-roster-acceptance-fixture.mjs",
         "scripts/desktop-dev.mjs",
-        "scripts/desktop-platform.mjs",
-        "scripts/desktop-platform.test.mjs",
-        "scripts/desktop-upstream-state.json",
-        "scripts/desktop-upstream-state.mjs"
+        "scripts/desktop-package-inputs.mjs",
+        "scripts/desktop-package-inputs.test.mjs",
+        "scripts/desktop-platform.mjs"
       ]
     },
     {
@@ -259,7 +260,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "67 file(s) under docs/"
+        "72 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
@@ -269,7 +270,7 @@
         "docs/LAUNCH_DEMO_SCRIPT.md",
         "docs/SECURITY_EXCEPTIONS.md",
         "docs/THIRD_PARTY_UI_REFERENCES.md",
-        "docs/architecture/ADR-001-edupi-living-teacher-agent.md"
+        "docs/acceptance/2026-09-08-live-workflows.md"
       ]
     }
   ],
