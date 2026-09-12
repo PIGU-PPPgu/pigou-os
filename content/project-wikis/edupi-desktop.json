@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-10T08:54:03Z",
+    "pushedAt": "2026-09-12T20:33:02Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-09-11T22:35:34.428Z",
+  "generatedAt": "2026-09-12T22:18:16.451Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,20 +22,20 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 955,
+    "totalFiles": 967,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 334
+        "count": 341
       },
       {
         "name": "components",
-        "count": 140
+        "count": 143
       },
       {
         "name": "app",
-        "count": 126
+        "count": 127
       },
       {
         "name": "src-tauri",
@@ -61,15 +61,15 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 318
+        "count": 325
       },
       {
         "ext": ".ts",
-        "count": 284
+        "count": 287
       },
       {
         "ext": ".tsx",
-        "count": 83
+        "count": 84
       },
       {
         "ext": ".md",
@@ -175,7 +175,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "126 file(s) under app/"
+        "127 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -192,7 +192,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "140 file(s) under components/"
+        "143 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -209,7 +209,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "334 file(s) under lib/"
+        "341 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
