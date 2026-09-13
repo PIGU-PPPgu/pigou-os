@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-12T20:33:02Z",
+    "pushedAt": "2026-09-13T22:11:10Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-09-12T22:18:16.451Z",
+  "generatedAt": "2026-09-13T22:24:54.329Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,12 +22,12 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 967,
+    "totalFiles": 979,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 341
+        "count": 349
       },
       {
         "name": "components",
@@ -35,7 +35,7 @@
       },
       {
         "name": "app",
-        "count": 127
+        "count": 130
       },
       {
         "name": "src-tauri",
@@ -51,7 +51,7 @@
       },
       {
         "name": "scripts",
-        "count": 68
+        "count": 69
       },
       {
         "name": "hooks",
@@ -61,11 +61,11 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 325
+        "count": 331
       },
       {
         "ext": ".ts",
-        "count": 287
+        "count": 293
       },
       {
         "ext": ".tsx",
@@ -175,7 +175,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "127 file(s) under app/"
+        "130 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -209,7 +209,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "341 file(s) under lib/"
+        "349 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -226,7 +226,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "68 file(s) under scripts/"
+        "69 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
