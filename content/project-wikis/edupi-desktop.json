@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-14T23:07:50Z",
+    "pushedAt": "2026-09-15T21:42:32Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-09-14T23:08:15.089Z",
+  "generatedAt": "2026-09-15T22:54:15.796Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,28 +22,28 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1039,
+    "totalFiles": 1078,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 371
+        "count": 389
       },
       {
         "name": "components",
-        "count": 157
+        "count": 162
       },
       {
         "name": "app",
-        "count": 144
+        "count": 151
       },
       {
         "name": "docs",
-        "count": 76
+        "count": 81
       },
       {
         "name": "scripts",
-        "count": 75
+        "count": 79
       },
       {
         "name": "src-tauri",
@@ -61,19 +61,19 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 362
+        "count": 380
       },
       {
         "ext": ".ts",
-        "count": 312
+        "count": 325
       },
       {
         "ext": ".tsx",
-        "count": 90
+        "count": 92
       },
       {
         "ext": ".md",
-        "count": 80
+        "count": 86
       },
       {
         "ext": ".svg",
@@ -175,7 +175,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "144 file(s) under app/"
+        "151 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -192,24 +192,24 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "157 file(s) under components/"
+        "162 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
+        "components/AppSettingsNotification.test.mjs",
         "components/AppSettingsUpdate.test.mjs",
         "components/AppShell-session-reset.test.mjs",
         "components/AppShell.tsx",
         "components/AppShellDingTalkRuntime.test.mjs",
         "components/BranchNavigator.tsx",
-        "components/ChatInput.dormancy.test.mjs",
-        "components/ChatInput.test.mjs"
+        "components/ChatInput.dormancy.test.mjs"
       ]
     },
     {
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "371 file(s) under lib/"
+        "389 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -226,7 +226,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "75 file(s) under scripts/"
+        "79 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
@@ -260,7 +260,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "76 file(s) under docs/"
+        "81 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
