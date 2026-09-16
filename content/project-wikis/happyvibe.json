@@ -1,0 +1,259 @@
+{
+  "slug": "happyvibe",
+  "repo": {
+    "owner": "PIGU-PPPgu",
+    "name": "happyvibe",
+    "url": "https://github.com/PIGU-PPPgu/happyvibe",
+    "defaultBranch": "main",
+    "private": false,
+    "pushedAt": "2026-09-16T06:31:17Z",
+    "language": "Astro"
+  },
+  "generatedAt": "2026-09-16T22:56:50.405Z",
+  "readme": {
+    "title": "HappyVibe for Teachers",
+    "summary": [
+      "An open-source learning-site framework for teachers.",
+      "Astro · Zero-dependency UI · Cloudflare Web Analytics · CC BY 4.0",
+      "[](https://creativecommons.org/licenses/by/4.0/) [](https://astro.build) [](https://github.com/PIGU-PPPgu/happyvibe/pulls)",
+      "Toolbox — sidebar rail & filter Lesson — native Mermaid Analytics — site-wide stats ---------",
+      "HappyVibe grew out of a real teacher-training site for a school group in China — a place where teachers learn to work with AI, from writing their first prompt to shipping their first teaching tool. This repository is the framework underneath: a complete learning site you can fill with your own content by writing Markdown.",
+      "Feature Notes ------ Course system Content collections with modules & lessons; write a .md file, it's a lesson Toolbox Categorized, searchable tool directory — also driven by Markdown Zero-dependency UI Stacked-card carousel, sidebar rail with drag, search modal, onboarding spotlight tour — all vanilla, no JS framework Local progress \"Mark as learned\" stored in the visitor's own browser; no accounts, no tracking Site-wide search Pagefind index built at deploy time; ⌘K anywhere Analytics dashboard /analytics/ page wired to Cloudflare Web Analytics through a Pages Function; token stays server-side Mermaid support Write a mermaid flowchart TD subgraph Content[\"src/content — Markdown in\"] L[lessons/.md] T[tools/.md] end subgraph Framework[\"src — framework\"] P[pages/ · astro routes] C[components/ · carousel · rail · tour · search] S[styles/tokens.css · theme] end subgraph Edge[\"Cloudflare Pages\"] F[functions/api/analytics.js] W[Web Analytics GraphQL] end L -- P T -- P C -- P S -- C P --build DIST[static dist] DIST -- EDGE[teachers' browsers] EDGE --beacon W F --read-only token W P -.-/api/analytics F bash git clone https://github.com/PIGU-PPPgu/happyvibe.git cd happyvibe npm install npm run dev http://localhost:4321 markdown --- title: 发出你的第一句话 module: start a slug from src/data/modules.ts order: 2 description: 一句话课程简介，显示在课程卡上。 source: 你的署名 status: ready draft ready minutes: 15 ---"
+    ]
+  },
+  "fileTree": {
+    "totalFiles": 72,
+    "truncated": false,
+    "topDirectories": [
+      {
+        "name": "src",
+        "count": 42
+      },
+      {
+        "name": "scripts",
+        "count": 16
+      },
+      {
+        "name": "[root]",
+        "count": 8
+      },
+      {
+        "name": "docs",
+        "count": 4
+      },
+      {
+        "name": ".github",
+        "count": 1
+      },
+      {
+        "name": "functions",
+        "count": 1
+      }
+    ],
+    "extensions": [
+      {
+        "ext": ".astro",
+        "count": 22
+      },
+      {
+        "ext": ".md",
+        "count": 16
+      },
+      {
+        "ext": ".py",
+        "count": 12
+      },
+      {
+        "ext": ".ts",
+        "count": 5
+      },
+      {
+        "ext": ".png",
+        "count": 4
+      },
+      {
+        "ext": ".json",
+        "count": 3
+      },
+      {
+        "ext": ".pyc",
+        "count": 3
+      },
+      {
+        "ext": ".mjs",
+        "count": 2
+      },
+      {
+        "ext": ".css",
+        "count": 1
+      },
+      {
+        "ext": ".gitignore",
+        "count": 1
+      }
+    ]
+  },
+  "package": {
+    "manager": "npm",
+    "scripts": [
+      "dev",
+      "build",
+      "preview",
+      "astro",
+      "optimize:images"
+    ],
+    "dependencies": [
+      "@pagefind/default-ui",
+      "astro",
+      "mermaid",
+      "pagefind",
+      "sharp"
+    ],
+    "devDependencies": [
+      "unist-util-visit"
+    ]
+  },
+  "frameworks": [
+    "Python"
+  ],
+  "modules": [
+    {
+      "name": "src/pages",
+      "kind": "Mini program pages",
+      "evidence": [
+        "7 file(s) under src/pages/"
+      ],
+      "files": [
+        "src/pages/about.astro",
+        "src/pages/analytics.astro",
+        "src/pages/index.astro",
+        "src/pages/modules/[slug]/[lesson].astro",
+        "src/pages/modules/[slug]/index.astro",
+        "src/pages/modules/index.astro",
+        "src/pages/toolbox.astro"
+      ]
+    },
+    {
+      "name": "src/components",
+      "kind": "Mini program components",
+      "evidence": [
+        "14 file(s) under src/components/"
+      ],
+      "files": [
+        "src/components/LessonCard.astro",
+        "src/components/MarkDoneButton.astro",
+        "src/components/Mermaid.astro",
+        "src/components/ModuleCarousel.astro",
+        "src/components/OnboardingTour.astro",
+        "src/components/PixelBadge.astro",
+        "src/components/PreTest.astro",
+        "src/components/SearchModal.astro"
+      ]
+    },
+    {
+      "name": "src",
+      "kind": "Source root",
+      "evidence": [
+        "42 file(s) under src/"
+      ],
+      "files": [
+        "src/components/LessonCard.astro",
+        "src/components/MarkDoneButton.astro",
+        "src/components/Mermaid.astro",
+        "src/components/ModuleCarousel.astro",
+        "src/components/OnboardingTour.astro",
+        "src/components/PixelBadge.astro",
+        "src/components/PreTest.astro",
+        "src/components/SearchModal.astro"
+      ]
+    },
+    {
+      "name": "scripts",
+      "kind": "Automation scripts",
+      "evidence": [
+        "16 file(s) under scripts/"
+      ],
+      "files": [
+        "scripts/__pycache__/build_material_packs.cpython-313.pyc",
+        "scripts/__pycache__/make_tutorial_gif.cpython-313.pyc",
+        "scripts/__pycache__/material_data.cpython-313.pyc",
+        "scripts/build_deploy_visuals.py",
+        "scripts/build_lesson_images.mjs",
+        "scripts/build_m0_visuals.py",
+        "scripts/build_material_packs.py",
+        "scripts/build_more_visuals.py"
+      ]
+    },
+    {
+      "name": "docs",
+      "kind": "Documentation",
+      "evidence": [
+        "4 file(s) under docs/"
+      ],
+      "files": [
+        "docs/screenshots/analytics.png",
+        "docs/screenshots/home.png",
+        "docs/screenshots/lesson.png",
+        "docs/screenshots/toolbox.png"
+      ]
+    }
+  ],
+  "entrypoints": [
+    "package.json"
+  ],
+  "importantFiles": [
+    {
+      "path": "package.json",
+      "reason": "Node package manifest"
+    },
+    {
+      "path": "README.md",
+      "reason": "Human project explanation"
+    }
+  ],
+  "graph": [
+    {
+      "from": "GitHub repository",
+      "to": "happyvibe",
+      "label": "indexes"
+    },
+    {
+      "from": "Python",
+      "to": "happyvibe",
+      "label": "powers"
+    },
+    {
+      "from": "src/pages",
+      "to": "happyvibe",
+      "label": "contains"
+    },
+    {
+      "from": "src/components",
+      "to": "happyvibe",
+      "label": "contains"
+    },
+    {
+      "from": "src",
+      "to": "happyvibe",
+      "label": "contains"
+    },
+    {
+      "from": "scripts",
+      "to": "happyvibe",
+      "label": "contains"
+    },
+    {
+      "from": "docs",
+      "to": "happyvibe",
+      "label": "contains"
+    },
+    {
+      "from": "package scripts",
+      "to": "developer workflow",
+      "label": "drives"
+    }
+  ],
+  "gaps": [
+    "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+  ]
+}
