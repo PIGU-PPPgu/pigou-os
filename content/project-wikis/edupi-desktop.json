@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-16T08:01:22Z",
+    "pushedAt": "2026-09-17T16:44:57Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-09-16T22:56:46.828Z",
+  "generatedAt": "2026-09-17T22:51:30.585Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1090,
+    "totalFiles": 1096,
     "truncated": false,
     "topDirectories": [
       {
@@ -31,7 +31,7 @@
       },
       {
         "name": "components",
-        "count": 166
+        "count": 168
       },
       {
         "name": "app",
@@ -39,7 +39,7 @@
       },
       {
         "name": "docs",
-        "count": 87
+        "count": 91
       },
       {
         "name": "scripts",
@@ -61,19 +61,19 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 385
+        "count": 386
       },
       {
         "ext": ".ts",
         "count": 325
       },
       {
-        "ext": ".tsx",
-        "count": 93
+        "ext": ".md",
+        "count": 96
       },
       {
-        "ext": ".md",
-        "count": 92
+        "ext": ".tsx",
+        "count": 94
       },
       {
         "ext": ".svg",
@@ -192,7 +192,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "166 file(s) under components/"
+        "168 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -260,7 +260,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "87 file(s) under docs/"
+        "91 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",

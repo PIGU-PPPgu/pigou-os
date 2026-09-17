@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/pigou-os",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-15T22:54:51Z",
+    "pushedAt": "2026-09-16T22:57:12Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-09-16T22:56:59.991Z",
+  "generatedAt": "2026-09-17T22:51:44.797Z",
   "readme": {
     "title": "Pigou OS",
     "summary": [
@@ -22,12 +22,12 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 257,
+    "totalFiles": 259,
     "truncated": false,
     "topDirectories": [
       {
         "name": "content",
-        "count": 90
+        "count": 92
       },
       {
         "name": "app",
@@ -61,7 +61,7 @@
     "extensions": [
       {
         "ext": ".json",
-        "count": 93
+        "count": 95
       },
       {
         "ext": ".ts",
@@ -215,7 +215,7 @@
       "name": "content",
       "kind": "Local content source",
       "evidence": [
-        "90 file(s) under content/"
+        "92 file(s) under content/"
       ],
       "files": [
         "content/activity/github-contributions.json",
