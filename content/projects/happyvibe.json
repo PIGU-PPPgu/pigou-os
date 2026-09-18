@@ -13,7 +13,7 @@
     "[](https://creativecommons.org/licenses/by/4.0/)\n[](https://astro.build)\n[](https://github.com/PIGU-PPPgu/happyvibe/pulls)",
     "Toolbox — sidebar rail & filter  Lesson — native Mermaid  Analytics — site-wide stats \n---------"
   ],
-  "progress": 71,
+  "progress": 84,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -29,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/happyvibe"
     }
   ],
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "progressEvaluation": {
-    "generatedAt": "2026-09-18",
+    "generatedAt": "2026-09-19",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 71,
+    "progress": 84,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -85,8 +85,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "1o689r1",
-    "generatedAt": "2026-09-18",
+    "id": "h1j9yv",
+    "generatedAt": "2026-09-19",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -100,7 +100,7 @@
       "last push: 2026-09-16",
       "launch/use signal in project text",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 71% building"
+      "progress evaluation: 84% building"
     ],
     "dimensions": [
       {

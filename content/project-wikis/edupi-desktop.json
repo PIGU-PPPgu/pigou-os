@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-17T16:44:57Z",
+    "pushedAt": "2026-09-18T13:08:22Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-09-17T22:51:30.585Z",
+  "generatedAt": "2026-09-18T22:34:52.528Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,12 +22,12 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1096,
+    "totalFiles": 1100,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 391
+        "count": 393
       },
       {
         "name": "components",
@@ -39,7 +39,7 @@
       },
       {
         "name": "docs",
-        "count": 91
+        "count": 93
       },
       {
         "name": "scripts",
@@ -61,15 +61,15 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 386
+        "count": 387
       },
       {
         "ext": ".ts",
-        "count": 325
+        "count": 326
       },
       {
         "ext": ".md",
-        "count": 96
+        "count": 98
       },
       {
         "ext": ".tsx",
@@ -209,7 +209,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "391 file(s) under lib/"
+        "393 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -260,7 +260,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "91 file(s) under docs/"
+        "93 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
