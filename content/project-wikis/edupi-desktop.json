@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-20T12:31:31Z",
+    "pushedAt": "2026-09-21T19:58:28Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-09-20T22:26:51.763Z",
+  "generatedAt": "2026-09-21T23:17:51.751Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,24 +22,24 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1125,
+    "totalFiles": 1154,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 404
+        "count": 415
       },
       {
         "name": "components",
-        "count": 171
+        "count": 173
       },
       {
         "name": "app",
-        "count": 153
+        "count": 167
       },
       {
         "name": "docs",
-        "count": 101
+        "count": 103
       },
       {
         "name": "scripts",
@@ -61,19 +61,19 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 397
+        "count": 406
       },
       {
         "ext": ".ts",
-        "count": 332
+        "count": 347
       },
       {
         "ext": ".md",
-        "count": 106
+        "count": 108
       },
       {
         "ext": ".tsx",
-        "count": 95
+        "count": 98
       },
       {
         "ext": ".svg",
@@ -175,7 +175,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "153 file(s) under app/"
+        "167 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -192,7 +192,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "171 file(s) under components/"
+        "173 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -209,7 +209,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "404 file(s) under lib/"
+        "415 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -260,7 +260,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "101 file(s) under docs/"
+        "103 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
