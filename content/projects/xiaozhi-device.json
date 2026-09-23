@@ -1,7 +1,7 @@
 {
   "slug": "xiaozhi-device",
   "title": "小智设备",
-  "status": "building",
+  "status": "paused",
   "priority": "medium",
   "summary": "自建小智语音设备和 OpenClaw 接入，作为实体入口触发 Mochi。",
   "explanation": "它代表 Pigou OS 的硬件入口方向：让 AI 协作不只停留在网页和命令行，而能通过实体设备、声音提醒和状态显示进入日常环境。",
@@ -28,20 +28,20 @@
       "url": "https://github.com/PIGU-PPPgu/xiaozhi-esp32"
     }
   ],
-  "updated": "2026-09-23",
+  "updated": "2026-09-24",
   "progressEvaluation": {
-    "generatedAt": "2026-09-23",
+    "generatedAt": "2026-09-24",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 75,
-    "status": "building",
+    "status": "paused",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
     "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
-        "score": 16,
+        "score": 10,
         "max": 25,
         "reason": "Project status, launch wording, and product surface signals."
       },
@@ -86,21 +86,22 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "18elj36",
-    "generatedAt": "2026-09-23",
+    "id": "16a8zc9",
+    "generatedAt": "2026-09-24",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 34,
-    "rationale": "综合分 34/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 12,
+    "rationale": "综合分 12/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 91",
       "last push: 2026-04-25",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 75% building"
+      "status penalty: paused",
+      "progress evaluation: 75% paused"
     ],
     "dimensions": [
       {
@@ -117,7 +118,7 @@
       },
       {
         "name": "strategic_fit",
-        "score": 38,
+        "score": 20,
         "max": 100,
         "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
       },
@@ -129,7 +130,7 @@
       },
       {
         "name": "staleness_penalty",
-        "score": 0,
+        "score": 18,
         "max": 100,
         "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
       }

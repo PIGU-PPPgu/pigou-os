@@ -6,10 +6,10 @@
     "url": "https://github.com/Intellinfinity/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-22T22:30:09Z",
+    "pushedAt": "2026-09-23T22:51:16Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-09-22T22:57:15.801Z",
+  "generatedAt": "2026-09-23T22:57:26.502Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -18,36 +18,36 @@
       "Availability depends on the pinned EduPi Core contract, configured models, and local permissions. Unsupported Core operations are not executed as supported capabilities.",
       "Choose an asset from Releases. The release workflow targets Apple Silicon macOS, Windows x64, and Linux x64; consult each release for the assets actually available.",
       "Platform Installer --- --- macOS Apple Silicon aarch64.dmg Windows x64 x64-setup.exe Linux x64 .deb",
-      "The desktop package includes the local Next.js server, Node.js, Pi SDK, and a pinned EduPi Core runtime. The installed app starts its own local server. Complete the teacher setup when opening the app, then configure an available model in Settings."
+      "On macOS, v0.3.29 lacks the updater plugin; v0.3.25–v0.3.28 have the old release endpoint built in. The withdrawn v0.3.30–v0.3.34 builds also need replacement. Quit EduPi, download the latest signed aarch64.dmg, replace /Applications/EduPi.app, and reopen it. Keep the separate teacher data directory. From v0.3.35 onward, use Settings to update in the app; the v0.3.35 → v0.3.36 path was verified on an installed Mac."
     ]
   },
   "fileTree": {
-    "totalFiles": 1205,
+    "totalFiles": 1296,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 429
-      },
-      {
-        "name": "components",
-        "count": 174
+        "count": 472
       },
       {
         "name": "app",
-        "count": 172
+        "count": 183
+      },
+      {
+        "name": "components",
+        "count": 176
       },
       {
         "name": "docs",
-        "count": 111
+        "count": 128
       },
       {
         "name": "scripts",
-        "count": 93
+        "count": 106
       },
       {
         "name": "src-tauri",
-        "count": 75
+        "count": 77
       },
       {
         "name": "public",
@@ -61,19 +61,19 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 429
+        "count": 471
       },
       {
         "ext": ".ts",
-        "count": 357
+        "count": 383
       },
       {
         "ext": ".md",
-        "count": 116
+        "count": 131
       },
       {
         "ext": ".tsx",
-        "count": 99
+        "count": 100
       },
       {
         "ext": ".svg",
@@ -93,7 +93,7 @@
       },
       {
         "ext": ".png",
-        "count": 11
+        "count": 14
       },
       {
         "ext": "[none]",
@@ -122,21 +122,26 @@
       "@earendil-works/pi-ai",
       "@earendil-works/pi-coding-agent",
       "@earendil-works/pi-tui",
+      "@napi-rs/canvas",
       "@tauri-apps/api",
       "@tauri-apps/plugin-clipboard-manager",
       "@tauri-apps/plugin-dialog",
       "@tauri-apps/plugin-notification",
       "@tauri-apps/plugin-process",
       "@tauri-apps/plugin-updater",
+      "@tesseract.js-data/chi_sim",
+      "@tesseract.js-data/eng",
       "@xmldom/xmldom",
       "jszip",
       "next",
+      "node-ical",
+      "pdfjs-dist",
       "proper-lockfile",
       "react",
       "react-dom",
-      "typebox",
-      "undici",
-      "xlsx"
+      "temporal-polyfill",
+      "tesseract.js",
+      "typebox"
     ],
     "devDependencies": [
       "@lobehub/icons",
@@ -175,7 +180,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "172 file(s) under app/"
+        "183 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -192,7 +197,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "174 file(s) under components/"
+        "176 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -209,7 +214,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "429 file(s) under lib/"
+        "472 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -226,7 +231,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "93 file(s) under scripts/"
+        "106 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
@@ -260,7 +265,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "111 file(s) under docs/"
+        "128 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",

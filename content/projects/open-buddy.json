@@ -1,7 +1,7 @@
 {
   "slug": "open-buddy",
   "title": "Open Buddy",
-  "status": "building",
+  "status": "paused",
   "priority": "medium",
   "summary": "面向 M5Stack StickS3 的多智能体硬件伙伴，支持 Claude Code、Codex、OpenClaw 等状态显示和提醒。",
   "explanation": "这是 Pigou 的 AI 硬件接口实验：把多智能体协作状态、优先级、声音提醒和静音模式放进一个可触摸的实体设备。",
@@ -24,20 +24,20 @@
       "url": "https://github.com/PIGU-PPPgu/open-buddy"
     }
   ],
-  "updated": "2026-09-23",
+  "updated": "2026-09-24",
   "progressEvaluation": {
-    "generatedAt": "2026-09-23",
+    "generatedAt": "2026-09-24",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 75,
-    "status": "building",
+    "status": "paused",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
     "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
-        "score": 16,
+        "score": 10,
         "max": 25,
         "reason": "Project status, launch wording, and product surface signals."
       },
@@ -82,21 +82,22 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "13oed38",
-    "generatedAt": "2026-09-23",
+    "id": "1nge1jj",
+    "generatedAt": "2026-09-24",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 34,
-    "rationale": "综合分 34/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 12,
+    "rationale": "综合分 12/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 91",
       "last push: 2026-04-25",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 75% building"
+      "status penalty: paused",
+      "progress evaluation: 75% paused"
     ],
     "dimensions": [
       {
@@ -113,7 +114,7 @@
       },
       {
         "name": "strategic_fit",
-        "score": 38,
+        "score": 20,
         "max": 100,
         "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
       },
@@ -125,7 +126,7 @@
       },
       {
         "name": "staleness_penalty",
-        "score": 0,
+        "score": 18,
         "max": 100,
         "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
       }
