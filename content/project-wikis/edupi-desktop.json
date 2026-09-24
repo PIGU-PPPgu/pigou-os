@@ -6,10 +6,10 @@
     "url": "https://github.com/Intellinfinity/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-23T22:51:16Z",
+    "pushedAt": "2026-09-24T17:59:32Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-09-23T22:57:26.502Z",
+  "generatedAt": "2026-09-24T23:12:39.259Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,28 +22,28 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1296,
+    "totalFiles": 1328,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 472
+        "count": 481
       },
       {
         "name": "app",
-        "count": 183
+        "count": 185
       },
       {
         "name": "components",
-        "count": 176
+        "count": 180
       },
       {
         "name": "docs",
-        "count": 128
+        "count": 141
       },
       {
         "name": "scripts",
-        "count": 106
+        "count": 107
       },
       {
         "name": "src-tauri",
@@ -61,19 +61,19 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 471
+        "count": 482
       },
       {
         "ext": ".ts",
-        "count": 383
+        "count": 389
       },
       {
         "ext": ".md",
-        "count": 131
+        "count": 140
       },
       {
         "ext": ".tsx",
-        "count": 100
+        "count": 102
       },
       {
         "ext": ".svg",
@@ -85,7 +85,7 @@
       },
       {
         "ext": ".json",
-        "count": 28
+        "count": 32
       },
       {
         "ext": ".css",
@@ -123,6 +123,7 @@
       "@earendil-works/pi-coding-agent",
       "@earendil-works/pi-tui",
       "@napi-rs/canvas",
+      "@oomol-lab/open-connector",
       "@tauri-apps/api",
       "@tauri-apps/plugin-clipboard-manager",
       "@tauri-apps/plugin-dialog",
@@ -140,8 +141,7 @@
       "react",
       "react-dom",
       "temporal-polyfill",
-      "tesseract.js",
-      "typebox"
+      "tesseract.js"
     ],
     "devDependencies": [
       "@lobehub/icons",
@@ -180,7 +180,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "183 file(s) under app/"
+        "185 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -197,7 +197,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "176 file(s) under components/"
+        "180 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -214,7 +214,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "472 file(s) under lib/"
+        "481 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -231,7 +231,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "106 file(s) under scripts/"
+        "107 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
@@ -265,7 +265,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "128 file(s) under docs/"
+        "141 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",

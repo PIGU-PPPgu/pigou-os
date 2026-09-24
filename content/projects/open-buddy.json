@@ -7,7 +7,7 @@
   "explanation": "这是 Pigou 的 AI 硬件接口实验：把多智能体协作状态、优先级、声音提醒和静音模式放进一个可触摸的实体设备。",
   "domain": "hardware-agent",
   "source": "github:PIGU-PPPgu/open-buddy",
-  "progress": 75,
+  "progress": 67,
   "goals": [
     "稳定 BLE bridge",
     "显示多智能体优先级状态",
@@ -24,12 +24,12 @@
       "url": "https://github.com/PIGU-PPPgu/open-buddy"
     }
   ],
-  "updated": "2026-09-24",
+  "updated": "2026-09-25",
   "progressEvaluation": {
-    "generatedAt": "2026-09-24",
+    "generatedAt": "2026-09-25",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 75,
+    "progress": 67,
     "status": "paused",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -82,22 +82,22 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "1nge1jj",
-    "generatedAt": "2026-09-24",
+    "id": "uidhin",
+    "generatedAt": "2026-09-25",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 12,
-    "rationale": "综合分 12/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 11,
+    "rationale": "综合分 11/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 91",
       "last push: 2026-04-25",
       "strategic OS/workflow signal in project text",
       "status penalty: paused",
-      "progress evaluation: 75% paused"
+      "progress evaluation: 67% paused"
     ],
     "dimensions": [
       {
@@ -120,7 +120,7 @@
       },
       {
         "name": "maturity_or_impact",
-        "score": 20,
+        "score": 16,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },

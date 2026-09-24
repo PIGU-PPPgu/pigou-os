@@ -45,9 +45,9 @@
       "url": "https://github.com/PIGU-PPPgu/Headteacher-helper"
     }
   ],
-  "updated": "2026-09-24",
+  "updated": "2026-09-25",
   "progressEvaluation": {
-    "generatedAt": "2026-09-24",
+    "generatedAt": "2026-09-25",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 92,
@@ -103,15 +103,15 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "o8v1ye",
-    "generatedAt": "2026-09-24",
+    "id": "8jqz8m",
+    "generatedAt": "2026-09-25",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
     "suggestedPriority": "low",
     "confidence": "high",
-    "score": 40,
-    "rationale": "综合分 40/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 26,
+    "rationale": "综合分 26/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 156",
@@ -147,7 +147,7 @@
       },
       {
         "name": "staleness_penalty",
-        "score": 0,
+        "score": 14,
         "max": 100,
         "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
       }
