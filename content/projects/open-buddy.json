@@ -7,7 +7,7 @@
   "explanation": "这是 Pigou 的 AI 硬件接口实验：把多智能体协作状态、优先级、声音提醒和静音模式放进一个可触摸的实体设备。",
   "domain": "hardware-agent",
   "source": "github:PIGU-PPPgu/open-buddy",
-  "progress": 67,
+  "progress": 62,
   "goals": [
     "稳定 BLE bridge",
     "显示多智能体优先级状态",
@@ -24,12 +24,12 @@
       "url": "https://github.com/PIGU-PPPgu/open-buddy"
     }
   ],
-  "updated": "2026-09-25",
+  "updated": "2026-09-26",
   "progressEvaluation": {
-    "generatedAt": "2026-09-25",
+    "generatedAt": "2026-09-26",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 67,
+    "progress": 62,
     "status": "paused",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -82,8 +82,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "uidhin",
-    "generatedAt": "2026-09-25",
+    "id": "w49gkq",
+    "generatedAt": "2026-09-26",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -97,7 +97,7 @@
       "last push: 2026-04-25",
       "strategic OS/workflow signal in project text",
       "status penalty: paused",
-      "progress evaluation: 67% paused"
+      "progress evaluation: 62% paused"
     ],
     "dimensions": [
       {
