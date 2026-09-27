@@ -6,10 +6,10 @@
     "url": "https://github.com/Intellinfinity/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-26T20:35:10Z",
+    "pushedAt": "2026-09-27T22:55:13Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-09-26T22:52:21.209Z",
+  "generatedAt": "2026-09-27T23:03:48.984Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1376,
+    "totalFiles": 1379,
     "truncated": false,
     "topDirectories": [
       {
@@ -31,7 +31,7 @@
       },
       {
         "name": "app",
-        "count": 188
+        "count": 189
       },
       {
         "name": "components",
@@ -43,7 +43,7 @@
       },
       {
         "name": "scripts",
-        "count": 116
+        "count": 118
       },
       {
         "name": "src-tauri",
@@ -61,7 +61,7 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 500
+        "count": 503
       },
       {
         "ext": ".ts",
@@ -180,7 +180,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "188 file(s) under app/"
+        "189 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -231,7 +231,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "116 file(s) under scripts/"
+        "118 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
