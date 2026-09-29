@@ -29,9 +29,9 @@
       "url": "https://github.com/PIGU-PPPgu/edupi-desktop"
     }
   ],
-  "updated": "2026-09-28",
+  "updated": "2026-09-29",
   "progressEvaluation": {
-    "generatedAt": "2026-09-28",
+    "generatedAt": "2026-09-29",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 97,
@@ -73,7 +73,7 @@
     ],
     "evidence": [
       "repo files: 1379",
-      "last push: 2026-09-27",
+      "last push: 2026-09-28",
       "frameworks: Next.js, React, Tailwind CSS"
     ],
     "risks": [
@@ -85,8 +85,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "1jwezo",
-    "generatedAt": "2026-09-28",
+    "id": "j4ga3",
+    "generatedAt": "2026-09-29",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -97,7 +97,7 @@
     "evidence": [
       "no open linked tasks",
       "repo files: 1379",
-      "last push: 2026-09-27",
+      "last push: 2026-09-28",
       "strategic OS/workflow signal in project text",
       "progress evaluation: 97% building"
     ],
