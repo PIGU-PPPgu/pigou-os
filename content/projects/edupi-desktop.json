@@ -29,9 +29,9 @@
       "url": "https://github.com/PIGU-PPPgu/edupi-desktop"
     }
   ],
-  "updated": "2026-10-02",
+  "updated": "2026-10-03",
   "progressEvaluation": {
-    "generatedAt": "2026-10-02",
+    "generatedAt": "2026-10-03",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 97,
@@ -86,7 +86,7 @@
   },
   "prioritySuggestion": {
     "id": "t1wijx",
-    "generatedAt": "2026-10-02",
+    "generatedAt": "2026-10-03",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
