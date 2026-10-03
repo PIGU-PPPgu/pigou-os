@@ -6,10 +6,10 @@
     "url": "https://github.com/Intellinfinity/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-29T16:16:59Z",
+    "pushedAt": "2026-10-03T17:01:18Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-10-02T23:46:53.094Z",
+  "generatedAt": "2026-10-03T23:06:09.212Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1390,
+    "totalFiles": 1397,
     "truncated": false,
     "topDirectories": [
       {
@@ -39,11 +39,11 @@
       },
       {
         "name": "docs",
-        "count": 152
+        "count": 153
       },
       {
         "name": "scripts",
-        "count": 121
+        "count": 123
       },
       {
         "name": "src-tauri",
@@ -61,7 +61,7 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 509
+        "count": 511
       },
       {
         "ext": ".ts",
@@ -69,7 +69,7 @@
       },
       {
         "ext": ".md",
-        "count": 153
+        "count": 155
       },
       {
         "ext": ".tsx",
@@ -80,12 +80,12 @@
         "count": 65
       },
       {
-        "ext": ".rs",
+        "ext": ".json",
         "count": 37
       },
       {
-        "ext": ".json",
-        "count": 36
+        "ext": ".rs",
+        "count": 37
       },
       {
         "ext": ".css",
@@ -104,6 +104,7 @@
   "package": {
     "manager": "npm",
     "scripts": [
+      "postinstall",
       "dev",
       "dev:edupi-c1-checkpoint",
       "dev:lan",
@@ -114,8 +115,7 @@
       "desktop:prepare",
       "desktop:stage-windows-native",
       "desktop:verify-windows-native",
-      "desktop:build",
-      "release:manifest"
+      "desktop:build"
     ],
     "dependencies": [
       "@earendil-works/pi-agent-core",
@@ -133,6 +133,7 @@
       "@tesseract.js-data/chi_sim",
       "@tesseract.js-data/eng",
       "@xmldom/xmldom",
+      "brace-expansion",
       "jszip",
       "next",
       "node-ical",
@@ -140,8 +141,7 @@
       "proper-lockfile",
       "react",
       "react-dom",
-      "temporal-polyfill",
-      "tesseract.js"
+      "temporal-polyfill"
     ],
     "devDependencies": [
       "@lobehub/icons",
@@ -154,6 +154,7 @@
       "@types/react-syntax-highlighter",
       "eslint",
       "eslint-config-next",
+      "fast-glob",
       "jiti",
       "katex",
       "mammoth",
@@ -166,8 +167,7 @@
       "rehype-sanitize",
       "remark-gfm",
       "remark-math",
-      "tailwindcss",
-      "typescript"
+      "tailwindcss"
     ]
   },
   "frameworks": [
@@ -231,17 +231,17 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "121 file(s) under scripts/"
+        "123 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
         "scripts/configure-updater-public-key.mjs",
         "scripts/configure-updater-public-key.test.mjs",
         "scripts/create-roster-acceptance-fixture.mjs",
+        "scripts/dependency-security.test.mjs",
         "scripts/desktop-dev.mjs",
         "scripts/desktop-package-inputs.mjs",
-        "scripts/desktop-package-inputs.test.mjs",
-        "scripts/desktop-platform.mjs"
+        "scripts/desktop-package-inputs.test.mjs"
       ]
     },
     {
@@ -265,7 +265,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "152 file(s) under docs/"
+        "153 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
