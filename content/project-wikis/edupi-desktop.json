@@ -6,10 +6,10 @@
     "url": "https://github.com/Intellinfinity/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-03T17:01:18Z",
+    "pushedAt": "2026-10-04T21:48:06Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-10-03T23:06:09.212Z",
+  "generatedAt": "2026-10-04T23:10:59.558Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,24 +22,24 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1397,
+    "totalFiles": 1409,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 490
+        "count": 494
       },
       {
         "name": "app",
-        "count": 190
+        "count": 192
       },
       {
         "name": "components",
-        "count": 185
+        "count": 188
       },
       {
         "name": "docs",
-        "count": 153
+        "count": 156
       },
       {
         "name": "scripts",
@@ -61,19 +61,19 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 511
+        "count": 518
       },
       {
         "ext": ".ts",
-        "count": 395
+        "count": 396
       },
       {
         "ext": ".md",
-        "count": 155
+        "count": 158
       },
       {
         "ext": ".tsx",
-        "count": 104
+        "count": 105
       },
       {
         "ext": ".svg",
@@ -104,7 +104,6 @@
   "package": {
     "manager": "npm",
     "scripts": [
-      "postinstall",
       "dev",
       "dev:edupi-c1-checkpoint",
       "dev:lan",
@@ -115,7 +114,8 @@
       "desktop:prepare",
       "desktop:stage-windows-native",
       "desktop:verify-windows-native",
-      "desktop:build"
+      "desktop:build",
+      "release:manifest"
     ],
     "dependencies": [
       "@earendil-works/pi-agent-core",
@@ -180,7 +180,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "190 file(s) under app/"
+        "192 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -197,7 +197,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "185 file(s) under components/"
+        "188 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -214,7 +214,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "490 file(s) under lib/"
+        "494 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -265,7 +265,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "153 file(s) under docs/"
+        "156 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
