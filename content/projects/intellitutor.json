@@ -7,7 +7,7 @@
   "explanation": "这是 Pigou 教育 AI 产品线的核心展示项目，用来验证 K12 场景里 AI 家教、阅读陪伴、知识诊断和在线部署能否形成真实可用的学习产品。",
   "domain": "education-ai",
   "source": "github:PIGU-PPPgu/IntelliTutor",
-  "progress": 79,
+  "progress": 71,
   "goals": [
     "稳定深度解题和知识图谱",
     "打通在线部署",
@@ -27,12 +27,12 @@
       "url": "https://tutor.intelliclass.online"
     }
   ],
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "progressEvaluation": {
-    "generatedAt": "2026-10-06",
+    "generatedAt": "2026-10-07",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 79,
+    "progress": 71,
     "status": "paused",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -83,8 +83,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "u4gxpt",
-    "generatedAt": "2026-10-06",
+    "id": "9au5rt",
+    "generatedAt": "2026-10-07",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
@@ -98,7 +98,7 @@
       "last push: 2026-05-07",
       "strategic OS/workflow signal in project text",
       "status penalty: paused",
-      "progress evaluation: 79% paused"
+      "progress evaluation: 71% paused"
     ],
     "dimensions": [
       {

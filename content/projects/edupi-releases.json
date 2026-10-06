@@ -13,7 +13,7 @@
     "稳定版本会显示在右侧 Releases。EduPi Desktop 只会安装通过永久 updater 密钥验证的完整应用更新；不会在线替换单个脚本或依赖。",
     "源码、设计文档和开发讨论位于公开的 。本仓库只保存安装包、版本说明、许可证与更新元数据，不包含教师数据或本机配置。"
   ],
-  "progress": 33,
+  "progress": 28,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -30,12 +30,12 @@
       "url": "https://github.com/PIGU-PPPgu/edupi-releases"
     }
   ],
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "progressEvaluation": {
-    "generatedAt": "2026-10-06",
+    "generatedAt": "2026-10-07",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 33,
+    "progress": 28,
     "status": "idea",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -67,7 +67,7 @@
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
@@ -87,8 +87,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "1p1s3lb",
-    "generatedAt": "2026-10-06",
+    "id": "tt20sl",
+    "generatedAt": "2026-10-07",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -102,7 +102,7 @@
       "last push: 2026-09-06",
       "launch/use signal in project text",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 33% idea"
+      "progress evaluation: 28% idea"
     ],
     "dimensions": [
       {
