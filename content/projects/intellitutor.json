@@ -1,7 +1,7 @@
 {
   "slug": "intellitutor",
   "title": "IntelliTutor",
-  "status": "building",
+  "status": "paused",
   "priority": "high",
   "summary": "AI 阅读家教项目，基于 DeepTutor 改造成面向学生的智能学习伴侣。",
   "explanation": "这是 Pigou 教育 AI 产品线的核心展示项目，用来验证 K12 场景里 AI 家教、阅读陪伴、知识诊断和在线部署能否形成真实可用的学习产品。",
@@ -27,20 +27,20 @@
       "url": "https://tutor.intelliclass.online"
     }
   ],
-  "updated": "2026-10-05",
+  "updated": "2026-10-06",
   "progressEvaluation": {
-    "generatedAt": "2026-10-05",
+    "generatedAt": "2026-10-06",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 79,
-    "status": "building",
+    "status": "paused",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
     "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
-        "score": 16,
+        "score": 10,
         "max": 25,
         "reason": "Project status, launch wording, and product surface signals."
       },
@@ -83,21 +83,22 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "1q6nqka",
-    "generatedAt": "2026-10-05",
+    "id": "u4gxpt",
+    "generatedAt": "2026-10-06",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "high",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 34,
-    "rationale": "综合分 34/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 12,
+    "rationale": "综合分 12/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 91",
       "last push: 2026-05-07",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 79% building"
+      "status penalty: paused",
+      "progress evaluation: 79% paused"
     ],
     "dimensions": [
       {
@@ -114,7 +115,7 @@
       },
       {
         "name": "strategic_fit",
-        "score": 38,
+        "score": 20,
         "max": 100,
         "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
       },
@@ -126,7 +127,7 @@
       },
       {
         "name": "staleness_penalty",
-        "score": 0,
+        "score": 18,
         "max": 100,
         "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
       }

@@ -6,10 +6,10 @@
     "url": "https://github.com/Intellinfinity/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-04T21:48:06Z",
+    "pushedAt": "2026-10-05T20:34:09Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-10-04T23:10:59.558Z",
+  "generatedAt": "2026-10-06T01:18:22.821Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,12 +22,12 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1409,
+    "totalFiles": 1421,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 494
+        "count": 496
       },
       {
         "name": "app",
@@ -35,15 +35,15 @@
       },
       {
         "name": "components",
-        "count": 188
+        "count": 189
       },
       {
         "name": "docs",
-        "count": 156
+        "count": 157
       },
       {
         "name": "scripts",
-        "count": 123
+        "count": 125
       },
       {
         "name": "src-tauri",
@@ -61,15 +61,15 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 518
+        "count": 522
       },
       {
         "ext": ".ts",
-        "count": 396
+        "count": 397
       },
       {
         "ext": ".md",
-        "count": 158
+        "count": 159
       },
       {
         "ext": ".tsx",
@@ -88,12 +88,12 @@
         "count": 37
       },
       {
-        "ext": ".css",
-        "count": 15
+        "ext": ".png",
+        "count": 20
       },
       {
-        "ext": ".png",
-        "count": 14
+        "ext": ".css",
+        "count": 15
       },
       {
         "ext": "[none]",
@@ -197,7 +197,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "188 file(s) under components/"
+        "189 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -214,7 +214,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "494 file(s) under lib/"
+        "496 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -231,7 +231,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "123 file(s) under scripts/"
+        "125 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
@@ -265,7 +265,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "156 file(s) under docs/"
+        "157 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
