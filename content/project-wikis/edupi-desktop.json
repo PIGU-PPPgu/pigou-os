@@ -6,10 +6,10 @@
     "url": "https://github.com/Intellinfinity/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-06T20:52:06Z",
+    "pushedAt": "2026-10-07T23:47:18Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-10-06T23:49:02.782Z",
+  "generatedAt": "2026-10-08T00:12:19.525Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,20 +22,20 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1430,
+    "totalFiles": 1493,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 498
+        "count": 527
       },
       {
         "name": "components",
-        "count": 193
+        "count": 207
       },
       {
         "name": "app",
-        "count": 192
+        "count": 204
       },
       {
         "name": "docs",
@@ -43,11 +43,11 @@
       },
       {
         "name": "scripts",
-        "count": 125
+        "count": 128
       },
       {
         "name": "src-tauri",
-        "count": 79
+        "count": 81
       },
       {
         "name": "public",
@@ -55,17 +55,17 @@
       },
       {
         "name": "desktop",
-        "count": 32
+        "count": 33
       }
     ],
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 526
+        "count": 558
       },
       {
         "ext": ".ts",
-        "count": 400
+        "count": 419
       },
       {
         "ext": ".md",
@@ -73,27 +73,27 @@
       },
       {
         "ext": ".tsx",
-        "count": 107
+        "count": 112
       },
       {
         "ext": ".svg",
         "count": 65
       },
       {
+        "ext": ".rs",
+        "count": 39
+      },
+      {
         "ext": ".json",
         "count": 37
       },
       {
-        "ext": ".rs",
-        "count": 37
+        "ext": ".css",
+        "count": 20
       },
       {
         "ext": ".png",
         "count": 20
-      },
-      {
-        "ext": ".css",
-        "count": 15
       },
       {
         "ext": "[none]",
@@ -180,7 +180,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "192 file(s) under app/"
+        "204 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -197,7 +197,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "193 file(s) under components/"
+        "207 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -214,24 +214,24 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "498 file(s) under lib/"
+        "527 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
         "lib/agent-event-wire.test.mjs",
         "lib/agent-event-wire.ts",
+        "lib/agent-message-history.test.mjs",
+        "lib/agent-message-history.ts",
         "lib/allowed-roots.test.mjs",
         "lib/allowed-roots.ts",
-        "lib/ansi.test.mjs",
-        "lib/ansi.ts",
-        "lib/api-types.ts"
+        "lib/ansi.test.mjs"
       ]
     },
     {
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "125 file(s) under scripts/"
+        "128 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",

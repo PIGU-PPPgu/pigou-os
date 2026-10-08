@@ -6,90 +6,98 @@
     "url": "https://github.com/PIGU-PPPgu/happyvibe",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-09-16T06:31:17Z",
-    "language": "Astro"
+    "pushedAt": "2026-10-07T18:13:47Z",
+    "language": "HTML"
   },
-  "generatedAt": "2026-10-06T23:49:07.750Z",
+  "generatedAt": "2026-10-08T00:12:23.282Z",
   "readme": {
-    "title": "HappyVibe for Teachers",
+    "title": "HappyVibe 数智学园",
     "summary": [
-      "An open-source learning-site framework for teachers.",
-      "Astro · Zero-dependency UI · Cloudflare Web Analytics · CC BY 4.0",
-      "[](https://creativecommons.org/licenses/by/4.0/) [](https://astro.build) [](https://github.com/PIGU-PPPgu/happyvibe/pulls)",
-      "Toolbox — sidebar rail & filter Lesson — native Mermaid Analytics — site-wide stats ---------",
-      "HappyVibe grew out of a real teacher-training site for a school group in China — a place where teachers learn to work with AI, from writing their first prompt to shipping their first teaching tool. This repository is the framework underneath: a complete learning site you can fill with your own content by writing Markdown.",
-      "Feature Notes ------ Course system Content collections with modules & lessons; write a .md file, it's a lesson Toolbox Categorized, searchable tool directory — also driven by Markdown Zero-dependency UI Stacked-card carousel, sidebar rail with drag, search modal, onboarding spotlight tour — all vanilla, no JS framework Local progress \"Mark as learned\" stored in the visitor's own browser; no accounts, no tracking Site-wide search Pagefind index built at deploy time; ⌘K anywhere Analytics dashboard /analytics/ page wired to Cloudflare Web Analytics through a Pages Function; token stays server-side Mermaid support Write a mermaid flowchart TD subgraph Content[\"src/content — Markdown in\"] L[lessons/.md] T[tools/.md] end subgraph Framework[\"src — framework\"] P[pages/ · astro routes] C[components/ · carousel · rail · tour · search] S[styles/tokens.css · theme] end subgraph Edge[\"Cloudflare Pages\"] F[functions/api/analytics.js] W[Web Analytics GraphQL] end L -- P T -- P C -- P S -- C P --build DIST[static dist] DIST -- EDGE[teachers' browsers] EDGE --beacon W F --read-only token W P -.-/api/analytics F bash git clone https://github.com/PIGU-PPPgu/happyvibe.git cd happyvibe npm install npm run dev http://localhost:4321 markdown --- title: 发出你的第一句话 module: start a slug from src/data/modules.ts order: 2 description: 一句话课程简介，显示在课程卡上。 source: 你的署名 status: ready draft ready minutes: 15 ---"
+      "集团教师 AI 赋能学习站 —— 由「数智赋能教育教学」系列培训 PPT 整理而成。",
+      "在 src/content/lessons/<模块目录/ 下新建一个 .md 文件：",
+      "1. 写资源本体：src/interactives/<学科/<名/ 下 index.mjs（入口，用 shared/runtime.mjs 的 init）+ meta.json（{\"title\":\"中文名\",\"hint\":\"一句操作提示\"}） 2. 写条目：src/content/resources/<学科/<名.md（frontmatter 照任一黄金样例，如 src/content/resources/math/math-cube-nets.md） 3. npm run build:interactives && npm run check:interactives 六项全过（命令后可加资源名单独构建校验），再 npm run build 看页面",
+      "规范细节（形态选择、视觉红线、事实校验）见 skills/teaching-interactives/SKILL.md。",
+      "- GitHub Pages（默认）：推送到 GitHub 仓库 main 分支，Actions 自动构建发布（见 .github/workflows/deploy.yml）。仓库设置 → Pages → Source 选 GitHub Actions。项目站会自动以仓库名作为 base 路径构建。 - Vercel：导入仓库即可，构建命令 npm run build，输出目录 dist，无需配置 base。",
+      "- 涉及真实学生信息的截图一律不上线（见 docs/图片待确认清单.md） - 未校对的课程 status: draft，页面显示「内容校对中」 - 内容仅供集团内部学习交流"
     ]
   },
   "fileTree": {
-    "totalFiles": 72,
+    "totalFiles": 928,
     "truncated": false,
     "topDirectories": [
       {
+        "name": "public",
+        "count": 377
+      },
+      {
         "name": "src",
-        "count": 42
+        "count": 279
       },
       {
-        "name": "scripts",
-        "count": 16
-      },
-      {
-        "name": "[root]",
-        "count": 8
+        "name": "skills",
+        "count": 195
       },
       {
         "name": "docs",
-        "count": 4
+        "count": 35
+      },
+      {
+        "name": "scripts",
+        "count": 28
+      },
+      {
+        "name": "[root]",
+        "count": 10
       },
       {
         "name": ".github",
         "count": 1
       },
       {
-        "name": "functions",
+        "name": ".v2c",
         "count": 1
       }
     ],
     "extensions": [
       {
-        "ext": ".astro",
-        "count": 22
-      },
-      {
         "ext": ".md",
-        "count": 16
-      },
-      {
-        "ext": ".py",
-        "count": 12
-      },
-      {
-        "ext": ".ts",
-        "count": 5
-      },
-      {
-        "ext": ".png",
-        "count": 4
-      },
-      {
-        "ext": ".json",
-        "count": 3
-      },
-      {
-        "ext": ".pyc",
-        "count": 3
+        "count": 209
       },
       {
         "ext": ".mjs",
-        "count": 2
+        "count": 180
       },
       {
-        "ext": ".css",
-        "count": 1
+        "ext": ".webp",
+        "count": 160
       },
       {
-        "ext": ".gitignore",
-        "count": 1
+        "ext": ".png",
+        "count": 76
+      },
+      {
+        "ext": ".json",
+        "count": 70
+      },
+      {
+        "ext": ".txt",
+        "count": 46
+      },
+      {
+        "ext": ".html",
+        "count": 39
+      },
+      {
+        "ext": ".mp3",
+        "count": 36
+      },
+      {
+        "ext": ".astro",
+        "count": 31
+      },
+      {
+        "ext": ".zip",
+        "count": 18
       }
     ]
   },
@@ -97,19 +105,26 @@
     "manager": "npm",
     "scripts": [
       "dev",
+      "build:interactives",
+      "build:previews",
       "build",
+      "check:interactives",
       "preview",
       "astro",
-      "optimize:images"
+      "optimize:images",
+      "verify",
+      "verify:fast"
     ],
     "dependencies": [
       "@pagefind/default-ui",
       "astro",
       "mermaid",
       "pagefind",
-      "sharp"
+      "sharp",
+      "three"
     ],
     "devDependencies": [
+      "esbuild",
       "unist-util-visit"
     ]
   },
@@ -121,16 +136,17 @@
       "name": "src/pages",
       "kind": "Mini program pages",
       "evidence": [
-        "7 file(s) under src/pages/"
+        "16 file(s) under src/pages/"
       ],
       "files": [
         "src/pages/about.astro",
         "src/pages/analytics.astro",
+        "src/pages/challenge.astro",
+        "src/pages/contest.astro",
+        "src/pages/facilitator.astro",
         "src/pages/index.astro",
         "src/pages/modules/[slug]/[lesson].astro",
-        "src/pages/modules/[slug]/index.astro",
-        "src/pages/modules/index.astro",
-        "src/pages/toolbox.astro"
+        "src/pages/modules/[slug]/index.astro"
       ]
     },
     {
@@ -154,7 +170,7 @@
       "name": "src",
       "kind": "Source root",
       "evidence": [
-        "42 file(s) under src/"
+        "279 file(s) under src/"
       ],
       "files": [
         "src/components/LessonCard.astro",
@@ -171,30 +187,51 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "16 file(s) under scripts/"
+        "28 file(s) under scripts/"
       ],
       "files": [
         "scripts/__pycache__/build_material_packs.cpython-313.pyc",
         "scripts/__pycache__/make_tutorial_gif.cpython-313.pyc",
         "scripts/__pycache__/material_data.cpython-313.pyc",
         "scripts/build_deploy_visuals.py",
+        "scripts/build_interactives.mjs",
         "scripts/build_lesson_images.mjs",
         "scripts/build_m0_visuals.py",
-        "scripts/build_material_packs.py",
-        "scripts/build_more_visuals.py"
+        "scripts/build_material_packs.py"
+      ]
+    },
+    {
+      "name": "public",
+      "kind": "Static assets",
+      "evidence": [
+        "377 file(s) under public/"
+      ],
+      "files": [
+        "public/demos/dashboard/index.html",
+        "public/demos/dianming/index.html",
+        "public/demos/exam-analysis/index.html",
+        "public/demos/exam-paper/index.html",
+        "public/demos/fenceng/index.html",
+        "public/demos/function-lab/index.html",
+        "public/demos/home-comm/index.html",
+        "public/demos/jifen/index.html"
       ]
     },
     {
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "4 file(s) under docs/"
+        "35 file(s) under docs/"
       ],
       "files": [
-        "docs/screenshots/analytics.png",
-        "docs/screenshots/home.png",
-        "docs/screenshots/lesson.png",
-        "docs/screenshots/toolbox.png"
+        "docs/diagrams/harness-pipeline.workflow.json",
+        "docs/ppt-素材/素材1-流程时间轴.png",
+        "docs/ppt-素材/素材2-痛点举手页.png",
+        "docs/ppt-素材/素材3-三问页.png",
+        "docs/ppt-素材/素材4-四格拆解单.png",
+        "docs/ppt-素材/素材5-话术模板卡.png",
+        "docs/ppt-素材/素材6-结束页.png",
+        "docs/ppt-素材/素材7-痛点启发图.png"
       ]
     }
   ],
@@ -243,7 +280,7 @@
       "label": "contains"
     },
     {
-      "from": "docs",
+      "from": "public",
       "to": "happyvibe",
       "label": "contains"
     },
