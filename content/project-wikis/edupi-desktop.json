@@ -6,10 +6,10 @@
     "url": "https://github.com/Intellinfinity/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-07T23:47:18Z",
+    "pushedAt": "2026-10-08T16:13:07Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-10-08T00:12:19.525Z",
+  "generatedAt": "2026-10-09T00:23:28.431Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,20 +22,20 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1493,
+    "totalFiles": 1501,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 527
+        "count": 530
       },
       {
         "name": "components",
-        "count": 207
+        "count": 209
       },
       {
         "name": "app",
-        "count": 204
+        "count": 207
       },
       {
         "name": "docs",
@@ -61,11 +61,11 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 558
+        "count": 562
       },
       {
         "ext": ".ts",
-        "count": 419
+        "count": 422
       },
       {
         "ext": ".md",
@@ -73,7 +73,7 @@
       },
       {
         "ext": ".tsx",
-        "count": 112
+        "count": 113
       },
       {
         "ext": ".svg",
@@ -180,7 +180,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "204 file(s) under app/"
+        "207 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -197,7 +197,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "207 file(s) under components/"
+        "209 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -214,7 +214,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "527 file(s) under lib/"
+        "530 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
