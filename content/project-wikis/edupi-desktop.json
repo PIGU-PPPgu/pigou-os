@@ -3,13 +3,13 @@
   "repo": {
     "owner": "PIGU-PPPgu",
     "name": "edupi-desktop",
-    "url": "https://github.com/Intellinfinity/edupi-desktop",
+    "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-08T16:13:07Z",
+    "pushedAt": "2026-10-09T20:27:53Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-10-09T00:23:28.431Z",
+  "generatedAt": "2026-10-10T00:02:54.256Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [

@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/happyvibe",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-07T18:13:47Z",
+    "pushedAt": "2026-10-09T04:48:36Z",
     "language": "HTML"
   },
-  "generatedAt": "2026-10-09T00:23:33.849Z",
+  "generatedAt": "2026-10-10T00:03:00.163Z",
   "readme": {
     "title": "HappyVibe 数智学园",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 928,
+    "totalFiles": 932,
     "truncated": false,
     "topDirectories": [
       {
@@ -31,7 +31,7 @@
       },
       {
         "name": "src",
-        "count": 279
+        "count": 283
       },
       {
         "name": "skills",
@@ -61,11 +61,11 @@
     "extensions": [
       {
         "ext": ".md",
-        "count": 209
+        "count": 210
       },
       {
         "ext": ".mjs",
-        "count": 180
+        "count": 181
       },
       {
         "ext": ".webp",
@@ -77,7 +77,7 @@
       },
       {
         "ext": ".json",
-        "count": 70
+        "count": 72
       },
       {
         "ext": ".txt",
@@ -170,7 +170,7 @@
       "name": "src",
       "kind": "Source root",
       "evidence": [
-        "279 file(s) under src/"
+        "283 file(s) under src/"
       ],
       "files": [
         "src/components/LessonCard.astro",
