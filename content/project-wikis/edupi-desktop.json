@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-09T20:27:53Z",
+    "pushedAt": "2026-10-10T20:59:32Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-10-10T00:02:54.256Z",
+  "generatedAt": "2026-10-10T23:34:06.989Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,20 +22,20 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1501,
+    "totalFiles": 1525,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 530
-      },
-      {
-        "name": "components",
-        "count": 209
+        "count": 542
       },
       {
         "name": "app",
-        "count": 207
+        "count": 215
+      },
+      {
+        "name": "components",
+        "count": 212
       },
       {
         "name": "docs",
@@ -61,11 +61,11 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 562
+        "count": 574
       },
       {
         "ext": ".ts",
-        "count": 422
+        "count": 432
       },
       {
         "ext": ".md",
@@ -73,7 +73,7 @@
       },
       {
         "ext": ".tsx",
-        "count": 113
+        "count": 114
       },
       {
         "ext": ".svg",
@@ -96,7 +96,7 @@
         "count": 20
       },
       {
-        "ext": "[none]",
+        "ext": ".yml",
         "count": 9
       }
     ]
@@ -180,24 +180,24 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "207 file(s) under app/"
+        "215 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
         "app/api/agent/[id]/events/route.ts",
         "app/api/agent/[id]/route.ts",
+        "app/api/agent/direct-prompt-gate.test.mjs",
         "app/api/agent/events-route.test.mjs",
         "app/api/agent/new/route.ts",
         "app/api/agent/running/events/route.ts",
-        "app/api/agent/running/route.ts",
-        "app/api/auth/all-providers/route.ts"
+        "app/api/agent/running/route.ts"
       ]
     },
     {
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "209 file(s) under components/"
+        "212 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -214,7 +214,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "530 file(s) under lib/"
+        "542 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",

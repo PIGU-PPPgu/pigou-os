@@ -1,65 +1,62 @@
 {
-  "slug": "education-monopoly",
-  "title": "Education Monopoly",
-  "status": "paused",
+  "slug": "paperclip-zh-ui-overlay",
+  "title": "paperclip-zh-ui-overlay",
+  "status": "idea",
   "priority": "medium",
-  "summary": "教育大富翁游戏化学习平台，把大富翁机制和答题、德育任务、成就系统、教师数据分析结合起来。",
-  "explanation": "这是 Pigou 对“游戏化教育”的 private 实验：用游戏机制承载学习激励、团队协作、题库任务和教师端数据反馈。",
-  "domain": "gamified-education",
-  "visibility": "private",
-  "source": "private:Education-Monopoly",
+  "summary": "Reversible Simplified Chinese UI layer for Paperclip v2026.916.1",
+  "domain": "javascript",
+  "visibility": "public",
+  "source": "github:PIGU-PPPgu/paperclip-zh-ui-overlay",
   "readme": [
-    "教育大富翁将经典大富翁游戏与教育元素融合，通过游戏化方式激发学生学习兴趣，同时为教师提供数据驱动的教学决策支持。",
-    "核心特色包括完整大富翁机制、48/72 格棋盘、答题系统、德育任务、成就系统、多人在线同步和教师端数据分析。",
-    "教师端包括学生管理、游戏控制台、题库管理、事件库管理、德育任务审核和数据分析；学生端围绕游戏参与和学习任务展开。",
-    "技术栈以 Vue 3、TypeScript、Vite 和 Supabase 为主。"
+    "这是一个独立于 Paperclip 安装包的中文显示入口。它在本机 127.0.0.1:3101 转发到官方 Paperclip 127.0.0.1:3100，并在网页响应中加载同源词库。升级 Paperclip managed installation 不需要重装或修改中文入口；升级后应检查界面是否仍匹配新文案。右下角的 EN 按钮可切回英文。",
+    "要求 Node.js 24+。先启动官方 Paperclip，再在本仓库执行：",
+    "打开 http://127.0.0.1:3101。http://127.0.0.1:3101/paperclipzh/health 会报告入口和上游状态。入口只绑定 loopback；如需供其他成员访问，应先将 Paperclip 切到需要登录的部署模式，再用受控的 HTTPS 私有入口发布。",
+    "将该进程交由 macOS LaunchAgent 或 Linux systemd 常驻，并把本仓库文件放在Paperclip managed installation 之外的固定目录。上游升级只替换 3100 的 Paperclip 版本；中文入口、词库和进程配置继续留在固定目录。它不会修改 Paperclip 后端、数据库、API、Agent 配置或 NAS。"
   ],
-  "images": [
-    {
-      "src": "/project-assets/education-monopoly/legend(1).png",
-      "alt": "Education Monopoly legend asset"
-    },
-    {
-      "src": "/project-assets/education-monopoly/formats(1).png",
-      "alt": "Education Monopoly format asset"
-    }
-  ],
-  "progress": 72,
+  "progress": 41,
   "goals": [
-    "验证游戏化学习机制",
-    "连接题库和德育任务",
-    "沉淀教师端游戏数据分析"
+    "整理项目定位",
+    "补充 README 摘要",
+    "确认展示边界"
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Add one approved public screenshot or product surface image."
+    "Add one approved public screenshot or product surface image.",
+    "检查自动导入内容",
+    "补充项目截图"
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/PIGU-PPPgu/paperclip-zh-ui-overlay"
+    }
   ],
   "updated": "2026-10-11",
   "progressEvaluation": {
     "generatedAt": "2026-10-11",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 72,
-    "status": "paused",
+    "progress": 41,
+    "status": "idea",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
     "rationale": "The sync pipeline applied local repository, wiki, task, image, and log signals after refreshing GitHub data.",
     "dimensions": [
       {
         "name": "product_readiness",
-        "score": 10,
+        "score": 5,
         "max": 25,
         "reason": "Project status, launch wording, and product surface signals."
       },
       {
         "name": "technical_completeness",
-        "score": 16,
+        "score": 10,
         "max": 20,
         "reason": "Repository file count, framework, entrypoint, module, and code insight signals."
       },
       {
         "name": "usage_validation",
-        "score": 10,
+        "score": 4,
         "max": 25,
         "reason": "Launch/use wording, screenshots, and visible product proof."
       },
@@ -71,39 +68,42 @@
       },
       {
         "name": "momentum",
-        "score": 2,
+        "score": 8,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
     ],
     "evidence": [
-      "repo files: 231",
-      "last push: 2026-03-22",
-      "frameworks: Tailwind CSS",
-      "images: 2"
+      "repo files: 15",
+      "last push: 2026-10-10"
     ],
-    "risks": [],
+    "risks": [
+      "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
+    ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Add one approved public screenshot or product surface image."
+      "Add one approved public screenshot or product surface image.",
+      "检查自动导入内容",
+      "补充项目截图"
     ]
   },
   "prioritySuggestion": {
-    "id": "1v1fj8m",
+    "id": "372n5e",
     "generatedAt": "2026-10-11",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 9,
-    "rationale": "综合分 9/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 40,
+    "rationale": "综合分 40/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 231",
-      "last push: 2026-03-22",
-      "status penalty: paused",
-      "progress evaluation: 72% paused"
+      "repo files: 15",
+      "last push: 2026-10-10",
+      "launch/use signal in project text",
+      "strategic OS/workflow signal in project text",
+      "progress evaluation: 41% idea"
     ],
     "dimensions": [
       {
@@ -114,25 +114,25 @@
       },
       {
         "name": "momentum",
-        "score": 10,
+        "score": 34,
         "max": 100,
         "reason": "Recent repository pushes, project updates, and log activity."
       },
       {
         "name": "strategic_fit",
-        "score": 5,
+        "score": 28,
         "max": 100,
         "reason": "Current lifecycle state plus Pigou OS/workflow/life-state relevance."
       },
       {
         "name": "maturity_or_impact",
-        "score": 26,
+        "score": 31,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },
       {
         "name": "staleness_penalty",
-        "score": 18,
+        "score": 0,
         "max": 100,
         "reason": "Paused, archived, or stale projects should cool down unless other signals are strong."
       }
