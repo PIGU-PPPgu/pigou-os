@@ -21,9 +21,7 @@
   ],
   "nextActions": [
     "Generate LLM code insights for the most important source files.",
-    "Add one approved public screenshot or product surface image.",
-    "检查自动导入内容",
-    "补充项目截图"
+    "Add one approved public screenshot or product surface image."
   ],
   "links": [
     {
@@ -31,9 +29,9 @@
       "url": "https://github.com/PIGU-PPPgu/paperclip-department-workbench"
     }
   ],
-  "updated": "2026-10-13",
+  "updated": "2026-10-14",
   "progressEvaluation": {
-    "generatedAt": "2026-10-13",
+    "generatedAt": "2026-10-14",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 46,
@@ -74,7 +72,7 @@
       }
     ],
     "evidence": [
-      "repo files: 16",
+      "repo files: 20",
       "last push: 2026-10-13",
       "frameworks: React"
     ],
@@ -83,14 +81,12 @@
     ],
     "nextActions": [
       "Generate LLM code insights for the most important source files.",
-      "Add one approved public screenshot or product surface image.",
-      "检查自动导入内容",
-      "补充项目截图"
+      "Add one approved public screenshot or product surface image."
     ]
   },
   "prioritySuggestion": {
-    "id": "2r3efa",
-    "generatedAt": "2026-10-13",
+    "id": "jrmrvn",
+    "generatedAt": "2026-10-14",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -100,7 +96,7 @@
     "rationale": "综合分 36/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
-      "repo files: 16",
+      "repo files: 20",
       "last push: 2026-10-13",
       "strategic OS/workflow signal in project text",
       "progress evaluation: 46% idea"
