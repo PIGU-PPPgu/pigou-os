@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/happyvibe",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-09T04:48:36Z",
+    "pushedAt": "2026-10-12T02:30:18Z",
     "language": "HTML"
   },
-  "generatedAt": "2026-10-11T23:40:12.656Z",
+  "generatedAt": "2026-10-13T02:01:16.446Z",
   "readme": {
     "title": "HappyVibe 数智学园",
     "summary": [
@@ -22,9 +22,13 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 932,
+    "totalFiles": 1667,
     "truncated": false,
     "topDirectories": [
+      {
+        "name": ".v2c",
+        "count": 732
+      },
       {
         "name": "public",
         "count": 377
@@ -39,7 +43,7 @@
       },
       {
         "name": "docs",
-        "count": 35
+        "count": 36
       },
       {
         "name": "scripts",
@@ -50,54 +54,50 @@
         "count": 10
       },
       {
-        "name": ".github",
-        "count": 1
-      },
-      {
-        "name": ".v2c",
-        "count": 1
+        "name": "assets",
+        "count": 3
       }
     ],
     "extensions": [
       {
+        "ext": ".webp",
+        "count": 320
+      },
+      {
+        "ext": ".html",
+        "count": 224
+      },
+      {
         "ext": ".md",
-        "count": 210
+        "count": 211
       },
       {
         "ext": ".mjs",
         "count": 181
       },
       {
-        "ext": ".webp",
-        "count": 160
+        "ext": ".js",
+        "count": 149
       },
       {
         "ext": ".png",
-        "count": 76
-      },
-      {
-        "ext": ".json",
-        "count": 72
+        "count": 137
       },
       {
         "ext": ".txt",
-        "count": 46
+        "count": 92
       },
       {
-        "ext": ".html",
-        "count": 39
+        "ext": ".json",
+        "count": 74
       },
       {
         "ext": ".mp3",
-        "count": 36
+        "count": 72
       },
       {
-        "ext": ".astro",
-        "count": 31
-      },
-      {
-        "ext": ".zip",
-        "count": 18
+        "ext": ".jpg",
+        "count": 51
       }
     ]
   },
@@ -221,17 +221,17 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "35 file(s) under docs/"
+        "36 file(s) under docs/"
       ],
       "files": [
         "docs/diagrams/harness-pipeline.workflow.json",
+        "docs/harness-overview.md",
         "docs/ppt-素材/素材1-流程时间轴.png",
         "docs/ppt-素材/素材2-痛点举手页.png",
         "docs/ppt-素材/素材3-三问页.png",
         "docs/ppt-素材/素材4-四格拆解单.png",
         "docs/ppt-素材/素材5-话术模板卡.png",
-        "docs/ppt-素材/素材6-结束页.png",
-        "docs/ppt-素材/素材7-痛点启发图.png"
+        "docs/ppt-素材/素材6-结束页.png"
       ]
     }
   ],

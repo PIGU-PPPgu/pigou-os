@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-11T17:03:23Z",
+    "pushedAt": "2026-10-12T16:53:03Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-10-11T23:40:07.911Z",
+  "generatedAt": "2026-10-13T02:01:12.114Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,12 +22,12 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1525,
+    "totalFiles": 1527,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 542
+        "count": 544
       },
       {
         "name": "app",
@@ -65,7 +65,7 @@
       },
       {
         "ext": ".ts",
-        "count": 432
+        "count": 434
       },
       {
         "ext": ".md",
@@ -214,7 +214,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "542 file(s) under lib/"
+        "544 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
