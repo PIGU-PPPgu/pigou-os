@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-14T17:11:07Z",
+    "pushedAt": "2026-10-15T06:37:19Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-10-14T23:14:57.068Z",
+  "generatedAt": "2026-10-15T23:04:34.708Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1527,
+    "totalFiles": 1534,
     "truncated": false,
     "topDirectories": [
       {
@@ -39,11 +39,11 @@
       },
       {
         "name": "docs",
-        "count": 157
+        "count": 160
       },
       {
         "name": "scripts",
-        "count": 128
+        "count": 132
       },
       {
         "name": "src-tauri",
@@ -61,7 +61,7 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 574
+        "count": 578
       },
       {
         "ext": ".ts",
@@ -69,7 +69,7 @@
       },
       {
         "ext": ".md",
-        "count": 159
+        "count": 162
       },
       {
         "ext": ".tsx",
@@ -231,7 +231,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "128 file(s) under scripts/"
+        "132 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
@@ -265,7 +265,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "157 file(s) under docs/"
+        "160 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
