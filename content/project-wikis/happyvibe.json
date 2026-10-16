@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/happyvibe",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-15T08:17:26Z",
+    "pushedAt": "2026-10-16T07:10:31Z",
     "language": "HTML"
   },
-  "generatedAt": "2026-10-15T23:04:38.720Z",
+  "generatedAt": "2026-10-16T22:51:57.632Z",
   "readme": {
     "title": "HappyVibe 数智学园",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1675,
+    "totalFiles": 1678,
     "truncated": false,
     "topDirectories": [
       {
@@ -43,11 +43,11 @@
       },
       {
         "name": "docs",
-        "count": 42
+        "count": 44
       },
       {
         "name": "scripts",
-        "count": 28
+        "count": 29
       },
       {
         "name": "[root]",
@@ -81,7 +81,7 @@
       },
       {
         "ext": ".png",
-        "count": 143
+        "count": 145
       },
       {
         "ext": ".txt",
@@ -187,7 +187,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "28 file(s) under scripts/"
+        "29 file(s) under scripts/"
       ],
       "files": [
         "scripts/__pycache__/build_material_packs.cpython-313.pyc",
@@ -221,7 +221,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "42 file(s) under docs/"
+        "44 file(s) under docs/"
       ],
       "files": [
         "docs/diagrams/harness-pipeline.workflow.json",
