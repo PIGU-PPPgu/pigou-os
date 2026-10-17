@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-15T06:37:19Z",
+    "pushedAt": "2026-10-17T21:20:50Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-10-16T22:51:53.678Z",
+  "generatedAt": "2026-10-17T22:19:21.821Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1534,
+    "totalFiles": 1535,
     "truncated": false,
     "topDirectories": [
       {
@@ -39,7 +39,7 @@
       },
       {
         "name": "docs",
-        "count": 160
+        "count": 161
       },
       {
         "name": "scripts",
@@ -69,7 +69,7 @@
       },
       {
         "ext": ".md",
-        "count": 162
+        "count": 163
       },
       {
         "ext": ".tsx",
@@ -265,7 +265,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "160 file(s) under docs/"
+        "161 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
