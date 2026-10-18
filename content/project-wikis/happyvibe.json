@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/happyvibe",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-16T07:10:31Z",
+    "pushedAt": "2026-10-18T18:32:37Z",
     "language": "HTML"
   },
-  "generatedAt": "2026-10-17T22:19:28.166Z",
+  "generatedAt": "2026-10-18T20:25:33.786Z",
   "readme": {
     "title": "HappyVibe 数智学园",
     "summary": [
@@ -22,275 +22,25 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1678,
+    "totalFiles": 0,
     "truncated": false,
-    "topDirectories": [
-      {
-        "name": ".v2c",
-        "count": 732
-      },
-      {
-        "name": "public",
-        "count": 377
-      },
-      {
-        "name": "src",
-        "count": 284
-      },
-      {
-        "name": "skills",
-        "count": 195
-      },
-      {
-        "name": "docs",
-        "count": 44
-      },
-      {
-        "name": "scripts",
-        "count": 29
-      },
-      {
-        "name": "[root]",
-        "count": 10
-      },
-      {
-        "name": "assets",
-        "count": 3
-      }
-    ],
-    "extensions": [
-      {
-        "ext": ".webp",
-        "count": 320
-      },
-      {
-        "ext": ".html",
-        "count": 224
-      },
-      {
-        "ext": ".md",
-        "count": 212
-      },
-      {
-        "ext": ".mjs",
-        "count": 181
-      },
-      {
-        "ext": ".js",
-        "count": 149
-      },
-      {
-        "ext": ".png",
-        "count": 145
-      },
-      {
-        "ext": ".txt",
-        "count": 92
-      },
-      {
-        "ext": ".json",
-        "count": 74
-      },
-      {
-        "ext": ".mp3",
-        "count": 72
-      },
-      {
-        "ext": ".jpg",
-        "count": 51
-      }
-    ]
+    "topDirectories": [],
+    "extensions": []
   },
-  "package": {
-    "manager": "npm",
-    "scripts": [
-      "dev",
-      "build:interactives",
-      "build:previews",
-      "build",
-      "check:interactives",
-      "preview",
-      "astro",
-      "optimize:images",
-      "verify",
-      "verify:fast"
-    ],
-    "dependencies": [
-      "@pagefind/default-ui",
-      "astro",
-      "mermaid",
-      "pagefind",
-      "sharp",
-      "three"
-    ],
-    "devDependencies": [
-      "esbuild",
-      "unist-util-visit"
-    ]
-  },
-  "frameworks": [
-    "Python"
-  ],
-  "modules": [
-    {
-      "name": "src/pages",
-      "kind": "Mini program pages",
-      "evidence": [
-        "16 file(s) under src/pages/"
-      ],
-      "files": [
-        "src/pages/about.astro",
-        "src/pages/analytics.astro",
-        "src/pages/challenge.astro",
-        "src/pages/contest.astro",
-        "src/pages/facilitator.astro",
-        "src/pages/index.astro",
-        "src/pages/modules/[slug]/[lesson].astro",
-        "src/pages/modules/[slug]/index.astro"
-      ]
-    },
-    {
-      "name": "src/components",
-      "kind": "Mini program components",
-      "evidence": [
-        "14 file(s) under src/components/"
-      ],
-      "files": [
-        "src/components/LessonCard.astro",
-        "src/components/MarkDoneButton.astro",
-        "src/components/Mermaid.astro",
-        "src/components/ModuleCarousel.astro",
-        "src/components/OnboardingTour.astro",
-        "src/components/PixelBadge.astro",
-        "src/components/PreTest.astro",
-        "src/components/SearchModal.astro"
-      ]
-    },
-    {
-      "name": "src",
-      "kind": "Source root",
-      "evidence": [
-        "284 file(s) under src/"
-      ],
-      "files": [
-        "src/components/LessonCard.astro",
-        "src/components/MarkDoneButton.astro",
-        "src/components/Mermaid.astro",
-        "src/components/ModuleCarousel.astro",
-        "src/components/OnboardingTour.astro",
-        "src/components/PixelBadge.astro",
-        "src/components/PreTest.astro",
-        "src/components/SearchModal.astro"
-      ]
-    },
-    {
-      "name": "scripts",
-      "kind": "Automation scripts",
-      "evidence": [
-        "29 file(s) under scripts/"
-      ],
-      "files": [
-        "scripts/__pycache__/build_material_packs.cpython-313.pyc",
-        "scripts/__pycache__/make_tutorial_gif.cpython-313.pyc",
-        "scripts/__pycache__/material_data.cpython-313.pyc",
-        "scripts/build_deploy_visuals.py",
-        "scripts/build_interactives.mjs",
-        "scripts/build_lesson_images.mjs",
-        "scripts/build_m0_visuals.py",
-        "scripts/build_material_packs.py"
-      ]
-    },
-    {
-      "name": "public",
-      "kind": "Static assets",
-      "evidence": [
-        "377 file(s) under public/"
-      ],
-      "files": [
-        "public/demos/dashboard/index.html",
-        "public/demos/dianming/index.html",
-        "public/demos/exam-analysis/index.html",
-        "public/demos/exam-paper/index.html",
-        "public/demos/fenceng/index.html",
-        "public/demos/function-lab/index.html",
-        "public/demos/home-comm/index.html",
-        "public/demos/jifen/index.html"
-      ]
-    },
-    {
-      "name": "docs",
-      "kind": "Documentation",
-      "evidence": [
-        "44 file(s) under docs/"
-      ],
-      "files": [
-        "docs/diagrams/harness-pipeline.workflow.json",
-        "docs/harness-overview.md",
-        "docs/ppt-素材/素材1-流程时间轴.png",
-        "docs/ppt-素材/素材2-痛点举手页.png",
-        "docs/ppt-素材/素材3-三问页.png",
-        "docs/ppt-素材/素材4-四格拆解单.png",
-        "docs/ppt-素材/素材5-话术模板卡.png",
-        "docs/ppt-素材/素材6-结束页.png"
-      ]
-    }
-  ],
-  "entrypoints": [
-    "package.json"
-  ],
-  "importantFiles": [
-    {
-      "path": "package.json",
-      "reason": "Node package manifest"
-    },
-    {
-      "path": "README.md",
-      "reason": "Human project explanation"
-    }
-  ],
+  "frameworks": [],
+  "modules": [],
+  "entrypoints": [],
+  "importantFiles": [],
   "graph": [
     {
       "from": "GitHub repository",
       "to": "happyvibe",
       "label": "indexes"
-    },
-    {
-      "from": "Python",
-      "to": "happyvibe",
-      "label": "powers"
-    },
-    {
-      "from": "src/pages",
-      "to": "happyvibe",
-      "label": "contains"
-    },
-    {
-      "from": "src/components",
-      "to": "happyvibe",
-      "label": "contains"
-    },
-    {
-      "from": "src",
-      "to": "happyvibe",
-      "label": "contains"
-    },
-    {
-      "from": "scripts",
-      "to": "happyvibe",
-      "label": "contains"
-    },
-    {
-      "from": "public",
-      "to": "happyvibe",
-      "label": "contains"
-    },
-    {
-      "from": "package scripts",
-      "to": "developer workflow",
-      "label": "drives"
     }
   ],
   "gaps": [
+    "package.json could not be found or parsed.",
+    "Repository file tree could not be fetched.",
     "No LLM code insight snapshot has been generated yet. Run pnpm sync:wiki -- --with-llm."
   ]
 }
