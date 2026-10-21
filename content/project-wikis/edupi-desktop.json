@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-20T16:56:44Z",
+    "pushedAt": "2026-10-21T00:15:40Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-10-20T20:29:33.283Z",
+  "generatedAt": "2026-10-21T20:27:55.030Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1567,
+    "totalFiles": 1581,
     "truncated": false,
     "topDirectories": [
       {
@@ -30,12 +30,12 @@
         "count": 559
       },
       {
-        "name": "app",
-        "count": 219
+        "name": "components",
+        "count": 225
       },
       {
-        "name": "components",
-        "count": 218
+        "name": "app",
+        "count": 221
       },
       {
         "name": "docs",
@@ -43,7 +43,7 @@
       },
       {
         "name": "scripts",
-        "count": 138
+        "count": 142
       },
       {
         "name": "src-tauri",
@@ -61,11 +61,11 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 593
+        "count": 607
       },
       {
         "ext": ".ts",
-        "count": 445
+        "count": 444
       },
       {
         "ext": ".md",
@@ -73,7 +73,7 @@
       },
       {
         "ext": ".tsx",
-        "count": 118
+        "count": 119
       },
       {
         "ext": ".svg",
@@ -180,7 +180,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "219 file(s) under app/"
+        "221 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -197,7 +197,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "218 file(s) under components/"
+        "225 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
@@ -231,7 +231,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "138 file(s) under scripts/"
+        "142 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",

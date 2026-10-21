@@ -6,19 +6,19 @@
     "url": "https://github.com/PIGU-PPPgu/paperclip-zh-ui-overlay",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-13T07:42:18Z",
+    "pushedAt": "2026-10-21T00:32:41Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-10-20T20:29:48.650Z",
+  "generatedAt": "2026-10-21T20:28:13.874Z",
   "readme": {
     "title": "Paperclip 简体中文界面",
     "summary": [
       "这是一个独立于 Paperclip 安装包的中文显示入口。它在本机 127.0.0.1:3101 转发到官方 Paperclip 127.0.0.1:3100，并在网页响应中加载同源词库。升级 Paperclip managed installation 不需要重装或修改中文入口；升级后应检查界面是否仍匹配新文案。右下角的 EN 按钮可切回英文。",
       "打开 http://127.0.0.1:3101。http://127.0.0.1:3101/paperclipzh/health 会报告入口和上游状态。入口只绑定 loopback；如需供其他成员访问，应先将 Paperclip 切到需要登录的部署模式，再用受控的 HTTPS 私有入口发布。",
+      "若入口位于 Caddy 或 Tailscale Serve 后面，设置 PAPERCLIPZHPUBLICORIGIN=https://paperclip.example.com，并让 Paperclip 的公开地址使用同一个 HTTPS origin。sidecar 仍只监听 loopback；此设置固定转发给 Paperclip 的 Host 和协议，以及登录重定向的地址，不接受任意网页请求头作为公开地址。不要把无登录的 localtrusted 实例对外开放。",
       "若已有书签指向 3100，可将 Paperclip 实例本身改为仅监听 127.0.0.1:3102，让中文入口占用原地址，并让 3101 同时作为兼容入口：",
       "这要求先在实例数据目录中配置并启动 Paperclip 的 3102 监听，再启动 sidecar；两者都必须保持 loopback。这样从旧 3100 书签进入的页面也会加载汉化。升级前后检查 3100/3101 的中文入口、3102 的官方健康接口及一条实际浏览器页面。",
-      "将该进程交由 macOS LaunchAgent 或 Linux systemd 常驻，并把本仓库文件放在Paperclip managed installation 之外的固定目录。上游升级只替换 Paperclip 的程序 payload；中文入口、词库和进程配置继续留在固定目录。它不会修改 Paperclip 后端、数据库、API、Agent 配置或 NAS。",
-      "未命中的新文案会保留英文；用户输入、富文本编辑器和代码块不翻译。若将来上游改变页面结构，入口会原样返回页面，不会阻止 Paperclip 启动；此时需要更新词库或入口代码才能恢复完整汉化。独立安装保证的是无需逐次重装补丁，无法保证任意未来上游版本都保持相同的 DOM 文案。"
+      "将该进程交由 macOS LaunchAgent 或 Linux systemd 常驻，并把本仓库文件放在Paperclip managed installation 之外的固定目录。上游升级只替换 Paperclip 的程序 payload；中文入口、词库和进程配置继续留在固定目录。它不会修改 Paperclip 后端、数据库、API、Agent 配置或 NAS。"
     ]
   },
   "fileTree": {

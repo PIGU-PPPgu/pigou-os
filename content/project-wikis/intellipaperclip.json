@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/intelliPaperclip",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-20T12:17:42Z",
+    "pushedAt": "2026-10-21T03:18:08Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-10-20T20:29:41.080Z",
+  "generatedAt": "2026-10-21T20:28:04.718Z",
   "readme": {
     "title": "intelliPaperclip",
     "summary": [
@@ -17,20 +17,25 @@
       "模块 内容 --- --- 部门工作台 原生侧栏、仪表盘、项目标签和行事历、记事、OKR、里程碑、知识库等视图；作为独立仓库维护。 中文界面 独立于官方安装包的中文入口；作为独立仓库维护。 NAS Source 小范围只读文件列表、搜索与文档读取插件。",
       "前两个模块以 Git 子模块引用各自的公开仓库，避免同一套源码在多个仓库中分叉。克隆时使用：",
       "需要 Node.js 24+ 和与各模块锁定版本兼容的 Paperclip。NAS Source 当前针对 macOS 的 SMB 挂载实现；每个模块的安装和权限边界见其 README。源码检查：",
-      "NAS Source 的哈希校验快照模式仅用于验证下游流程，不代表实时 SMB 已可用。部署时应选择获准的非敏感目录，并在 Paperclip 中单独配置只读资料源。项目按 MIT License 开源；子模块保留各自的许可证。"
+      "NAS Source 的哈希校验快照模式仅用于验证下游流程，不代表实时 SMB 已可用。部署时应选择获准的非敏感目录，并在 Paperclip 中单独配置只读资料源。项目按 MIT License 开源；子模块保留各自的许可证。",
+      "多人共享请从 服务器部署 开始。它包含独立 PostgreSQL、持久化文件卷、私网/公网 HTTPS、初始化、备份和恢复；本地 Mac 的实例数据仍需按迁移章节单独处理，不会被公开仓库自动上传。"
     ]
   },
   "fileTree": {
-    "totalFiles": 13,
+    "totalFiles": 26,
     "truncated": false,
     "topDirectories": [
+      {
+        "name": "deploy",
+        "count": 12
+      },
       {
         "name": "extensions",
         "count": 8
       },
       {
         "name": "[root]",
-        "count": 4
+        "count": 5
       },
       {
         "name": ".github",
@@ -43,12 +48,32 @@
         "count": 5
       },
       {
+        "ext": ".sh",
+        "count": 4
+      },
+      {
+        "ext": ".md",
+        "count": 3
+      },
+      {
         "ext": ".json",
         "count": 2
       },
       {
-        "ext": ".md",
+        "ext": ".mjs",
         "count": 2
+      },
+      {
+        "ext": "[none]",
+        "count": 2
+      },
+      {
+        "ext": ".dockerignore",
+        "count": 1
+      },
+      {
+        "ext": ".example",
+        "count": 1
       },
       {
         "ext": ".gitignore",
@@ -56,14 +81,6 @@
       },
       {
         "ext": ".gitmodules",
-        "count": 1
-      },
-      {
-        "ext": ".yml",
-        "count": 1
-      },
-      {
-        "ext": "[none]",
         "count": 1
       }
     ]
@@ -83,6 +100,23 @@
   "frameworks": [],
   "modules": [
     {
+      "name": "deploy",
+      "kind": "Repository directory",
+      "evidence": [
+        "12 file(s)"
+      ],
+      "files": [
+        "deploy/Caddyfile",
+        "deploy/Dockerfile.paperclip",
+        "deploy/Dockerfile.zh",
+        "deploy/README.md",
+        "deploy/backup.sh",
+        "deploy/compose.yaml",
+        "deploy/env.example",
+        "deploy/init-env.sh"
+      ]
+    },
+    {
       "name": "extensions",
       "kind": "Repository directory",
       "evidence": [
@@ -97,6 +131,16 @@
         "extensions/paperclip-department-nas-source/src/source.js",
         "extensions/paperclip-department-nas-source/src/worker.js",
         "extensions/paperclip-department-nas-source/tests/source.test.js"
+      ]
+    },
+    {
+      "name": ".dockerignore",
+      "kind": "Repository directory",
+      "evidence": [
+        "1 file(s)"
+      ],
+      "files": [
+        ".dockerignore"
       ]
     },
     {
@@ -128,26 +172,6 @@
       "files": [
         ".gitmodules"
       ]
-    },
-    {
-      "name": "LICENSE",
-      "kind": "Repository directory",
-      "evidence": [
-        "1 file(s)"
-      ],
-      "files": [
-        "LICENSE"
-      ]
-    },
-    {
-      "name": "README.md",
-      "kind": "Repository directory",
-      "evidence": [
-        "1 file(s)"
-      ],
-      "files": [
-        "README.md"
-      ]
     }
   ],
   "entrypoints": [
@@ -170,7 +194,17 @@
       "label": "indexes"
     },
     {
+      "from": "deploy",
+      "to": "intelliPaperclip",
+      "label": "contains"
+    },
+    {
       "from": "extensions",
+      "to": "intelliPaperclip",
+      "label": "contains"
+    },
+    {
+      "from": ".dockerignore",
       "to": "intelliPaperclip",
       "label": "contains"
     },
@@ -181,16 +215,6 @@
     },
     {
       "from": ".gitignore",
-      "to": "intelliPaperclip",
-      "label": "contains"
-    },
-    {
-      "from": ".gitmodules",
-      "to": "intelliPaperclip",
-      "label": "contains"
-    },
-    {
-      "from": "LICENSE",
       "to": "intelliPaperclip",
       "label": "contains"
     },
