@@ -30,9 +30,9 @@
       "url": "https://github.com/PIGU-PPPgu/happyvibe"
     }
   ],
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "progressEvaluation": {
-    "generatedAt": "2026-10-23",
+    "generatedAt": "2026-10-24",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 88,
@@ -89,7 +89,7 @@
   },
   "prioritySuggestion": {
     "id": "1oero5m",
-    "generatedAt": "2026-10-23",
+    "generatedAt": "2026-10-24",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",

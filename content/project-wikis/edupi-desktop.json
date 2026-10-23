@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-21T00:15:40Z",
+    "pushedAt": "2026-10-23T18:57:15Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-10-22T20:27:42.325Z",
+  "generatedAt": "2026-10-23T20:28:42.907Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,20 +22,20 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1581,
+    "totalFiles": 1592,
     "truncated": false,
     "topDirectories": [
       {
         "name": "lib",
-        "count": 559
+        "count": 561
       },
       {
         "name": "components",
-        "count": 225
+        "count": 228
       },
       {
         "name": "app",
-        "count": 221
+        "count": 223
       },
       {
         "name": "docs",
@@ -43,7 +43,7 @@
       },
       {
         "name": "scripts",
-        "count": 142
+        "count": 145
       },
       {
         "name": "src-tauri",
@@ -61,11 +61,11 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 607
+        "count": 614
       },
       {
         "ext": ".ts",
-        "count": 444
+        "count": 446
       },
       {
         "ext": ".md",
@@ -89,7 +89,7 @@
       },
       {
         "ext": ".css",
-        "count": 20
+        "count": 21
       },
       {
         "ext": ".png",
@@ -162,12 +162,12 @@
       "postcss",
       "react-markdown",
       "react-syntax-highlighter",
+      "react-test-renderer",
       "rehype-katex",
       "rehype-raw",
       "rehype-sanitize",
       "remark-gfm",
-      "remark-math",
-      "tailwindcss"
+      "remark-math"
     ]
   },
   "frameworks": [
@@ -180,7 +180,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "221 file(s) under app/"
+        "223 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -197,24 +197,24 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "225 file(s) under components/"
+        "228 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
+        "components/AppSettingsNativeHost.test.mjs",
         "components/AppSettingsNotification.test.mjs",
         "components/AppSettingsUpdate.test.mjs",
         "components/AppShell-reminder-continuation.test.mjs",
         "components/AppShell-session-reset.test.mjs",
         "components/AppShell.tsx",
-        "components/AppShellDingTalkRuntime.test.mjs",
-        "components/BranchNavigator.tsx"
+        "components/AppShellDingTalkRuntime.test.mjs"
       ]
     },
     {
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "559 file(s) under lib/"
+        "561 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -231,7 +231,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "142 file(s) under scripts/"
+        "145 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",

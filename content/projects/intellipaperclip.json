@@ -13,7 +13,7 @@
     "前两个模块以 Git 子模块引用各自的公开仓库，避免同一套源码在多个仓库中分叉。克隆时使用：",
     "需要 Node.js 24+ 和与各模块锁定版本兼容的 Paperclip。NAS Source 当前针对 macOS 的 SMB 挂载实现；每个模块的安装和权限边界见其 README。源码检查："
   ],
-  "progress": 59,
+  "progress": 71,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -29,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/intelliPaperclip"
     }
   ],
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "progressEvaluation": {
-    "generatedAt": "2026-10-23",
+    "generatedAt": "2026-10-24",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 59,
+    "progress": 71,
     "status": "building",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -84,21 +84,21 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "1afm4oy",
-    "generatedAt": "2026-10-23",
+    "id": "qoaqau",
+    "generatedAt": "2026-10-24",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
     "suggestedPriority": "low",
     "confidence": "medium",
-    "score": 39,
-    "rationale": "综合分 39/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
+    "score": 40,
+    "rationale": "综合分 40/100，建议为 low。这个值来自任务紧急度、近期动量、战略相关性、成熟/影响证据和停滞惩罚；它只是候选建议，只有 apply 后才会改项目 priority。",
     "evidence": [
       "no open linked tasks",
       "repo files: 26",
       "last push: 2026-10-21",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 59% building"
+      "progress evaluation: 71% building"
     ],
     "dimensions": [
       {
@@ -121,7 +121,7 @@
       },
       {
         "name": "maturity_or_impact",
-        "score": 13,
+        "score": 17,
         "max": 100,
         "reason": "Progress, shipped/use signals, screenshots, and repository scale."
       },
