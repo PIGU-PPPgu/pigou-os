@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-24T15:59:05Z",
+    "pushedAt": "2026-10-25T19:14:24Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-10-24T20:25:56.094Z",
+  "generatedAt": "2026-10-25T20:25:50.434Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,9 +22,13 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 1592,
+    "totalFiles": 2703,
     "truncated": false,
     "topDirectories": [
+      {
+        "name": "src-tauri",
+        "count": 1191
+      },
       {
         "name": "lib",
         "count": 561
@@ -43,11 +47,7 @@
       },
       {
         "name": "scripts",
-        "count": 145
-      },
-      {
-        "name": "src-tauri",
-        "count": 81
+        "count": 146
       },
       {
         "name": "public",
@@ -60,8 +60,12 @@
     ],
     "extensions": [
       {
+        "ext": ".rs",
+        "count": 752
+      },
+      {
         "ext": ".mjs",
-        "count": 614
+        "count": 615
       },
       {
         "ext": ".ts",
@@ -69,7 +73,7 @@
       },
       {
         "ext": ".md",
-        "count": 163
+        "count": 220
       },
       {
         "ext": ".tsx",
@@ -80,24 +84,20 @@
         "count": 65
       },
       {
-        "ext": ".rs",
-        "count": 39
-      },
-      {
         "ext": ".json",
-        "count": 37
+        "count": 64
       },
       {
-        "ext": ".css",
-        "count": 21
+        "ext": ".asm",
+        "count": 54
       },
       {
-        "ext": ".png",
-        "count": 20
+        "ext": ".toml",
+        "count": 43
       },
       {
-        "ext": ".yml",
-        "count": 10
+        "ext": ".S",
+        "count": 40
       }
     ]
   },
@@ -173,7 +173,8 @@
   "frameworks": [
     "Next.js",
     "React",
-    "Tailwind CSS"
+    "Tailwind CSS",
+    "Python"
   ],
   "modules": [
     {
@@ -231,7 +232,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "145 file(s) under scripts/"
+        "146 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
@@ -319,6 +320,11 @@
     },
     {
       "from": "Tailwind CSS",
+      "to": "edupi-desktop",
+      "label": "powers"
+    },
+    {
+      "from": "Python",
       "to": "edupi-desktop",
       "label": "powers"
     },
