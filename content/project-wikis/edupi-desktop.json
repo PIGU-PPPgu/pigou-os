@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-25T19:14:24Z",
+    "pushedAt": "2026-10-27T19:52:27Z",
     "language": "TypeScript"
   },
-  "generatedAt": "2026-10-26T20:29:39.256Z",
+  "generatedAt": "2026-10-27T20:21:57.257Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 2703,
+    "totalFiles": 2708,
     "truncated": false,
     "topDirectories": [
       {
@@ -31,7 +31,7 @@
       },
       {
         "name": "lib",
-        "count": 561
+        "count": 562
       },
       {
         "name": "components",
@@ -47,7 +47,7 @@
       },
       {
         "name": "scripts",
-        "count": 146
+        "count": 149
       },
       {
         "name": "public",
@@ -55,7 +55,7 @@
       },
       {
         "name": "desktop",
-        "count": 33
+        "count": 34
       }
     ],
     "extensions": [
@@ -65,7 +65,7 @@
       },
       {
         "ext": ".mjs",
-        "count": 615
+        "count": 620
       },
       {
         "ext": ".ts",
@@ -215,7 +215,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "561 file(s) under lib/"
+        "562 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -232,7 +232,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "146 file(s) under scripts/"
+        "149 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
