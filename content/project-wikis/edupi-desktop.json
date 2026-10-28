@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-27T19:52:27Z",
-    "language": "TypeScript"
+    "pushedAt": "2026-10-28T20:02:21Z",
+    "language": "JavaScript"
   },
-  "generatedAt": "2026-10-27T20:21:57.257Z",
+  "generatedAt": "2026-10-28T20:22:40.798Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 2708,
+    "totalFiles": 2802,
     "truncated": false,
     "topDirectories": [
       {
@@ -31,23 +31,23 @@
       },
       {
         "name": "lib",
-        "count": 562
+        "count": 588
       },
       {
         "name": "components",
-        "count": 228
+        "count": 279
       },
       {
         "name": "app",
-        "count": 223
+        "count": 232
       },
       {
         "name": "docs",
-        "count": 161
+        "count": 163
       },
       {
         "name": "scripts",
-        "count": 149
+        "count": 150
       },
       {
         "name": "public",
@@ -55,7 +55,7 @@
       },
       {
         "name": "desktop",
-        "count": 34
+        "count": 38
       }
     ],
     "extensions": [
@@ -65,27 +65,27 @@
       },
       {
         "ext": ".mjs",
-        "count": 620
+        "count": 682
       },
       {
         "ext": ".ts",
-        "count": 446
+        "count": 459
       },
       {
         "ext": ".md",
-        "count": 220
+        "count": 223
       },
       {
         "ext": ".tsx",
-        "count": 119
+        "count": 130
+      },
+      {
+        "ext": ".json",
+        "count": 65
       },
       {
         "ext": ".svg",
         "count": 65
-      },
-      {
-        "ext": ".json",
-        "count": 64
       },
       {
         "ext": ".asm",
@@ -181,7 +181,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "223 file(s) under app/"
+        "232 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -198,24 +198,24 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "228 file(s) under components/"
+        "279 file(s) under components/"
       ],
       "files": [
         "components/AppSettings.tsx",
+        "components/AppSettingsComputerUse.behavior.test.mjs",
         "components/AppSettingsNativeHost.test.mjs",
         "components/AppSettingsNotification.test.mjs",
+        "components/AppSettingsPages.test.mjs",
         "components/AppSettingsUpdate.test.mjs",
-        "components/AppShell-reminder-continuation.test.mjs",
-        "components/AppShell-session-reset.test.mjs",
-        "components/AppShell.tsx",
-        "components/AppShellDingTalkRuntime.test.mjs"
+        "components/AppShell-chat-navigation.behavior.test.mjs",
+        "components/AppShell-reminder-continuation.test.mjs"
       ]
     },
     {
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "562 file(s) under lib/"
+        "588 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -232,7 +232,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "149 file(s) under scripts/"
+        "150 file(s) under scripts/"
       ],
       "files": [
         "scripts/bump-pi-agent-desktop-version.mjs",
@@ -266,7 +266,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "161 file(s) under docs/"
+        "163 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
