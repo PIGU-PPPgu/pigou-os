@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-29T18:15:42Z",
+    "pushedAt": "2026-10-30T19:58:41Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-10-29T20:22:12.271Z",
+  "generatedAt": "2026-10-30T20:19:57.165Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 2833,
+    "totalFiles": 2850,
     "truncated": false,
     "topDirectories": [
       {
@@ -43,7 +43,7 @@
       },
       {
         "name": "docs",
-        "count": 168
+        "count": 183
       },
       {
         "name": "scripts",
@@ -51,7 +51,7 @@
       },
       {
         "name": "public",
-        "count": 72
+        "count": 74
       },
       {
         "name": "desktop",
@@ -81,7 +81,7 @@
       },
       {
         "ext": ".json",
-        "count": 67
+        "count": 74
       },
       {
         "ext": ".svg",
@@ -249,7 +249,7 @@
       "name": "public",
       "kind": "Static assets",
       "evidence": [
-        "72 file(s) under public/"
+        "74 file(s) under public/"
       ],
       "files": [
         "public/icons/apple-touch-icon.png",
@@ -266,7 +266,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "168 file(s) under docs/"
+        "183 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
