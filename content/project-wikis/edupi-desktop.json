@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-30T19:58:41Z",
+    "pushedAt": "2026-10-31T18:40:16Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-10-30T20:19:57.165Z",
+  "generatedAt": "2026-10-31T20:19:49.398Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 2850,
+    "totalFiles": 2902,
     "truncated": false,
     "topDirectories": [
       {
@@ -31,27 +31,27 @@
       },
       {
         "name": "lib",
-        "count": 592
+        "count": 596
       },
       {
         "name": "components",
-        "count": 287
+        "count": 292
       },
       {
         "name": "app",
-        "count": 236
+        "count": 239
       },
       {
         "name": "docs",
-        "count": 183
+        "count": 217
       },
       {
         "name": "scripts",
-        "count": 156
+        "count": 158
       },
       {
         "name": "public",
-        "count": 74
+        "count": 78
       },
       {
         "name": "desktop",
@@ -65,23 +65,23 @@
       },
       {
         "ext": ".mjs",
-        "count": 692
+        "count": 698
       },
       {
         "ext": ".ts",
-        "count": 463
+        "count": 465
       },
       {
         "ext": ".md",
-        "count": 225
+        "count": 231
       },
       {
         "ext": ".tsx",
-        "count": 136
+        "count": 139
       },
       {
         "ext": ".json",
-        "count": 74
+        "count": 85
       },
       {
         "ext": ".svg",
@@ -96,8 +96,8 @@
         "count": 43
       },
       {
-        "ext": ".S",
-        "count": 40
+        "ext": ".png",
+        "count": 41
       }
     ]
   },
@@ -181,7 +181,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "236 file(s) under app/"
+        "239 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -198,7 +198,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "287 file(s) under components/"
+        "292 file(s) under components/"
       ],
       "files": [
         "components/AffectSegmentedControl.test.mjs",
@@ -215,7 +215,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "592 file(s) under lib/"
+        "596 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -232,41 +232,41 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "156 file(s) under scripts/"
+        "158 file(s) under scripts/"
       ],
       "files": [
+        "scripts/assert-macos-isolated-edupi.mjs",
+        "scripts/assert-macos-isolated-edupi.test.mjs",
         "scripts/bump-pi-agent-desktop-version.mjs",
         "scripts/configure-updater-public-key.mjs",
         "scripts/configure-updater-public-key.test.mjs",
         "scripts/create-roster-acceptance-fixture.mjs",
         "scripts/dependency-security.test.mjs",
-        "scripts/desktop-dev.mjs",
-        "scripts/desktop-package-inputs.mjs",
-        "scripts/desktop-package-inputs.test.mjs"
+        "scripts/desktop-dev.mjs"
       ]
     },
     {
       "name": "public",
       "kind": "Static assets",
       "evidence": [
-        "74 file(s) under public/"
+        "78 file(s) under public/"
       ],
       "files": [
+        "public/dossier/default-classroom.png",
+        "public/dossier/default-classroom.webp",
+        "public/dossier/default-student-avatar.png",
+        "public/dossier/default-student-avatar.webp",
         "public/icons/apple-touch-icon.png",
         "public/icons/catppuccin/LICENSE",
         "public/icons/catppuccin/README.md",
-        "public/icons/catppuccin/latte/_file.svg",
-        "public/icons/catppuccin/latte/_folder.svg",
-        "public/icons/catppuccin/latte/_folder_open.svg",
-        "public/icons/catppuccin/latte/bash.svg",
-        "public/icons/catppuccin/latte/bun-lock.svg"
+        "public/icons/catppuccin/latte/_file.svg"
       ]
     },
     {
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "183 file(s) under docs/"
+        "217 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
