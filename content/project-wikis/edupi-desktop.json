@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-10-31T18:40:16Z",
+    "pushedAt": "2026-11-01T18:35:01Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-10-31T20:19:49.398Z",
+  "generatedAt": "2026-11-01T20:19:35.193Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 2902,
+    "totalFiles": 2921,
     "truncated": false,
     "topDirectories": [
       {
@@ -31,7 +31,7 @@
       },
       {
         "name": "lib",
-        "count": 596
+        "count": 608
       },
       {
         "name": "components",
@@ -39,11 +39,11 @@
       },
       {
         "name": "app",
-        "count": 239
+        "count": 241
       },
       {
         "name": "docs",
-        "count": 217
+        "count": 222
       },
       {
         "name": "scripts",
@@ -65,15 +65,15 @@
       },
       {
         "ext": ".mjs",
-        "count": 698
+        "count": 706
       },
       {
         "ext": ".ts",
-        "count": 465
+        "count": 471
       },
       {
         "ext": ".md",
-        "count": 231
+        "count": 234
       },
       {
         "ext": ".tsx",
@@ -92,12 +92,12 @@
         "count": 54
       },
       {
-        "ext": ".toml",
+        "ext": ".png",
         "count": 43
       },
       {
-        "ext": ".png",
-        "count": 41
+        "ext": ".toml",
+        "count": 43
       }
     ]
   },
@@ -181,7 +181,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "239 file(s) under app/"
+        "241 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -215,7 +215,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "596 file(s) under lib/"
+        "608 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -266,7 +266,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "217 file(s) under docs/"
+        "222 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
