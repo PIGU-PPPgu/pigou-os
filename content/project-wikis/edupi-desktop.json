@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-11-01T18:35:01Z",
+    "pushedAt": "2026-11-03T02:17:39Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-11-01T20:19:35.193Z",
+  "generatedAt": "2026-11-03T02:19:05.879Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 2921,
+    "totalFiles": 2924,
     "truncated": false,
     "topDirectories": [
       {
@@ -43,11 +43,11 @@
       },
       {
         "name": "docs",
-        "count": 222
+        "count": 224
       },
       {
         "name": "scripts",
-        "count": 158
+        "count": 159
       },
       {
         "name": "public",
@@ -65,7 +65,7 @@
       },
       {
         "ext": ".mjs",
-        "count": 706
+        "count": 707
       },
       {
         "ext": ".ts",
@@ -73,7 +73,7 @@
       },
       {
         "ext": ".md",
-        "count": 234
+        "count": 236
       },
       {
         "ext": ".tsx",
@@ -232,7 +232,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "158 file(s) under scripts/"
+        "159 file(s) under scripts/"
       ],
       "files": [
         "scripts/assert-macos-isolated-edupi.mjs",
@@ -266,7 +266,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "222 file(s) under docs/"
+        "224 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
