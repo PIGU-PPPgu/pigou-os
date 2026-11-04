@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-11-03T02:17:39Z",
+    "pushedAt": "2026-11-03T19:19:28Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-11-03T02:19:05.879Z",
+  "generatedAt": "2026-11-04T00:36:25.752Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 2924,
+    "totalFiles": 2939,
     "truncated": false,
     "topDirectories": [
       {
@@ -31,19 +31,19 @@
       },
       {
         "name": "lib",
-        "count": 608
+        "count": 614
       },
       {
         "name": "components",
-        "count": 292
+        "count": 296
       },
       {
         "name": "app",
-        "count": 241
+        "count": 243
       },
       {
         "name": "docs",
-        "count": 224
+        "count": 227
       },
       {
         "name": "scripts",
@@ -65,19 +65,19 @@
       },
       {
         "ext": ".mjs",
-        "count": 707
+        "count": 713
       },
       {
         "ext": ".ts",
-        "count": 471
+        "count": 475
       },
       {
         "ext": ".md",
-        "count": 236
+        "count": 239
       },
       {
         "ext": ".tsx",
-        "count": 139
+        "count": 141
       },
       {
         "ext": ".json",
@@ -134,14 +134,14 @@
       "@tesseract.js-data/eng",
       "@xmldom/xmldom",
       "brace-expansion",
+      "dompurify",
       "jszip",
       "next",
       "node-ical",
       "pdfjs-dist",
       "proper-lockfile",
-      "react",
-      "react-dom",
-      "temporal-polyfill"
+      "qrcode",
+      "react"
     ],
     "devDependencies": [
       "@lobehub/icons",
@@ -149,6 +149,7 @@
       "@tauri-apps/cli",
       "@types/node",
       "@types/proper-lockfile",
+      "@types/qrcode",
       "@types/react",
       "@types/react-dom",
       "@types/react-syntax-highlighter",
@@ -166,8 +167,7 @@
       "rehype-katex",
       "rehype-raw",
       "rehype-sanitize",
-      "remark-gfm",
-      "remark-math"
+      "remark-gfm"
     ]
   },
   "frameworks": [
@@ -181,7 +181,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "241 file(s) under app/"
+        "243 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -198,7 +198,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "292 file(s) under components/"
+        "296 file(s) under components/"
       ],
       "files": [
         "components/AffectSegmentedControl.test.mjs",
@@ -215,7 +215,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "608 file(s) under lib/"
+        "614 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -266,7 +266,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "224 file(s) under docs/"
+        "227 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
