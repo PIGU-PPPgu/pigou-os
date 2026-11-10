@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-11-08T13:35:03Z",
+    "pushedAt": "2026-11-10T00:26:25Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-11-08T23:43:20.313Z",
+  "generatedAt": "2026-11-10T02:44:34.429Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 2953,
+    "totalFiles": 2957,
     "truncated": false,
     "topDirectories": [
       {
@@ -31,7 +31,7 @@
       },
       {
         "name": "lib",
-        "count": 621
+        "count": 622
       },
       {
         "name": "components",
@@ -43,11 +43,11 @@
       },
       {
         "name": "docs",
-        "count": 227
+        "count": 228
       },
       {
         "name": "scripts",
-        "count": 159
+        "count": 161
       },
       {
         "name": "public",
@@ -65,15 +65,15 @@
       },
       {
         "ext": ".mjs",
-        "count": 722
+        "count": 724
       },
       {
         "ext": ".ts",
-        "count": 479
+        "count": 480
       },
       {
         "ext": ".md",
-        "count": 239
+        "count": 240
       },
       {
         "ext": ".tsx",
@@ -215,7 +215,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "621 file(s) under lib/"
+        "622 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -232,7 +232,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "159 file(s) under scripts/"
+        "161 file(s) under scripts/"
       ],
       "files": [
         "scripts/assert-macos-isolated-edupi.mjs",
@@ -266,7 +266,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "227 file(s) under docs/"
+        "228 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
