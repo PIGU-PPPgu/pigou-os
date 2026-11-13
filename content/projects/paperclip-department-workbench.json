@@ -13,7 +13,7 @@
     "进入 /:companyPrefix/office。顶部的项目、月份是筛选条件；各视图有自己的“新建”入口。项目本身仍由 Paperclip 的原生项目页管理。页面没有演示数据，也不会自动创建业务记录。",
     "写操作从 Paperclip 宿主获得公司与操作者身份。Agent 和仅查看成员不能通过插件动作写入；记录保存创建者、更新者、时间与修订号，更新时检查修订冲突。GitHub 地址只接受 https://github.com/，插件不会向 GitHub 发送 API 请求。知识库正文存放在插件表中，目前不自动同步 Paperclip Wiki 或 NAS。"
   ],
-  "progress": 46,
+  "progress": 41,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -29,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/paperclip-department-workbench"
     }
   ],
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "progressEvaluation": {
-    "generatedAt": "2026-11-12",
+    "generatedAt": "2026-11-13",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 46,
+    "progress": 41,
     "status": "idea",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -66,7 +66,7 @@
       },
       {
         "name": "momentum",
-        "score": 8,
+        "score": 2,
         "max": 15,
         "reason": "Recent push, linked work items, and project log activity."
       }
@@ -85,8 +85,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "127r0li",
-    "generatedAt": "2026-11-12",
+    "id": "uy02ox",
+    "generatedAt": "2026-11-13",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -99,7 +99,7 @@
       "repo files: 20",
       "last push: 2026-10-13",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 46% idea"
+      "progress evaluation: 41% idea"
     ],
     "dimensions": [
       {

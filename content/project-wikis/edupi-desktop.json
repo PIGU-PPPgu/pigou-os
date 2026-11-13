@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-11-11T16:52:47Z",
+    "pushedAt": "2026-11-12T21:27:57Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-11-12T01:54:10.925Z",
+  "generatedAt": "2026-11-13T01:04:59.923Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 2957,
+    "totalFiles": 2978,
     "truncated": false,
     "topDirectories": [
       {
@@ -31,23 +31,23 @@
       },
       {
         "name": "lib",
-        "count": 622
+        "count": 629
       },
       {
         "name": "components",
-        "count": 300
+        "count": 304
       },
       {
         "name": "app",
-        "count": 246
+        "count": 248
       },
       {
         "name": "docs",
-        "count": 228
+        "count": 233
       },
       {
         "name": "scripts",
-        "count": 161
+        "count": 164
       },
       {
         "name": "public",
@@ -65,19 +65,19 @@
       },
       {
         "ext": ".mjs",
-        "count": 724
+        "count": 734
       },
       {
         "ext": ".ts",
-        "count": 480
+        "count": 484
       },
       {
         "ext": ".md",
-        "count": 240
+        "count": 245
       },
       {
         "ext": ".tsx",
-        "count": 142
+        "count": 144
       },
       {
         "ext": ".json",
@@ -181,7 +181,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "246 file(s) under app/"
+        "248 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -198,7 +198,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "300 file(s) under components/"
+        "304 file(s) under components/"
       ],
       "files": [
         "components/AffectSegmentedControl.test.mjs",
@@ -215,7 +215,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "622 file(s) under lib/"
+        "629 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -232,7 +232,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "161 file(s) under scripts/"
+        "164 file(s) under scripts/"
       ],
       "files": [
         "scripts/assert-macos-isolated-edupi.mjs",
@@ -266,7 +266,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "228 file(s) under docs/"
+        "233 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
