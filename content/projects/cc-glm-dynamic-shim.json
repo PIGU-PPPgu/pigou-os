@@ -13,7 +13,7 @@
     "Local compatibility shim for using GLM Coding Plan models, especially\nglm-5.1, behind Claude Code's Anthropic Messages API surface.",
     "It is useful when a tool expects Anthropic-compatible /v1/messages requests,\nbut your GLM Coding Plan access is exposed through an OpenAI-compatible\nchat/completions endpoint."
   ],
-  "progress": 36,
+  "progress": 53,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -29,12 +29,12 @@
       "url": "https://github.com/PIGU-PPPgu/cc-glm-dynamic-shim"
     }
   ],
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "progressEvaluation": {
-    "generatedAt": "2026-11-14",
+    "generatedAt": "2026-11-15",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 36,
+    "progress": 53,
     "status": "paused",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -84,8 +84,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "x8jcj5",
-    "generatedAt": "2026-11-14",
+    "id": "tk459u",
+    "generatedAt": "2026-11-15",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -99,7 +99,7 @@
       "last push: 2026-06-15",
       "strategic OS/workflow signal in project text",
       "status penalty: paused",
-      "progress evaluation: 36% paused"
+      "progress evaluation: 53% paused"
     ],
     "dimensions": [
       {

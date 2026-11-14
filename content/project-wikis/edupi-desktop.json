@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-11-13T01:28:10Z",
+    "pushedAt": "2026-11-14T19:47:50Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-11-14T00:53:33.898Z",
+  "generatedAt": "2026-11-14T23:55:30.181Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 2978,
+    "totalFiles": 2985,
     "truncated": false,
     "topDirectories": [
       {
@@ -35,7 +35,7 @@
       },
       {
         "name": "components",
-        "count": 304
+        "count": 309
       },
       {
         "name": "app",
@@ -43,7 +43,7 @@
       },
       {
         "name": "docs",
-        "count": 233
+        "count": 234
       },
       {
         "name": "scripts",
@@ -65,7 +65,7 @@
       },
       {
         "ext": ".mjs",
-        "count": 734
+        "count": 739
       },
       {
         "ext": ".ts",
@@ -73,11 +73,11 @@
       },
       {
         "ext": ".md",
-        "count": 245
+        "count": 246
       },
       {
         "ext": ".tsx",
-        "count": 144
+        "count": 145
       },
       {
         "ext": ".json",
@@ -198,7 +198,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "304 file(s) under components/"
+        "309 file(s) under components/"
       ],
       "files": [
         "components/AffectSegmentedControl.test.mjs",
@@ -266,7 +266,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "233 file(s) under docs/"
+        "234 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
