@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-11-15T19:11:58Z",
+    "pushedAt": "2026-11-17T02:55:57Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-11-15T23:58:17.766Z",
+  "generatedAt": "2026-11-17T02:56:19.241Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,16 +22,16 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 2985,
+    "totalFiles": 3010,
     "truncated": false,
     "topDirectories": [
       {
         "name": "src-tauri",
-        "count": 1194
+        "count": 1195
       },
       {
         "name": "lib",
-        "count": 629
+        "count": 631
       },
       {
         "name": "components",
@@ -43,11 +43,11 @@
       },
       {
         "name": "docs",
-        "count": 234
+        "count": 236
       },
       {
         "name": "scripts",
-        "count": 164
+        "count": 181
       },
       {
         "name": "public",
@@ -60,20 +60,20 @@
     ],
     "extensions": [
       {
-        "ext": ".rs",
-        "count": 753
+        "ext": ".mjs",
+        "count": 755
       },
       {
-        "ext": ".mjs",
-        "count": 739
+        "ext": ".rs",
+        "count": 754
       },
       {
         "ext": ".ts",
-        "count": 484
+        "count": 485
       },
       {
         "ext": ".md",
-        "count": 246
+        "count": 247
       },
       {
         "ext": ".tsx",
@@ -81,7 +81,7 @@
       },
       {
         "ext": ".json",
-        "count": 85
+        "count": 86
       },
       {
         "ext": ".svg",
@@ -215,7 +215,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "629 file(s) under lib/"
+        "631 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -232,7 +232,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "164 file(s) under scripts/"
+        "181 file(s) under scripts/"
       ],
       "files": [
         "scripts/assert-macos-isolated-edupi.mjs",
@@ -240,9 +240,9 @@
         "scripts/bump-pi-agent-desktop-version.mjs",
         "scripts/configure-updater-public-key.mjs",
         "scripts/configure-updater-public-key.test.mjs",
-        "scripts/create-roster-acceptance-fixture.mjs",
-        "scripts/dependency-security.test.mjs",
-        "scripts/desktop-dev.mjs"
+        "scripts/create-native-l4-acceptance-fixture.mjs",
+        "scripts/create-native-l4-acceptance-fixture.test.mjs",
+        "scripts/create-roster-acceptance-fixture.mjs"
       ]
     },
     {
@@ -266,7 +266,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "234 file(s) under docs/"
+        "236 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
