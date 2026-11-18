@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-11-17T02:55:57Z",
+    "pushedAt": "2026-11-18T01:06:11Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-11-17T02:56:19.241Z",
+  "generatedAt": "2026-11-18T02:25:46.561Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,7 +22,7 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 3010,
+    "totalFiles": 3060,
     "truncated": false,
     "topDirectories": [
       {
@@ -31,23 +31,23 @@
       },
       {
         "name": "lib",
-        "count": 631
+        "count": 640
       },
       {
         "name": "components",
-        "count": 309
-      },
-      {
-        "name": "app",
-        "count": 248
+        "count": 312
       },
       {
         "name": "docs",
-        "count": 236
+        "count": 262
+      },
+      {
+        "name": "app",
+        "count": 255
       },
       {
         "name": "scripts",
-        "count": 181
+        "count": 185
       },
       {
         "name": "public",
@@ -61,7 +61,7 @@
     "extensions": [
       {
         "ext": ".mjs",
-        "count": 755
+        "count": 764
       },
       {
         "ext": ".rs",
@@ -69,19 +69,19 @@
       },
       {
         "ext": ".ts",
-        "count": 485
+        "count": 495
       },
       {
         "ext": ".md",
-        "count": 247
+        "count": 250
       },
       {
         "ext": ".tsx",
-        "count": 145
+        "count": 147
       },
       {
         "ext": ".json",
-        "count": 86
+        "count": 96
       },
       {
         "ext": ".svg",
@@ -93,7 +93,7 @@
       },
       {
         "ext": ".png",
-        "count": 43
+        "count": 47
       },
       {
         "ext": ".toml",
@@ -181,7 +181,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "248 file(s) under app/"
+        "255 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -198,7 +198,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "309 file(s) under components/"
+        "312 file(s) under components/"
       ],
       "files": [
         "components/AffectSegmentedControl.test.mjs",
@@ -215,7 +215,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "631 file(s) under lib/"
+        "640 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -232,7 +232,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "181 file(s) under scripts/"
+        "185 file(s) under scripts/"
       ],
       "files": [
         "scripts/assert-macos-isolated-edupi.mjs",
@@ -266,7 +266,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "236 file(s) under docs/"
+        "262 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
