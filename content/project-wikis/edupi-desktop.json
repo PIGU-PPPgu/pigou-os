@@ -6,10 +6,10 @@
     "url": "https://github.com/PIGU-PPPgu/edupi-desktop",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-11-19T11:22:28Z",
+    "pushedAt": "2026-11-20T19:26:54Z",
     "language": "JavaScript"
   },
-  "generatedAt": "2026-11-19T20:20:22.188Z",
+  "generatedAt": "2026-11-20T20:20:34.060Z",
   "readme": {
     "title": "EduPi Desktop",
     "summary": [
@@ -22,32 +22,32 @@
     ]
   },
   "fileTree": {
-    "totalFiles": 3060,
+    "totalFiles": 3319,
     "truncated": false,
     "topDirectories": [
       {
         "name": "src-tauri",
-        "count": 1195
+        "count": 1385
       },
       {
         "name": "lib",
-        "count": 640
+        "count": 674
       },
       {
         "name": "components",
-        "count": 312
-      },
-      {
-        "name": "docs",
-        "count": 262
+        "count": 321
       },
       {
         "name": "app",
-        "count": 255
+        "count": 265
+      },
+      {
+        "name": "docs",
+        "count": 265
       },
       {
         "name": "scripts",
-        "count": 185
+        "count": 190
       },
       {
         "name": "public",
@@ -55,33 +55,33 @@
       },
       {
         "name": "desktop",
-        "count": 38
+        "count": 41
       }
     ],
     "extensions": [
       {
-        "ext": ".mjs",
-        "count": 764
+        "ext": ".rs",
+        "count": 847
       },
       {
-        "ext": ".rs",
-        "count": 754
+        "ext": ".mjs",
+        "count": 801
       },
       {
         "ext": ".ts",
-        "count": 495
+        "count": 517
       },
       {
         "ext": ".md",
-        "count": 250
-      },
-      {
-        "ext": ".tsx",
-        "count": 147
+        "count": 259
       },
       {
         "ext": ".json",
-        "count": 96
+        "count": 181
+      },
+      {
+        "ext": ".tsx",
+        "count": 150
       },
       {
         "ext": ".svg",
@@ -97,7 +97,7 @@
       },
       {
         "ext": ".toml",
-        "count": 43
+        "count": 45
       }
     ]
   },
@@ -124,6 +124,7 @@
       "@earendil-works/pi-tui",
       "@napi-rs/canvas",
       "@oomol-lab/open-connector",
+      "playwright-core",
       "@tauri-apps/api",
       "@tauri-apps/plugin-clipboard-manager",
       "@tauri-apps/plugin-dialog",
@@ -140,8 +141,7 @@
       "node-ical",
       "pdfjs-dist",
       "proper-lockfile",
-      "qrcode",
-      "react"
+      "qrcode"
     ],
     "devDependencies": [
       "@lobehub/icons",
@@ -172,7 +172,6 @@
   },
   "frameworks": [
     "Next.js",
-    "React",
     "Tailwind CSS",
     "Python"
   ],
@@ -181,7 +180,7 @@
       "name": "app",
       "kind": "Next.js App Router surface",
       "evidence": [
-        "255 file(s) under app/"
+        "265 file(s) under app/"
       ],
       "files": [
         "app/api/agent/[id]/bash-output/route.ts",
@@ -198,7 +197,7 @@
       "name": "components",
       "kind": "Reusable UI components",
       "evidence": [
-        "312 file(s) under components/"
+        "321 file(s) under components/"
       ],
       "files": [
         "components/AffectSegmentedControl.test.mjs",
@@ -215,7 +214,7 @@
       "name": "lib",
       "kind": "Core application logic",
       "evidence": [
-        "640 file(s) under lib/"
+        "674 file(s) under lib/"
       ],
       "files": [
         "lib/agent-client.ts",
@@ -232,7 +231,7 @@
       "name": "scripts",
       "kind": "Automation scripts",
       "evidence": [
-        "185 file(s) under scripts/"
+        "190 file(s) under scripts/"
       ],
       "files": [
         "scripts/assert-macos-isolated-edupi.mjs",
@@ -266,7 +265,7 @@
       "name": "docs",
       "kind": "Documentation",
       "evidence": [
-        "262 file(s) under docs/"
+        "265 file(s) under docs/"
       ],
       "files": [
         "docs/EDUPI_DESKTOP_ACCEPTANCE_MATRIX.md",
@@ -310,11 +309,6 @@
     },
     {
       "from": "Next.js",
-      "to": "edupi-desktop",
-      "label": "powers"
-    },
-    {
-      "from": "React",
       "to": "edupi-desktop",
       "label": "powers"
     },
