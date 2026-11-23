@@ -29,9 +29,9 @@
       "url": "https://github.com/PIGU-PPPgu/intelliPaperclip"
     }
   ],
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "progressEvaluation": {
-    "generatedAt": "2026-11-23",
+    "generatedAt": "2026-11-24",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 66,
@@ -85,7 +85,7 @@
   },
   "prioritySuggestion": {
     "id": "1cbx1z5",
-    "generatedAt": "2026-11-23",
+    "generatedAt": "2026-11-24",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
