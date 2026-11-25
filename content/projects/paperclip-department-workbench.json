@@ -29,9 +29,9 @@
       "url": "https://github.com/PIGU-PPPgu/paperclip-department-workbench"
     }
   ],
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "progressEvaluation": {
-    "generatedAt": "2026-11-25",
+    "generatedAt": "2026-11-26",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
     "progress": 41,
@@ -86,7 +86,7 @@
   },
   "prioritySuggestion": {
     "id": "uy02ox",
-    "generatedAt": "2026-11-25",
+    "generatedAt": "2026-11-26",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",

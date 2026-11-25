@@ -13,7 +13,7 @@
     "Builds are available from :",
     "- Apple Silicon Mac: download the aarch64.dmg, open it, and drag the app into Applications. Official releases do not build for Intel Macs.\n- Linux x64: download the .deb package and install it with your distribution's package manager."
   ],
-  "progress": 81,
+  "progress": 73,
   "goals": [
     "整理项目定位",
     "补充 README 摘要",
@@ -30,12 +30,12 @@
       "url": "https://github.com/PIGU-PPPgu/edupi-desktop"
     }
   ],
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "progressEvaluation": {
-    "generatedAt": "2026-11-25",
+    "generatedAt": "2026-11-26",
     "model": "sync-worker-signal-engine",
     "source": "algorithm",
-    "progress": 81,
+    "progress": 73,
     "status": "idea",
     "confidence": "medium",
     "summary": "GitHub sync processed; Pigou OS refreshed the project wiki, progress, status, and sync log signals from repository evidence.",
@@ -88,8 +88,8 @@
     ]
   },
   "prioritySuggestion": {
-    "id": "hrdii4",
-    "generatedAt": "2026-11-25",
+    "id": "1a0lw3l",
+    "generatedAt": "2026-11-26",
     "model": "sync-worker-priority-signal-engine",
     "source": "algorithm",
     "currentPriority": "medium",
@@ -102,7 +102,7 @@
       "repo files: 0",
       "last push: 2026-11-23",
       "strategic OS/workflow signal in project text",
-      "progress evaluation: 81% idea"
+      "progress evaluation: 73% idea"
     ],
     "dimensions": [
       {
