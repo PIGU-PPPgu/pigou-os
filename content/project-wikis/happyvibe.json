@@ -6,16 +6,16 @@
     "url": "https://github.com/PIGU-PPPgu/happyvibe",
     "defaultBranch": "main",
     "private": false,
-    "pushedAt": "2026-11-25T17:34:38Z",
+    "pushedAt": "2026-11-26T10:15:48Z",
     "language": "HTML"
   },
-  "generatedAt": "2026-11-25T20:20:16.403Z",
+  "generatedAt": "2026-11-26T20:20:35.398Z",
   "readme": {
     "title": "HappyVibe 数智学园",
     "summary": [
       "集团教师 AI 赋能学习站 —— 由「数智赋能教育教学」系列培训 PPT 整理而成。",
       "在 src/content/lessons/<模块目录/ 下新建一个 .md 文件：",
-      "1. 写资源本体：src/interactives/<学科/<名/ 下 index.mjs（入口，用 shared/runtime.mjs 的 init）+ meta.json（{\"title\":\"中文名\",\"hint\":\"一句操作提示\"}） 2. 写条目：src/content/resources/<学科/<名.md（frontmatter 照任一黄金样例，如 src/content/resources/math/math-cube-nets.md） 3. npm run build:interactives && npm run check:interactives 六项全过（命令后可加资源名单独构建校验），再 npm run build 看页面",
+      "1. 写资源本体：src/interactives/<学科/<名/ 下 index.mjs（入口，用 shared/runtime.mjs 的 init）+ meta.json（{\"title\":\"中文名\",\"hint\":\"一句操作提示\"}） 2. 写条目：src/content/resources/<学科/<名.md（frontmatter 字段与约束见 src/content.config.ts 的 resources schema：external 条目必填 url+source，自产条目必填 file，二者互斥） 3. npm run build:interactives && npm run check:interactives 六项全过（命令后可加资源名单独构建校验），再 npm run build 看页面",
       "规范细节（形态选择、视觉红线、事实校验）见 skills/teaching-interactives/SKILL.md。",
       "- GitHub Pages（默认）：推送到 GitHub 仓库 main 分支，Actions 自动构建发布（见 .github/workflows/deploy.yml）。仓库设置 → Pages → Source 选 GitHub Actions。项目站会自动以仓库名作为 base 路径构建。 - Vercel：导入仓库即可，构建命令 npm run build，输出目录 dist，无需配置 base。",
       "- 涉及真实学生信息的截图一律不上线（见 docs/图片待确认清单.md） - 未校对的课程 status: draft，页面显示「内容校对中」 - 内容仅供集团内部学习交流"
